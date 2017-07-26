@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type BFER --cde-type LDPC --src-type AZCW -K 288 -N 576 -m 0.00 -M 3.51 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem ONMS -i 100 --cde-alist-path ../conf/dec/LDPC/WIMAX_288_576.alist --dec-norm 0.825 --dec-no-synd
+./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 288 -N 576 -m 0.00 -M 3.51 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem ONMS -i 100 --dec-h-path ../conf/dec/LDPC/WIMAX_288_576.alist --dec-norm 0.825 --dec-no-synd
 Curve name:
 LDPC WiMAX min-sum (576,288)
 Trace:

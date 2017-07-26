@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" --cde-type "LDPC" --src-type "RAND_FAST" -K "58320" -N "64800" -m "3.00" -M "4.01" -s "0.05" -e "10" --mod-type "PSK" --mod-bps "2" --dec-type "BP_LAYERED" --dec-implem "SPA" -i "35" --cde-alist-path "../conf/dec/LDPC/DVB-S2_6480_64800.alist" --enc-type "LDPC_DVBS2" --sim-pyber "DVBS2 6480*64800 35it" 
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND_FAST" -K "58320" -N "64800" -m "3.00" -M "4.01" -s "0.05" -e "10" --mdm-type "PSK" --mdm-bps "2" --dec-type "BP_LAYERED" --dec-implem "SPA" -i "35" --dec-h-path "../conf/dec/LDPC/DVB-S2_6480_64800.alist" --enc-type "LDPC_DVBS2" --sim-pyber "DVBS2 6480*64800 35it" 
 Curve name:
 DVBS2 6480*64800 35it
 # -------------------------------------------------

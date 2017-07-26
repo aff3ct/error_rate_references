@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type BFER --cde-type LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 20 --cde-alist-path ../conf/dec/LDPC/WIFI_540_648.alist
+./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 20 --dec-h-path ../conf/dec/LDPC/WIFI_540_648.alist
 Curve name:
 LDPC WiFi 20 ite (648,540)
 Trace:

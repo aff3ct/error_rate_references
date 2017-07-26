@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" --cde-type "TURBO" -K "1024" -N "3072" -m "0" -M "2.5" -s "0.1" --chn-type "RAYLEIGH" --mod-type "BPSK" --mnt-max-fe "500" --sim-pyber "Rayleigh Turbo" --dec-sf "LTE_VEC" 
+./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "2.5" -s "0.1" --enc-sub-std LTE --chn-type "RAYLEIGH" --mdm-type "BPSK" --mnt-max-fe "500" --dec-sf-type "LTE_VEC" --sim-pyber "Rayleigh Turbo"
 Curve name:
 Rayleigh Turbo
 # -------------------------------------------------

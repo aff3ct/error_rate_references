@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type BFER --cde-type LDPC --src-type AZCW -K 480 -N 576 -m 2.50 -M 5.51 -s 0.50 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 40 --cde-alist-path ../conf/dec/LDPC/WIMAX_480_576.alist --dec-no-synd -p 32
+./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 480 -N 576 -m 2.50 -M 5.51 -s 0.50 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 40 --dec-h-path ../conf/dec/LDPC/WIMAX_480_576.alist --dec-no-synd -p 32
 Curve name:
 LDPC WiMAX (576,480)
 Trace:

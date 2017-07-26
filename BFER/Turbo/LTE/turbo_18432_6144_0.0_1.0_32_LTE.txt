@@ -1,5 +1,5 @@
 Run command: 
-./bin/aff3ct -p 32 --sim-type BFER --cde-type TURBO -K 6144 -N 18432 -e 500 -m 0.0 -M 1.01 --dec-type LTE --dec-implem VERY_FAST --dec-simd INTER -i 6 --itl-type LTE --dec-sf LTE_VEC --dec-max MAX
+./bin/aff3ct -p 32 --sim-type BFER -C TURBO -K 6144 -e 500 -m 0.0 -M 1.01 --enc-sub-std LTE --dec-sub-implem VERY_FAST --dec-sub-simd INTER -i 6 --dec-sf-type LTE_VEC --dec-sub-max MAX --sim-pyber "Turbo LTE 32-bit"
 Curve name:
 Turbo LTE 32-bit
 Trace:

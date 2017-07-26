@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -p 16 --sim-type BFER --cde-type POLAR -K 2048 -N 4096 -m 1.0 -M 2.81 -e 500 --cde-fb-gen-method TV --dec-type SC --src-type RAND_FAST --chn-type AWGN_FAST --dec-implem FAST --dec-simd INTRA --qnt-bits 6 --qnt-dec 1
+./bin/aff3ct -p 16 --sim-type BFER -C POLAR -K 2048 -N 4096 -m 1.0 -M 2.81 -e 500 --enc-fb-gen-method TV --dec-type SC --src-type RAND_FAST --chn-type AWGN_FAST --dec-implem FAST --dec-simd INTRA --qnt-bits 6 --qnt-dec 1
 Curve name:
 SC 16-bit
 Trace:

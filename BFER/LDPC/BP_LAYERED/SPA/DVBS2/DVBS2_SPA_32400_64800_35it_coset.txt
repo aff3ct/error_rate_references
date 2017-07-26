@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" --cde-type "LDPC" --src-type "RAND_FAST" -K "32400" -N "64800" -m "0.9" -M "1.351" --sim-snr-type "ES" -s "0.05" -e "100" --mod-type "PSK" --mod-bps "2" --dec-type "BP_LAYERED" --dec-implem "SPA" -i "35" --cde-alist-path "../conf/dec/LDPC/DVB-S2_32400_64800.alist" --enc-type "COSET" --sim-pyber "DVBS2 32400*64800 35it coset" 
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND_FAST" -K "32400" -N "64800" -m "0.9" -M "1.351" --sim-snr-type "ES" -s "0.05" -e "100" --mdm-type "PSK" --mdm-bps "2" --dec-type "BP_LAYERED" --dec-implem "SPA" -i "35" --dec-h-path "../conf/dec/LDPC/DVB-S2_32400_64800.alist" --enc-type "COSET" --sim-pyber "DVBS2 32400*64800 35it coset" 
 Curve name:
 DVBS2 32400*64800 35it coset
 # -------------------------------------------------
@@ -63,5 +63,5 @@ DVBS2 32400*64800 35it coset
     1.10 |  1.10 |      171 |   222274 |      102 | 4.01e-02 | 5.96e-01 ||     0.11 |     0.05 | 5.98e+05 ||     0.85 | 00h00'13  
     1.15 |  1.15 |      501 |   199299 |      104 | 1.23e-02 | 2.08e-01 ||     0.12 |     0.06 | 5.37e+05 ||     0.95 | 00h00'34  
     1.20 |  1.20 |     2724 |   158856 |      100 | 1.80e-03 | 3.67e-02 ||     0.12 |     0.06 | 5.40e+05 ||     0.95 | 00h03'05  
-    1.25 |  1.25 |     8437 |    22548 |       20 | 8.25e-05 | 2.37e-03 ||     0.07 |     0.04 | 9.08e+05 ||     0.57 | 00h16'07 x
+    1.25 |  1.25 |     8437 |    22548 |       20 | 8.25e-05 | 2.37e-03 ||     0.07 |     0.04 | 9.08e+05 ||     0.57 | 00h16'07 x
 # End of the simulation.

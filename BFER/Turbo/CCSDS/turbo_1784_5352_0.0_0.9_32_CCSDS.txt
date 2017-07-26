@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --cde-type TURBO -K 1784 -N 5352 -m 0.0 -M 0.91 --dec-type CCSDS --dec-implem GENERIC -i 10 --itl-type CCSDS --dec-sf NO --dec-max MAXS
+./bin/aff3ct -C TURBO -K 1784 -m 0.0 -M 0.91 --enc-sub-std CCSDS -i 10 --dec-sub-max MAXS --sim-pyber "Turbo CCSDS"
 Curve name:
 Turbo CCSDS
 Trace:
