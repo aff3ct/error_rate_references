@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type "RAYLEIGH" --mdm-type "QAM" --mnt-max-fe "1000" --sim-pyber "Rayleigh 16-QAM" --mdm-bps "4" 
+./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type "RAYLEIGH" --mdm-type "QAM" --mnt-max-fe "1000" --mdm-bps "4" --sim-pyber "Rayleigh 16-QAM"
 Curve name:
 Rayleigh 16-QAM
 # -------------------------------------------------

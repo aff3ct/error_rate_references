@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type BFER -C LDPC -m 0.0 -M 8.51 -s 0.25 -K 504 -N 1008 --dec-h-path ../conf/dec/LDPC/LDPC_504_1008.alist --dec-type BP_FLOODING --dec-implem GALA -i 200
+./bin/aff3ct --sim-type BFER -C LDPC -m 0.0 -M 8.51 -s 0.25 -K 504 -N 1008 --dec-h-path ../conf/dec/LDPC/LDPC_504_1008.alist --dec-type BP_FLOODING --dec-implem GALA -i 200 --sim-pyber "LDPC Gallager A"
 Curve name:
 LDPC Gallager A
 # -------------------------------------------------

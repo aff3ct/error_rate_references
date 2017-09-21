@@ -1,5 +1,5 @@
 Run command: 
-./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type BPSK_FAST --chn-type AWGN_FAST --src-type RAND_FAST
+./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type BPSK_FAST --chn-type AWGN_FAST --src-type RAND_FAST --sim-pyber "BPSK fast"
 Curve name:
 BPSK fast
 Trace: 
