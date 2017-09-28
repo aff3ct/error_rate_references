@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND_FAST" -K "32400" -N "64800" -m "1.0" -M "1.21" -s "0.05" -e "100" --mdm-type "BPSK" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-off "0.15" -p "32" -i "20" --dec-h-path "../conf/dec/LDPC/DVB-S2_32400_64800.alist" --enc-type "LDPC_DVBS2" --mdm-no-sig2 --sim-pyber "DVBS2 NMS 32400*64800 20it" 
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND_FAST" -K "32400" -N "64800" -m "1.0" -M "1.21" -s "0.05" -e "100" --mdm-type "BPSK" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-off "0.15" -p "32" -i "20" --dec-h-path "../conf/dec/LDPC/DVB-S2/DVB-S2_64800x32400.alist" --enc-type "LDPC_DVBS2" --mdm-no-sig2 --sim-pyber "DVBS2 NMS 32400*64800 20it" 
 Curve name:
 DVBS2 NMS 32400*64800 20it
 # -------------------------------------------------
@@ -21,7 +21,7 @@ DVBS2 NMS 32400*64800 20it
 #    ** Info. bits (K)            = 32400
 #    ** Codeword size (N)         = 64800
 #    ** Coset approach (c)        = off
-#    ** AList file path           = ../conf/dec/LDPC/DVB-S2_32400_64800.alist
+#    ** AList file path           = ../conf/dec/LDPC/DVB-S2/DVB-S2_64800x32400.alist
 # * Source ----------------------------------------
 #    ** Type                      = RAND_FAST
 # * Encoder ---------------------------------------
