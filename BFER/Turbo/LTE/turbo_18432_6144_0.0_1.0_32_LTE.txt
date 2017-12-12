@@ -1,67 +1,111 @@
-Run command: 
-./bin/aff3ct -p 32 --sim-type BFER -C TURBO -K 6144 -e 500 -m 0.0 -M 1.01 --enc-sub-std LTE --dec-sub-implem VERY_FAST --dec-sub-simd INTER -i 6 --dec-sf-type LTE_VEC --dec-sub-max MAX --sim-pyber "Turbo LTE 32-bit"
+Run command:
+./bin/aff3ct -p "32" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --dec-sub-max "MAX" --sim-pyber "Turbo LTE 32-bit" --ter-freq "0" -t "0" --sim-no-colors --sim-stop-time "43200" 
 Curve name:
 Turbo LTE 32-bit
-Trace:
 # -------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
 # -------------------------------------------------
-# Parameters:
+# Parameters :
 # * Simulation ------------------------------------
 #    ** Type                   = BFER
+#    ** Type of bits           = int32
+#    ** Type of reals          = float32
+#    ** Date (UTC)             = 2017-10-28 20:35:32
+#    ** Git version            = v1.1-beta.0-963-gc9baccd
+#    ** Code type (C)          = TURBO
 #    ** SNR min (m)            = 0.000000 dB
-#    ** SNR max (M)            = 1.010000 dB
+#    ** SNR max (M)            = 1.010100 dB
 #    ** SNR step (s)           = 0.100000 dB
-#    ** Type of bits           = int (32 bits)
-#    ** Type of reals          = float (32 bits)
-#    ** Multi-threading (t)    = 48 thread(s)
-# * Code ------------------------------------------
-#    ** Type                   = TURBO
-#    ** Info. bits (K)         = 6144
-#    ** Codeword size (N)      = 18432 + 12 (tail bits)
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Multi-threading (t)    = 64 thread(s)
+#    ** SNR type               = EB
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.333116
+#    ** Inter frame level      = 4
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Info. bits (K_info)    = 6144
+# * Codec -----------------------------------------
+#    ** Type                   = TURBO
+#    ** Info. bits (K)         = 6144
+#    ** Codeword size (N_cw)   = 18444
+#    ** Frame size (N)         = 18444
+#    ** Code rate              = 0.333116
 # * Encoder ---------------------------------------
-#    ** Systematic encoding    = on
+#    ** Type                   = TURBO
+#    ** Systematic             = yes
+#    ** Tail length            = 12
+#    Encoder --------------------------------------
+#    ** Type                   = RSC
+#    ** Systematic             = yes
+#    ** Tail length            = 6
 #    ** Buffered               = on
+#    ** Standard               = LTE
+#    ** Polynomials            = {013,015}
 # * Interleaver -----------------------------------
 #    ** Type                   = LTE
-# * Modulator -------------------------------------
+#    ** Size                   = 6144
+#    ** Inter frame level      = 4
+# * Decoder ---------------------------------------
+#    ** Type (D)               = TURBO
+#    ** Implementation         = FAST
+#    ** Systematic             = yes
+#    ** Num. of iterations (i) = 6
+#    ** Enable json            = off
+#    ** Self-corrected         = off
+#    Scaling factor -------------------------------
+#    ** Enabled                = yes
+#    ** Scaling factor (SF)    = LTE_VEC
+#    ** SF iterations          = 6
+#    Flip and check -------------------------------
+#    ** Enabled                = no
+#    Decoder --------------------------------------
+#    ** Type (D)               = BCJR
+#    ** Implementation         = VERY_FAST
+#    ** Systematic             = yes
+#    ** Standard               = LTE
+#    ** Polynomials            = {013,015}
+#    ** SIMD strategy          = INTER
+#    ** Max type               = MAX
+# * Modem -----------------------------------------
 #    ** Type                   = BPSK
+#    ** Bits per symbol        = 1
+#    ** Sampling factor        = 1
+#    ** Sigma square           = on
 # * Channel ---------------------------------------
 #    ** Type                   = AWGN
-#    ** Domain                 = LLR
-# * Demodulator -----------------------------------
-#    ** Sigma square           = on
-#    ** Max type               = unused
-# * Decoder ---------------------------------------
-#    ** Type (D)               = LTE
-#    ** Implementation         = VERY_FAST
-#    ** SIMD strategy          = INTER
-#    ** Num. of iterations (i) = 6
-#    ** Scaling factor         = LTE_VEC
-#    ** Max type               = MAX
+#    ** Complex                = off
+#    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 500
+# * Terminal --------------------------------------
+#    ** Type                   = STD
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 0
 #
 # The simulation is running...
-# ----------------------------------------------------------------------||--------------------------------||---------------------
-#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput  
-#                    on the Signal Noise Ratio (SNR)                    ||      latency (per thread)      ||  and elapsed time   
-# ----------------------------------------------------------------------||--------------------------------||---------------------
-# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT 
-#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss) 
-# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-   -4.77 |  0.00 |      880 |   679475 |      880 | 1.26e-01 | 1.00e+00 ||     3.65 |     1.22 | 40447.51 ||    49.96 | 00h00'00  
-   -4.67 |  0.10 |      880 |   521141 |      879 | 9.64e-02 | 9.99e-01 ||     4.02 |     1.34 | 36686.44 ||    59.08 | 00h00'00  
-   -4.57 |  0.20 |      888 |   329971 |      868 | 6.05e-02 | 9.77e-01 ||     3.85 |     1.28 | 38327.45 ||    79.08 | 00h00'00  
-   -4.47 |  0.30 |      944 |   153180 |      832 | 2.64e-02 | 8.81e-01 ||     5.12 |     1.71 | 28772.63 ||    93.11 | 00h00'00  
-   -4.37 |  0.40 |     1192 |    52509 |      705 | 7.17e-03 | 5.91e-01 ||     4.18 |     1.39 | 35271.61 ||    92.30 | 00h00'00  
-   -4.27 |  0.50 |     2560 |    16926 |      571 | 1.08e-03 | 2.23e-01 ||     3.03 |     1.01 | 48729.88 ||    89.51 | 00h00'00  
-   -4.17 |  0.60 |    11304 |     7685 |      518 | 1.11e-04 | 4.58e-02 ||     2.94 |     0.98 | 50193.04 ||    95.05 | 00h00'02  
-   -4.07 |  0.70 |   105848 |     2748 |      500 | 4.23e-06 | 4.72e-03 ||     2.57 |     0.86 | 57463.58 ||    90.15 | 00h00'21  
-   -3.97 |  0.80 |   888136 |     1447 |      500 | 2.65e-07 | 5.63e-04 ||     2.57 |     0.86 | 57400.21 ||    90.61 | 00h03'00  
-   -3.87 |  0.90 |  3913952 |     1117 |      500 | 4.65e-08 | 1.28e-04 ||     2.56 |     0.85 | 57592.96 ||    90.33 | 00h13'18  
-   -3.77 |  1.00 | 10037312 |     1094 |      500 | 1.77e-08 | 4.98e-05 ||     2.56 |     0.85 | 57496.53 ||    90.51 | 00h34'04  
+# ----------------------------------------------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput  
+#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time   
+# ----------------------------------------------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+   -4.77 |  0.00 |      752 |   634564 |      752 | 1.37e-01 | 1.00e+00 ||     6.77 | 00h00'00  
+   -4.67 |  0.10 |      756 |   484483 |      754 | 1.04e-01 | 9.97e-01 ||    34.59 | 00h00'00  
+   -4.57 |  0.20 |      756 |   308410 |      749 | 6.64e-02 | 9.91e-01 ||    36.88 | 00h00'00  
+   -4.47 |  0.30 |      824 |   156207 |      725 | 3.09e-02 | 8.80e-01 ||    37.26 | 00h00'00  
+   -4.37 |  0.40 |     1148 |    63538 |      644 | 9.01e-03 | 5.61e-01 ||    36.51 | 00h00'00  
+   -4.27 |  0.50 |     2508 |    20121 |      555 | 1.31e-03 | 2.21e-01 ||    38.64 | 00h00'00  
+   -4.17 |  0.60 |    13188 |     8378 |      507 | 1.03e-04 | 3.84e-02 ||    37.22 | 00h00'02  
+   -4.07 |  0.70 |   128480 |     3972 |      500 | 5.03e-06 | 3.89e-03 ||    38.90 | 00h00'20  
+   -3.97 |  0.80 |  1338516 |     1591 |      500 | 1.93e-07 | 3.74e-04 ||    37.38 | 00h03'40  
+   -3.87 |  0.90 |  6076804 |     1226 |      500 | 3.28e-08 | 8.23e-05 ||    38.17 | 00h16'18  
+   -3.77 |  1.00 | 15333312 |     1228 |      500 | 1.30e-08 | 3.26e-05 ||    38.04 | 00h41'16  
 # End of the simulation.
