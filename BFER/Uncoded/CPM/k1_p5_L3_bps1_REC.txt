@@ -1,5 +1,5 @@
 Run command:
-./build/bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-snr-type "ES" --sim-snr-min "0.0" --sim-snr-max "21.0" --sim-snr-step "1.0" -e "100" --src-type "RAND_FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "1" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "1" --mdm-cpm-p "5" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS" --sim-pyber "CPM h=1/5 L=3 bps=1 REC"
+./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-snr-type "ES" --sim-snr-min "0.0" --sim-snr-max "21.0" --sim-snr-step "1.0" -e "100" --src-type "RAND_FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "1" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "1" --mdm-cpm-p "5" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS" --sim-pyber "CPM h=1/5 L=3 bps=1 REC"
 Curve name:
 CPM h=1/5 L=3 bps=1 REC
 # -------------------------------------------------
