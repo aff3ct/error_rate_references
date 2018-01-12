@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -p "8" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --qnt-bits "6" --qnt-dec "2" --mdm-no-sig2 --dec-sub-max "MAX" --sim-pyber "Turbo LTE 8-bit" --ter-freq "0" -t "0" --sim-no-colors --sim-stop-time "43200" 
+./bin/aff3ct -p "8" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --qnt-bits "6" --qnt-dec "2" --mdm-no-sig2 --dec-sub-max "MAX" --sim-pyber "Turbo LTE 8-bit"
 Curve name:
 Turbo LTE 8-bit
 # -------------------------------------------------
