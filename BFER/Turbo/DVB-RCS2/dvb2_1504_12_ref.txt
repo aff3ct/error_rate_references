@@ -1,1 +1,103 @@
-Run command:./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.4" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-type "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --sim-pyber "DVB2 S=752 R=1/2 REF" Curve name:DVB2 S=752 R=1/2 REF# -------------------------------------------------# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----# -------------------------------------------------# Parameters :# * Simulation ------------------------------------#    ** Type                           = BFER#    ** Type of bits                   = int32#    ** Type of reals                  = float32#    ** Date (UTC)                     = 2017-08-01 11:36:53#    ** Code type (C)                  = TURBO_DB#    ** SNR min (m)                    = 0.000000 dB#    ** SNR max (M)                    = 2.400100 dB#    ** SNR step (s)                   = 0.200000 dB#    ** Seed                           = 0#    ** Multi-threading (t)            = 28 thread(s)#    ** SNR type                       = EB#    ** Time report                    = off#    ** Debug mode                     = off#    ** Coset approach (c)             = no#    ** Bad frames tracking            = off#    ** Bad frames replay              = off#    ** Bit rate                       = 0.489362#    ** Inter frame level              = 1# * Code ------------------------------------------#    ** Type                           = TURBO_DB#    ** Info. bits (K)                 = 1504#    ** Codeword size (N_cw)           = 4512#    ** Frame size (N)                 = 3008#    ** Code rate                      = 0.500000# * Source ----------------------------------------#    ** Type                           = RAND#    ** Info. bits (K_info)            = 1472# * CRC -------------------------------------------#    ** Type                           = FAST#    ** Name                           = 32-GZIP#    ** Polynomial (hexadecimal)       = 0x4c11db7#    ** Size (in bit)                  = 32# * Encoder ---------------------------------------#    ** Type                           = TURBO_DB#    ** Systematic                     = yes#    ** Encoder RSC DB: Type           = RSC_DB#    ** Encoder RSC DB: Systematic     = yes#    ** Encoder RSC DB: Buffered       = on#    ** Encoder RSC DB: Standard       = DVB-RCS2# * Puncturer -------------------------------------#    ** Type                           = TURBO_DB# * Interleaver -----------------------------------#    ** Type                           = ARP_DVBS2# * Modem -----------------------------------------#    ** Type                           = PSK#    ** Bits per symbol                = 2#    ** Sampling factor                = 1#    ** Sigma square                   = on#    ** Max type                       = MAX# * Channel ---------------------------------------#    ** Type                           = AWGN#    ** Complex                        = on#    ** Add users                      = off# * Decoder ---------------------------------------#    ** Type (D)                       = TURBO_DB#    ** Implementation                 = STD#    ** Systematic                     = yes#    ** Num. of iterations (i)         = 8#    ** Scaling factor (SF)            = ADAPTIVE#    ** SF iterations                  = 8#    ** Flip aNd Check (FNC)           = off#    ** Decoder RSC DB: Type (D)       = BCJR#    ** Decoder RSC DB: Implementation = DVB-RCS2#    ** Decoder RSC DB: Systematic     = yes#    ** Decoder RSC DB: Max type       = MAX# * Monitor ---------------------------------------#    ** Frame error count (e)          = 100# * Terminal --------------------------------------#    ** Type                           = STD#    ** Enabled                        = yes#    ** Frequency (ms)                 = 500## The simulation is running...# ----------------------------------------------------------------------||--------------------------------||---------------------#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput  #                    on the Signal Noise Ratio (SNR)                    ||      latency (per thread)      ||  and elapsed time   # ----------------------------------------------------------------------||--------------------------------||---------------------# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss) # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------   -0.09 |  0.00 |      127 |    36048 |      127 | 1.93e-01 | 1.00e+00 ||     0.28 |     0.14 | 10579.96 ||     3.42 | 00h00'00      0.11 |  0.20 |      127 |    34559 |      127 | 1.85e-01 | 1.00e+00 ||     0.27 |     0.14 | 11053.15 ||     5.51 | 00h00'00      0.31 |  0.40 |      128 |    32279 |      127 | 1.71e-01 | 9.92e-01 ||     0.28 |     0.14 | 10653.68 ||     5.79 | 00h00'00      0.51 |  0.60 |      135 |    28834 |      126 | 1.45e-01 | 9.33e-01 ||     0.28 |     0.14 | 10928.99 ||     5.73 | 00h00'00      0.71 |  0.80 |      160 |    24872 |      121 | 1.06e-01 | 7.56e-01 ||     0.28 |     0.14 | 10563.62 ||     5.84 | 00h00'00     0.91 |  1.00 |   128626 |  8924701 |    51403 | 4.71e-02 | 4.00e-01 ||     0.00 |     0.00 |     0.00 ||   630.83 | 00h00'00      1.11 |  1.20 |   178722 |  2871971 |    19105 | 1.09e-02 | 1.07e-01 ||     0.00 |     0.00 |     0.00 ||   814.45 | 00h00'00      1.31 |  1.40 |   225957 |   360927 |     2748 | 1.09e-03 | 1.22e-02 ||     0.00 |     0.00 |     0.00 ||  1025.74 | 00h00'00      1.51 |  1.60 |   260383 |    18514 |      154 | 4.83e-05 | 5.91e-04 ||     0.00 |     0.00 |     0.00 ||  1182.20 | 00h00'00      1.71 |  1.80 | 11063056 |     9702 |      102 | 5.96e-07 | 9.22e-06 ||     0.00 |     0.00 |     0.00 ||  1311.53 | 00h00'38      1.91 |  2.00 | 1.07e+09 |     6176 |      100 | 3.91e-09 | 9.31e-08 ||     0.00 |     0.00 |     0.00 ||  1394.76 | 00h57'55      2.11 |  2.20 | 7.75e+09 |     1148 |      100 | 1.01e-10 | 1.29e-08 ||     0.00 |     0.00 |     0.00 ||  1417.04 | 06h51'18      2.31 |  2.40 | 1.85e+10 |      717 |       66 | 2.64e-11 | 3.57e-09 ||     0.00 |     0.00 |     0.00 ||  1431.55 | 08h19'42
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.4" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-type "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --sim-pyber "DVB2 S=752 R=1/2 REF"
+Curve name:
+DVB2 S=752 R=1/2 REF
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                           = BFER
+#    ** Type of bits                   = int32
+#    ** Type of reals                  = float32
+#    ** Date (UTC)                     = 2017-08-01 11:36:53
+#    ** Code type (C)                  = TURBO_DB
+#    ** SNR min (m)                    = 0.000000 dB
+#    ** SNR max (M)                    = 2.400100 dB
+#    ** SNR step (s)                   = 0.200000 dB
+#    ** Seed                           = 0
+#    ** Multi-threading (t)            = 28 thread(s)
+#    ** SNR type                       = EB
+#    ** Time report                    = off
+#    ** Debug mode                     = off
+#    ** Coset approach (c)             = no
+#    ** Bad frames tracking            = off
+#    ** Bad frames replay              = off
+#    ** Bit rate                       = 0.489362
+#    ** Inter frame level              = 1
+# * Code ------------------------------------------
+#    ** Type                           = TURBO_DB
+#    ** Info. bits (K)                 = 1504
+#    ** Codeword size (N_cw)           = 4512
+#    ** Frame size (N)                 = 3008
+#    ** Code rate                      = 0.500000
+# * Source ----------------------------------------
+#    ** Type                           = RAND
+#    ** Info. bits (K_info)            = 1472
+# * CRC -------------------------------------------
+#    ** Type                           = FAST
+#    ** Name                           = 32-GZIP
+#    ** Polynomial (hexadecimal)       = 0x4c11db7
+#    ** Size (in bit)                  = 32
+# * Encoder ---------------------------------------
+#    ** Type                           = TURBO_DB
+#    ** Systematic                     = yes
+#    ** Encoder RSC DB: Type           = RSC_DB
+#    ** Encoder RSC DB: Systematic     = yes
+#    ** Encoder RSC DB: Buffered       = on
+#    ** Encoder RSC DB: Standard       = DVB-RCS2
+# * Puncturer -------------------------------------
+#    ** Type                           = TURBO_DB
+# * Interleaver -----------------------------------
+#    ** Type                           = ARP_DVBS2
+# * Modem -----------------------------------------
+#    ** Type                           = PSK
+#    ** Bits per symbol                = 2
+#    ** Sampling factor                = 1
+#    ** Sigma square                   = on
+#    ** Max type                       = MAX
+# * Channel ---------------------------------------
+#    ** Type                           = AWGN
+#    ** Complex                        = on
+#    ** Add users                      = off
+# * Decoder ---------------------------------------
+#    ** Type (D)                       = TURBO_DB
+#    ** Implementation                 = STD
+#    ** Systematic                     = yes
+#    ** Num. of iterations (i)         = 8
+#    ** Scaling factor (SF)            = ADAPTIVE
+#    ** SF iterations                  = 8
+#    ** Flip aNd Check (FNC)           = off
+#    ** Decoder RSC DB: Type (D)       = BCJR
+#    ** Decoder RSC DB: Implementation = DVB-RCS2
+#    ** Decoder RSC DB: Systematic     = yes
+#    ** Decoder RSC DB: Max type       = MAX
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)          = 100
+# * Terminal --------------------------------------
+#    ** Type                           = STD
+#    ** Enabled                        = yes
+#    ** Frequency (ms)                 = 500
+#
+# The simulation is running...
+# ----------------------------------------------------------------------||--------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||      latency (per thread)      ||  and elapsed time
+# ----------------------------------------------------------------------||--------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
+# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+   -0.09 |  0.00 |      127 |    36048 |      127 | 1.93e-01 | 1.00e+00 ||     0.28 |     0.14 | 10579.96 ||     3.42 | 00h00'00
+    0.11 |  0.20 |      127 |    34559 |      127 | 1.85e-01 | 1.00e+00 ||     0.27 |     0.14 | 11053.15 ||     5.51 | 00h00'00
+    0.31 |  0.40 |      128 |    32279 |      127 | 1.71e-01 | 9.92e-01 ||     0.28 |     0.14 | 10653.68 ||     5.79 | 00h00'00
+    0.51 |  0.60 |      135 |    28834 |      126 | 1.45e-01 | 9.33e-01 ||     0.28 |     0.14 | 10928.99 ||     5.73 | 00h00'00
+    0.71 |  0.80 |      160 |    24872 |      121 | 1.06e-01 | 7.56e-01 ||     0.28 |     0.14 | 10563.62 ||     5.84 | 00h00'00
+    0.91 |  1.00 |   128626 |  8924701 |    51403 | 4.71e-02 | 4.00e-01 ||     0.00 |     0.00 |     0.00 ||   630.83 | 00h00'00
+    1.11 |  1.20 |   178722 |  2871971 |    19105 | 1.09e-02 | 1.07e-01 ||     0.00 |     0.00 |     0.00 ||   814.45 | 00h00'00
+    1.31 |  1.40 |   225957 |   360927 |     2748 | 1.09e-03 | 1.22e-02 ||     0.00 |     0.00 |     0.00 ||  1025.74 | 00h00'00
+    1.51 |  1.60 |   260383 |    18514 |      154 | 4.83e-05 | 5.91e-04 ||     0.00 |     0.00 |     0.00 ||  1182.20 | 00h00'00
+    1.71 |  1.80 | 11063056 |     9702 |      102 | 5.96e-07 | 9.22e-06 ||     0.00 |     0.00 |     0.00 ||  1311.53 | 00h00'38
+    1.91 |  2.00 | 1.07e+09 |     6176 |      100 | 3.91e-09 | 9.31e-08 ||     0.00 |     0.00 |     0.00 ||  1394.76 | 00h57'55
+    2.11 |  2.20 | 7.75e+09 |     1148 |      100 | 1.01e-10 | 1.29e-08 ||     0.00 |     0.00 |     0.00 ||  1417.04 | 06h51'18
+    2.31 |  2.40 | 1.85e+10 |      717 |       66 | 2.64e-11 | 3.57e-09 ||     0.00 |     0.00 |     0.00 ||  1431.55 | 08h19'42

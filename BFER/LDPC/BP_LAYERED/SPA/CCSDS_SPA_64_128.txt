@@ -3,9 +3,9 @@ Run command:
 Curve name:
 LDPC CCSDS (128,64)
 Trace:
-# -------------------------------------------------
-# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
-# -------------------------------------------------
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                   = BFER
@@ -43,12 +43,12 @@ Trace:
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------
-#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput  
-#                    on the Signal Noise Ratio (SNR)                    ||      latency (per thread)      ||  and elapsed time   
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||      latency (per thread)      ||  and elapsed time
 # ----------------------------------------------------------------------||--------------------------------||---------------------
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT 
-#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss) 
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
    -3.01 |  0.00 |      167 |     1574 |      163 | 1.47e-01 | 9.76e-01 ||     0.00 |     0.00 | 68991.11 ||     0.05 | 00h00'00
    -2.51 |  0.50 |      171 |     1396 |      161 | 1.28e-01 | 9.42e-01 ||     0.00 |     0.00 | 71360.20 ||     0.05 | 00h00'00

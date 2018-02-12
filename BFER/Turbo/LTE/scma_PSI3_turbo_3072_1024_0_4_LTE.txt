@@ -2,9 +2,9 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "4.0" -s "0.25" --enc-sub-std LTE --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "5" -i "6" --mnt-max-fe "100" --src-fra "6" --dec-sf-type "LTE_VEC" --mdm-psi "PSI3" --sim-pyber "SCMA-PSI3 + Turbo"
 Curve name:
 SCMA-PSI3 + Turbo
-# -------------------------------------------------
-# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
-# -------------------------------------------------
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
 # Parameters :
 # * Simulation ------------------------------------
 #    ** Type                   = BFER

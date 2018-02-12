@@ -2,9 +2,9 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PAM" --mnt-max-fe "1000" --mdm-bps "2" --sim-pyber "Rayleigh 4-PAM"
 Curve name:
 Rayleigh 4-PAM
-# -------------------------------------------------
-# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
-# -------------------------------------------------
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                  = BFER

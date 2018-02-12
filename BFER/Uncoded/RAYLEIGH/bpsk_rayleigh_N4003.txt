@@ -2,9 +2,9 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "60" -s "2.0" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "BPSK" --mnt-max-fe "1000" --sim-pyber "Rayleigh BPSK"
 Curve name:
 Rayleigh BPSK
-# -------------------------------------------------
-# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
-# -------------------------------------------------
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                  = BFER

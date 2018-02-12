@@ -3,9 +3,9 @@ Run command:
 Curve name:
 GSM-BPL MAXS SPA, 10 glob. ite.
 Trace:
-# -------------------------------------------------
-# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
-# -------------------------------------------------
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                    = BFERI
