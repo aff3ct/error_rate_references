@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "4.0" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-norm "0.75" --dec-ite "05" --sim-pyber "DVBS2 short 4/5 05it BPL-ONMS"
+./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.7" -M "4.0" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-norm "0.75" --dec-ite "05" --sim-pyber "DVBS2 short 4/5 05it BPL-ONMS"
 Curve name:
 DVBS2 short 4/5 05it BPL-ONMS
 # ----------------------------------------------------
@@ -13,7 +13,7 @@ DVBS2 short 4/5 05it BPL-ONMS
 #    ** Date (UTC)                = 2018-03-02 07:51:12
 #    ** Git version               = v1.3.2-64-g81a2a1b
 #    ** Code type (C)             = LDPC
-#    ** SNR min (m)               = 2.600000 dB
+#    ** SNR min (m)               = 2.700000 dB
 #    ** SNR max (M)               = 4.000100 dB
 #    ** SNR step (s)              = 0.100000 dB
 #    ** Seed                      = 0
