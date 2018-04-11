@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" --sim-snr-min "0.0" --sim-snr-max "3.51" --sim-snr-step "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-min "MIN" --sim-pyber "LDPC WiMAX (576,288) AMS Min"
+./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -m "0.0" -M "3.51" -s "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-min "MIN" --sim-pyber "LDPC WiMAX (576,288) AMS Min"
 Curve name:
 LDPC WiMAX (576,288) AMS Min
 # ----------------------------------------------------
