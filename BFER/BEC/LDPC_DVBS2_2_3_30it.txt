@@ -1,0 +1,87 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND_FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_LAYERED" --dec-implem "ONMS" -i "30" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BEC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.3" -E "EP" --sim-pyber "BEC LDPC 2/3 30it"
+Curve name:
+DVBS2 LDPC 2/3 30it on BEC
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-04-16 07:54:15
+#    ** Git version               = v1.3.2-267-gb2581f0
+#    ** Code type (C)             = LDPC
+#    ** NOISE range               = 0.01 -> 0.5 dB
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 8 thread(s)
+#    ** NOISE type (E)            = EP
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.666667 (2/3)
+#    ** Inter frame level         = 8
+# * Source ----------------------------------------
+#    ** Type                      = RAND_FAST
+#    ** Info. bits (K_info)       = 10800
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 10800
+#    ** Codeword size (N_cw)      = 16200
+#    ** Frame size (N)            = 16200
+#    ** Code rate                 = 0.666667 (2/3)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_DVBS2
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_LAYERED
+#    ** Implementation            = ONMS
+#    ** Systematic                = yes
+#    ** SIMD strategy             = INTER
+#    ** Num. of iterations (i)    = 30
+#    ** Offset                    = 0.000000
+#    ** Normalize factor          = 0.825000
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 2
+# * Modem -----------------------------------------
+#    ** Type                      = OOK
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = BEC
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# -----------------------------------------------------------------||---------------------
+#          Bit Error Rate (BER) and Frame Error Rate (FER)         ||  Global throughput
+#             depending on the Erasure Probability (EP)            ||  and elapsed time
+# -----------------------------------------------------------------||---------------------
+# ----------|----------|----------|----------|----------|----------||----------|----------
+#        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------|----------|----------|----------|----------||----------|----------
+     0.5000 |      160 |   426421 |      160 | 2.47e-01 | 1.00e+00 ||     7.16 | 00h00'00
+     0.4500 |      152 |   360589 |      152 | 2.20e-01 | 1.00e+00 ||    12.61 | 00h00'00
+     0.4000 |      160 |   326734 |      160 | 1.89e-01 | 1.00e+00 ||    13.01 | 00h00'00
+     0.3500 |      160 |   257435 |      160 | 1.49e-01 | 1.00e+00 ||    13.10 | 00h00'00
+     0.3000 |      344 |    54609 |      121 | 1.47e-02 | 3.52e-01 ||    14.25 | 00h00'00
+     0.2980 |      560 |    39434 |      116 | 6.52e-03 | 2.07e-01 ||    14.35 | 00h00'00
+     0.2960 |     1368 |    38524 |      104 | 2.61e-03 | 7.60e-02 ||    12.96 | 00h00'01
+     0.2940 |     2824 |    26494 |      105 | 8.69e-04 | 3.72e-02 ||    16.12 | 00h00'01
+     0.2920 |    16848 |    27891 |      100 | 1.53e-04 | 5.94e-03 ||    18.57 | 00h00'09
+     0.2900 |    38200 |    25104 |      101 | 6.08e-05 | 2.64e-03 ||    20.73 | 00h00'19
+     0.2880 |    53144 |     6989 |       43 | 1.22e-05 | 8.09e-04 ||    22.43 | 00h00'25 x
+# End of the simulation.
