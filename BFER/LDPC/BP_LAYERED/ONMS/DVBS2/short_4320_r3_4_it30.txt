@@ -1,7 +1,7 @@
 Run command:
-./bin/aff3ct -C "LDPC" -K "11880" -N "16200" --enc-type "LDPC_DVBS2" -m "2.3" -M "3.6" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-norm "0.75" --dec-ite "30" --sim-pyber "DVBS2 short 3/4 30it BPL-ONMS"
+./bin/aff3ct -C "LDPC" -K "11880" -N "16200" --enc-type "LDPC_DVBS2" -m "2.3" -M "3.6" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "30" --sim-pyber "DVBS2 short 3/4 30it BPL-NMS"
 Curve name:
-DVBS2 short 3/4 30it BPL-ONMS
+DVBS2 short 3/4 30it BPL-NMS
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

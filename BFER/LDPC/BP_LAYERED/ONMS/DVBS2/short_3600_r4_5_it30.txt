@@ -1,7 +1,7 @@
 Run command:
-./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "3.3" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-norm "0.75" --dec-ite "30" --sim-pyber "DVBS2 short 4/5 30it BPL-ONMS" 
+./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "3.3" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "30" --sim-pyber "DVBS2 short 4/5 30it BPL-NMS"
 Curve name:
-DVBS2 short 4/5 30it BPL-ONMS
+DVBS2 short 4/5 30it BPL-NMS
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -68,19 +68,19 @@ DVBS2 short 4/5 30it BPL-ONMS
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||---------------------
-#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput  
-#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time   
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time
 # ----------------------------------------------------------------------||---------------------
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
-#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-    1.51 |  2.60 |      632 |    30753 |      246 | 3.86e-03 | 3.89e-01 ||     5.77 | 00h00'01  
-    1.61 |  2.70 |     1576 |    12020 |      132 | 6.05e-04 | 8.38e-02 ||    43.59 | 00h00'00  
-    1.71 |  2.80 |    13816 |     8594 |      104 | 4.94e-05 | 7.53e-03 ||    61.55 | 00h00'02  
-    1.81 |  2.90 |   287752 |     5570 |      100 | 1.54e-06 | 3.48e-04 ||    79.58 | 00h00'45  
-    1.91 |  3.00 |  4112040 |     1484 |      100 | 2.86e-08 | 2.43e-05 ||    93.12 | 00h09'16  
-    2.01 |  3.10 |  7189720 |      322 |      100 | 3.55e-09 | 1.39e-05 ||   104.06 | 00h14'30  
-    2.11 |  3.20 | 13342736 |      300 |      100 | 1.78e-09 | 7.49e-06 ||   113.30 | 00h24'43  
-    2.21 |  3.30 | 20149408 |      303 |      100 | 1.19e-09 | 4.96e-06 ||   120.90 | 00h34'59  
+    1.51 |  2.60 |      632 |    30753 |      246 | 3.86e-03 | 3.89e-01 ||     5.77 | 00h00'01
+    1.61 |  2.70 |     1576 |    12020 |      132 | 6.05e-04 | 8.38e-02 ||    43.59 | 00h00'00
+    1.71 |  2.80 |    13816 |     8594 |      104 | 4.94e-05 | 7.53e-03 ||    61.55 | 00h00'02
+    1.81 |  2.90 |   287752 |     5570 |      100 | 1.54e-06 | 3.48e-04 ||    79.58 | 00h00'45
+    1.91 |  3.00 |  4112040 |     1484 |      100 | 2.86e-08 | 2.43e-05 ||    93.12 | 00h09'16
+    2.01 |  3.10 |  7189720 |      322 |      100 | 3.55e-09 | 1.39e-05 ||   104.06 | 00h14'30
+    2.11 |  3.20 | 13342736 |      300 |      100 | 1.78e-09 | 7.49e-06 ||   113.30 | 00h24'43
+    2.21 |  3.30 | 20149408 |      303 |      100 | 1.19e-09 | 4.96e-06 ||   120.90 | 00h34'59
 # End of the simulation.
