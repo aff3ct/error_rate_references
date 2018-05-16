@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.41 -s 0.2 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist --sim-pyber "LDPC ETH layered (2048,1723)"
 Curve name:
-LDPC ETH layered (2048,1723)
+LDPC (2048,1723) SPA 100 ite. eth. 10 Gbps
 Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----

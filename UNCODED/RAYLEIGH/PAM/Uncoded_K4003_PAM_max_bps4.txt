@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "70" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PAM" --mnt-max-fe "1000" --mdm-bps "4" --sim-pyber "Rayleigh 16-PAM"
 Curve name:
-Rayleigh 16-PAM
+Uncoded K=4003 16-PAM
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

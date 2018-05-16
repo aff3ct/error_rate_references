@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "4.00" -s "0.25" --enc-sub-std LTE --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "5" -i "6" --mnt-max-fe "100" --src-fra "6" --dec-sf-type "LTE_VEC" --mdm-psi "PSI2" --sim-pyber "SCMA-PSI2 + Turbo"
 Curve name:
-SCMA-PSI2 + Turbo
+Turbo (3084,1024) SCMA (PSI2 5 ite.) BCJR 6 ite. 4G LTE
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

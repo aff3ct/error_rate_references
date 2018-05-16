@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 20.1 -s 1.0 -e 500 -K 4003 --mdm-type PAM --mdm-max MAX --mdm-bps 3 --chn-type AWGN --chn-implem FAST --src-type RAND_FAST --sim-pyber "8-PAM"
 Curve name:
-8-PAM
+Uncoded K=4003 8-PAM
 Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----

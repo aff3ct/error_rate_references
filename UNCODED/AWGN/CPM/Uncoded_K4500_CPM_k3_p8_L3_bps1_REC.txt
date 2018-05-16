@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-snr-type "ES" --sim-snr-min "0.0" --sim-snr-max "21.0" --sim-snr-step "1.0" -e "100" --src-type "RAND_FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "1" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "3" --mdm-cpm-p "8" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS" --sim-pyber "CPM h=3/8 L=3 bps=1 REC"
 Curve name:
-CPM h=3/8 L=3 bps=1 REC
+Uncoded K=4500 CPM h=3/8 L=3 bps=1 REC
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 19.1 -s 1.0 -e 500 -K 4003 --mdm-type QAM --mdm-max MAX --mdm-bps 6 --chn-type AWGN --chn-implem FAST --src-type RAND_FAST --sim-pyber "64-QAM"
 Curve name:
-64-QAM
+Uncoded K=4003 64-QAM
 Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----

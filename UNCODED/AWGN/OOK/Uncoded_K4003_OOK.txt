@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND_FAST" --sim-pyber "OOK K=4003" -K "4003"
 Curve name:
-OOK K=4003
+Uncoded K=4003 OOK
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

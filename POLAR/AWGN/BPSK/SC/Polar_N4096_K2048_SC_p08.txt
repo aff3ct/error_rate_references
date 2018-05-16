@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct -p 8 --sim-type BFER -C POLAR -K 2048 -N 4096 -m 1.0 -M 2.81 -e 500 --enc-fb-gen-method TV --dec-type SC --src-type RAND_FAST --chn-type AWGN --chn-implem FAST --dec-implem FAST --dec-simd INTRA --qnt-bits 6 --qnt-dec 1 --sim-pyber "SC 8-bit"
 Curve name:
-SC 8-bit
+Polar (4096,2048) SC 8-bit
 Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----

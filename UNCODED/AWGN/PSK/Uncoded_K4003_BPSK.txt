@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type BPSK --chn-type AWGN --chn-implem FAST --src-type RAND_FAST --sim-pyber "BPSK"
 Curve name:
-BPSK
+Uncoded K=4003 BPSK
 Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----

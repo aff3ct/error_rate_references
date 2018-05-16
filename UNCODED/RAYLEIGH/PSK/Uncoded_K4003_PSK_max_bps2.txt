@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "60" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PSK" --mnt-max-fe "1000" --mdm-bps "2" --sim-pyber "Rayleigh 4-PSK"
 Curve name:
-Rayleigh 4-PSK
+Uncoded K=4003 4-PSK
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.751" --sim-snr-step "0.25" -K "1755" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "SCL" --dec-simd "INTRA" -L "32" --crc-type "FAST" --crc-poly "32-GZIP" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}" --sim-pyber "Fast-SCL32+CRC32"
 Curve name:
-Fast-SCL32+CRC32
+Polar (2048,1755) SCL L=32 CRC 32-bit
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.7" -M "4.0" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "ONMS" --dec-norm "0.75" --dec-ite "05" --sim-pyber "DVBS2 short 4/5 05it BPL-ONMS"
 Curve name:
-DVBS2 short 4/5 05it BPL-ONMS
+LDPC (16200,12600) NMS 5 ite. DVB-S2
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
