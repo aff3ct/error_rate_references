@@ -1,7 +1,7 @@
 Run command:
 ./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -E "EP" -R "0.06:0.02:0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "OOK" --crc-type "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --chn-type "BSC" --sim-pyber "DVB1 S=752 R=1/2 REF on BSC"
 Curve name:
-DVB1 S=752 R=1/2 REF on BSC
+Turbo DB (3008,1504) BCJR 8 ite. DVB-RCS1 on BSC
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
