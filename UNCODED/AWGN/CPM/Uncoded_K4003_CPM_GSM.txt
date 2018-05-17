@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -p 32 --sim-type BFER -C UNCODED -m 0.0 -M 12.1 -s 1.0 -e 500 -K 4003 -e 500 --mdm-type CPM --mdm-cpm-std GSM --mdm-max MAX --chn-type AWGN --chn-implem FAST --src-type RAND_FAST --sim-pyber "Uncoded K=4003 GSM"
+./bin/aff3ct -p 32 --sim-type BFER -C UNCODED -m 0.0 -M 12.1 -s 1.0 -e 500 -K 4003 -e 500 --mdm-type CPM --mdm-cpm-std GSM --mdm-max MAX --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST --sim-pyber "Uncoded K=4003 GSM"
 Curve name:
 Uncoded K=4003 GSM
 Trace:

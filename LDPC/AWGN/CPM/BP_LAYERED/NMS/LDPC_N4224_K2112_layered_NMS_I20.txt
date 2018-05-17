@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 3.01 -s 0.25 -K 2112 -N 4224 --sim-coset --src-type RAND_FAST --itl-type USER --itl-path ../conf/itl/GSM-LDPC_4224.itl --mdm-type CPM --chn-type AWGN --chn-implem FAST --sim-ite 20 --dec-type BP_LAYERED --dec-h-path ../conf/dec/LDPC/GSM_2112_4224.alist --dec-implem NMS --dec-norm 0.825 --dec-ite 1 --mnt-max-fe 100 --mdm-max MAX --mdm-cpm-std GSM --sim-pyber "GSM-BPL MAX NMS, 20 glob. ite."
+./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 3.01 -s 0.25 -K 2112 -N 4224 --sim-coset --src-type RAND --src-implem FAST --itl-type USER --itl-path ../conf/itl/GSM-LDPC_4224.itl --mdm-type CPM --chn-type AWGN --chn-implem FAST --sim-ite 20 --dec-type BP_LAYERED --dec-h-path ../conf/dec/LDPC/GSM_2112_4224.alist --dec-implem NMS --dec-norm 0.825 --dec-ite 1 --mnt-max-fe 100 --mdm-max MAX --mdm-cpm-std GSM --sim-pyber "GSM-BPL MAX NMS, 20 glob. ite."
 Curve name:
 LDPC (4224,2112) GSM-NMS 20 turbo ite.
 Trace:
