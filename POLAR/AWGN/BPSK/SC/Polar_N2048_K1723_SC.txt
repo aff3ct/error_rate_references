@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -K "1723" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "SC" --dec-simd "INTRA" -L "32" --sim-pyber "Fast-SSC"
+./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -K "1723" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "SC" --dec-simd "INTRA" -L "32" --sim-pyber "Polar (2048,1723) SC"
 Curve name:
 Polar (2048,1723) SC
 # ----------------------------------------------------

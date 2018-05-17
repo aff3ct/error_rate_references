@@ -1,7 +1,7 @@
 Run command:
-./bin/aff3ct -C "BCH" -N "255" -T "18" -R "0.2:0.05:0.4,0.04:0.02:0.2,0.03" -E "EP" --chn-type "BSC" --mdm-type "OOK" --sim-pyber "BCH(255,131,18) on BSC"
+./bin/aff3ct -C "BCH" -N "255" -T "18" -R "0.2:0.05:0.4,0.04:0.02:0.2,0.03" -E "EP" --chn-type "BSC" --mdm-type "OOK" --sim-pyber "BCH (255,131,18)"
 Curve name:
-BCH(255,131,18) on BSC
+BCH (255,131,18)
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

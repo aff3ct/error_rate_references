@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 360 -N 480 -m 0.00 -M 5.51 -s 0.50 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 40 --dec-h-path ../conf/dec/LDPC/WRAN_360_480.alist -p 32 --sim-pyber "LDPC WRAN (480,360)"
+./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 360 -N 480 -m 0.00 -M 5.51 -s 0.50 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 40 --dec-h-path ../conf/dec/LDPC/WRAN_360_480.alist -p 32 --sim-pyber "LDPC (480,360) SPA 40 ite. WRAN"
 Curve name:
 LDPC (480,360) SPA 40 ite. WRAN
 Trace:

@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.6" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-type "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc --sim-pyber "DVB1 S=752 R=1/2 FNC"
+./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.6" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-type "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc --sim-pyber "Turbo DB (3008,1504) BCJR 8 ite. FNC DVB-RCS1"
 Curve name:
 Turbo DB (3008,1504) BCJR 8 ite. FNC DVB-RCS1
 # ----------------------------------------------------

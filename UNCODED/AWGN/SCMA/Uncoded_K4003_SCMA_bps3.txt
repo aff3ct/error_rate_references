@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "18" -s "0.5" --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" --mnt-max-fe "1000" --src-fra "6" --sim-pyber "8-SCMA"
+./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "18" -s "0.5" --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" --mnt-max-fe "1000" --src-fra "6" --sim-pyber "Uncoded K=4003 8-SCMA"
 Curve name:
 Uncoded K=4003 8-SCMA
 # ----------------------------------------------------

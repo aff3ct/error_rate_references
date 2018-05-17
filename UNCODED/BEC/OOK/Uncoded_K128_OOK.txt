@@ -1,7 +1,7 @@
 Run command:
-./bin/aff3ct -C "UNCODED" -K "128" -R "0.001:0.001:0.1,0.01:0.01:0.05,0.05:0.05:1" -E "EP" --chn-type "BEC" --mdm-type "OOK" -e "1000" --sim-pyber "UNCODED OOK 128 on BEC"
+./bin/aff3ct -C "UNCODED" -K "128" -R "0.001:0.001:0.1,0.01:0.01:0.05,0.05:0.05:1" -E "EP" --chn-type "BEC" --mdm-type "OOK" -e "1000" --sim-pyber "Uncoded K=128 OOK"
 Curve name:
-Uncoded K=128 OOK on BEC
+Uncoded K=128 OOK
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
