@@ -1,0 +1,87 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-noise-type "ESN0" -m "0.0" -M "21.0" -s "1.0" -e "100" --src-type "RAND_FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "2" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "3" --mdm-cpm-p "5" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS" --sim-pyber "CPM h=3/5 L=3 bps=2 REC"
+Curve name:
+Uncoded K=4500 CPM h=3/5 L=3 bps=2 REC
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                  = BFER
+#    ** Type of bits          = int32
+#    ** Type of reals         = float32
+#    ** Date (UTC)            = 2017-11-23 10:23:21
+#    ** Git version           = v1.3.0-29-g6df3c0b
+#    ** Code type (C)         = UNCODED
+#    ** SNR min (m)           = 0.000000 dB
+#    ** SNR max (M)           = 21.000099 dB
+#    ** SNR step (s)          = 1.000000 dB
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Multi-threading (t)   = 8 thread(s)
+#    ** SNR type              = ES
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 1.000000
+#    ** Inter frame level     = 1
+# * Source ----------------------------------------
+#    ** Type                  = RAND_FAST
+#    ** Info. bits (K_info)   = 4500
+# * Codec -----------------------------------------
+#    ** Type                  = UNCODED
+#    ** Info. bits (K)        = 4500
+#    ** Codeword size (N_cw)  = 4500
+#    ** Frame size (N)        = 4500
+#    ** Code rate             = 1.000000
+# * Decoder ---------------------------------------
+#    ** Type (D)              = NONE
+#    ** Implementation        = HARD_DECISION
+#    ** Systematic            = yes
+# * Modem -----------------------------------------
+#    ** Type                  = CPM
+#    ** CPM L memory          = 3
+#    ** CPM h index           = 3/5
+#    ** CPM wave shape        = REC
+#    ** CPM mapping           = NATURAL
+#    ** Bits per symbol       = 2
+#    ** Sampling factor       = 8
+#    ** Sigma square          = on
+#    ** Max type              = MAXS
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Complex               = on
+#    ** Add users             = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e) = 100
+# * Terminal --------------------------------------
+#    ** Type                  = STD
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
+#
+# The simulation is running...
+# ----------------------------------------------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time
+# ----------------------------------------------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+    0.00 | -3.01 |      107 |   178743 |      107 | 3.71e-01 | 1.00e+00 ||     0.24 | 00h00'01
+    1.00 | -2.01 |      107 |   164454 |      107 | 3.42e-01 | 1.00e+00 ||     0.24 | 00h00'02
+    2.00 | -1.01 |      107 |   144134 |      107 | 2.99e-01 | 1.00e+00 ||     0.25 | 00h00'01
+    3.00 | -0.01 |      107 |   117280 |      107 | 2.44e-01 | 1.00e+00 ||     0.25 | 00h00'01
+    4.00 |  0.99 |      107 |    82913 |      107 | 1.72e-01 | 1.00e+00 ||     0.25 | 00h00'01
+    5.00 |  1.99 |      107 |    48709 |      107 | 1.01e-01 | 1.00e+00 ||     0.25 | 00h00'01
+    6.00 |  2.99 |      107 |    27113 |      107 | 5.63e-02 | 1.00e+00 ||     0.26 | 00h00'01
+    7.00 |  3.99 |      107 |    14750 |      107 | 3.06e-02 | 1.00e+00 ||     0.27 | 00h00'01
+    8.00 |  4.99 |      107 |     6755 |      107 | 1.40e-02 | 1.00e+00 ||     0.27 | 00h00'01
+    9.00 |  5.99 |      107 |     2909 |      107 | 6.04e-03 | 1.00e+00 ||     0.27 | 00h00'01
+   10.00 |  6.99 |      127 |     1068 |      106 | 1.87e-03 | 8.35e-01 ||     0.28 | 00h00'02
+   11.00 |  7.99 |      321 |      659 |      102 | 4.56e-04 | 3.18e-01 ||     0.29 | 00h00'04
+   12.00 |  8.99 |     1336 |      544 |      100 | 9.05e-05 | 7.49e-02 ||     0.31 | 00h00'19
+   13.00 |  9.99 |     1994 |       60 |       12 | 6.69e-06 | 6.02e-03 ||     0.32 | 00h00'28 x
+# End of the simulation.

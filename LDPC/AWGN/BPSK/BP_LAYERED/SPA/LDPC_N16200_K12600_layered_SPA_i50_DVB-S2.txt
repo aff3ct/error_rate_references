@@ -1,0 +1,90 @@
+Run command:
+./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "4.0" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-type "BP_LAYERED" --dec-ite "50" --sim-pyber "DVBS2 short 4/5 05it BPL-SPA"
+Curve name:
+LDPC (16200,12600) SPA 50 ite. DVB-S2
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-03-05 13:33:56
+#    ** Git version               = v1.3.2-64-g81a2a1b
+#    ** Code type (C)             = LDPC
+#    ** SNR min (m)               = 2.600000 dB
+#    ** SNR max (M)               = 4.000100 dB
+#    ** SNR step (s)              = 0.100000 dB
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 48 thread(s)
+#    ** SNR type                  = EB
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.777778
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND_FAST
+#    ** Info. bits (K_info)       = 12600
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 12600
+#    ** Codeword size (N_cw)      = 16200
+#    ** Frame size (N)            = 16200
+#    ** Code rate                 = 0.777778
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_DVBS2
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_LAYERED
+#    ** Implementation            = SPA
+#    ** Systematic                = yes
+#    ** Num. of iterations (i)    = 50
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 2
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK_FAST
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = FAST
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ----------------------------------------------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time
+# ----------------------------------------------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+    1.51 |  2.60 |     1421 |    18366 |      110 | 1.03e-03 | 7.74e-02 ||     4.11 | 00h00'04
+    1.61 |  2.70 |    15062 |    15440 |      101 | 8.14e-05 | 6.71e-03 ||     8.34 | 00h00'22
+    1.71 |  2.80 |   204097 |     6542 |      100 | 2.54e-06 | 4.90e-04 ||    10.51 | 00h04'04
+    1.81 |  2.90 |   466444 |      704 |      100 | 1.20e-07 | 2.14e-04 ||    12.17 | 00h08'03
+    1.91 |  3.00 |   623240 |      314 |      100 | 4.00e-08 | 1.60e-04 ||    13.60 | 00h09'37
+    2.01 |  3.10 |   953973 |      323 |      101 | 2.69e-08 | 1.06e-04 ||    14.91 | 00h13'26
+    2.11 |  3.20 |  1179291 |      325 |      100 | 2.19e-08 | 8.48e-05 ||    16.14 | 00h15'20
+    2.21 |  3.30 |  1665106 |      329 |      100 | 1.57e-08 | 6.01e-05 ||    17.30 | 00h20'12
+    2.31 |  3.40 |  2160818 |      311 |      100 | 1.14e-08 | 4.63e-05 ||    18.39 | 00h24'40
+    2.41 |  3.50 |  3250167 |      322 |      100 | 7.86e-09 | 3.08e-05 ||    19.41 | 00h35'09
+    2.51 |  3.60 |  4131593 |      327 |      100 | 6.28e-09 | 2.42e-05 ||    20.44 | 00h42'27
+    2.61 |  3.70 |  4768687 |      312 |      100 | 5.19e-09 | 2.10e-05 ||    21.50 | 00h46'35
+    2.71 |  3.80 |  9167517 |      319 |      100 | 2.76e-09 | 1.09e-05 ||    22.51 | 01h25'30
+    2.81 |  3.90 | 11445926 |      311 |      100 | 2.16e-09 | 8.74e-06 ||    23.39 | 01h42'45
+    2.91 |  4.00 | 12340189 |      301 |      100 | 1.94e-09 | 8.10e-06 ||    24.15 | 01h47'18
+# End of the simulation.

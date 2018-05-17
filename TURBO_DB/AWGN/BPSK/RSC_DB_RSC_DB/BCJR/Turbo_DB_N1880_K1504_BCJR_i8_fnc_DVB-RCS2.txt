@@ -1,0 +1,126 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "1880" -m "0.0" -M "4.6" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-type "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc --sim-pyber "DVB2 S=752 R=4/5 FNC" --ter-freq "0" -t "0"
+Curve name:
+Turbo DB (1880,1504) BCJR 8 ite. FNC DVB-RCS2
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                     = BFER
+#    ** Type of bits             = int32
+#    ** Type of reals            = float32
+#    ** Date (UTC)               = 2017-12-12 09:41:48
+#    ** Git version              = v1.3.0-23-g9de2a39
+#    ** Code type (C)            = TURBO_DB
+#    ** SNR min (m)              = 0.000000 dB
+#    ** SNR max (M)              = 4.600100 dB
+#    ** SNR step (s)             = 0.200000 dB
+#    ** Seed                     = 0
+#    ** Statistics               = off
+#    ** Debug mode               = off
+#    ** Multi-threading (t)      = 48 thread(s)
+#    ** SNR type                 = EB
+#    ** Coset approach (c)       = no
+#    ** Coded monitoring         = no
+#    ** Bad frames tracking      = off
+#    ** Bad frames replay        = off
+#    ** Bit rate                 = 0.782979
+#    ** Inter frame level        = 1
+# * Source ----------------------------------------
+#    ** Type                     = RAND
+#    ** Info. bits (K_info)      = 1472
+# * CRC -------------------------------------------
+#    ** Type                     = FAST
+#    ** Name                     = 32-GZIP
+#    ** Polynomial (hexadecimal) = 0x4c11db7
+#    ** Size (in bit)            = 32
+# * Codec -----------------------------------------
+#    ** Type                     = TURBO_DB
+#    ** Info. bits (K)           = 1504
+#    ** Codeword size (N_cw)     = 4512
+#    ** Frame size (N)           = 1880
+#    ** Code rate                = 0.800000
+# * Encoder ---------------------------------------
+#    ** Type                     = TURBO_DB
+#    ** Systematic               = yes
+#    Encoder --------------------------------------
+#    ** Type                     = RSC_DB
+#    ** Systematic               = yes
+#    ** Buffered                 = on
+#    ** Standard                 = DVB-RCS2
+# * Interleaver -----------------------------------
+#    ** Type                     = DVB-RCS2
+# * Decoder ---------------------------------------
+#    ** Type (D)                 = TURBO_DB
+#    ** Implementation           = STD
+#    ** Systematic               = yes
+#    ** Num. of iterations (i)   = 8
+#    Scaling factor -------------------------------
+#    ** Enabled                  = yes
+#    ** Scaling factor (SF)      = ADAPTIVE
+#    ** SF iterations            = 8
+#    Flip and check -------------------------------
+#    ** Enabled                  = yes
+#    ** FNC q                    = 10
+#    ** FNC ite min              = 3
+#    ** FNC ite max              = 8
+#    ** FNC ite step             = 1
+#    Decoder --------------------------------------
+#    ** Type (D)                 = BCJR
+#    ** Implementation           = DVB-RCS2
+#    ** Systematic               = yes
+#    ** Max type                 = MAX
+# * Puncturer -------------------------------------
+#    ** Type                     = TURBO_DB
+# * Modem -----------------------------------------
+#    ** Type                     = PSK
+#    ** Bits per symbol          = 2
+#    ** Sampling factor          = 1
+#    ** Sigma square             = on
+#    ** Max type                 = MAX
+# * Channel ---------------------------------------
+#    ** Type                     = AWGN
+#    ** Complex                  = on
+#    ** Add users                = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)    = 100
+# * Terminal --------------------------------------
+#    ** Type                     = STD
+#    ** Enabled                  = yes
+#    ** Frequency (ms)           = 0
+#
+# The simulation is running...
+# ----------------------------------------------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time
+# ----------------------------------------------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+    1.95 |  0.00 |      147 |    25286 |      147 | 1.17e-01 | 1.00e+00 ||     0.42 | 00h00'00
+    2.15 |  0.20 |      147 |    24450 |      147 | 1.13e-01 | 1.00e+00 ||     2.54 | 00h00'00
+    2.35 |  0.40 |      147 |    23181 |      147 | 1.07e-01 | 1.00e+00 ||     2.54 | 00h00'00
+    2.55 |  0.60 |      147 |    22077 |      147 | 1.02e-01 | 1.00e+00 ||     2.55 | 00h00'00
+    2.75 |  0.80 |      147 |    21189 |      147 | 9.79e-02 | 1.00e+00 ||     2.44 | 00h00'00
+    2.95 |  1.00 |      147 |    20161 |      147 | 9.32e-02 | 1.00e+00 ||     2.46 | 00h00'00
+    3.15 |  1.20 |      147 |    18736 |      147 | 8.66e-02 | 1.00e+00 ||     2.61 | 00h00'00
+    3.35 |  1.40 |      147 |    17951 |      147 | 8.30e-02 | 1.00e+00 ||     2.54 | 00h00'00
+    3.55 |  1.60 |      147 |    16548 |      147 | 7.65e-02 | 1.00e+00 ||     2.50 | 00h00'00
+    3.75 |  1.80 |      147 |    15113 |      147 | 6.98e-02 | 1.00e+00 ||     2.50 | 00h00'00
+    3.95 |  2.00 |      148 |    13911 |      147 | 6.39e-02 | 9.93e-01 ||     2.56 | 00h00'00
+    4.15 |  2.20 |      155 |    12472 |      146 | 5.47e-02 | 9.42e-01 ||     2.65 | 00h00'00
+    4.35 |  2.40 |      177 |    10717 |      144 | 4.11e-02 | 8.14e-01 ||     3.01 | 00h00'00
+    4.55 |  2.60 |      239 |     7938 |      133 | 2.26e-02 | 5.56e-01 ||     3.82 | 00h00'00
+    4.75 |  2.80 |      552 |     7888 |      133 | 9.71e-03 | 2.41e-01 ||     6.36 | 00h00'00
+    4.95 |  3.00 |     1750 |     5551 |      114 | 2.15e-03 | 6.51e-02 ||    12.59 | 00h00'00
+    5.15 |  3.20 |    11073 |     4385 |      102 | 2.69e-04 | 9.21e-03 ||    24.90 | 00h00'00
+    5.35 |  3.40 |   134803 |     4260 |      101 | 2.15e-05 | 7.49e-04 ||    37.87 | 00h00'05
+    5.55 |  3.60 |  2434907 |     2958 |       90 | 8.25e-07 | 3.70e-05 ||  1537.06 | 00h00'07
+    5.75 |  3.80 | 28154068 |     1396 |       77 | 3.37e-08 | 2.73e-06 ||  1736.83 | 00h01'13
+    5.95 |  4.00 | 2.48e+08 |      653 |       75 | 1.79e-09 | 3.02e-07 ||  1897.20 | 00h09'50
+    6.15 |  4.20 | 8.79e+08 |      506 |       75 | 3.91e-10 | 8.53e-08 ||  1990.46 | 00h33'12
+    6.35 |  4.40 | 3.16e+09 |      489 |       75 | 1.05e-10 | 2.38e-08 ||  2049.14 | 01h55'48
+    6.55 |  4.60 | 1.31e+10 |      398 |       75 | 2.06e-11 | 5.72e-09 ||  2069.71 | 07h56'44
+# End of the simulation.
