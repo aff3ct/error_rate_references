@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "2048" -m "0.0" -M "2.0" -s "0.1" --enc-sub-std "LTE" -i "8" --dec-sf-type "LTE_VEC" --dec-sub-implem FAST --dec-sub-max "MAX" --pct-pattern "11,10,01" --crc-type "FAST" --crc-poly "24-LTEA" --sim-pyber "Turbo (4108,2048) BCJR 8 ite. REF LTE"
+./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "2048" -m "0.0" -M "2.0" -s "0.1" --enc-sub-std "LTE" -i "8" --dec-sf-type "LTE_VEC" --dec-sub-implem FAST --dec-sub-max "MAX" --pct-pattern "11,10,01" --crc-implem "FAST" --crc-poly "24-LTEA" --sim-pyber "Turbo (4108,2048) BCJR 8 ite. REF LTE"
 Curve name:
 Turbo (4108,2048) BCJR 8 ite. REF LTE
 # ----------------------------------------------------

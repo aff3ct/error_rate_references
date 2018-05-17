@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "4.0" --dec-simd "INTER" --mdm-type "BPSK_FAST" --src-type "RAND_FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "20" --sim-pyber "LDPC (16200,12600) NMS 20 ite. DVB-S2"
+./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "4.0" --dec-simd "INTER" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "20" --sim-pyber "LDPC (16200,12600) NMS 20 ite. DVB-S2"
 Curve name:
 LDPC (16200,12600) NMS 20 ite. DVB-S2
 # ----------------------------------------------------
