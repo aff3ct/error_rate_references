@@ -2,6 +2,7 @@ Run command:
 ./bin/aff3ct -C "BCH" -N "255" -T "18" -R "0.2:0.05:0.4,0.04:0.02:0.2,0.03" -E "EP" --chn-type "BSC" --mdm-type "OOK" --sim-pyber "BCH (255,131,18)"
 Curve name:
 BCH (255,131,18)
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,14 +11,14 @@ BCH (255,131,18)
 #    ** Type                   = BFER
 #    ** Type of bits           = int32
 #    ** Type of reals          = float32
-#    ** Date (UTC)             = 2018-05-17 09:02:27
-#    ** Git version            = v1.3.2-494-g376e111
+#    ** Date (UTC)             = 2018-05-17 14:28:41
+#    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = BCH
 #    ** Noise range            = 0.03 -> 0.4 dB
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
-#    ** Multi-threading (t)    = 8 thread(s)
+#    ** Multi-threading (t)    = 4 thread(s)
 #    ** NOISE type (E)         = EP
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
@@ -45,6 +46,7 @@ BCH (255,131,18)
 #    ** Correction power (T)   = 18
 # * Modem -----------------------------------------
 #    ** Type                   = OOK
+#    ** Implementation         = STD
 #    ** Bits per symbol        = 1
 #    ** Sampling factor        = 1
 #    ** Sigma square           = on

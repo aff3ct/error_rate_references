@@ -5,48 +5,66 @@ Polar (2048,1723) SCL L=32
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
-# Parameters:
+# Parameters :
 # * Simulation ------------------------------------
-#    ** Type                      = BFER
-#    ** SNR min (m)               = 1.000000 dB
-#    ** SNR max (M)               = 4.510000 dB
-#    ** SNR step (s)              = 0.250000 dB
-#    ** Type of bits              = int (32 bits)
-#    ** Type of reals             = float (32 bits)
-#    ** Inter frame level         = 1
-#    ** Seed                      = 0
-#    ** Multi-threading (t)       = 56 thread(s)
-# * Code ------------------------------------------
-#    ** Type                      = POLAR
-#    ** Info. bits (K)            = 1723
-#    ** Codeword size (N)         = 2048
-#    ** Coset approach (c)        = off
-#    ** Sigma for code gen.       = adaptative
-#    ** Frozen bits gen. method   = TV
-#    ** Path to the best channels = ../conf/cde/awgn_polar_codes/TV
+#    ** Type                  = BFER
+#    ** Type of bits          = int32
+#    ** Type of reals         = float32
+#    ** Date (UTC)            = 2018-05-17 14:11:12
+#    ** Git version           = v1.3.2-470-gf8de061
+#    ** Code type (C)         = POLAR
+#    ** Noise range           = 1 -> 4.5 dB
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Multi-threading (t)   = 4 thread(s)
+#    ** NOISE type (E)        = EBN0
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 0.841309 (1723/2048)
+#    ** Inter frame level     = 1
 # * Source ----------------------------------------
-#    ** Type                      = AZCW
+#    ** Type                  = AZCW
+#    ** Info. bits (K_info)   = 1723
+# * Codec -----------------------------------------
+#    ** Type                  = POLAR
+#    ** Info. bits (K)        = 1723
+#    ** Codeword size (N_cw)  = 2048
+#    ** Frame size (N)        = 2048
+#    ** Code rate             = 0.841309 (1723/2048)
 # * Encoder ---------------------------------------
-#    ** Type                      = AZCW
-#    ** Systematic encoding       = on
-# * Modulator -------------------------------------
-#    ** Type                      = BPSK
-#    ** Bits per symbol           = 1
-#    ** Sampling factor           = 1
-# * Channel ---------------------------------------
-#    ** Type                      = AWGN_FAST
-#    ** Domain                    = LLR
-# * Demodulator -----------------------------------
-#    ** Sigma square              = on
-#    ** Max type                  = unused
+#    ** Type                  = AZCW
+#    ** Systematic            = yes
+#    Frozen bits generator ------------------------
+#    ** Type                  = GA
+#    ** Sigma                 = adaptive
 # * Decoder ---------------------------------------
-#    ** Type (D)                  = SCL
-#    ** Implementation            = FAST
-#    ** SIMD strategy             = INTRA
-#    ** Num. of lists (L)         = 32
-#    ** Polar node types          = {R0,R0L,R1,REP,REPL}
+#    ** Type (D)              = SCL
+#    ** Implementation        = FAST
+#    ** Systematic            = yes
+#    ** SIMD strategy         = INTRA
+#    ** Num. of lists (L)     = 32
+#    ** Polar node types      = {R0,R0L,R1,REP,REPL}
+# * Modem -----------------------------------------
+#    ** Type                  = BPSK
+#    ** Implementation        = STD
+#    ** Bits per symbol       = 1
+#    ** Sampling factor       = 1
+#    ** Sigma square          = on
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Implementation        = FAST
+#    ** Complex               = off
+#    ** Add users             = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)     = 100
+#    ** Frame error count (e) = 100
+#    ** Compute Mutual Info   = no
+# * Terminal --------------------------------------
+#    ** Type                  = STD
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------

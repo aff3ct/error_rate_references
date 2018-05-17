@@ -2,6 +2,7 @@ Run command:
 ./bin/aff3ct -C "UNCODED" -K "128" -R "0.0005,0.001:0.001:0.01,0.01:0.01:0.1,0.1:0.1:0.5" -E "EP" --chn-type "BSC" --mdm-type "OOK" -e "1000" --sim-pyber "Uncoded K=128 OOK"
 Curve name:
 Uncoded K=128 OOK
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,14 +11,14 @@ Uncoded K=128 OOK
 #    ** Type                  = BFER
 #    ** Type of bits          = int32
 #    ** Type of reals         = float32
-#    ** Date (UTC)            = 2018-05-17 07:37:43
-#    ** Git version           = v1.3.2-492-gf86a7be
+#    ** Date (UTC)            = 2018-05-17 14:00:18
+#    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0.0005 -> 0.5 dB
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
-#    ** Multi-threading (t)   = 8 thread(s)
+#    ** Multi-threading (t)   = 4 thread(s)
 #    ** NOISE type (E)        = EP
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
@@ -40,6 +41,7 @@ Uncoded K=128 OOK
 #    ** Systematic            = yes
 # * Modem -----------------------------------------
 #    ** Type                  = OOK
+#    ** Implementation        = STD
 #    ** Bits per symbol       = 1
 #    ** Sampling factor       = 1
 #    ** Sigma square          = on

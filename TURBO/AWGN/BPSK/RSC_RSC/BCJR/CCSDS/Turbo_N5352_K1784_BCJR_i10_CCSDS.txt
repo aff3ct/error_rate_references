@@ -6,42 +6,86 @@ Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
-# Parameters:
+# Parameters :
 # * Simulation ------------------------------------
 #    ** Type                   = BFER
-#    ** SNR min (m)            = 0.000000 dB
-#    ** SNR max (M)            = 0.910000 dB
-#    ** SNR step (s)           = 0.100000 dB
-#    ** Type of bits           = int (32 bits)
-#    ** Type of reals          = float (32 bits)
-#    ** Multi-threading (t)    = 48 thread(s)
-# * Code ------------------------------------------
-#    ** Type                   = TURBO
-#    ** Info. bits (K)         = 1784
-#    ** Codeword size (N)      = 5352 + 16 (tail bits)
+#    ** Type of bits           = int32
+#    ** Type of reals          = float32
+#    ** Date (UTC)             = 2018-05-17 14:30:02
+#    ** Git version            = v1.3.2-470-gf8de061
+#    ** Code type (C)          = TURBO
+#    ** Noise range            = 0 -> 0.9 dB
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Multi-threading (t)    = 4 thread(s)
+#    ** NOISE type (E)         = EBN0
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.33234 (223/671)
+#    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Info. bits (K_info)    = 1784
+# * Codec -----------------------------------------
+#    ** Type                   = TURBO
+#    ** Info. bits (K)         = 1784
+#    ** Codeword size (N_cw)   = 5368
+#    ** Frame size (N)         = 5368
+#    ** Code rate              = 0.33234 (223/671)
 # * Encoder ---------------------------------------
-#    ** Systematic encoding    = on
+#    ** Type                   = TURBO
+#    ** Systematic             = yes
+#    ** Tail length            = 16
+#    Encoder --------------------------------------
+#    ** Type                   = RSC
+#    ** Systematic             = yes
+#    ** Tail length            = 8
 #    ** Buffered               = on
+#    ** Standard               = CCSDS
+#    ** Polynomials            = {023,033}
 # * Interleaver -----------------------------------
 #    ** Type                   = CCSDS
-# * Modulator -------------------------------------
+#    ** Size                   = 1784
+#    ** Inter frame level      = 1
+# * Decoder ---------------------------------------
+#    ** Type (D)               = TURBO
+#    ** Implementation         = FAST
+#    ** Systematic             = yes
+#    ** Num. of iterations (i) = 10
+#    ** Enable json            = off
+#    ** Self-corrected         = off
+#    Scaling factor -------------------------------
+#    ** Enabled                = no
+#    Flip and check -------------------------------
+#    ** Enabled                = no
+#    Decoder --------------------------------------
+#    ** Type (D)               = BCJR
+#    ** Implementation         = GENERIC
+#    ** Systematic             = yes
+#    ** Standard               = CCSDS
+#    ** Polynomials            = {023,033}
+#    ** Max type               = MAXS
+# * Modem -----------------------------------------
 #    ** Type                   = BPSK
+#    ** Implementation         = STD
+#    ** Bits per symbol        = 1
+#    ** Sampling factor        = 1
+#    ** Sigma square           = on
 # * Channel ---------------------------------------
 #    ** Type                   = AWGN
-#    ** Domain                 = LLR
-# * Demodulator -----------------------------------
-#    ** Sigma square           = on
-#    ** Max type               = unused
-# * Decoder ---------------------------------------
-#    ** Type (D)               = CCSDS
-#    ** Implementation         = GENERIC
-#    ** Num. of iterations (i) = 10
-#    ** Scaling factor         = NO
-#    ** Max type               = MAXS
+#    ** Implementation         = STD
+#    ** Complex                = off
+#    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
+#    ** Compute Mutual Info    = no
+# * Terminal --------------------------------------
+#    ** Type                   = STD
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 500
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------

@@ -2,69 +2,104 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "2048" -m "0.0" -M "2.0" -s "0.1" --enc-sub-std "LTE" -i "8" --dec-sf-type "LTE_VEC" --dec-sub-implem FAST --dec-sub-max "MAX" --pct-pattern "11,10,01" --crc-implem "FAST" --crc-poly "24-LTEA" --dec-fnc --dec-fnc-ite-m "5" --sim-pyber "Turbo (4108,2048) BCJR 8 ite. FNC LTE"
 Curve name:
 Turbo (4108,2048) BCJR 8 ite. FNC LTE
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
-# Parameters:
+# Parameters :
 # * Simulation ------------------------------------
 #    ** Type                     = BFER
-#    ** SNR min (m)              = 0.000000 dB
-#    ** SNR max (M)              = 2.000000 dB
-#    ** SNR step (s)             = 0.100000 dB
-#    ** Type of bits             = int (32 bits)
-#    ** Type of reals            = float (32 bits)
-#    ** Inter frame level        = 1
+#    ** Type of bits             = int32
+#    ** Type of reals            = float32
+#    ** Date (UTC)               = 2018-05-17 14:30:43
+#    ** Git version              = v1.3.2-470-gf8de061
+#    ** Code type (C)            = TURBO
+#    ** Noise range              = 0 -> 2 dB
 #    ** Seed                     = 0
-#    ** Multi-threading (t)      = 48 thread(s)
-# * Code ------------------------------------------
-#    ** Type                     = TURBO
-#    ** Info. bits (K)           = 2024 + 24 (CRC)
-#    ** Codeword size (N)        = 4096 + 12 (tail bits)
-#    ** Code rate (R)            = 0.498539
-#    ** Coset approach (c)       = off
+#    ** Statistics               = off
+#    ** Debug mode               = off
+#    ** Multi-threading (t)      = 4 thread(s)
+#    ** NOISE type (E)           = EBN0
+#    ** Coset approach (c)       = no
+#    ** Coded monitoring         = no
+#    ** Bad frames tracking      = off
+#    ** Bad frames replay        = off
+#    ** Bit rate                 = 0.492697 (506/1027)
+#    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Info. bits (K_info)      = 2024
 # * CRC -------------------------------------------
-#    ** Type                     = FAST
-#    ** Name                     = 24-LTEA
+#    ** Type                     = 24-LTEA
 #    ** Polynomial (hexadecimal) = 0x864cfb
 #    ** Size (in bit)            = 24
-#    ** Add CRC in the code rate = off
+#    ** Implementation           = FAST
+# * Codec -----------------------------------------
+#    ** Type                     = TURBO
+#    ** Info. bits (K)           = 2048
+#    ** Codeword size (N_cw)     = 6156
+#    ** Frame size (N)           = 4108
+#    ** Code rate                = 0.498539 (512/1027)
 # * Encoder ---------------------------------------
 #    ** Type                     = TURBO
-#    ** Systematic encoding      = on
-#    ** Polynomials              = {013,015}
+#    ** Systematic               = yes
+#    ** Tail length              = 12
+#    Encoder --------------------------------------
+#    ** Type                     = RSC
+#    ** Systematic               = yes
+#    ** Tail length              = 6
 #    ** Buffered                 = on
-# * Puncturer -------------------------------------
-#    ** Pattern                  = {11,10,01}
+#    ** Standard                 = LTE
+#    ** Polynomials              = {013,015}
 # * Interleaver -----------------------------------
 #    ** Type                     = LTE
-#    ** Uniform                  = off
-# * Modulator -------------------------------------
-#    ** Type                     = BPSK
-#    ** Bits per symbol          = 1
-#    ** Sampling factor          = 1
-# * Channel ---------------------------------------
-#    ** Type                     = AWGN
-# * Demodulator -----------------------------------
-#    ** Sigma square             = on
-#    ** Max type                 = unused
+#    ** Size                     = 2048
+#    ** Inter frame level        = 1
 # * Decoder ---------------------------------------
-#    ** Type (D)                 = BCJR
+#    ** Type (D)                 = TURBO
 #    ** Implementation           = FAST
+#    ** Systematic               = yes
 #    ** Num. of iterations (i)   = 8
-#    ** Scaling factor           = LTE_VEC
-#    ** Max type                 = MAX
+#    ** Enable json              = off
 #    ** Self-corrected           = off
-#    ** Flip aNd Check (FNC)     = on
+#    Scaling factor -------------------------------
+#    ** Enabled                  = yes
+#    ** Scaling factor (SF)      = LTE_VEC
+#    ** SF iterations            = 8
+#    Flip and check -------------------------------
+#    ** Enabled                  = yes
 #    ** FNC q                    = 10
 #    ** FNC ite min              = 5
 #    ** FNC ite max              = 8
 #    ** FNC ite step             = 1
+#    Decoder --------------------------------------
+#    ** Type (D)                 = BCJR
+#    ** Implementation           = FAST
+#    ** Systematic               = yes
+#    ** Standard                 = LTE
+#    ** Polynomials              = {013,015}
+#    ** Max type                 = MAX
+# * Puncturer -------------------------------------
+#    ** Type                     = TURBO
+#    ** Pattern                  = {11,10,01}
+# * Modem -----------------------------------------
+#    ** Type                     = BPSK
+#    ** Implementation           = STD
+#    ** Bits per symbol          = 1
+#    ** Sampling factor          = 1
+#    ** Sigma square             = on
+# * Channel ---------------------------------------
+#    ** Type                     = AWGN
+#    ** Implementation           = STD
+#    ** Complex                  = off
+#    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Bad frames tracking      = off
-#    ** Bad frames replay        = off
+#    ** Compute Mutual Info      = no
+# * Terminal --------------------------------------
+#    ** Type                     = STD
+#    ** Enabled                  = yes
+#    ** Frequency (ms)           = 500
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------

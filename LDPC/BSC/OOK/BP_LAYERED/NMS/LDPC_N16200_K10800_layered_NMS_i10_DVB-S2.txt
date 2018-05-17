@@ -1,7 +1,8 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_LAYERED" --dec-implem "NMS" -i "10" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BSC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.1" -E "EP" --sim-pyber "LDPC 2/3 10it on BSC"
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_LAYERED" --dec-implem "NMS" -i "10" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BSC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.1" -E "EP" --sim-pyber "LDPC (16200,10800) NMS 10 ite. DVB-S2"
 Curve name:
-LDPC (16200,10800) NMS 10 ite. DVB-S2 on BSC
+LDPC (16200,10800) NMS 10 ite. DVB-S2
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,14 +11,14 @@ LDPC (16200,10800) NMS 10 ite. DVB-S2 on BSC
 #    ** Type                      = BFER
 #    ** Type of bits              = int32
 #    ** Type of reals             = float32
-#    ** Date (UTC)                = 2018-05-17 07:47:17
-#    ** Git version               = v1.3.2-492-gf86a7be
+#    ** Date (UTC)                = 2018-05-17 14:11:27
+#    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0.01 -> 0.5 dB
+#    ** Noise range               = 0.03 -> 0.5 dB
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
-#    ** Multi-threading (t)       = 8 thread(s)
+#    ** Multi-threading (t)       = 4 thread(s)
 #    ** NOISE type (E)            = EP
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
@@ -26,7 +27,7 @@ LDPC (16200,10800) NMS 10 ite. DVB-S2 on BSC
 #    ** Bit rate                  = 0.666667 (2/3)
 #    ** Inter frame level         = 8
 # * Source ----------------------------------------
-#    ** Type                      = RAND_FAST
+#    ** Type                      = RAND
 #    ** Info. bits (K_info)       = 10800
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -39,16 +40,16 @@ LDPC (16200,10800) NMS 10 ite. DVB-S2 on BSC
 #    ** Systematic                = yes
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_LAYERED
-#    ** Implementation            = ONMS
+#    ** Implementation            = NMS
 #    ** Systematic                = yes
 #    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 10
-#    ** Offset                    = 0.000000
 #    ** Normalize factor          = 0.825000
 #    ** Stop criterion (syndrome) = on
-#    ** Stop criterion depth      = 2
+#    ** Stop criterion depth      = 1
 # * Modem -----------------------------------------
 #    ** Type                      = OOK
+#    ** Implementation            = STD
 #    ** Bits per symbol           = 1
 #    ** Sampling factor           = 1
 #    ** Sigma square              = on

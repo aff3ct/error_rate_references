@@ -6,36 +6,58 @@ Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
-# Parameters:
+# Parameters :
 # * Simulation ------------------------------------
 #    ** Type                  = BFER
-#    ** SNR min (m)           = 0.000000 dB
-#    ** SNR max (M)           = 19.100000 dB
-#    ** SNR step (s)          = 1.000000 dB
-#    ** Type of bits          = int (32 bits)
-#    ** Type of reals         = float (32 bits)
-#    ** Multi-threading (t)   = 48 thread(s)
-# * Code ------------------------------------------
+#    ** Type of bits          = int32
+#    ** Type of reals         = float32
+#    ** Date (UTC)            = 2018-05-17 14:03:27
+#    ** Git version           = v1.3.2-470-gf8de061
+#    ** Code type (C)         = UNCODED
+#    ** Noise range           = 0 -> 19 dB
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Multi-threading (t)   = 4 thread(s)
+#    ** NOISE type (E)        = EBN0
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 1 (1/1)
+#    ** Inter frame level     = 1
+# * Source ----------------------------------------
+#    ** Type                  = RAND
+#    ** Info. bits (K_info)   = 4003
+# * Codec -----------------------------------------
 #    ** Type                  = UNCODED
 #    ** Info. bits (K)        = 4003
-#    ** Codeword size (N)     = 4003
-# * Source ----------------------------------------
-#    ** Type                  = RAND_FAST
-# * Encoder ---------------------------------------
-#    ** Systematic encoding   = on
-# * Modulator -------------------------------------
-#    ** Type                  = 16-PSK
-# * Channel ---------------------------------------
-#    ** Type                  = AWGN_FAST
-#    ** Domain                = LLR
-# * Demodulator -----------------------------------
-#    ** Sigma square          = on
-#    ** Max type              = MAX
+#    ** Codeword size (N_cw)  = 4003
+#    ** Frame size (N)        = 4003
+#    ** Code rate             = 1 (1/1)
 # * Decoder ---------------------------------------
 #    ** Type (D)              = NONE
-#    ** Implementation        = NONE
+#    ** Implementation        = HARD_DECISION
+#    ** Systematic            = yes
+# * Modem -----------------------------------------
+#    ** Type                  = PSK
+#    ** Implementation        = STD
+#    ** Bits per symbol       = 4
+#    ** Sampling factor       = 1
+#    ** Sigma square          = on
+#    ** Max type              = MAX
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Implementation        = FAST
+#    ** Complex               = on
+#    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 500
+#    ** Compute Mutual Info   = no
+# * Terminal --------------------------------------
+#    ** Type                  = STD
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------

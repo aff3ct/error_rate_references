@@ -1,7 +1,8 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "AZCW" -K "288" -N "576" -E "EP" -R "0.5:0.05:0.6,0.5:-0.01:0.3" -e "100" --dec-type "BP_LAYERED" --dec-implem "NMS" -i "100" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-norm "0.825" --sim-pyber "LDPC WiMAX min-sum (576,288) BEC" --chn-type "BEC" --mdm-type "OOK" --dec-simd "INTER"
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "AZCW" -K "288" -N "576" -E "EP" -R "0.5:0.05:0.6,0.5:-0.01:0.3" -e "100" --dec-type "BP_LAYERED" --dec-implem "NMS" -i "100" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-norm "0.825" --sim-pyber "LDPC (576,288) NMS 100 ite. WiMAX" --chn-type "BEC" --mdm-type "OOK" --dec-simd "INTER"
 Curve name:
-LDPC (576,288) NMS 100 ite. WiMAX on BEC
+LDPC (576,288) NMS 100 ite. WiMAX
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,14 +11,14 @@ LDPC (576,288) NMS 100 ite. WiMAX on BEC
 #    ** Type                      = BFER
 #    ** Type of bits              = int32
 #    ** Type of reals             = float32
-#    ** Date (UTC)                = 2018-04-16 08:14:26
-#    ** Git version               = v1.3.2-267-gb2581f0
+#    ** Date (UTC)                = 2018-05-17 14:26:02
+#    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** NOISE range               = 0.3 -> 0.6 dB
+#    ** Noise range               = 0.3 -> 0.6 dB
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
-#    ** Multi-threading (t)       = 8 thread(s)
+#    ** Multi-threading (t)       = 4 thread(s)
 #    ** NOISE type (E)            = EP
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
@@ -39,18 +40,18 @@ LDPC (576,288) NMS 100 ite. WiMAX on BEC
 #    ** Systematic                = yes
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_LAYERED
-#    ** Implementation            = ONMS
+#    ** Implementation            = NMS
 #    ** Systematic                = yes
 #    ** H matrix path             = ../conf/dec/LDPC/WIMAX_288_576.alist
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 100
-#    ** Offset                    = 0.000000
 #    ** Normalize factor          = 0.825000
 #    ** Stop criterion (syndrome) = on
-#    ** Stop criterion depth      = 2
+#    ** Stop criterion depth      = 1
 # * Modem -----------------------------------------
 #    ** Type                      = OOK
+#    ** Implementation            = STD
 #    ** Bits per symbol           = 1
 #    ** Sampling factor           = 1
 #    ** Sigma square              = on
@@ -61,6 +62,7 @@ LDPC (576,288) NMS 100 ite. WiMAX on BEC
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
+#    ** Compute Mutual Info       = no
 # * Terminal --------------------------------------
 #    ** Type                      = STD
 #    ** Enabled                   = yes

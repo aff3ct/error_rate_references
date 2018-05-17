@@ -2,6 +2,7 @@ Run command:
 ./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" --sim-pyber "Uncoded K=4003 OOK" -K "4003"
 Curve name:
 Uncoded K=4003 OOK
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,49 +11,48 @@ Uncoded K=4003 OOK
 #    ** Type                  = BFER
 #    ** Type of bits          = int32
 #    ** Type of reals         = float32
-#    ** Date (UTC)            = 2017-10-31 08:12:12
-#    ** Git version           = v1.3.0-41-g829440c
+#    ** Date (UTC)            = 2018-05-17 14:08:58
+#    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
-#    ** SNR min (m)           = 0.000000 dB
-#    ** SNR max (M)           = 20.000099 dB
-#    ** SNR step (s)          = 1.000000 dB
+#    ** Noise range           = 0 -> 18 dB
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
-#    ** Multi-threading (t)   = 8 thread(s)
-#    ** SNR type              = EB
+#    ** Multi-threading (t)   = 4 thread(s)
+#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
 #    ** Bad frames replay     = off
-#    ** Bad frames threshold  = 0
-#    ** Bit rate              = 1.000000
+#    ** Bit rate              = 1 (1/1)
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
-#    ** Type                  = RAND_FAST
+#    ** Type                  = RAND
 #    ** Info. bits (K_info)   = 4003
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
 #    ** Info. bits (K)        = 4003
 #    ** Codeword size (N_cw)  = 4003
 #    ** Frame size (N)        = 4003
-#    ** Code rate             = 1.000000
+#    ** Code rate             = 1 (1/1)
 # * Decoder ---------------------------------------
 #    ** Type (D)              = NONE
 #    ** Implementation        = HARD_DECISION
 #    ** Systematic            = yes
 # * Modem -----------------------------------------
 #    ** Type                  = OOK
+#    ** Implementation        = STD
 #    ** Bits per symbol       = 1
 #    ** Sampling factor       = 1
 #    ** Sigma square          = on
 # * Channel ---------------------------------------
 #    ** Type                  = AWGN
 #    ** Implementation        = FAST
-#    ** Complex               = on
+#    ** Complex               = off
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 500
+#    ** Compute Mutual Info   = no
 # * Terminal --------------------------------------
 #    ** Type                  = STD
 #    ** Enabled               = yes

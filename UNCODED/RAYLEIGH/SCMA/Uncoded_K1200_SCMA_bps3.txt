@@ -2,6 +2,7 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" -F "6" --sim-pyber "Uncoded K=1200 8-SCMA"
 Curve name:
 Uncoded K=1200 8-SCMA
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,15 +11,15 @@ Uncoded K=1200 8-SCMA
 #    ** Type                  = BFER
 #    ** Type of bits          = int32
 #    ** Type of reals         = float32
-#    ** Date (UTC)            = 2018-04-16 16:38:14
-#    ** Git version           = v1.3.2-267-gdbd37b0
+#    ** Date (UTC)            = 2018-05-17 14:02:52
+#    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
-#    ** SNR range             = 0 -> 32 dB
+#    ** Noise range           = 0 -> 32 dB
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
-#    ** Multi-threading (t)   = 8 thread(s)
-#    ** SNR type              = EB
+#    ** Multi-threading (t)   = 4 thread(s)
+#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -40,6 +41,7 @@ Uncoded K=1200 8-SCMA
 #    ** Systematic            = yes
 # * Modem -----------------------------------------
 #    ** Type                  = SCMA
+#    ** Implementation        = STD
 #    ** Bits per symbol       = 3
 #    ** Sampling factor       = 1
 #    ** Sigma square          = on
@@ -53,6 +55,7 @@ Uncoded K=1200 8-SCMA
 #    ** Add users             = on
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 100
+#    ** Compute Mutual Info   = no
 # * Terminal --------------------------------------
 #    ** Type                  = STD
 #    ** Enabled               = yes

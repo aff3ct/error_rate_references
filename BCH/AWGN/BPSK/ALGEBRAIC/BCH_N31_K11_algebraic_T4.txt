@@ -2,49 +2,66 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" -C "BCH" -N "31" -K "11" -T "4" -m "0" -M "9" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST --sim-pyber "BCH (31,11,4)"
 Curve name:
 BCH (31,11,4)
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
-# Parameters:
+# Parameters :
 # * Simulation ------------------------------------
-#    ** Type                      = BFER
-#    ** SNR min (m)               = 0.000000 dB
-#    ** SNR max (M)               = 9.000000 dB
-#    ** SNR step (s)              = 0.250000 dB
-#    ** Type of bits              = int (32 bits)
-#    ** Type of reals             = float (32 bits)
-#    ** Inter frame level         = 1
-#    ** Seed                      = 0
-#    ** Multi-threading (t)       = 4 thread(s)
-# * Code ------------------------------------------
-#    ** Type                      = BCH
-#    ** Info. bits (K)            = 11
-#    ** Codeword size (N)         = 31
-#    ** Coset approach (c)        = off
-#    ** Correction power (T)      = 4
-#    ** Order of the GField (mGF) = 5
+#    ** Type                   = BFER
+#    ** Type of bits           = int32
+#    ** Type of reals          = float32
+#    ** Date (UTC)             = 2018-05-17 14:28:47
+#    ** Git version            = v1.3.2-470-gf8de061
+#    ** Code type (C)          = BCH
+#    ** Noise range            = 0 -> 9 dB
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Multi-threading (t)    = 4 thread(s)
+#    ** NOISE type (E)         = EBN0
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.354839 (11/31)
+#    ** Inter frame level      = 1
 # * Source ----------------------------------------
-#    ** Type                      = AZCW
+#    ** Type                   = AZCW
+#    ** Info. bits (K_info)    = 11
+# * Codec -----------------------------------------
+#    ** Type                   = BCH
+#    ** Info. bits (K)         = 11
+#    ** Codeword size (N_cw)   = 31
+#    ** Frame size (N)         = 31
+#    ** Code rate              = 0.354839 (11/31)
 # * Encoder ---------------------------------------
-#    ** Type                      = AZCW
-#    ** Systematic encoding       = on
-# * Modulator -------------------------------------
-#    ** Type                      = BPSK
-#    ** Bits per symbol           = 1
-#    ** Sampling factor           = 1
-# * Channel ---------------------------------------
-#    ** Type                      = AWGN_FAST
-#    ** Domain                    = LLR
-# * Demodulator -----------------------------------
-#    ** Sigma square              = on
-#    ** Max type                  = unused
+#    ** Type                   = AZCW
+#    ** Systematic             = yes
 # * Decoder ---------------------------------------
-#    ** Type (D)                  = ALGEBRAIC
-#    ** Implementation            = STD
+#    ** Type (D)               = ALGEBRAIC
+#    ** Implementation         = STD
+#    ** Systematic             = yes
+#    ** Galois field order (m) = 5
+#    ** Correction power (T)   = 4
+# * Modem -----------------------------------------
+#    ** Type                   = BPSK
+#    ** Implementation         = STD
+#    ** Bits per symbol        = 1
+#    ** Sampling factor        = 1
+#    ** Sigma square           = on
+# * Channel ---------------------------------------
+#    ** Type                   = AWGN
+#    ** Implementation         = FAST
+#    ** Complex                = off
+#    ** Add users              = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)     = 4000
-#    ** Bad frames tracking       = off
-#    ** Bad frames replay         = off
+#    ** Frame error count (e)  = 4000
+#    ** Compute Mutual Info    = no
+# * Terminal --------------------------------------
+#    ** Type                   = STD
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 500
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------

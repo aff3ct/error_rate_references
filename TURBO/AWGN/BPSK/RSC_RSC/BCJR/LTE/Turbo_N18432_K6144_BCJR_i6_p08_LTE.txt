@@ -2,6 +2,7 @@ Run command:
 ./bin/aff3ct -p "8" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --qnt-bits "6" --qnt-dec "2" --mdm-no-sig2 --dec-sub-max "MAX" --sim-pyber "Turbo (18444,6144) BCJR 8-bit 6 ite. LTE"
 Curve name:
 Turbo (18444,6144) BCJR 8-bit 6 ite. LTE
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -11,23 +12,21 @@ Turbo (18444,6144) BCJR 8-bit 6 ite. LTE
 #    ** Type of bits           = int8
 #    ** Type of reals          = float32
 #    ** Type of quant. reals   = int8
-#    ** Date (UTC)             = 2017-10-28 21:37:10
-#    ** Git version            = v1.1-beta.0-963-gc9baccd
+#    ** Date (UTC)             = 2018-05-17 14:30:12
+#    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
-#    ** SNR min (m)            = 0.000000 dB
-#    ** SNR max (M)            = 1.010100 dB
-#    ** SNR step (s)           = 0.100000 dB
+#    ** Noise range            = 0 -> 1 dB
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
-#    ** Multi-threading (t)    = 64 thread(s)
-#    ** SNR type               = EB
+#    ** Multi-threading (t)    = 4 thread(s)
+#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
 #    ** Bad frames replay      = off
-#    ** Bit rate               = 0.333116
-#    ** Inter frame level      = 16
+#    ** Bit rate               = 0.333116 (512/1537)
+#    ** Inter frame level      = 32
 # * Source ----------------------------------------
 #    ** Type                   = RAND
 #    ** Info. bits (K_info)    = 6144
@@ -36,7 +35,7 @@ Turbo (18444,6144) BCJR 8-bit 6 ite. LTE
 #    ** Info. bits (K)         = 6144
 #    ** Codeword size (N_cw)   = 18444
 #    ** Frame size (N)         = 18444
-#    ** Code rate              = 0.333116
+#    ** Code rate              = 0.333116 (512/1537)
 # * Encoder ---------------------------------------
 #    ** Type                   = TURBO
 #    ** Systematic             = yes
@@ -51,7 +50,7 @@ Turbo (18444,6144) BCJR 8-bit 6 ite. LTE
 # * Interleaver -----------------------------------
 #    ** Type                   = LTE
 #    ** Size                   = 6144
-#    ** Inter frame level      = 16
+#    ** Inter frame level      = 32
 # * Decoder ---------------------------------------
 #    ** Type (D)               = TURBO
 #    ** Implementation         = FAST
@@ -75,22 +74,25 @@ Turbo (18444,6144) BCJR 8-bit 6 ite. LTE
 #    ** Max type               = MAX
 # * Modem -----------------------------------------
 #    ** Type                   = BPSK
+#    ** Implementation         = STD
 #    ** Bits per symbol        = 1
 #    ** Sampling factor        = 1
 #    ** Sigma square           = off
 # * Channel ---------------------------------------
 #    ** Type                   = AWGN
+#    ** Implementation         = STD
 #    ** Complex                = off
 #    ** Add users              = off
 # * Quantizer -------------------------------------
-#    ** Type                   = STD
+#    ** Type                   = POW2
 #    ** Fixed-point config.    = {6, 2}
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 500
+#    ** Frame error count (e)  = 100
+#    ** Compute Mutual Info    = no
 # * Terminal --------------------------------------
 #    ** Type                   = STD
 #    ** Enabled                = yes
-#    ** Frequency (ms)         = 0
+#    ** Frequency (ms)         = 500
 #
 # The simulation is running...
 # ----------------------------------------------------------------------||---------------------

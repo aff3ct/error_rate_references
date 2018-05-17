@@ -2,6 +2,7 @@ Run command:
 ./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -m "0.0" -M "3.51" -s "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-min "MINS" --sim-pyber "LDPC (576,288) AMS MinStar 100 ite. WiMAX"
 Curve name:
 LDPC (576,288) AMS MinStar 100 ite. WiMAX
+Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
@@ -10,22 +11,20 @@ LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Type                      = BFER
 #    ** Type of bits              = int32
 #    ** Type of reals             = float32
-#    ** Date (UTC)                = 2017-12-14 18:30:04
-#    ** Git version               = v1.3.1-39-g8f598d1
+#    ** Date (UTC)                = 2018-05-17 14:12:55
+#    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** SNR min (m)               = 0.000000 dB
-#    ** SNR max (M)               = 3.510100 dB
-#    ** SNR step (s)              = 0.250000 dB
+#    ** Noise range               = 0 -> 3.5 dB
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
-#    ** Multi-threading (t)       = 8 thread(s)
-#    ** SNR type                  = EB
+#    ** Multi-threading (t)       = 4 thread(s)
+#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
 #    ** Bad frames replay         = off
-#    ** Bit rate                  = 0.500000
+#    ** Bit rate                  = 0.5 (1/2)
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = AZCW
@@ -35,7 +34,7 @@ LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Info. bits (K)            = 288
 #    ** Codeword size (N_cw)      = 576
 #    ** Frame size (N)            = 576
-#    ** Code rate                 = 0.500000
+#    ** Code rate                 = 0.5 (1/2)
 # * Encoder ---------------------------------------
 #    ** Type                      = AZCW
 #    ** Systematic                = yes
@@ -44,12 +43,14 @@ LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Implementation            = AMS
 #    ** Systematic                = yes
 #    ** H matrix path             = ../conf/dec/LDPC/WIMAX_288_576.alist
+#    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 100
 #    ** Stop criterion (syndrome) = on
 #    ** Stop criterion depth      = 1
 #    ** Min type                  = MINS
 # * Modem -----------------------------------------
 #    ** Type                      = BPSK
+#    ** Implementation            = STD
 #    ** Bits per symbol           = 1
 #    ** Sampling factor           = 1
 #    ** Sigma square              = on
@@ -60,6 +61,7 @@ LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
+#    ** Compute Mutual Info       = no
 # * Terminal --------------------------------------
 #    ** Type                      = STD
 #    ** Enabled                   = yes
