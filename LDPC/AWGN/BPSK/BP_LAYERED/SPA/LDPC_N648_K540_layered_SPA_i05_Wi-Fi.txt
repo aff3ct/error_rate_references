@@ -1,7 +1,7 @@
 Run command:
-./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 5 --dec-h-path ../conf/dec/LDPC/WIFI_540_648.alist --sim-pyber "LDPC WiFi 5 ite (648,540)"
+./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 5 --dec-h-path ../conf/dec/LDPC/WIFI_540_648.alist --sim-pyber "LDPC (648,540) SPA 5 ite. Wi-Fi"
 Curve name:
-LDPC (648,540) SPA 5 ite. WiFi
+LDPC (648,540) SPA 5 ite. Wi-Fi
 Trace:
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----

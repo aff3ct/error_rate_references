@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 15.1 -s 1.0 -e 500 -K 4003 --mdm-type PSK --mdm-max MAX --mdm-bps 3 --chn-type AWGN --chn-implem FAST --src-type RAND_FAST --sim-pyber "8-PSK"
+./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 15.1 -s 1.0 -e 500 -K 4003 --mdm-type PSK --mdm-max MAX --mdm-bps 3 --chn-type AWGN --chn-implem FAST --src-type RAND_FAST --sim-pyber "Uncoded K=4003 8-PSK"
 Curve name:
 Uncoded K=4003 8-PSK
 Trace:

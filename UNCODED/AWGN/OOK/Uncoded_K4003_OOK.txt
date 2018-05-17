@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND_FAST" --sim-pyber "OOK K=4003" -K "4003"
+./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND_FAST" --sim-pyber "Uncoded K=4003 OOK" -K "4003"
 Curve name:
 Uncoded K=4003 OOK
 # ----------------------------------------------------

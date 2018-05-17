@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -C "LDPC" -K "13320" -N "16200" --enc-type "LDPC_DVBS2" -m "2.8" -M "4.2" --sim-pyber "DVBS2 short 5/6"
+./bin/aff3ct -C "LDPC" -K "13320" -N "16200" --enc-type "LDPC_DVBS2" -m "2.8" -M "4.2" --sim-pyber "LDPC (16200,13320) SPA 10 ite. DVB-S2"
 Curve name:
 LDPC (16200,13320) SPA 10 ite. DVB-S2
 # -------------------------------------------------
