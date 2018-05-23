@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -R "0:0.1:1.41" --enc-type "LDPC_QC" -N "8192" --pct-type "LDPC" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/AR4JA_4096_8192.qc" --dec-ite "100" --dec-synd-depth "1" --sim-pyber "LDPC (8192,4096) AMS 100 ite. AR4JA"
+./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -R "0:0.1:1.31" --enc-type "LDPC_QC" -N "8192" --pct-type "LDPC" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/AR4JA_4096_8192.qc" --dec-ite "100" --dec-synd-depth "1" --sim-pyber "LDPC (8192,4096) AMS 100 ite. AR4JA"
 Curve name:
 LDPC (8192,4096) AMS 100 ite. AR4JA
 Trace:
@@ -14,7 +14,7 @@ Trace:
 #    ** Date (UTC)                = 2018-05-17 14:12:04
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0 -> 1.29999 dB
+#    ** Noise range               = 0 -> 1.3 dB
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
