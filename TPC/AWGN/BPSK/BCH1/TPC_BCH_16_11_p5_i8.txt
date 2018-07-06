@@ -1,0 +1,106 @@
+Run command:
+./bin/aff3ct -C "TURBO_PROD" -K "11" -N "15" --enc-ext -m "0" -M "5.5" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" --sim-stop-time "3600" --sim-pyber "TPC BCH(16,11,1) it8 p5"
+Curve name:
+TPC BCH(16,11,1) it8 p5
+# -------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
+# -------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                        = BFER
+#    ** Type of bits                = int32
+#    ** Type of reals               = float32
+#    ** Date (UTC)                  = 2018-02-02 15:09:34
+#    ** Git version                 = v1.3.1-171-g170b395
+#    ** Code type (C)               = TURBO_PROD
+#    ** SNR min (m)                 = 0.000000 dB
+#    ** SNR max (M)                 = 5.500100 dB
+#    ** SNR step (s)                = 0.250000 dB
+#    ** Seed                        = 0
+#    ** Statistics                  = off
+#    ** Debug mode                  = off
+#    ** Multi-threading (t)         = 48 thread(s)
+#    ** SNR type                    = EB
+#    ** Coset approach (c)          = no
+#    ** Coded monitoring            = no
+#    ** Bad frames tracking         = off
+#    ** Bad frames replay           = off
+#    ** Bit rate                    = 0.472656
+#    ** Inter frame level           = 1
+# * Source ----------------------------------------
+#    ** Type                        = RAND_FAST
+#    ** Info. bits (K_info)         = 121
+# * Codec -----------------------------------------
+#    ** Type                        = TURBO_PROD
+#    ** Info. bits (K)              = 121
+#    ** Codeword size (N_cw)        = 256
+#    ** Frame size (N)              = 256
+#    ** Code rate                   = 0.472656
+# * Encoder ---------------------------------------
+#    ** Type                        = TURBO_PROD
+#    ** Systematic                  = yes
+#    ** Parity extended             = yes
+#    Encoder --------------------------------------
+#    ** Type                        = BCH
+#    ** Systematic                  = yes
+# * Interleaver -----------------------------------
+#    ** Type                        = ROW_COL
+#    ** Number of columns           = 16
+# * Decoder ---------------------------------------
+#    ** Type (D)                    = CP
+#    ** Implementation              = STD
+#    ** Systematic                  = yes
+#    ** Num. of iterations (i)      = 8
+#    ** alpha                       = 0.500000
+#    ** Num. least reliable pos (p) = 5
+#    ** Parity extended             = yes
+#    Decoder --------------------------------------
+#    ** Type (D)                    = ALGEBRAIC
+#    ** Implementation              = STD
+#    ** Systematic                  = yes
+#    ** Galois field order (m)      = 4
+#    ** Correction power (T)        = 1
+# * Modem -----------------------------------------
+#    ** Type                        = BPSK
+#    ** Bits per symbol             = 1
+#    ** Sampling factor             = 1
+#    ** Sigma square                = on
+# * Channel ---------------------------------------
+#    ** Type                        = AWGN
+#    ** Implementation              = FAST
+#    ** Complex                     = off
+#    ** Add users                   = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)       = 100
+# * Terminal --------------------------------------
+#    ** Type                        = STD
+#    ** Enabled                     = yes
+#    ** Frequency (ms)              = 500
+#
+# The simulation is running...
+# ----------------------------------------------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||  and elapsed time
+# ----------------------------------------------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# -------|-------|----------|----------|----------|----------|----------||----------|----------
+   -3.25 |  0.00 |      180 |     2441 |      135 | 1.12e-01 | 7.50e-01 ||     0.05 | 00h00'00
+   -3.00 |  0.25 |      195 |     2054 |      134 | 8.71e-02 | 6.87e-01 ||     0.25 | 00h00'00
+   -2.75 |  0.50 |      284 |     1724 |      123 | 5.02e-02 | 4.33e-01 ||     0.25 | 00h00'00
+   -2.50 |  0.75 |      338 |     1709 |      118 | 4.18e-02 | 3.49e-01 ||     0.27 | 00h00'00
+   -2.25 |  1.00 |      435 |     1491 |      116 | 2.83e-02 | 2.67e-01 ||     0.28 | 00h00'00
+   -2.00 |  1.25 |      618 |     1277 |      107 | 1.71e-02 | 1.73e-01 ||     0.30 | 00h00'00
+   -1.75 |  1.50 |     1343 |     1187 |      106 | 7.30e-03 | 7.89e-02 ||     0.32 | 00h00'00
+   -1.50 |  1.75 |     2502 |     1129 |      105 | 3.73e-03 | 4.20e-02 ||     0.33 | 00h00'00
+   -1.25 |  2.00 |     4786 |     1038 |      101 | 1.79e-03 | 2.11e-02 ||     0.34 | 00h00'01
+   -1.00 |  2.25 |    10602 |      905 |      100 | 7.05e-04 | 9.43e-03 ||     0.34 | 00h00'03
+   -0.75 |  2.50 |    27174 |      831 |      100 | 2.53e-04 | 3.68e-03 ||     0.35 | 00h00'09
+   -0.50 |  2.75 |    80524 |      813 |      100 | 8.34e-05 | 1.24e-03 ||     0.35 | 00h00'28
+   -0.25 |  3.00 |   166545 |      794 |      100 | 3.94e-05 | 6.00e-04 ||     0.35 | 00h00'57
+   -0.00 |  3.25 |   397852 |      739 |      100 | 1.54e-05 | 2.51e-04 ||     0.35 | 00h02'18
+    0.25 |  3.50 |  1235804 |      770 |      100 | 5.15e-06 | 8.09e-05 ||     0.35 | 00h07'11
+    0.50 |  3.75 |  3223080 |      778 |      100 | 1.99e-06 | 3.10e-05 ||     0.35 | 00h18'47
+    0.75 |  4.00 | 10264947 |      650 |       87 | 5.23e-07 | 8.48e-06 ||     0.35 | 01h00'00
+# End of the simulation.
