@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct -C "TURBO_PROD" -K "57" -N "63" --enc-ext -m "2" -M "4.5" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" --sim-stop-time "3600" --sim-pyber "TPC BCH(64,57,1) it8 p5"
+./bin/aff3ct -C "TURBO_PROD" -K "57" -N "63" --enc-ext -m "2" -M "4.5" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" --sim-pyber "TPC BCH(64,57,1) it8 p5"
 Curve name:
 TPC BCH(64,57,1) it8 p5
 # -------------------------------------------------
