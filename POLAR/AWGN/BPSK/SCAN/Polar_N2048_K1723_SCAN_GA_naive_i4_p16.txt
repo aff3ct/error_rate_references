@@ -1,0 +1,98 @@
+Run command:
+./bin/aff3ct -p "16" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SCAN" --dec-implem "NAIVE" -i "4" --qnt-bits "6" --qnt-dec "1" --sim-pyber "Polar (2048,1723) SCAN 4 ite. 16-bit" 
+Curve name:
+Polar (2048,1723) SCAN 4 ite. 16-bit
+Trace:
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                   = BFER
+#    ** Type of bits           = int16
+#    ** Type of reals          = float32
+#    ** Type of quant. reals   = int16
+#    ** Date (UTC)             = 2018-06-17 16:35:05
+#    ** Git version            = v1.3.2-659-g662929e
+#    ** Code type (C)          = POLAR
+#    ** Noise range            = 1 -> 4.5 dB
+#    ** Noise type (E)         = EBN0
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Multi-threading (t)    = 72 thread(s)
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.841309 (1723/2048)
+#    ** Inter frame level      = 1
+# * Source ----------------------------------------
+#    ** Type                   = RAND
+#    ** Implementation         = FAST
+#    ** Info. bits (K_info)    = 1723
+# * Codec -----------------------------------------
+#    ** Type                   = POLAR
+#    ** Info. bits (K)         = 1723
+#    ** Codeword size (N_cw)   = 2048
+#    ** Frame size (N)         = 2048
+#    ** Code rate              = 0.841309 (1723/2048)
+# * Encoder ---------------------------------------
+#    ** Type                   = POLAR
+#    ** Systematic             = yes
+#    Frozen bits generator ------------------------
+#    ** Type                   = GA
+#    ** Sigma                  = adaptive
+# * Decoder ---------------------------------------
+#    ** Type (D)               = SCAN
+#    ** Implementation         = NAIVE
+#    ** Systematic             = yes
+#    ** Num. of iterations (i) = 4
+# * Modem -----------------------------------------
+#    ** Type                   = BPSK
+#    ** Implementation         = STD
+#    ** Bits per symbol        = 1
+#    ** Sampling factor        = 1
+#    ** Sigma square           = on
+# * Channel ---------------------------------------
+#    ** Type                   = AWGN
+#    ** Implementation         = FAST
+#    ** Complex                = off
+#    ** Add users              = off
+# * Quantizer -------------------------------------
+#    ** Type                   = POW2
+#    ** Implementation         = STD
+#    ** Fixed-point config.    = {6, 1}
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)  = 500
+#    ** Compute mutual info    = no
+# * Terminal --------------------------------------
+#    ** Type                   = STD
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 500
+# 
+# The simulation is running...
+# ----------------------------------------------------------------------------||---------------------
+#               Bit Error Rate (BER) and Frame Error Rate (FER)               ||  Global throughput  
+#                  depending on the Signal Noise Ratio (SNR)                  ||  and elapsed time   
+# ----------------------------------------------------------------------------||---------------------
+# ----------|----------|----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# ----------|----------|----------|----------|----------|----------|----------||----------|----------
+       0.25 |     1.00 |      571 |    83475 |      571 | 8.48e-02 | 1.00e+00 ||    10.97 | 00h00'00  
+       0.50 |     1.25 |      571 |    78593 |      571 | 7.99e-02 | 1.00e+00 ||    18.13 | 00h00'00  
+       0.75 |     1.50 |      571 |    73695 |      571 | 7.49e-02 | 1.00e+00 ||    18.01 | 00h00'00  
+       1.00 |     1.75 |      570 |    69204 |      570 | 7.05e-02 | 1.00e+00 ||    18.14 | 00h00'00  
+       1.25 |     2.00 |      571 |    64585 |      571 | 6.56e-02 | 1.00e+00 ||    18.13 | 00h00'00  
+       1.50 |     2.25 |      570 |    59163 |      570 | 6.02e-02 | 1.00e+00 ||    18.25 | 00h00'00  
+       1.75 |     2.50 |      572 |    52501 |      571 | 5.33e-02 | 9.98e-01 ||    17.91 | 00h00'00  
+       2.00 |     2.75 |      606 |    41060 |      564 | 3.93e-02 | 9.31e-01 ||    19.18 | 00h00'00  
+       2.25 |     3.00 |      728 |    30213 |      555 | 2.41e-02 | 7.62e-01 ||    20.98 | 00h00'00  
+       2.50 |     3.25 |     1227 |    21492 |      525 | 1.02e-02 | 4.28e-01 ||    27.73 | 00h00'00  
+       2.75 |     3.50 |     3324 |    14231 |      514 | 2.48e-03 | 1.55e-01 ||    39.23 | 00h00'00  
+       3.00 |     3.75 |    10260 |    12431 |      502 | 7.03e-04 | 4.89e-02 ||    47.42 | 00h00'00  
+       3.25 |     4.00 |    39897 |     9649 |      502 | 1.40e-04 | 1.26e-02 ||    50.80 | 00h00'01  
+       3.50 |     4.25 |   181825 |     8463 |      501 | 2.70e-05 | 2.76e-03 ||    52.13 | 00h00'06  
+       3.75 |     4.50 |   914317 |     8448 |      500 | 5.36e-06 | 5.47e-04 ||    52.25 | 00h00'30  
+# End of the simulation.
