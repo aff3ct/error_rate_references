@@ -1,0 +1,88 @@
+Run command:
+./bin/aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA" --dec-h-path "../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist" --dec-type "BP_PEELING" --dec-implem "STD" --chn-type "BEC" --mdm-type "OOK" --sim-pyber "LDPC (3000,2400) Peeling 50 ite. PureIRA" --dec-ite "50" --dec-synd-depth "1"
+Curve name:
+LDPC (3000,2400) Peeling 50 ite. PureIRA
+Trace:
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-05-16 15:43:14
+#    ** Git version               = v1.3.2-490-g48bc94a
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 0.13 -> 0.5 dB
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 8 thread(s)
+#    ** NOISE type (E)            = EP
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.8 (4/5)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Info. bits (K_info)       = 2400
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 2400
+#    ** Codeword size (N_cw)      = 3000
+#    ** Frame size (N)            = 3000
+#    ** Code rate                 = 0.8 (4/5)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_IRA
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_PEELING
+#    ** Implementation            = STD
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 50
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = OOK
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = BEC
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute Mutual Info       = no
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# -----------------------------------------------------------------||---------------------
+#          Bit Error Rate (BER) and Frame Error Rate (FER)         ||  Global throughput
+#             depending on the Erasure Probability (EP)            ||  and elapsed time
+# -----------------------------------------------------------------||---------------------
+# ----------|----------|----------|----------|----------|----------||----------|----------
+#        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------|----------|----------|----------|----------||----------|----------
+     0.5000 |      107 |   128699 |      107 | 5.01e-01 | 1.00e+00 ||     0.54 | 00h00'00
+     0.4000 |      105 |   100609 |      105 | 3.99e-01 | 1.00e+00 ||     5.48 | 00h00'00
+     0.3000 |      104 |    74039 |      104 | 2.97e-01 | 1.00e+00 ||     6.32 | 00h00'00
+     0.2000 |      105 |    43580 |      105 | 1.73e-01 | 1.00e+00 ||     4.83 | 00h00'00
+     0.1900 |      107 |    40991 |      107 | 1.60e-01 | 1.00e+00 ||     5.03 | 00h00'00
+     0.1800 |      107 |    34822 |      107 | 1.36e-01 | 1.00e+00 ||     7.09 | 00h00'00
+     0.1700 |      128 |    29799 |      106 | 9.70e-02 | 8.28e-01 ||     5.92 | 00h00'00
+     0.1600 |      232 |    25597 |      103 | 4.60e-02 | 4.44e-01 ||     8.25 | 00h00'00
+     0.1500 |     1570 |    22190 |      100 | 5.89e-03 | 6.37e-02 ||     9.01 | 00h00'00
+     0.1400 |    65002 |    20570 |      100 | 1.32e-04 | 1.54e-03 ||    10.13 | 00h00'15
+     0.1300 | 14418723 |    20010 |      100 | 5.78e-07 | 6.94e-06 ||     9.77 | 00h59'00
+# End of the simulation.
