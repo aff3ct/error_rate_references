@@ -1,0 +1,87 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "RS" -N "63" -K "59" -T "2" -R "0.0001,0.0005,0.001,0.005,0.01,0.05:0.05:0.25" -e "1000" -E "EP" --src-implem "FAST" --mdm-type "OOK" --chn-type "BEC" --chn-implem "FAST" --sim-pyber "RS (63,59,2)" 
+Curve name:
+RS (63,59,2)
+Trace:
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                   = BFER
+#    ** Type of bits           = int32
+#    ** Type of reals          = float32
+#    ** Date (UTC)             = 2018-07-31 14:06:16
+#    ** Git version            = v1.3.2-837-ga167806
+#    ** Code type (C)          = RS
+#    ** Noise range            = 0.0001 -> 0.25 dB
+#    ** Noise type (E)         = EP
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Multi-threading (t)    = 8 thread(s)
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.936508 (59/63)
+#    ** Inter frame level      = 1
+# * Source ----------------------------------------
+#    ** Type                   = RAND
+#    ** Implementation         = FAST
+#    ** Info. bits (K_info)    = 354
+# * Codec -----------------------------------------
+#    ** Type                   = RS
+#    ** Info. bits (K)         = 354
+#    ** Codeword size (N_cw)   = 378
+#    ** Frame size (N)         = 378
+#    ** Code rate              = 0.936508 (59/63)
+#    ** Symbols Source size    = 59
+#    ** Symbols Codeword size  = 63
+# * Encoder ---------------------------------------
+#    ** Type                   = RS
+#    ** Systematic             = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)               = ALGEBRAIC
+#    ** Implementation         = STD
+#    ** Systematic             = yes
+#    ** Galois field order (m) = 6
+#    ** Correction power (T)   = 2
+# * Modem -----------------------------------------
+#    ** Type                   = OOK
+#    ** Implementation         = STD
+#    ** Bits per symbol        = 1
+#    ** Sampling factor        = 1
+#    ** Sigma square           = on
+# * Channel ---------------------------------------
+#    ** Type                   = BEC
+#    ** Implementation         = FAST
+#    ** Complex                = off
+#    ** Add users              = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)  = 1000
+#    ** Compute mutual info    = no
+# * Terminal --------------------------------------
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 500
+# 
+# The simulation is running...
+# -----------------||------------------------------------------------------||---------------------
+# Event Probability||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput  
+#       (EP)       ||                                                      ||  and elapsed time   
+# -----------------||------------------------------------------------------||---------------------
+# -----------------||----------|----------|----------|----------|----------||----------|----------
+#               EP ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#                  ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# -----------------||----------|----------|----------|----------|----------||----------|----------
+            0.2500 ||     1002 |    46323 |     1002 | 1.31e-01 | 1.00e+00 ||    8.569 | 00h00'00   
+            0.2000 ||     1006 |    37366 |     1006 | 1.05e-01 | 1.00e+00 ||  183.759 | 00h00'00   
+            0.1500 ||     1006 |    29261 |     1006 | 8.22e-02 | 1.00e+00 ||  203.383 | 00h00'00   
+            0.1000 ||     1009 |    20322 |     1009 | 5.69e-02 | 1.00e+00 ||  224.928 | 00h00'00   
+            0.0500 ||     1012 |    11687 |     1011 | 3.26e-02 | 9.99e-01 ||  241.082 | 00h00'00   
+            0.0100 ||     3597 |     5786 |     1003 | 4.54e-03 | 2.79e-01 ||  276.512 | 00h00'00   
+            0.0050 ||    14691 |     5568 |     1002 | 1.07e-03 | 6.82e-02 ||  296.433 | 00h00'00   
+            0.0010 ||  1088070 |     5332 |     1000 | 1.38e-05 | 9.19e-04 ||  358.828 | 00h00'01   
+            0.0005 ||  7874754 |     5505 |     1000 | 1.97e-06 | 1.27e-04 ||  349.102 | 00h00'07   
+            0.0001 || 1.10e+08 |      587 |      117 | 1.51e-08 | 1.06e-06 ||  368.490 | 00h01'45  x
+# End of the simulation.
