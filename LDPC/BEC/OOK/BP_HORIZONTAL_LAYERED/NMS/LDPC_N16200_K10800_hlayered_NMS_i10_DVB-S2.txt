@@ -1,0 +1,103 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" -i "10" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BEC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.3" -E "EP" --sim-pyber "LDPC (16200,10800) NMS 10 ite. DVB-S2"
+Curve name:
+LDPC (16200,10800) NMS 10 ite. DVB-S2
+Trace:
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-05-17 14:26:12
+#    ** Git version               = v1.3.2-470-gf8de061
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 0.26 -> 0.5 dB
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 4 thread(s)
+#    ** NOISE type (E)            = EP
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.666667 (2/3)
+#    ** Inter frame level         = 8
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Info. bits (K_info)       = 10800
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 10800
+#    ** Codeword size (N_cw)      = 16200
+#    ** Frame size (N)            = 16200
+#    ** Code rate                 = 0.666667 (2/3)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_DVBS2
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_HORIZONTAL_LAYERED
+#    ** Implementation            = NMS
+#    ** Systematic                = yes
+#    ** SIMD strategy             = INTER
+#    ** Num. of iterations (i)    = 10
+#    ** Normalize factor          = 0.825000
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = OOK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = BEC
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute Mutual Info       = no
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# -----------------------------------------------------------------||---------------------
+#          Bit Error Rate (BER) and Frame Error Rate (FER)         ||  Global throughput
+#             depending on the Erasure Probability (EP)            ||  and elapsed time
+# -----------------------------------------------------------------||---------------------
+# ----------|----------|----------|----------|----------|----------||----------|----------
+#        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------|----------|----------|----------|----------||----------|----------
+     0.5000 |      160 |   426600 |      160 | 2.47e-01 | 1.00e+00 ||     7.98 | 00h00'00
+     0.4500 |      160 |   380120 |      160 | 2.20e-01 | 1.00e+00 ||    29.44 | 00h00'00
+     0.4000 |      160 |   326220 |      160 | 1.89e-01 | 1.00e+00 ||    22.52 | 00h00'00
+     0.3500 |      160 |   256921 |      160 | 1.49e-01 | 1.00e+00 ||    26.10 | 00h00'00
+     0.3000 |      160 |    89197 |      160 | 5.16e-02 | 1.00e+00 ||    23.14 | 00h00'00
+     0.2980 |      160 |    73914 |      160 | 4.28e-02 | 1.00e+00 ||    24.54 | 00h00'00
+     0.2960 |      160 |    62386 |      160 | 3.61e-02 | 1.00e+00 ||    26.18 | 00h00'00
+     0.2940 |      160 |    54023 |      160 | 3.13e-02 | 1.00e+00 ||    27.17 | 00h00'00
+     0.2920 |      160 |    41693 |      160 | 2.41e-02 | 1.00e+00 ||    22.32 | 00h00'00
+     0.2900 |      160 |    29534 |      160 | 1.71e-02 | 1.00e+00 ||    23.25 | 00h00'00
+     0.2880 |      160 |    16295 |      156 | 9.43e-03 | 9.75e-01 ||    27.58 | 00h00'00
+     0.2860 |      168 |    13838 |      162 | 7.63e-03 | 9.64e-01 ||    26.77 | 00h00'00
+     0.2840 |      176 |     6049 |      145 | 3.18e-03 | 8.24e-01 ||    24.87 | 00h00'00
+     0.2820 |      200 |     3847 |      142 | 1.78e-03 | 7.10e-01 ||    27.23 | 00h00'00
+     0.2800 |      296 |     1880 |      120 | 5.88e-04 | 4.05e-01 ||    26.86 | 00h00'00
+     0.2780 |      352 |      778 |      119 | 2.05e-04 | 3.38e-01 ||    25.34 | 00h00'00
+     0.2760 |      568 |      420 |      107 | 6.85e-05 | 1.88e-01 ||    29.62 | 00h00'00
+     0.2740 |     1120 |      284 |      102 | 2.35e-05 | 9.11e-02 ||    30.31 | 00h00'00
+     0.2720 |     2632 |      172 |      103 | 6.05e-06 | 3.91e-02 ||    30.49 | 00h00'00
+     0.2700 |     7928 |      254 |      102 | 2.97e-06 | 1.29e-02 ||    30.59 | 00h00'02
+     0.2680 |    19240 |      168 |      100 | 8.09e-07 | 5.20e-03 ||    29.57 | 00h00'07
+     0.2660 |    37984 |      144 |      100 | 3.51e-07 | 2.63e-03 ||    30.42 | 00h00'13
+     0.2640 |    78752 |       55 |       48 | 6.47e-08 | 6.10e-04 ||    33.79 | 00h00'25 x
+     0.2620 |   158592 |       54 |       48 | 3.15e-08 | 3.03e-04 ||    36.46 | 00h00'46 x
+     0.2600 |    67432 |       15 |       15 | 2.06e-08 | 2.22e-04 ||    36.76 | 00h00'19 x
+# End of the simulation.
