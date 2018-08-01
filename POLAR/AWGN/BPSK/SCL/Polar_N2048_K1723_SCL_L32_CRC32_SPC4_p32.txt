@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0.0" -M "4.51" -s "0.25" -e "100" --enc-fb-gen-method "GA" -K "1755" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SCL" --dec-simd "INTRA" --crc-type "32-GZIP" --crc-implem "FAST" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}" -L "32" --sim-pyber "Polar (2048,1723) SCL L=32 CRC 32-bit SPC4 32-bit"
-Curve name:
-Polar (2048,1723) SCL L=32 CRC 32-bit SPC4 32-bit
-Trace:
+[metadata]
+command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0.0" -M "4.51" -s "0.25" -e "100" --enc-fb-gen-method "GA" -K "1755" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SCL" --dec-simd "INTRA" --crc-type "32-GZIP" --crc-implem "FAST" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}" -L "32"
+title=Polar (2048,1723) SCL L=32 CRC 32-bit SPC4 32-bit
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

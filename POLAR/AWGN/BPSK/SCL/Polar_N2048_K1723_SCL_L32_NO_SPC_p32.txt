@@ -1,7 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -K "1723" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "SCL" --dec-simd "INTRA" -L "32" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}" --sim-pyber "Polar (2048,1723) SCL L=32"
-Curve name:
-Polar (2048,1723) SCL L=32
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -K "1723" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "SCL" --dec-simd "INTRA" -L "32" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}"
+title=Polar (2048,1723) SCL L=32
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

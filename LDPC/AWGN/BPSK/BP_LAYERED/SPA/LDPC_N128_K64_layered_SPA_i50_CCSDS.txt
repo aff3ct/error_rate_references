@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 64 -N 128 -m 0.00 -M 5.51 -s 0.5 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 50 --dec-h-path ../conf/dec/LDPC/CCSDS_64_128.alist --sim-pyber "LDPC (128,64) SPA 50 ite. CCSDS"
-Curve name:
-LDPC (128,64) SPA 50 ite. CCSDS
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 64 -N 128 -m 0.00 -M 5.51 -s 0.5 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 50 --dec-h-path ../conf/dec/LDPC/CCSDS_64_128.alist
+title=LDPC (128,64) SPA 50 ite. CCSDS
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

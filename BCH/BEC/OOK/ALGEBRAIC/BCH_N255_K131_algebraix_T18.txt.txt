@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct -C "BCH" -N "255" -T "18" -R "0.2:0.05:0.4,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --mdm-type "OOK" --sim-pyber "BCH (255,131,18)"
-Curve name:
-BCH (255,131,18)
-Trace:
+[metadata]
+command=./bin/aff3ct -C "BCH" -N "255" -T "18" -R "0.2:0.05:0.4,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --mdm-type "OOK"
+title=BCH (255,131,18)
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

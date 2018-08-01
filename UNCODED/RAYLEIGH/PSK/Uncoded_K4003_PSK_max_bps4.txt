@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "64" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PSK" --mnt-max-fe "1000" --mdm-bps "4" --sim-pyber "Uncoded K=4003 16-PSK"
-Curve name:
-Uncoded K=4003 16-PSK
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "64" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PSK" --mnt-max-fe "1000" --mdm-bps "4"
+title=Uncoded K=4003 16-PSK
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

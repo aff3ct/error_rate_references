@@ -1,7 +1,8 @@
-Run command:
-./bin/aff3ct -C "TURBO_PROD" -K "113" -N "127" --enc-ext -m "2.8" -M "3.6" -s "0.1" -T "2" --dec-ite "8" --dec-alpha "0.5,0.5,1,1,1,1,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2" --dec-c "0" --dec-t "0" --dec-p "4" --sim-pyber "Turbo Prod BCH(128,113,2) 8it p4" --dec-cp-coef "0,0.25,0,0,3" --src-type "RAND" --src-implem "FAST" --chn-implem "FAST"
-Curve name:
-Turbo Prod BCH(128,113,2) 8it p4
+[metadata]
+command=./bin/aff3ct -C "TURBO_PROD" -K "113" -N "127" --enc-ext -m "2.8" -M "3.6" -s "0.1" -T "2" --dec-ite "8" --dec-alpha "0.5,0.5,1,1,1,1,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2" --dec-c "0" --dec-t "0" --dec-p "4" --dec-cp-coef "0,0.25,0,0,3" --src-type "RAND" --src-implem "FAST" --chn-implem "FAST"
+title=Turbo Prod BCH(128,113,2) 8 ite. p4
+
+[trace]
 # -------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
 # -------------------------------------------------

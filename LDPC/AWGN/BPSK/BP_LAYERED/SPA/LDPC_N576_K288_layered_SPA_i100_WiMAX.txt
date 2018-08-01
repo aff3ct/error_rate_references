@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 288 -N 576 -m 0.00 -M 3.51 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/WIMAX_288_576.alist --sim-pyber "LDPC (576,288) SPA 100 ite. WiMAX"
-Curve name:
-LDPC (576,288) SPA 100 ite. WiMAX
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 288 -N 576 -m 0.00 -M 3.51 -s 0.25 -e 100 --dec-type BP_LAYERED --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/WIMAX_288_576.alist
+title=LDPC (576,288) SPA 100 ite. WiMAX
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

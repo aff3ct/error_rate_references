@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type BFER -C LDPC -m 0.0 -M 8.51 -s 0.25 -K 504 -N 1008 --dec-h-path ../conf/dec/LDPC/LDPC_504_1008.alist --dec-type BP_FLOODING --dec-implem GALA -i 200 --sim-pyber "LDPC (1008,504) Gallager A 200 ite."
-Curve name:
-LDPC (1008,504) Gallager A 200 ite.
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type BFER -C LDPC -m 0.0 -M 8.51 -s 0.25 -K 504 -N 1008 --dec-h-path ../conf/dec/LDPC/LDPC_504_1008.alist --dec-type BP_FLOODING --dec-implem GALA -i 200
+title=LDPC (1008,504) Gallager A 200 ite.
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "1880" -m "0.0" -M "4.6" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --sim-pyber "Turbo DB (1880,1504) BCJR 8 ite. REF DVB-RCS2"
-Curve name:
-Turbo DB (1880,1504) BCJR 8 ite. REF DVB-RCS2
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "1880" -m "0.0" -M "4.6" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE"
+title=Turbo DB (1880,1504) BCJR 8 ite. REF DVB-RCS2
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

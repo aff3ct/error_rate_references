@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA" --dec-h-path "../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist" --dec-type "BP_PEELING" --dec-implem "STD" --chn-type "BEC" --mdm-type "OOK" --sim-pyber "LDPC (3000,2400) Peeling 50 ite. PureIRA" --dec-ite "50" --dec-synd-depth "1"
-Curve name:
-LDPC (3000,2400) Peeling 50 ite. PureIRA
-Trace:
+[metadata]
+command=./bin/aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA" --dec-h-path "../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist" --dec-type "BP_PEELING" --dec-implem "STD" --chn-type "BEC" --mdm-type "OOK" --dec-ite "50" --dec-synd-depth "1"
+title=LDPC (3000,2400) Peeling 50 ite. PureIRA
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
