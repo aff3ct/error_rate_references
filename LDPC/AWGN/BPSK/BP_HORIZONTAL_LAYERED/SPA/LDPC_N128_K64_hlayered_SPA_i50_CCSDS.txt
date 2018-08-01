@@ -1,0 +1,90 @@
+[metadata]
+command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 64 -N 128 -m 0.00 -M 5.51 -s 0.5 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 50 --dec-h-path ../conf/dec/LDPC/CCSDS_64_128.alist
+title=LDPC (128,64) SPA 50 ite. CCSDS
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-05-17 14:18:55
+#    ** Git version               = v1.3.2-470-gf8de061
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 0 -> 5.5 dB
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 4 thread(s)
+#    ** NOISE type (E)            = EBN0
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.5 (1/2)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = AZCW
+#    ** Info. bits (K_info)       = 64
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 64
+#    ** Codeword size (N_cw)      = 128
+#    ** Frame size (N)            = 128
+#    ** Code rate                 = 0.5 (1/2)
+# * Encoder ---------------------------------------
+#    ** Type                      = AZCW
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_HORIZONTAL_LAYERED
+#    ** Implementation            = SPA
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/CCSDS_64_128.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 50
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute Mutual Info       = no
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ----------------------------------------------------------------------||--------------------------------||---------------------
+#       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput
+#                    on the Signal Noise Ratio (SNR)                    ||      latency (per thread)      ||  and elapsed time
+# ----------------------------------------------------------------------||--------------------------------||---------------------
+# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+#  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
+#   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
+# -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+   -3.01 |  0.00 |      167 |     1574 |      163 | 1.47e-01 | 9.76e-01 ||     0.00 |     0.00 | 68991.11 ||     0.05 | 00h00'00
+   -2.51 |  0.50 |      171 |     1396 |      161 | 1.28e-01 | 9.42e-01 ||     0.00 |     0.00 | 71360.20 ||     0.05 | 00h00'00
+   -2.01 |  1.00 |      196 |     1216 |      152 | 9.69e-02 | 7.76e-01 ||     0.00 |     0.00 | 52560.59 ||     0.06 | 00h00'00
+   -1.51 |  1.50 |      270 |     1145 |      150 | 6.63e-02 | 5.56e-01 ||     0.00 |     0.00 | 38269.62 ||     0.10 | 00h00'00
+   -1.01 |  2.00 |      399 |      912 |      133 | 3.57e-02 | 3.33e-01 ||     0.00 |     0.00 | 50043.16 ||     0.10 | 00h00'00
+   -0.51 |  2.50 |      859 |      848 |      121 | 1.54e-02 | 1.41e-01 ||     0.00 |     0.00 | 40144.05 ||     0.15 | 00h00'00
+   -0.01 |  3.00 |     2137 |      728 |      106 | 5.32e-03 | 4.96e-02 ||     0.00 |     0.00 | 31495.61 ||     0.22 | 00h00'01
+    0.49 |  3.50 |     9799 |      684 |      101 | 1.09e-03 | 1.03e-02 ||     0.01 |     0.00 | 14946.17 ||     0.50 | 00h00'02
+    0.99 |  4.00 |    65735 |      773 |      100 | 1.84e-04 | 1.52e-03 ||     0.01 |     0.01 | 10873.05 ||     0.74 | 00h00'11
+    1.49 |  4.50 |   482314 |      693 |      100 | 2.25e-05 | 2.07e-04 ||     0.01 |     0.01 | 10006.28 ||     0.81 | 00h01'15
+    1.99 |  5.00 |  5648655 |      683 |      100 | 1.89e-06 | 1.77e-05 ||     0.01 |     0.01 |  9257.68 ||     0.88 | 00h13'41
+    2.49 |  5.50 | 89085120 |      534 |      100 | 9.37e-08 | 1.12e-06 ||     0.02 |     0.01 |  8478.02 ||     0.96 | 03h17'42
+# End of the simulation.

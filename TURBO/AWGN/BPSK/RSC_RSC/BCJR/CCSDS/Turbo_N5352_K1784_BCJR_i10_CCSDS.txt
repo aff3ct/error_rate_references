@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C TURBO -K 1784 -m 0.0 -M 0.91 --enc-sub-std CCSDS -i 10 --dec-sub-max MAXS --sim-pyber "Turbo (5368,1784) BCJR 10 ite. CCSDS"
+command=./bin/aff3ct -C TURBO -K 1784 -m 0.0 -M 0.91 --enc-sub-std CCSDS -i 10 --dec-sub-max MAXS
 title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 
 [trace]
