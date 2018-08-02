@@ -1,0 +1,89 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --enc-type "LDPC_H" -m "1.00" -M "1.70" -s "0.1" --dec-implem "SPA" --dec-h-path "../conf/dec/LDPC/MACKAY_4000_8000.alist" -e "100" -i "2000" --dec-type "BP_VERTICAL_LAYERED" --sim-pyber "LDPC (8000,4000) SPA 2000 ite. MacKay"
+Curve name:
+LDPC (8000,4000) SPA 2000 ite. MacKay
+Trace:
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-07-06 13:00:26
+#    ** Git version               = v1.3.2-718-ga0aee591
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 1 -> 1.7 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 72 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.5 (1/2)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = STD
+#    ** Info. bits (K_info)       = 4000
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 4000
+#    ** Codeword size (N_cw)      = 8000
+#    ** Frame size (N)            = 8000
+#    ** Code rate                 = 0.5 (1/2)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_H
+#    ** Systematic                = yes
+#    ** H matrix path             =
+#    ** H matrix reordering       = NONE
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_VERTICAL_LAYERED
+#    ** Implementation            = SPA
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/MACKAY_4000_8000.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 2000
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ----------------------------------------------------------------------------||---------------------
+#               Bit Error Rate (BER) and Frame Error Rate (FER)               ||  Global throughput
+#                  depending on the Signal Noise Ratio (SNR)                  ||  and elapsed time
+# ----------------------------------------------------------------------------||---------------------
+# ----------|----------|----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------|----------|----------|----------|----------|----------||----------|----------
+      -2.01 |     1.00 |      199 |    48191 |      167 | 6.05e-02 | 8.39e-01 ||     0.01 | 00h02'07
+      -1.91 |     1.10 |      324 |    42895 |      164 | 3.31e-02 | 5.06e-01 ||     0.01 | 00h01'34
+      -1.81 |     1.20 |      593 |    38547 |      156 | 1.63e-02 | 2.63e-01 ||     0.02 | 00h01'35
+      -1.71 |     1.30 |     1786 |    39197 |      159 | 5.49e-03 | 8.90e-02 ||     0.07 | 00h01'38
+      -1.61 |     1.40 |    10165 |    36255 |      148 | 8.92e-04 | 1.46e-02 ||     0.35 | 00h01'56
+      -1.51 |     1.50 |    73857 |    26940 |      114 | 9.12e-05 | 1.54e-03 ||     1.14 | 00h04'18
+      -1.41 |     1.60 |   770185 |    23815 |      101 | 7.73e-06 | 1.31e-04 ||     1.82 | 00h28'11
+      -1.31 |     1.70 | 20043464 |    23858 |      100 | 2.98e-07 | 4.99e-06 ||     1.44 | 15h28'01
+# End of the simulation
