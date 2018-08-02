@@ -1,5 +1,5 @@
 Run command:
-./bin/aff3ct --sim-type "BFER" -C "LDPC" --enc-type "LDPC_H" -m "1.00" -M "1.80" -s "0.1" --dec-implem "SPA" --dec-h-path "../conf/dec/LDPC/MACKAY_4000_8000.alist" -e "100" -i "20" --dec-type "BP_HORIZONTAL_LAYERED" --dec-simd "INTER" -t "32" --sim-pyber "LDPC (8000,4000) SPA 20 ite. MacKay"
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --enc-type "LDPC_H" -m "1.00" -M "1.80" -s "0.1" --dec-implem "SPA" --dec-h-path "../conf/dec/LDPC/MACKAY_4000_8000.alist" -e "100" -i "20" --dec-type "BP_HORIZONTAL_LAYERED" -t "32" --sim-pyber "LDPC (8000,4000) SPA 20 ite. MacKay"
 Curve name:
 LDPC (8000,4000) SPA 20 ite. MacKay
 Trace:
