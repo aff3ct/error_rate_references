@@ -1,0 +1,95 @@
+Run command:
+./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "AZCW" -K "288" -N "576" -E "EP" -R "0.45:-0.05:0.1,0.01:0.01:0.1" -e "100" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" -i "100" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-norm "0.825" --sim-pyber "LDPC (576,288) NMS 100 ite. WiMAX" --chn-type "BSC" --mdm-type "OOK" --dec-simd "INTER"
+Curve name:
+LDPC (576,288) NMS 100 ite. WiMAX
+Trace:
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-05-17 14:11:21
+#    ** Git version               = v1.3.2-470-gf8de061
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 0.03 -> 0.45 dB
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 4 thread(s)
+#    ** NOISE type (E)            = EP
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.5 (1/2)
+#    ** Inter frame level         = 8
+# * Source ----------------------------------------
+#    ** Type                      = AZCW
+#    ** Info. bits (K_info)       = 288
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 288
+#    ** Codeword size (N_cw)      = 576
+#    ** Frame size (N)            = 576
+#    ** Code rate                 = 0.5 (1/2)
+# * Encoder ---------------------------------------
+#    ** Type                      = AZCW
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_HORIZONTAL_LAYERED
+#    ** Implementation            = NMS
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/WIMAX_288_576.alist
+#    ** H matrix reordering       = NONE
+#    ** SIMD strategy             = INTER
+#    ** Num. of iterations (i)    = 100
+#    ** Normalize factor          = 0.825000
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = OOK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = BSC
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute Mutual Info       = no
+# * Terminal --------------------------------------
+#    ** Type                      = STD
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# -----------------------------------------------------------------||---------------------
+#          Bit Error Rate (BER) and Frame Error Rate (FER)         ||  Global throughput
+#             depending on the Erasure Probability (EP)            ||  and elapsed time
+# -----------------------------------------------------------------||---------------------
+# ----------|----------|----------|----------|----------|----------||----------|----------
+#        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------|----------|----------|----------|----------||----------|----------
+     0.4500 |      136 |    18206 |      136 | 4.65e-01 | 1.00e+00 ||     0.24 | 00h00'00
+     0.4000 |      152 |    18495 |      152 | 4.22e-01 | 1.00e+00 ||     2.63 | 00h00'00
+     0.3500 |      152 |    16906 |      152 | 3.86e-01 | 1.00e+00 ||     2.53 | 00h00'00
+     0.3000 |      152 |    15021 |      152 | 3.43e-01 | 1.00e+00 ||     2.54 | 00h00'00
+     0.2500 |      152 |    13380 |      152 | 3.06e-01 | 1.00e+00 ||     2.49 | 00h00'00
+     0.2000 |      152 |    11025 |      152 | 2.52e-01 | 1.00e+00 ||     2.35 | 00h00'00
+     0.1500 |      152 |     8469 |      152 | 1.93e-01 | 1.00e+00 ||     2.65 | 00h00'00
+     0.1000 |      176 |     4481 |      145 | 8.84e-02 | 8.24e-01 ||     3.06 | 00h00'00
+     0.0900 |      232 |     3287 |      126 | 4.92e-02 | 5.43e-01 ||     3.62 | 00h00'00
+     0.0800 |      424 |     2755 |      119 | 2.26e-02 | 2.81e-01 ||     4.21 | 00h00'00
+     0.0700 |     1608 |     1994 |      107 | 4.31e-03 | 6.65e-02 ||     8.41 | 00h00'00
+     0.0600 |     8496 |     1393 |      102 | 5.69e-04 | 1.20e-02 ||    20.62 | 00h00'00
+     0.0500 |    94104 |     1147 |      101 | 4.23e-05 | 1.07e-03 ||    46.56 | 00h00'00
+     0.0400 |  1684616 |      667 |      100 | 1.37e-06 | 5.94e-05 ||    66.79 | 00h00'07
+     0.0300 | 24275992 |      586 |      100 | 8.38e-08 | 4.12e-06 ||    75.91 | 00h01'32
+# End of the simulation.
