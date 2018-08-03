@@ -1,12 +1,7 @@
 [metadata]
-command=
-title=
-ci=off
-
-[trace]
-[metadata]
 command=./bin/aff3ct -C "BCH" -N "255" -T "25" -R "0.2:0.05:0.4,0.04:0.02:0.2,0.03" -E "EP" --chn-type "BSC" --mdm-type "OOK"
 title=BCH (255,91,25)
+ci=on
 
 [trace]
 # ----------------------------------------------------
