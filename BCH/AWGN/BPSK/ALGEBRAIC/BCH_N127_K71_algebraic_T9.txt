@@ -1,9 +1,9 @@
-#CI IGNORE
-Run command:
-./bin/aff3ct --sim-type "BFER" -C "BCH" -N "127" -K "71" -T "9" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --sim-pyber "BCH (127,71,9)"
-Curve name:
-BCH (127,71,9)
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "127" -K "71" -T "9" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" 
+title=BCH (127,71,9)
+ci=off
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

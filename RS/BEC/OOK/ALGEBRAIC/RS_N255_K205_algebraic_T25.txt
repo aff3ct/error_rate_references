@@ -1,8 +1,9 @@
-Run command:
-./bin/aff3ct -C "RS" -N "255" -T "25" -R "0.2,0.25,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --chn-implem "FAST" --mdm-type "OOK" --sim-pyber "RS (255,205,25)"
-Curve name:
-RS (255,205,25)
-Trace:
+[metadata]
+command=./bin/aff3ct -C "RS" -N "255" -T "25" -R "0.2,0.25,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --chn-implem "FAST" --mdm-type "OOK" 
+title=RS (255,205,25)
+ci=off
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

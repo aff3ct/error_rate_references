@@ -1,8 +1,9 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" -C "RS" -N "511" -K "471" -T "20" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST" --sim-pyber "RS (511,471,20)" 
-Curve name:
-RS (511,471,20)
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "511" -K "471" -T "20" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST" 
+title=RS (511,471,20)
+ci=off
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
