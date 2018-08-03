@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct -C "LDPC" -K "14400" -N "16200" --enc-type "LDPC_DVBS2" -m "3.4" -M "4.6" --dec-simd "INTER" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "05" --sim-pyber "LDPC (16200,14400) NMS 5 ite. DVB-S2"
-Curve name:
-LDPC (16200,14400) NMS 5 ite. DVB-S2
-Trace:
+[metadata]
+command=./bin/aff3ct -C "LDPC" -K "14400" -N "16200" --enc-type "LDPC_DVBS2" -m "3.4" -M "4.6" --dec-simd "INTER" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "05"
+title=LDPC (16200,14400) NMS 5 ite. DVB-S2
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

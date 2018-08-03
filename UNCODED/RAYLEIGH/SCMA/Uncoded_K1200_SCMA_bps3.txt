@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" -F "6" --sim-pyber "Uncoded K=1200 8-SCMA"
-Curve name:
-Uncoded K=1200 8-SCMA
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" -F "6"
+title=Uncoded K=1200 8-SCMA
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
