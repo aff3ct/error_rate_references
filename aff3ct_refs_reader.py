@@ -35,7 +35,7 @@ class aff3ctRefsReader:
 	# the content of a file stocked in a list object with one line of the file per line of the table
 	# else raise a ValueError exception
 	def __init__(self, aff3ctOutput):
-		self.Metadata   = {'command': '', 'title': '', 'ci': 'on', 'filename' : '', 'url' : '', 'info' : ''}
+		self.Metadata   = {'command': '', 'title': ''}
 		self.SimuHeader = [] # simulation header
 		self.Legend     = [] # keys of BferLegendsList or MiLegendsList
 		self.NoiseType  = "" # key of NoiseLegendsList
@@ -56,6 +56,9 @@ class aff3ctRefsReader:
 			self.__reader0(aff3ctOutput)
 		elif traceVersion == 1:
 			self.__reader1(aff3ctOutput)
+
+	def legendKeyAvailable(self, key):
+		return key in self.Trace and len(self.Trace[key]) != 0
 
 	def getMetadataAsString(self):
 		header = "[metadata]\n"
