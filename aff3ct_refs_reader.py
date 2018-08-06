@@ -57,6 +57,24 @@ class aff3ctRefsReader:
 		elif traceVersion == 1:
 			self.__reader1(aff3ctOutput)
 
+	def getNoise(self):
+		return self.getTrace(self.NoiseType)
+
+	def getTrace(self, key):
+		if self.legendKeyAvailable(key):
+			return self.Trace[key]
+		else:
+			return []
+
+	def getMetadata(self, key):
+		if key in self.Metadata:
+			return self.Metadata[key]
+		else:
+			return ""
+
+	def getNoiseType(self):
+		return self.NoiseType
+
 	def legendKeyAvailable(self, key):
 		return key in self.Trace and len(self.Trace[key]) != 0
 
@@ -122,17 +140,17 @@ class aff3ctRefsReader:
 
 		self.Legend = line
 
+		# find the type of noise used in this simulation
+		for n in self.NoiseLegendsList:
+			if n in self.Legend:
+				self.NoiseType = n
+				break
+
 	def __findLine(self, stringArray, string):
 		for i in range(len(stringArray)):
 			if string in stringArray[i]:
 				return i
 
-		return -1
-
-	def __getLegendIdx(self, colName):
-		for i in range(len(self.Legend)):
-			if self.Legend[i] == colName:
-				return i
 		return -1
 
 	def __getVal(self, line):
@@ -227,15 +245,6 @@ class aff3ctRefsReader:
 		for i in range(len(self.Legend)):
 			self.Trace[self.Legend[i]] = allTrace[i]
 
-
-		# find the type of noise used in this simulation
-		idx = -1
-		for n in self.NoiseLegendsList:
-			idx = self.__getLegendIdx(self.NoiseLegendsList[n])
-			if idx != -1:
-				self.NoiseType = n
-				break
-
 	def __reader0(self, aff3ctOutput):
 		startMeta  = False;
 		startTrace = False;
@@ -292,12 +301,3 @@ class aff3ctRefsReader:
 		# fill trace
 		for i in range(len(self.Legend)):
 			self.Trace[self.Legend[i]] = allTrace[i]
-
-
-		# find the type of noise used in this simulation
-		idx = -1
-		for n in self.NoiseLegendsList:
-			idx = self.__getLegendIdx(self.NoiseLegendsList[n])
-			if idx != -1:
-				self.NoiseType = n
-				break
