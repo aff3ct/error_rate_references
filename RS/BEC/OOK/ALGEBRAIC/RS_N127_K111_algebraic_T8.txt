@@ -1,0 +1,85 @@
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "127" -K "111" -T "8" -R "0.0025,0.005,0.01,0.05:0.05:0.25" -e "1000" -E "EP" --src-implem "FAST" --mdm-type "OOK" --chn-type "BEC" --chn-implem "FAST"
+title=RS (127,111,8)
+ci=on
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                   = BFER
+#    ** Type of bits           = int32
+#    ** Type of reals          = float32
+#    ** Date (UTC)             = 2018-07-31 14:29:17
+#    ** Git version            = v1.3.2-837-ga167806
+#    ** Code type (C)          = RS
+#    ** Noise range            = 0.00025 -> 0.25 dB
+#    ** Noise type (E)         = EP
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Multi-threading (t)    = 8 thread(s)
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.874016 (111/127)
+#    ** Inter frame level      = 1
+# * Source ----------------------------------------
+#    ** Type                   = RAND
+#    ** Implementation         = FAST
+#    ** Info. bits (K_info)    = 777
+# * Codec -----------------------------------------
+#    ** Type                   = RS
+#    ** Info. bits (K)         = 777
+#    ** Codeword size (N_cw)   = 889
+#    ** Frame size (N)         = 889
+#    ** Code rate              = 0.874016 (111/127)
+#    ** Symbols Source size    = 111
+#    ** Symbols Codeword size  = 127
+# * Encoder ---------------------------------------
+#    ** Type                   = RS
+#    ** Systematic             = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)               = ALGEBRAIC
+#    ** Implementation         = STD
+#    ** Systematic             = yes
+#    ** Galois field order (m) = 7
+#    ** Correction power (T)   = 8
+# * Modem -----------------------------------------
+#    ** Type                   = OOK
+#    ** Implementation         = STD
+#    ** Bits per symbol        = 1
+#    ** Sampling factor        = 1
+#    ** Sigma square           = on
+# * Channel ---------------------------------------
+#    ** Type                   = BEC
+#    ** Implementation         = FAST
+#    ** Complex                = off
+#    ** Add users              = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)  = 1000
+#    ** Compute mutual info    = no
+# * Terminal --------------------------------------
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 500
+#
+# The simulation is running...
+# -----------------||------------------------------------------------------||---------------------
+# Event Probability||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#       (EP)       ||                                                      ||  and elapsed time
+# -----------------||------------------------------------------------------||---------------------
+# -----------------||----------|----------|----------|----------|----------||----------|----------
+#               EP ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#                  ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# -----------------||----------|----------|----------|----------|----------||----------|----------
+            0.2500 ||     1004 |    97595 |     1004 | 1.25e-01 | 1.00e+00 ||   11.377 | 00h00'00
+            0.2000 ||     1007 |    77940 |     1007 | 9.96e-02 | 1.00e+00 ||   95.969 | 00h00'00
+            0.1500 ||     1006 |    58938 |     1006 | 7.54e-02 | 1.00e+00 ||  120.683 | 00h00'00
+            0.1000 ||     1007 |    39203 |     1007 | 5.01e-02 | 1.00e+00 ||  118.175 | 00h00'00
+            0.0500 ||     1007 |    19738 |     1006 | 2.52e-02 | 9.99e-01 ||  129.243 | 00h00'00
+            0.0100 ||    31506 |     8942 |     1052 | 3.65e-04 | 3.34e-02 ||  175.000 | 00h00'00
+            0.0050 ||  2467106 |     8184 |     1000 | 4.27e-06 | 4.05e-04 ||  226.514 | 00h00'08
+            0.0025 || 45740146 |      804 |      100 | 2.26e-08 | 2.19e-06 ||  236.738 | 00h02'30
