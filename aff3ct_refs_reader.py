@@ -35,7 +35,7 @@ class aff3ctRefsReader:
 	# the content of a file stocked in a list object with one line of the file per line of the table
 	# else raise a ValueError exception
 	def __init__(self, aff3ctOutput):
-		self.Metadata   = {'command': '', 'title': '', 'ci': 'on', 'filename' : ''}
+		self.Metadata   = {'command': '', 'title': '', 'ci': 'on', 'filename' : '', 'url' : '', 'info' : ''}
 		self.SimuHeader = [] # simulation header
 		self.Legend     = [] # keys of BferLegendsList or MiLegendsList
 		self.NoiseType  = "" # key of NoiseLegendsList
@@ -50,11 +50,12 @@ class aff3ctRefsReader:
 		else:
 			raise ValueError("Input is neither a str nor a list object")
 
-		try:
-			self.__readerNew(aff3ctOutput)
-		except RuntimeError():
-			self.__readerOld(aff3ctOutput)
 
+		traceVersion = self.__detectTraceVersion(aff3ctOutput)
+		if traceVersion == 0:
+			self.__reader0(aff3ctOutput)
+		elif traceVersion == 1:
+			self.__reader1(aff3ctOutput)
 
 	def getMetadataAsString(self):
 		header = "[metadata]\n"
@@ -118,6 +119,13 @@ class aff3ctRefsReader:
 
 		self.Legend = line
 
+	def __findLine(self, stringArray, string):
+		for i in range(len(stringArray)):
+			if string in stringArray[i]:
+				return i
+
+		return -1
+
 	def __getLegendIdx(self, colName):
 		for i in range(len(self.Legend)):
 			if self.Legend[i] == colName:
@@ -146,7 +154,16 @@ class aff3ctRefsReader:
 
 		return valLine
 
-	def __readerNew(self, aff3ctOutput):
+	def __detectTraceVersion(self, aff3ctOutput):
+		if aff3ctOutput[0].startswith("[metadata]"):
+			return 1
+
+		if aff3ctOutput[0].startswith("Run command:"):
+			return 0
+
+		return 0
+
+	def __reader1(self, aff3ctOutput):
 		startMeta  = False;
 		startTrace = False;
 		allTrace   = []
@@ -157,9 +174,6 @@ class aff3ctRefsReader:
 				continue
 
 			if line.startswith("[trace]"):
-				if not startMeta:
-					raise RuntimeError("Not in the new trace version.")
-
 				startTrace = True;
 				startMeta = False;
 				continue
@@ -219,7 +233,7 @@ class aff3ctRefsReader:
 				self.NoiseType = n
 				break
 
-	def __readerOld(self, aff3ctOutput):
+	def __reader0(self, aff3ctOutput):
 		startMeta  = False;
 		startTrace = False;
 		allTrace   = []
@@ -262,14 +276,14 @@ class aff3ctRefsReader:
 
 
 		# get the command to reproduce this trace
-		idx = findLine(lines, "Run command:")
-		if idx != -1 and len(lines) >= idx +1:
-			self.Metadata['command'] = str(lines[idx +1].strip())
+		idx = self.__findLine(aff3ctOutput, "Run command:")
+		if idx != -1 and len(aff3ctOutput) >= idx +1:
+			self.Metadata['command'] = str(aff3ctOutput[idx +1].strip())
 
 		# get the curve name (if there is one)
-		idx = findLine(lines, "Curve name:")
-		if idx != -1 and len(lines) >= idx +1:
-			self.Metadata['title'] = str(lines[idx +1].strip())
+		idx = self.__findLine(aff3ctOutput, "Curve name:")
+		if idx != -1 and len(aff3ctOutput) >= idx +1:
+			self.Metadata['title'] = str(aff3ctOutput[idx +1].strip())
 
 
 		# fill trace
