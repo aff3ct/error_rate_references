@@ -1,8 +1,10 @@
-Run command:
-./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.41 -s 0.2 -e 100 --dec-type BP_FLOODING --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist --sim-pyber "LDPC (2048,1723) SPA 100 ite. eth. 10 Gbps"
-Curve name:
-LDPC (2048,1723) SPA 100 ite. eth. 10 Gbps
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.41 -s 0.2 -e 100 --dec-type BP_FLOODING --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
+title=LDPC (2048,1723) SPA 100 ite. eth. 10 Gbps
+doi=10.1109/GLOCOM.2009.5425510
+info=Figure 3
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

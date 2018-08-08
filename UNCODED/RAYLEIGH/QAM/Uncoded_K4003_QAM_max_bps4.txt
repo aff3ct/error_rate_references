@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type "RAYLEIGH" --mdm-type "QAM" --mnt-max-fe "1000" --mdm-bps "4" --sim-pyber "Uncoded K=4003 16-QAM"
-Curve name:
-Uncoded K=4003 16-QAM
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type "RAYLEIGH" --mdm-type "QAM" --mnt-max-fe "1000" --mdm-bps "4"
+title=Uncoded K=4003 16-QAM
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

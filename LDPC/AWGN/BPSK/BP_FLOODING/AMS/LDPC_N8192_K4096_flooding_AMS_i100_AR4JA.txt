@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -R "0:0.1:1.31" --enc-type "LDPC_QC" -N "8192" --pct-type "LDPC" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/AR4JA_4096_8192.qc" --dec-ite "100" --dec-synd-depth "1" --sim-pyber "LDPC (8192,4096) AMS 100 ite. AR4JA"
-Curve name:
-LDPC (8192,4096) AMS 100 ite. AR4JA
-Trace:
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -R "0:0.1:1.31" --enc-type "LDPC_QC" -N "8192" --pct-type "LDPC" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/AR4JA_4096_8192.qc" --dec-ite "100" --dec-synd-depth "1"
+title=LDPC (8192,4096) AMS 100 ite. AR4JA
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------

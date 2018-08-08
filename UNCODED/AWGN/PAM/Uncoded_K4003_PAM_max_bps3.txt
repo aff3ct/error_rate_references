@@ -1,8 +1,8 @@
-Run command:
-./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 20.1 -s 1.0 -e 500 -K 4003 --mdm-type PAM --mdm-max MAX --mdm-bps 3 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST --sim-pyber "Uncoded K=4003 8-PAM"
-Curve name:
-Uncoded K=4003 8-PAM
-Trace:
+[metadata]
+command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 20.1 -s 1.0 -e 500 -K 4003 --mdm-type PAM --mdm-max MAX --mdm-bps 3 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
+title=Uncoded K=4003 8-PAM
+
+[trace]
 # ----------------------------------------------------
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
