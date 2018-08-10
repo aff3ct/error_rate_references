@@ -1,5 +1,59 @@
 #!/usr/bin/env python3
+import re
 import numpy as np
+
+# split a string command into a list of string arguments
+def splitAsCommand(runCommand):
+	argsList = [""]
+	idx = 0
+	new = 0
+	found_dashes = 0
+
+	for s in runCommand:
+		if found_dashes == 0:
+			if s == ' ':
+				if new == 0:
+					argsList.append("")
+					idx = idx + 1
+					new = 1
+
+			elif s == '\"':
+				if new == 0:
+					argsList.append("")
+					idx = idx + 1
+					new = 1
+				found_dashes = 1
+
+			else:
+				argsList[idx] += s
+				new = 0
+
+		else: # between dashes
+			if s == '\"':
+				argsList.append("")
+				idx = idx + 1
+				found_dashes = 0
+
+			else:
+				argsList[idx] += s
+
+	if argsList[idx] == "":
+		del argsList[idx]
+
+	return argsList
+
+# read all the lines from the given file and set them in a list of string lines with striped \n \r
+def readFileInTable(filename):
+	aFile = open(filename, "r")
+	lines = []
+	for line in aFile:
+		line = re.sub('\r','',line.rstrip('\n'))
+		if len(line) > 0:
+			lines.append(line)
+	aFile.close()
+
+	return lines;
+
 
 class aff3ctRefsReader:
 	NoiseLegendsList = { "ebn0" : "Eb/N0", # Signal noise ration view from info bits
@@ -44,7 +98,7 @@ class aff3ctRefsReader:
 
 		if type(aff3ctOutput) is str: # then a filename has been given
 			self.Metadata['filename'] = aff3ctOutput
-			aff3ctOutput = self.__fileReader(aff3ctOutput)
+			aff3ctOutput = readFileInTable(aff3ctOutput)
 		elif type(aff3ctOutput) is list: # then the file content has been given
 			pass
 		else:
@@ -56,6 +110,9 @@ class aff3ctRefsReader:
 			self.__reader0(aff3ctOutput)
 		elif traceVersion == 1:
 			self.__reader1(aff3ctOutput)
+
+	def getSplitCommand(self):
+		return splitAsCommand(self.Metadata['command']);
 
 	def getNoise(self):
 		return self.getTrace(self.NoiseType)
@@ -86,16 +143,6 @@ class aff3ctRefsReader:
 		header += "\n[trace]\n"
 
 		return header
-
-	def __fileReader(self, filename):
-		# read all the lines from the given file
-		aFile = open(filename, "r")
-		lines = []
-		for line in aFile:
-			lines.append(line)
-		aFile.close()
-
-		return lines;
 
 	def __checkLegend(self, legendTable, colName):
 
@@ -243,7 +290,11 @@ class aff3ctRefsReader:
 
 		# fill trace
 		for i in range(len(self.Legend)):
-			self.Trace[self.Legend[i]] = allTrace[i]
+			if len(allTrace) > i:
+				self.Trace[self.Legend[i]] = allTrace[i]
+			else:
+				self.Trace[self.Legend[i]] = []
+
 
 	def __reader0(self, aff3ctOutput):
 		startMeta  = False;
@@ -300,4 +351,7 @@ class aff3ctRefsReader:
 
 		# fill trace
 		for i in range(len(self.Legend)):
-			self.Trace[self.Legend[i]] = allTrace[i]
+			if len(allTrace) > i:
+				self.Trace[self.Legend[i]] = allTrace[i]
+			else:
+				self.Trace[self.Legend[i]] = []
