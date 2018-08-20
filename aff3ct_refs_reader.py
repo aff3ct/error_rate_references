@@ -84,17 +84,24 @@ class aff3ctRefsReader:
 	                     "el_time" : "hhmmss"
 	                   }
 
+	HeaderEmpty  = "#"
+	HeaderLevel1 = "# * "
+	HeaderLevel2 = "#    "
+	HeaderLevel3 = "#    ** "
 
 	# aff3ctOutput must be a filename string object or
 	# the content of a file stocked in a list object with one line of the file per line of the table
 	# else raise a ValueError exception
 	def __init__(self, aff3ctOutput):
-		self.Metadata   = {'command': '', 'title': ''}
-		self.SimuHeader = [] # simulation header
-		self.Legend     = [] # keys of BferLegendsList or MiLegendsList
-		self.NoiseType  = "" # key of NoiseLegendsList
-		self.Trace      = {} # all trace informations with key as in Legend array
-		                     #  and as value a list to represent the column of data
+		self.Metadata    = {'command': '', 'title': ''}
+		self.SimuHeader  = [] # simulation header that is list of trio (title, value, level index)
+		self.Legend      = [] # keys of BferLegendsList or MiLegendsList
+		self.NoiseType   = "" # key of NoiseLegendsList
+		self.Trace       = {} # all trace informations with key as in Legend array
+		                      #  and as value a list to represent the column of data
+
+		self.SimuTitle   = [] # save of the simulation title that is some lines to print software name
+		self.LegendTitle = [] # save of the legend table to print it
 
 		if type(aff3ctOutput) is str: # then a filename has been given
 			self.Metadata['filename'] = aff3ctOutput
@@ -129,6 +136,21 @@ class aff3ctRefsReader:
 		else:
 			return ""
 
+	def getSimuHeader(self, key):
+		for entry in self.SimuHeader:
+			if key in entry[0]:
+				return entry[1]
+
+		return ""
+
+	def setSimuHeader(self, key, value, level = 3):
+		for entry in self.SimuHeader:
+			if key in entry[0]:
+				entry[1] = value
+				return
+
+		self.SimuHeader.append([key, value, level])
+
 	def getNoiseType(self):
 		return self.NoiseType
 
@@ -143,6 +165,35 @@ class aff3ctRefsReader:
 		header += "\n[trace]\n"
 
 		return header
+
+	def getSimuTitleAsString(self):
+		header = ""
+		for entry in self.SimuTitle:
+			header += entry + "\n"
+
+		return header
+
+	def getLegendTitleAsString(self):
+		header = ""
+		for entry in self.LegendTitle:
+			header += entry + "\n"
+
+		return header
+
+	def getSimuHeaderAsString(self):
+		header = ""
+		for entry in self.SimuHeader:
+			if entry[2] == 1:
+				header += self.HeaderLevel1 + entry[0] + " " + entry[1] + "\n"
+			elif entry[2] == 2:
+				header += self.HeaderLevel2 + entry[0] + " " + entry[1] + "\n"
+			elif entry[2] == 3:
+				header += self.HeaderLevel3 + entry[0] + " = " + entry[1] + "\n"
+
+		return header + self.HeaderEmpty + "\n"
+
+	def getFullHeaderAsString(self):
+		return self.getSimuTitleAsString() + self.getSimuHeaderAsString() + self.getLegendTitleAsString()
 
 	def __checkLegend(self, legendTable, colName):
 
@@ -231,6 +282,42 @@ class aff3ctRefsReader:
 
 		return 0
 
+	def __parseCommentLine(self, line):
+		line = line.replace("\n", "")
+		if line.startswith(self.HeaderLevel1):
+			entry = line[len(self.HeaderLevel1):].split(" ") # keep line separator "-----------------" in second part
+			if len(entry) == 2:
+				entry.append(1)
+				self.SimuHeader.append(entry)
+
+		elif line.startswith(self.HeaderLevel2) and line[len(self.HeaderLevel2)] != ' ' and line[len(self.HeaderLevel2)] != '*':
+			entry = line[len(self.HeaderLevel2):].split(" ") # keep line separator "-----------------" in second part
+			if len(entry) == 2:
+				entry.append(2)
+				self.SimuHeader.append(entry)
+
+		elif line.startswith(self.HeaderLevel3):
+			entry = line[len(self.HeaderLevel3):].split(" = ")
+			if len(entry) == 2:
+				entry.append(3)
+				self.SimuHeader.append(entry)
+
+		elif len(line) > 2:
+			if len(self.SimuHeader) == 0: # then its a simu title
+				self.SimuTitle.append(line)
+
+			else: # then its a legend title
+				self.LegendTitle.append(line)
+
+				if(   line.find(self.BferLegendsList["be_rate"]) != -1
+				  and line.find(self.BferLegendsList["fe_rate"]) != -1
+				  and line.find(self.BferLegendsList["n_fra"  ]) != -1):
+					self.__fillLegend(line)
+
+				elif( line.find(self.MiLegendsList["n_trials"]) != -1
+				  and line.find(self.MiLegendsList["mi"      ]) != -1):
+					self.__fillLegend(line)
+
 	def __reader1(self, aff3ctOutput):
 		startMeta  = False;
 		startTrace = False;
@@ -253,36 +340,12 @@ class aff3ctRefsReader:
 
 			elif startTrace:
 				if line.startswith("#"):
-					if len(line) > 3 and line[0] == '#' and line[2] == '*':
-						entry = line.replace("# * ", "").replace("\n", "").split(" = ")
-						if len(entry) == 1:
-							entry[0] = entry[0].replace("-", "")
-						self.SimuHeader.append(entry)
+					self.__parseCommentLine(line)
 
-					elif len(line) > 7 and line[0] == '#' and line[5] == '*' and line[6] == '*':
-						entry = line.replace("#    ** ", "").replace("\n", "").split(" = ")
-						self.SimuHeader.append(entry)
-
-					elif len(line) > 6 and line[0] == '#' and line[1] == ' ' and line[2] == ' ' and line[3] == ' ' and line[4] == ' ' and line[5] != ' ' and line[5] != '*':
-						entry = line.replace("#    ", "*").replace("\n", "").split(" = ")
-						if len(entry) == 1:
-							entry[0] = entry[0].replace("-", "")
-						self.SimuHeader.append(entry)
-
-					elif len(line) > 20:
-						if(   line.find(self.BferLegendsList["be_rate"]) != -1
-						  and line.find(self.BferLegendsList["fe_rate"]) != -1
-						  and line.find(self.BferLegendsList["n_fra"  ]) != -1):
-							self.__fillLegend(line)
-
-						elif( line.find(self.MiLegendsList["n_trials"]) != -1
-						  and line.find(self.MiLegendsList["mi"      ]) != -1):
-							self.__fillLegend(line)
-				else:
-					if len(self.Legend) != 0:
-						d = self.__getVal(line)
-						if len(d) == len(self.Legend):
-							allTrace.append(d)
+				elif len(self.Legend) != 0:
+					d = self.__getVal(line)
+					if len(d) == len(self.Legend):
+						allTrace.append(d)
 
 
 		allTrace = np.array(allTrace).transpose()
@@ -295,7 +358,6 @@ class aff3ctRefsReader:
 			else:
 				self.Trace[self.Legend[i]] = []
 
-
 	def __reader0(self, aff3ctOutput):
 		startMeta  = False;
 		startTrace = False;
@@ -303,36 +365,12 @@ class aff3ctRefsReader:
 
 		for line in aff3ctOutput:
 			if line.startswith("#"):
-				if len(line) > 3 and line[0] == '#' and line[2] == '*':
-					entry = line.replace("# * ", "").replace("\n", "").split(" = ")
-					if len(entry) == 1:
-						entry[0] = entry[0].replace("-", "")
-					self.SimuHeader.append(entry)
+				self.__parseCommentLine(line)
 
-				elif len(line) > 7 and line[0] == '#' and line[5] == '*' and line[6] == '*':
-					entry = line.replace("#    ** ", "").replace("\n", "").split(" = ")
-					self.SimuHeader.append(entry)
-
-				elif len(line) > 6 and line[0] == '#' and line[1] == ' ' and line[2] == ' ' and line[3] == ' ' and line[4] == ' ' and line[5] != ' ' and line[5] != '*':
-					entry = line.replace("#    ", "*").replace("\n", "").split(" = ")
-					if len(entry) == 1:
-						entry[0] = entry[0].replace("-", "")
-					self.SimuHeader.append(entry)
-
-				elif len(line) > 20:
-					if(   line.find(self.BferLegendsList["be_rate"]) != -1
-					  and line.find(self.BferLegendsList["fe_rate"]) != -1
-					  and line.find(self.BferLegendsList["n_fra"  ]) != -1):
-						self.__fillLegend(line)
-
-					elif( line.find(self.MiLegendsList["n_trials"]) != -1
-					  and line.find(self.MiLegendsList["mi"      ]) != -1):
-						self.__fillLegend(line)
-			else:
-				if len(self.Legend) != 0:
-					d = self.__getVal(line)
-					if len(d) == len(self.Legend):
-						allTrace.append(d)
+			elif len(self.Legend) != 0:
+				d = self.__getVal(line)
+				if len(d) == len(self.Legend):
+					allTrace.append(d)
 
 
 		allTrace = np.array(allTrace).transpose()
