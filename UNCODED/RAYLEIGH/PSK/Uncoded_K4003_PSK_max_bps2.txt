@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 4-PSK
 command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "60" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PSK" --mnt-max-fe "1000" --mdm-bps "2"
+title=Uncoded K=4003 4-PSK
 
 [trace]
 # ----------------------------------------------------
@@ -69,7 +69,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "60" -s 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     3.01 |  0.00 |     1003 |   587069 |     1003 | 1.46e-01 | 1.00e+00 ||  2467.45 |  2467.45 |     1.62 ||    43.94 | 00h00'00
     5.01 |  2.00 |     1003 |   435672 |     1003 | 1.09e-01 | 1.00e+00 ||  2717.16 |  2717.16 |     1.47 ||    45.51 | 00h00'00
     7.01 |  4.00 |     1003 |   309440 |     1003 | 7.71e-02 | 1.00e+00 ||  2827.85 |  2827.85 |     1.42 ||    46.23 | 00h00'00

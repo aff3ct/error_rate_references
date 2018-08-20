@@ -1,8 +1,8 @@
 [metadata]
+command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "27307" -N "32768" -m "1.0" -M "4.0" -e "500" --enc-fb-gen-method "TV" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTRA"
+doi=10.1109/EUSIPCO.2016.7760327
 info=Figure 2
 title=Polar (32768,27307) SC TV intra 32-bit
-doi=10.1109/EUSIPCO.2016.7760327
-command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "27307" -N "32768" -m "1.0" -M "4.0" -e "500" --enc-fb-gen-method "TV" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTRA"
 
 [trace]
 # ----------------------------------------------------
@@ -78,7 +78,6 @@ command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "27307" -N "32768" 
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
        0.21 |     1.00 |      568 |  1445502 |      568 | 9.32e-02 | 1.00e+00 ||     9.55 | 00h00'01
        0.31 |     1.10 |      570 |  1418717 |      570 | 9.11e-02 | 1.00e+00 ||    13.73 | 00h00'01
        0.41 |     1.20 |      569 |  1384857 |      569 | 8.91e-02 | 1.00e+00 ||    13.09 | 00h00'01

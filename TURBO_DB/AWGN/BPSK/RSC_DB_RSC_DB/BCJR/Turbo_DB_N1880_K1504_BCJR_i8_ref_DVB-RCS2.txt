@@ -1,8 +1,8 @@
 [metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "1880" -m "0.0" -M "4.6" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE"
+doi=10.1109/ISTC.2016.7593096
 info=Figure 7
 title=Turbo DB (1880,1504) BCJR 8 ite. REF DVB-RCS2
-doi=10.1109/ISTC.2016.7593096
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "1880" -m "0.0" -M "4.6" -s "0.2" --enc-sub-std "DVB-RCS2" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE"
 
 [trace]
 # ----------------------------------------------------
@@ -99,7 +99,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "1880" -m "0.0
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     1.95 |  0.00 |      147 |    25336 |      147 | 1.17e-01 | 1.00e+00 ||     0.26 | 00h00'00
     2.15 |  0.20 |      156 |    25841 |      156 | 1.13e-01 | 1.00e+00 ||     9.90 | 00h00'00
     2.35 |  0.40 |      152 |    24087 |      152 | 1.08e-01 | 1.00e+00 ||     9.38 | 00h00'00

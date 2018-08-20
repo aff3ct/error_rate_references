@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (16200,12600) SPA 50 ite. DVB-S2
 command=./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m "2.6" -M "4.0" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-type "BP_HORIZONTAL_LAYERED" --dec-ite "50"
+title=LDPC (16200,12600) SPA 50 ite. DVB-S2
 
 [trace]
 # ----------------------------------------------------
@@ -73,7 +73,6 @@ command=./bin/aff3ct -C "LDPC" -K "12600" -N "16200" --enc-type "LDPC_DVBS2" -m 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     1.51 |  2.60 |     1421 |    18366 |      110 | 1.03e-03 | 7.74e-02 ||     4.11 | 00h00'04
     1.61 |  2.70 |    15062 |    15440 |      101 | 8.14e-05 | 6.71e-03 ||     8.34 | 00h00'22
     1.71 |  2.80 |   204097 |     6542 |      100 | 2.54e-06 | 4.90e-04 ||    10.51 | 00h04'04

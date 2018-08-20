@@ -1,9 +1,9 @@
 [metadata]
-url=https://www.embeddedrelated.com/showarticle/1182.php
-title=RS (255,191,32)
-info=https://c1.staticflickr.com/1/879/40996891980_d2cba66d7d_o.png
 ci=off
 command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "255" -K "191" -T "32" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
+info=https://c1.staticflickr.com/1/879/40996891980_d2cba66d7d_o.png
+title=RS (255,191,32)
+url=https://www.embeddedrelated.com/showarticle/1182.php
 
 [trace]
 # ----------------------------------------------------
@@ -77,7 +77,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "255" -K "191" -T "32" -m "0" 
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
       -1.26 |     0.00 ||     1047 |   176253 |     1047 | 1.10e-01 | 1.00e+00 ||    4.140 | 00h00'00
       -1.06 |     0.20 ||     1073 |   172157 |     1073 | 1.05e-01 | 1.00e+00 ||  101.810 | 00h00'00
       -0.86 |     0.40 ||     1068 |   162990 |     1068 | 9.99e-02 | 1.00e+00 ||  109.967 | 00h00'00

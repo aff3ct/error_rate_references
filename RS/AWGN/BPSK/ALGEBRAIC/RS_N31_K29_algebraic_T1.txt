@@ -1,9 +1,9 @@
 [metadata]
-url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
-title=RS (31,29,1)
-info=https://www.uni-kl.de/fileadmin/_processed_/8/a/csm_rs_31_4f8b88f450.png
 ci=off
 command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "31" -K "29" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
+info=https://www.uni-kl.de/fileadmin/_processed_/8/a/csm_rs_31_4f8b88f450.png
+title=RS (31,29,1)
+url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 
 [trace]
 # ----------------------------------------------------
@@ -77,7 +77,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "31" -K "29" -T "1" -m "0" -M 
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
       -0.29 |     0.00 ||     1018 |    14572 |     1018 | 9.87e-02 | 1.00e+00 ||    2.668 | 00h00'00
       -0.09 |     0.20 ||     1006 |    13775 |     1006 | 9.44e-02 | 1.00e+00 ||   93.029 | 00h00'00
        0.11 |     0.40 ||     1009 |    12928 |     1009 | 8.84e-02 | 1.00e+00 ||  100.346 | 00h00'00

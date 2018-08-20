@@ -1,8 +1,8 @@
 [metadata]
+command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "3.2" -e "500" --enc-fb-gen-method "FILE" --enc-fb-awgn-path "../conf/cde/awgn_polar_codes/TV/12/N4096_awgn_s0.692.pc" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTRA"
+doi=10.1109/EUSIPCO.2016.7760327
 info=Figure 2
 title=Polar (4096,2048) SC FILE intra 32-bit
-doi=10.1109/EUSIPCO.2016.7760327
-command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "3.2" -e "500" --enc-fb-gen-method "FILE" --enc-fb-awgn-path "../conf/cde/awgn_polar_codes/TV/12/N4096_awgn_s0.692.pc" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTRA"
 
 [trace]
 # ----------------------------------------------------
@@ -78,7 +78,6 @@ command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
       -3.01 |     0.00 |      540 |   254319 |      540 | 2.30e-01 | 1.00e+00 ||     4.19 | 00h00'00
       -2.91 |     0.10 |      541 |   252716 |      541 | 2.28e-01 | 1.00e+00 ||     5.88 | 00h00'00
       -2.81 |     0.20 |      540 |   248759 |      540 | 2.25e-01 | 1.00e+00 ||     5.97 | 00h00'00

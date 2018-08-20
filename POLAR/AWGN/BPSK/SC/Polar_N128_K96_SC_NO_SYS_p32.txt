@@ -1,6 +1,6 @@
 [metadata]
-title=Polar (128,96) SC NO SYS 32-bit
 command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0" -M "6" -s "0.25" -e "500" --enc-fb-gen-method "GA" --enc-no-sys -K "96" -N "128" --dec-type "SC" --dec-implem "NAIVE"
+title=Polar (128,96) SC NO SYS 32-bit
 
 [trace]
 # ----------------------------------------------------
@@ -73,7 +73,6 @@ command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0" -M "6" -s "0.25
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
       -1.25 |     0.00 |      540 |    19450 |      514 | 3.75e-01 | 9.52e-01 ||     3.00 | 00h00'00
       -1.00 |     0.25 |      547 |    18611 |      518 | 3.54e-01 | 9.47e-01 ||     8.84 | 00h00'00
       -0.75 |     0.50 |      564 |    18182 |      515 | 3.36e-01 | 9.13e-01 ||     9.43 | 00h00'00

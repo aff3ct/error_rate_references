@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (3000,2400) Peeling 50 ite. PureIRA
 command=./bin/aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA" --dec-h-path "../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist" --dec-type "BP_PEELING" --dec-implem "STD" --chn-type "BEC" --mdm-type "OOK" --dec-ite "50" --dec-synd-depth "1"
+title=LDPC (3000,2400) Peeling 50 ite. PureIRA
 
 [trace]
 # ----------------------------------------------------
@@ -75,7 +75,6 @@ command=./bin/aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA"
 #        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
      0.5000 |      107 |   128699 |      107 | 5.01e-01 | 1.00e+00 ||     0.54 | 00h00'00
      0.4000 |      105 |   100609 |      105 | 3.99e-01 | 1.00e+00 ||     5.48 | 00h00'00
      0.3000 |      104 |    74039 |      104 | 2.97e-01 | 1.00e+00 ||     6.32 | 00h00'00

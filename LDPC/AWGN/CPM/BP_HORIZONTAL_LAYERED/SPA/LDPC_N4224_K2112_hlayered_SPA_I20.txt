@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (4224,2112) GSM-SPA 20 turbo ite.
 command=./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 2.51 -s 0.25 -K 2112 -N 4224 --sim-coset --src-type RAND --src-implem FAST --itl-type USER --itl-path ../conf/itl/GSM-LDPC_4224.itl --mdm-type CPM --chn-type AWGN --chn-implem FAST --sim-ite 20 --dec-type BP_HORIZONTAL_LAYERED --dec-h-path ../conf/dec/LDPC/GSM_2112_4224.alist --dec-implem SPA --dec-ite 1 --mnt-max-fe 100 --mdm-max MAXS --mdm-cpm-std GSM
+title=LDPC (4224,2112) GSM-SPA 20 turbo ite.
 
 [trace]
 # ----------------------------------------------------
@@ -85,7 +85,6 @@ command=./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 2.51 -s 0.
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
    -3.01 |  0.00 |      123 |    59609 |      123 | 2.29e-01 | 1.00e+00 ||     0.21 |     0.10 | 20115.69 ||     0.22 | 00h00'02
    -2.76 |  0.25 |      123 |    54315 |      123 | 2.09e-01 | 1.00e+00 ||     0.21 |     0.10 | 20294.09 ||     0.23 | 00h00'02
    -2.51 |  0.50 |      123 |    47512 |      123 | 1.83e-01 | 1.00e+00 ||     0.21 |     0.10 | 20377.47 ||     0.24 | 00h00'02

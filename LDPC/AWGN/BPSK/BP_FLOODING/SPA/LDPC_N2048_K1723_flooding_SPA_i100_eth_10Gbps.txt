@@ -1,8 +1,8 @@
 [metadata]
+command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.41 -s 0.2 -e 100 --dec-type BP_FLOODING --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
+doi=10.1109/GLOCOM.2009.5425510
 info=Figure 3
 title=LDPC (2048,1723) SPA 100 ite. eth. 10 Gbps
-doi=10.1109/GLOCOM.2009.5425510
-command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.41 -s 0.2 -e 100 --dec-type BP_FLOODING --dec-implem SPA -i 100 --dec-h-path ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
 
 [trace]
 # ----------------------------------------------------
@@ -77,7 +77,6 @@ command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
    -0.75 |  0.00 |      155 |    26111 |      155 | 9.78e-02 | 1.00e+00 ||     0.01 |     0.01 | 1.40e+05 ||     0.55 | 00h00'00
    -0.55 |  0.20 |      155 |    24690 |      155 | 9.24e-02 | 1.00e+00 ||     0.02 |     0.01 | 1.36e+05 ||     0.71 | 00h00'00
    -0.35 |  0.40 |      155 |    23292 |      155 | 8.72e-02 | 1.00e+00 ||     0.01 |     0.01 | 1.41e+05 ||     0.68 | 00h00'00

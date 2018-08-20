@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (4224,2112) GSM-NMS 10 turbo ite.
 command=./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 2.51 -s 0.25 -K 2112 -N 4224 --sim-coset --src-type RAND --src-implem FAST --itl-type USER --itl-path ../conf/itl/GSM-LDPC_4224.itl --mdm-type CPM --chn-type AWGN --chn-implem FAST --sim-ite 10 --dec-type BP_FLOODING --dec-h-path ../conf/dec/LDPC/GSM_2112_4224.alist --dec-implem NMS --dec-norm 0.825 --dec-ite 1 --mnt-max-fe 100 --mdm-max MAX --mdm-cpm-std GSM
+title=LDPC (4224,2112) GSM-NMS 10 turbo ite.
 
 [trace]
 # ----------------------------------------------------
@@ -86,7 +86,6 @@ command=./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 2.51 -s 0.
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
    -3.01 |  0.00 |      147 |    81841 |      147 | 2.64e-01 | 1.00e+00 ||     0.84 |     0.42 |  5028.18 ||     1.32 | 00h00'00
    -2.76 |  0.25 |      147 |    76619 |      147 | 2.47e-01 | 1.00e+00 ||     1.13 |     0.57 |  3721.72 ||     1.42 | 00h00'00
    -2.51 |  0.50 |      147 |    69566 |      147 | 2.24e-01 | 1.00e+00 ||     0.87 |     0.43 |  4878.65 ||     1.76 | 00h00'00

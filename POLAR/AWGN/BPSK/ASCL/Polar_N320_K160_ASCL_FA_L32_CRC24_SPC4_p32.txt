@@ -1,8 +1,8 @@
 [metadata]
-title=Polar (320,160) ASCL FA L=32 CRC 24-bit SPC4 32-bit
-info=Figure 4
-url=https://arxiv.org/abs/1701.06458
 command=./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1" -M "3.75" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "160" -N "320" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "ASCL" --pct-type "SHORTLAST" --dec-simd "INTRA" -L "32" --crc-poly "24-LTEA" --dec-polar-nodes "{R0,R1,R0L,REP,SPC_4}"
+info=Figure 4
+title=Polar (320,160) ASCL FA L=32 CRC 24-bit SPC4 32-bit
+url=https://arxiv.org/abs/1701.06458
 
 [trace]
 # ----------------------------------------------------
@@ -86,7 +86,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1" -M "3.75" -s "0.25" -e 
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss) 
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
       -2.72 |     1.00 |      976 |    12166 |      506 | 9.17e-02 | 5.18e-01 ||     2.08 | 00h00'00  
       -2.47 |     1.25 |     1469 |    10751 |      506 | 5.38e-02 | 3.44e-01 ||     3.16 | 00h00'00  
       -2.22 |     1.50 |     2118 |    10320 |      505 | 3.58e-02 | 2.38e-01 ||     4.21 | 00h00'00  

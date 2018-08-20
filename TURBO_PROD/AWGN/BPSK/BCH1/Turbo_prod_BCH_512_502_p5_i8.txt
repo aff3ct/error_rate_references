@@ -1,6 +1,6 @@
 [metadata]
-title=Turbo Prod BCH(512,502,1) 8 ite. p5
 command=./bin/aff3ct -C "TURBO_PROD" -K "502" -N "511" --enc-ext -m "4" -M "5.25" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST"
+title=Turbo Prod BCH(512,502,1) 8 ite. p5
 
 [trace]
 # ----------------------------------------------------
@@ -90,7 +90,6 @@ command=./bin/aff3ct -C "TURBO_PROD" -K "502" -N "511" --enc-ext -m "4" -M "5.25
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     3.83 |  4.00 |      147 |   641327 |      147 | 1.73e-02 | 1.00e+00 ||     0.81 | 00h00'45
     4.08 |  4.25 |      147 |   562167 |      147 | 1.52e-02 | 1.00e+00 ||     0.84 | 00h00'44
     4.33 |  4.50 |      147 |   478088 |      147 | 1.29e-02 | 1.00e+00 ||     0.82 | 00h00'45

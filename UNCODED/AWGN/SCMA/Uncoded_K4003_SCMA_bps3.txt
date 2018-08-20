@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 8-SCMA
 command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "18" -s "0.5" --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" --mnt-max-fe "1000" --src-fra "6"
+title=Uncoded K=4003 8-SCMA
 
 [trace]
 # ----------------------------------------------------
@@ -69,7 +69,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "18" -s 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     4.77 |  0.00 |     1020 |   632048 |     1020 | 1.55e-01 | 1.00e+00 ||  1822.85 |  1822.85 |    13.18 ||     3.21 | 00h00'01
     5.27 |  0.50 |     1020 |   592255 |     1020 | 1.45e-01 | 1.00e+00 ||  1947.89 |  1947.89 |    12.33 ||     3.22 | 00h00'01
     5.77 |  1.00 |     1020 |   549245 |     1020 | 1.35e-01 | 1.00e+00 ||  1868.01 |  1868.01 |    12.86 ||     3.33 | 00h00'01

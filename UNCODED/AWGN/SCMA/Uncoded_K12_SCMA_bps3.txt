@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=12 8-SCMA
 command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "12" -m "0" -M "14" -s "0.5" --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" --mnt-max-fe "10000" --src-fra "6"
+title=Uncoded K=12 8-SCMA
 
 [trace]
 # ----------------------------------------------------
@@ -69,7 +69,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "12" -m "0" -M "14" -s "0
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     4.77 |  0.00 |    11676 |    21544 |    10032 | 1.54e-01 | 8.59e-01 ||     8.88 |     8.88 |     8.11 ||     3.85 | 00h00'00
     5.27 |  0.50 |    11946 |    20625 |    10035 | 1.44e-01 | 8.40e-01 ||    89.24 |    89.24 |     0.81 ||     4.81 | 00h00'00
     5.77 |  1.00 |    12216 |    19640 |    10040 | 1.34e-01 | 8.22e-01 ||   115.27 |   115.27 |     0.62 ||     5.24 | 00h00'00

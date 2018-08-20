@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (16200,10800) NMS 10 ite. DVB-S2
 command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" -i "10" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BSC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.1" -E "EP"
+title=LDPC (16200,10800) NMS 10 ite. DVB-S2
 
 [trace]
 # ----------------------------------------------------
@@ -75,7 +75,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem 
 #        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
      0.5000 |      160 |   863800 |      160 | 5.00e-01 | 1.00e+00 ||    10.73 | 00h00'00
      0.4500 |      160 |   787362 |      160 | 4.56e-01 | 1.00e+00 ||    34.69 | 00h00'00
      0.4000 |      160 |   710805 |      160 | 4.11e-01 | 1.00e+00 ||    30.80 | 00h00'00

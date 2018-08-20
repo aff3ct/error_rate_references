@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 8-PAM
 command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 20.1 -s 1.0 -e 500 -K 4003 --mdm-type PAM --mdm-max MAX --mdm-bps 3 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
+title=Uncoded K=4003 8-PAM
 
 [trace]
 # ----------------------------------------------------
@@ -68,7 +68,6 @@ command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 20.1 -s 1.0 -e 500 -K 4003 --mdm
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     4.77 |  0.00 |      540 |   431007 |      540 | 1.99e-01 | 1.00e+00 ||   887.61 |   887.61 |     4.51 ||    54.49 | 00h00'00
     5.77 |  1.00 |      522 |   371288 |      522 | 1.78e-01 | 1.00e+00 ||  1282.31 |  1282.31 |     3.12 ||    85.21 | 00h00'00
     6.77 |  2.00 |      519 |   326298 |      519 | 1.57e-01 | 1.00e+00 ||  1421.41 |  1421.41 |     2.82 ||    47.23 | 00h00'00

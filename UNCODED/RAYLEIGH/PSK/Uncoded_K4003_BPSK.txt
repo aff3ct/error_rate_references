@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 BPSK
 command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "60" -s "2.0" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "BPSK" --mnt-max-fe "1000"
+title=Uncoded K=4003 BPSK
 
 [trace]
 # ----------------------------------------------------
@@ -68,7 +68,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "60" -s 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     0.00 |  0.00 |     1003 |   587580 |     1003 | 1.46e-01 | 1.00e+00 ||  2366.65 |  2366.65 |     1.69 ||    43.90 | 00h00'00
     2.00 |  2.00 |     1003 |   435845 |     1003 | 1.09e-01 | 1.00e+00 ||  2260.13 |  2260.13 |     1.77 ||    46.08 | 00h00'00
     4.00 |  4.00 |     1003 |   310065 |     1003 | 7.72e-02 | 1.00e+00 ||  2325.02 |  2325.02 |     1.72 ||    33.15 | 00h00'00

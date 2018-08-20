@@ -1,8 +1,8 @@
 [metadata]
-title=LDPC (480,360) SPA 40 ite. WRAN
-info=https://www.uni-kl.de/fileadmin/_processed_/1/c/csm_wran_ldpc_spa_vs_ml_ae903dda7d.png
-url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 360 -N 480 -m 0.00 -M 5.51 -s 0.50 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 40 --dec-h-path ../conf/dec/LDPC/WRAN_360_480.alist -p 32
+info=https://www.uni-kl.de/fileadmin/_processed_/1/c/csm_wran_ldpc_spa_vs_ml_ae903dda7d.png
+title=LDPC (480,360) SPA 40 ite. WRAN
+url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 
 [trace]
 # ----------------------------------------------------
@@ -77,7 +77,6 @@ command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 360 -N 480 -m 0.
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
    -1.25 |  0.00 |      163 |     6289 |      163 | 1.07e-01 | 1.00e+00 ||     0.01 |     0.00 | 95016.76 ||     0.21 | 00h00'00
    -0.75 |  0.50 |      163 |     5475 |      163 | 9.33e-02 | 1.00e+00 ||     0.00 |     0.00 | 1.57e+05 ||     0.13 | 00h00'00
    -0.25 |  1.00 |      163 |     4539 |      163 | 7.74e-02 | 1.00e+00 ||     0.00 |     0.00 | 1.55e+05 ||     0.13 | 00h00'00

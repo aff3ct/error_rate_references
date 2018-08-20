@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 64-QAM
 command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 19.1 -s 1.0 -e 500 -K 4003 --mdm-type QAM --mdm-max MAX --mdm-bps 6 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
+title=Uncoded K=4003 64-QAM
 
 [trace]
 # ----------------------------------------------------
@@ -68,7 +68,6 @@ command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 19.1 -s 1.0 -e 500 -K 4003 --mdm
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     7.78 |  0.00 |      545 |   435940 |      545 | 2.00e-01 | 1.00e+00 ||   142.01 |   142.01 |    28.19 ||    46.88 | 00h00'00
     8.78 |  1.00 |      541 |   385242 |      541 | 1.78e-01 | 1.00e+00 ||  1226.28 |  1226.28 |     3.26 ||    33.22 | 00h00'00
     9.78 |  2.00 |      547 |   343175 |      547 | 1.57e-01 | 1.00e+00 ||  1203.22 |  1203.22 |     3.33 ||    42.68 | 00h00'00

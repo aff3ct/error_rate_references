@@ -1,6 +1,6 @@
 [metadata]
-title=Turbo DB (3008,1504) BCJR 8 ite. DVB-RCS1
 command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -E "EP" -R "0.06:0.02:0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "OOK" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --chn-type "BSC"
+title=Turbo DB (3008,1504) BCJR 8 ite. DVB-RCS1
 
 [trace]
 # ----------------------------------------------------
@@ -96,7 +96,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -E "EP"
 #        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
      0.2000 |      107 |    40597 |      107 | 2.58e-01 | 1.00e+00 ||     1.51 | 00h00'00
      0.1800 |      107 |    38566 |      107 | 2.45e-01 | 1.00e+00 ||     8.74 | 00h00'00
      0.1600 |      107 |    35073 |      107 | 2.23e-01 | 1.00e+00 ||     9.32 | 00h00'00

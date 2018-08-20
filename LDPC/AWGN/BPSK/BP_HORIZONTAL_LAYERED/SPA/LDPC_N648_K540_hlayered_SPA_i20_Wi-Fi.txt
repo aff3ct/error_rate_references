@@ -1,8 +1,8 @@
 [metadata]
-title=LDPC (648,540) SPA 20 ite. Wi-Fi
-info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2cdc87fd.png
-url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 20 --dec-h-path ../conf/dec/LDPC/WIFI_540_648.alist
+info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2cdc87fd.png
+title=LDPC (648,540) SPA 20 ite. Wi-Fi
+url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 
 [trace]
 # ----------------------------------------------------
@@ -77,7 +77,6 @@ command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     1.21 |  2.00 |      123 |     3093 |      121 | 4.66e-02 | 9.84e-01 ||     0.15 |     0.12 |  4408.60 ||     1.96 | 00h00'00
     1.46 |  2.25 |      126 |     2708 |      120 | 3.98e-02 | 9.52e-01 ||     0.15 |     0.12 |  4461.39 ||     1.97 | 00h00'00
     1.71 |  2.50 |      139 |     2258 |      117 | 3.01e-02 | 8.42e-01 ||     0.14 |     0.12 |  4610.27 ||     1.88 | 00h00'00

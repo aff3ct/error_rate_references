@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=1200 8-SCMA
 command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" -F "6"
+title=Uncoded K=1200 8-SCMA
 
 [trace]
 # ----------------------------------------------------
@@ -70,7 +70,6 @@ command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0"
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     4.77 |  0.00 |      144 |    35490 |      144 | 2.05e-01 | 1.00e+00 ||     2.35 | 00h00'00
     6.77 |  2.00 |      144 |    29043 |      144 | 1.68e-01 | 1.00e+00 ||     3.20 | 00h00'00
     8.77 |  4.00 |      144 |    21746 |      144 | 1.26e-01 | 1.00e+00 ||     2.87 | 00h00'00

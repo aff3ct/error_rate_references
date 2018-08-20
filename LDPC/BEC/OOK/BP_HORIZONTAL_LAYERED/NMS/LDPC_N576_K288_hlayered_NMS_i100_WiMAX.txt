@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (576,288) NMS 100 ite. WiMAX
 command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "AZCW" -K "288" -N "576" -E "EP" -R "0.5:0.05:0.6,0.5:-0.01:0.3" -e "100" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" -i "100" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-norm "0.825" --chn-type "BEC" --mdm-type "OOK" --dec-simd "INTER"
+title=LDPC (576,288) NMS 100 ite. WiMAX
 
 [trace]
 # ----------------------------------------------------
@@ -77,7 +77,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "AZCW" -K "288" -N "
 #        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
      0.6000 |      144 |    11864 |      144 | 2.86e-01 | 1.00e+00 ||     0.34 | 00h00'00
      0.5500 |      144 |    10615 |      144 | 2.56e-01 | 1.00e+00 ||     1.78 | 00h00'00
      0.5000 |      160 |     9455 |      160 | 2.05e-01 | 1.00e+00 ||     2.41 | 00h00'00

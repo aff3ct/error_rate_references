@@ -1,8 +1,8 @@
 [metadata]
+command=./bin/aff3ct -p "32" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --dec-sub-max "MAX"
+doi=10.1109/ISTC.2016.7593092
 info=Figure 2
 title=Turbo (18444,6144) BCJR 32-bit 6 ite. LTE
-doi=10.1109/ISTC.2016.7593092
-command=./bin/aff3ct -p "32" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --dec-sub-max "MAX"
 
 [trace]
 # ----------------------------------------------------
@@ -101,7 +101,6 @@ command=./bin/aff3ct -p "32" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
    -4.77 |  0.00 |      752 |   634564 |      752 | 1.37e-01 | 1.00e+00 ||     6.77 | 00h00'00
    -4.67 |  0.10 |      756 |   484483 |      754 | 1.04e-01 | 9.97e-01 ||    34.59 | 00h00'00
    -4.57 |  0.20 |      756 |   308410 |      749 | 6.64e-02 | 9.91e-01 ||    36.88 | 00h00'00

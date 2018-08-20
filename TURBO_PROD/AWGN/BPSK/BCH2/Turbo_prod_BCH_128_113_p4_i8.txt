@@ -1,6 +1,6 @@
 [metadata]
-title=Turbo Prod BCH(128,113,2) 8 ite. p4
 command=./bin/aff3ct -C "TURBO_PROD" -K "113" -N "127" --enc-ext -m "2.8" -M "3.6" -s "0.1" -T "2" --dec-ite "8" --dec-alpha "0.5,0.5,1,1,1,1,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2,1.2" --dec-c "0" --dec-t "0" --dec-p "4" --dec-cp-coef "0,0.25,0,0,3" --src-type "RAND" --src-implem "FAST" --chn-implem "FAST"
+title=Turbo Prod BCH(128,113,2) 8 ite. p4
 
 [trace]
 # ----------------------------------------------------
@@ -90,7 +90,6 @@ command=./bin/aff3ct -C "TURBO_PROD" -K "113" -N "127" --enc-ext -m "2.8" -M "3.
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     1.72 |  2.80 |      112 |    42896 |      107 | 3.00e-02 | 9.55e-01 ||     0.76 | 00h00'01
     1.82 |  2.90 |      150 |    23765 |      105 | 1.24e-02 | 7.00e-01 ||     0.80 | 00h00'02
     1.92 |  3.00 |      269 |    15440 |      103 | 4.50e-03 | 3.83e-01 ||     0.79 | 00h00'04

@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 OOK
 command=./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" -K "4003"
+title=Uncoded K=4003 OOK
 
 [trace]
 # ----------------------------------------------------
@@ -67,7 +67,6 @@ command=./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     0.00 |  0.00 |      504 |   483632 |      504 | 2.40e-01 | 1.00e+00 ||    75.61 | 00h00'00
     1.00 |  1.00 |      505 |   431730 |      505 | 2.14e-01 | 1.00e+00 ||   386.47 | 00h00'00
     2.00 |  2.00 |      504 |   376217 |      504 | 1.86e-01 | 1.00e+00 ||   398.56 | 00h00'00

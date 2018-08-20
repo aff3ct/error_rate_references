@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 2-PSK
 command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type PSK --mdm-max MAX --mdm-bps 1 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
+title=Uncoded K=4003 2-PSK
 
 [trace]
 # ----------------------------------------------------
@@ -68,7 +68,6 @@ command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     0.00 |  0.00 |      547 |   171767 |      547 | 7.84e-02 | 1.00e+00 ||     4.97 |     4.97 |   806.01 ||    52.92 | 00h00'00
     1.00 |  1.00 |      531 |   119515 |      531 | 5.62e-02 | 1.00e+00 ||  1273.59 |  1273.59 |     3.14 ||    48.69 | 00h00'00
     2.00 |  2.00 |      510 |    76479 |      510 | 3.75e-02 | 1.00e+00 ||  1385.76 |  1385.76 |     2.89 ||    58.16 | 00h00'00

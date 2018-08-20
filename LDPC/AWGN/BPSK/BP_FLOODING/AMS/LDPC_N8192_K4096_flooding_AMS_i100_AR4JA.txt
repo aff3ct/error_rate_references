@@ -1,6 +1,6 @@
 [metadata]
-title=LDPC (8192,4096) AMS 100 ite. AR4JA
 command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -R "0:0.1:1.31" --enc-type "LDPC_QC" -N "8192" --pct-type "LDPC" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/AR4JA_4096_8192.qc" --dec-ite "100" --dec-synd-depth "1"
+title=LDPC (8192,4096) AMS 100 ite. AR4JA
 
 [trace]
 # ----------------------------------------------------
@@ -81,7 +81,6 @@ command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -R "0:0.1:1.31" --e
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
       -3.01 |     0.00 |      147 |    94187 |      147 | 1.56e-01 | 1.00e+00 ||     0.01 | 00h00'47
       -2.91 |     0.10 |      147 |    91587 |      147 | 1.52e-01 | 1.00e+00 ||     0.50 | 00h00'01
       -2.81 |     0.20 |      147 |    90394 |      147 | 1.50e-01 | 1.00e+00 ||     0.50 | 00h00'01

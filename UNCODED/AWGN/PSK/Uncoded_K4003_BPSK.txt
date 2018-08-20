@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 BPSK
 command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type BPSK --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
+title=Uncoded K=4003 BPSK
 
 [trace]
 # ----------------------------------------------------
@@ -67,7 +67,6 @@ command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     0.00 |  0.00 |      513 |   161518 |      513 | 7.87e-02 | 1.00e+00 ||  1154.93 |  1154.93 |     3.47 ||    77.85 | 00h00'00
     1.00 |  1.00 |      505 |   114259 |      505 | 5.65e-02 | 1.00e+00 ||  1469.12 |  1469.12 |     2.72 ||    44.18 | 00h00'00
     2.00 |  2.00 |      523 |    78449 |      523 | 3.75e-02 | 1.00e+00 ||  1005.82 |  1005.82 |     3.98 ||    73.10 | 00h00'00

@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4003 4-PAM
 command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PAM" --mnt-max-fe "1000" --mdm-bps "2"
+title=Uncoded K=4003 4-PAM
 
 [trace]
 # ----------------------------------------------------
@@ -69,7 +69,6 @@ command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s 
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
-# End of the simulation.
     3.01 |  0.00 |     1003 |   793254 |     1003 | 1.98e-01 | 1.00e+00 ||  2141.04 |  2141.04 |     1.87 ||    52.68 | 00h00'00
     5.01 |  2.00 |     1003 |   630491 |     1003 | 1.57e-01 | 1.00e+00 ||  2176.76 |  2176.76 |     1.84 ||    54.37 | 00h00'00
     7.01 |  4.00 |     1003 |   480725 |     1003 | 1.20e-01 | 1.00e+00 ||  2543.13 |  2543.13 |     1.57 ||    53.13 | 00h00'00

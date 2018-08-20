@@ -1,6 +1,6 @@
 [metadata]
-title=Uncoded K=4500 CPM h=1/4 L=3 bps=1 REC
 command=./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-noise-type "ESN0" -m "0.0" -M "21.0" -s "1.0" -e "500" --src-type "RAND" --src-implem "FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "1" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "1" --mdm-cpm-p "4" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS"
+title=Uncoded K=4500 CPM h=1/4 L=3 bps=1 REC
 
 [trace]
 # ----------------------------------------------------
@@ -72,7 +72,6 @@ command=./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-noise-type "ESN0" -
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
-# End of the simulation.
     0.00 |  0.00 |      507 |   618405 |      507 | 2.71e-01 | 1.00e+00 ||     1.14 | 00h00'02
     1.00 |  1.00 |      507 |   568051 |      507 | 2.49e-01 | 1.00e+00 ||     1.19 | 00h00'01
     2.00 |  2.00 |      507 |   517425 |      507 | 2.27e-01 | 1.00e+00 ||     1.16 | 00h00'01
