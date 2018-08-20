@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-noise-type "ESN0" -m "0.0" -M "21.0" -s "1.0" -e "100" --src-type "RAND" --src-implem "FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "2" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "1" --mdm-cpm-p "5" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS"
 title=Uncoded K=4500 CPM h=1/5 L=3 bps=2 REC
+command=./bin/aff3ct --sim-type "BFER" --sim-prec "32" --sim-noise-type "ESN0" -m "0.0" -M "21.0" -s "1.0" -e "100" --src-type "RAND" --src-implem "FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "2" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "1" --mdm-cpm-p "5" --mdm-cpm-ws "REC" --mdm-ups "8" --mdm-max "MAXS"
 
 [trace]
 # ----------------------------------------------------
@@ -14,12 +14,12 @@ title=Uncoded K=4500 CPM h=1/5 L=3 bps=2 REC
 #    ** Date (UTC)            = 2018-05-17 14:05:14
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
-#    ** Noise range           = -3.01 -> 17.99 dB
+#    ** Noise range           = 0 -> 21 dB
+#    ** Noise type (E)        = ESN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4500 CPM h=1/5 L=3 bps=2 REC
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = FAST
 #    ** Info. bits (K_info)   = 4500
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -57,9 +58,8 @@ title=Uncoded K=4500 CPM h=1/5 L=3 bps=2 REC
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 100
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -72,6 +72,7 @@ title=Uncoded K=4500 CPM h=1/5 L=3 bps=2 REC
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
     0.00 | -3.01 |      107 |   174260 |      107 | 3.62e-01 | 1.00e+00 ||     0.24 | 00h00'02
     1.00 | -2.01 |      107 |   166998 |      107 | 3.47e-01 | 1.00e+00 ||     0.25 | 00h00'01
     2.00 | -1.01 |      107 |   160078 |      107 | 3.32e-01 | 1.00e+00 ||     0.25 | 00h00'01

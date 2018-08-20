@@ -1,9 +1,9 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "15" -K "11" -T "2" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
-title=RS (15,11,2)
-ci=off
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
+title=RS (15,11,2)
 info=https://www.uni-kl.de/fileadmin/_processed_/e/1/csm_rs_15_919f52dd35.png
+ci=off
+command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "15" -K "11" -T "2" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
 
 [trace]
 # ----------------------------------------------------
@@ -77,6 +77,7 @@ info=https://www.uni-kl.de/fileadmin/_processed_/e/1/csm_rs_15_919f52dd35.png
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -1.35 |     0.00 ||    15379 |    88626 |    14797 | 1.31e-01 | 9.62e-01 ||    2.074 | 00h00'00
       -1.15 |     0.20 ||    12564 |    69411 |    11960 | 1.26e-01 | 9.52e-01 ||  106.886 | 00h00'00
       -0.95 |     0.40 ||    15377 |    80715 |    14441 | 1.19e-01 | 9.39e-01 ||  119.792 | 00h00'00

@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 19.1 -s 1.0 -e 500 -K 4003 --mdm-type PSK --mdm-max MAX --mdm-bps 4 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
 title=Uncoded K=4003 16-PSK
+command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 19.1 -s 1.0 -e 500 -K 4003 --mdm-type PSK --mdm-max MAX --mdm-bps 4 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Uncoded K=4003 16-PSK
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 19 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4003 16-PSK
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = FAST
 #    ** Info. bits (K_info)   = 4003
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -53,9 +54,8 @@ title=Uncoded K=4003 16-PSK
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 500
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -68,6 +68,7 @@ title=Uncoded K=4003 16-PSK
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
     6.02 |  0.00 |      524 |   365599 |      524 | 1.74e-01 | 1.00e+00 ||  1130.27 |  1130.27 |     3.54 ||    39.50 | 00h00'00
     7.02 |  1.00 |      510 |   312830 |      510 | 1.53e-01 | 1.00e+00 ||  1347.74 |  1347.74 |     2.97 ||    35.29 | 00h00'00
     8.02 |  2.00 |      526 |   281439 |      526 | 1.34e-01 | 1.00e+00 ||   198.29 |   198.29 |    20.19 ||    44.04 | 00h00'00

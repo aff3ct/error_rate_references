@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -p "08" --sim-type "BFER" -C "POLAR" -m "0" -M "6" -s "0.25" -e "500" --enc-fb-gen-method "GA" --enc-no-sys -K "96" -N "128" --dec-type "SC" --dec-implem "NAIVE"
 title=Polar (128,96) SC NO SYS  8-bit
+command=./bin/aff3ct -p "08" --sim-type "BFER" -C "POLAR" -m "0" -M "6" -s "0.25" -e "500" --enc-fb-gen-method "GA" --enc-no-sys -K "96" -N "128" --dec-type "SC" --dec-implem "NAIVE"
 
 [trace]
 # ----------------------------------------------------
@@ -66,7 +66,6 @@ title=Polar (128,96) SC NO SYS  8-bit
 #    ** Frame error count (e) = 500
 #    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -79,6 +78,7 @@ title=Polar (128,96) SC NO SYS  8-bit
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -1.25 |     0.00 |      537 |    19464 |      518 | 3.78e-01 | 9.65e-01 ||     3.33 | 00h00'00
       -1.00 |     0.25 |      549 |    18410 |      522 | 3.49e-01 | 9.51e-01 ||     9.80 | 00h00'00
       -0.75 |     0.50 |      567 |    18178 |      519 | 3.34e-01 | 9.15e-01 ||     9.89 | 00h00'00

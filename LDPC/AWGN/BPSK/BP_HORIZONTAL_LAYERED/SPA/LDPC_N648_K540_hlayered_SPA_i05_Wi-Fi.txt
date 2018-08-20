@@ -1,8 +1,8 @@
 [metadata]
-command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 5 --dec-h-path ../conf/dec/LDPC/WIFI_540_648.alist
 title=LDPC (648,540) SPA 5 ite. Wi-Fi
-url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2cdc87fd.png
+url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
+command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 540 -N 648 -m 2.00 -M 5.01 -s 0.25 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 5 --dec-h-path ../conf/dec/LDPC/WIFI_540_648.alist
 
 [trace]
 # ----------------------------------------------------
@@ -17,11 +17,11 @@ info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 2 -> 5 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -30,6 +30,7 @@ info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = AZCW
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 540
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -62,9 +63,8 @@ info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -77,6 +77,7 @@ info=https://www.uni-kl.de/fileadmin/_processed_/e/e/csm_wifi_648_r083_ML_01_0a2
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
     1.21 |  2.00 |      108 |     2591 |      107 | 4.44e-02 | 9.91e-01 ||     0.69 |     0.57 |   944.59 ||     3.17 | 00h00'00
     1.46 |  2.25 |      121 |     2482 |      115 | 3.80e-02 | 9.50e-01 ||     0.64 |     0.53 |  1009.37 ||     5.95 | 00h00'00
     1.71 |  2.50 |      128 |     2072 |      117 | 3.00e-02 | 9.14e-01 ||     0.68 |     0.56 |   958.12 ||     6.79 | 00h00'00

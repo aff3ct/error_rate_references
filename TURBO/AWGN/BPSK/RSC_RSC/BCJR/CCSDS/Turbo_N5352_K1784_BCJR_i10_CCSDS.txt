@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -C TURBO -K 1784 -m 0.0 -M 0.91 --enc-sub-std CCSDS -i 10 --dec-sub-max MAXS
 title=Turbo (5368,1784) BCJR 10 ite. CCSDS
+command=./bin/aff3ct -C TURBO -K 1784 -m 0.0 -M 0.91 --enc-sub-std CCSDS -i 10 --dec-sub-max MAXS
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 0.9 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -28,6 +28,7 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 1784
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -81,9 +82,8 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -96,6 +96,7 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -4.78 |  0.00 |      184 |    28089 |      138 | 8.56e-02 | 7.50e-01 ||     0.03 |     0.01 | 1.54e+05 ||     1.33 | 00h00'00
    -4.68 |  0.10 |      251 |    23802 |      125 | 5.32e-02 | 4.98e-01 ||     0.04 |     0.01 | 1.53e+05 ||     1.56 | 00h00'00
    -4.58 |  0.20 |      420 |    19443 |      112 | 2.59e-02 | 2.67e-01 ||     0.04 |     0.01 | 1.48e+05 ||     1.63 | 00h00'01

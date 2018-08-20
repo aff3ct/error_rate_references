@@ -1,8 +1,8 @@
 [metadata]
-command=./bin/aff3ct -p "8" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --qnt-bits "6" --qnt-dec "2" --mdm-no-sig2 --dec-sub-max "MAX"
+info=Figure 2
 title=Turbo (18444,6144) BCJR 8-bit 6 ite. LTE
 doi=10.1109/ISTC.2016.7593092
-info=Figure 2
+command=./bin/aff3ct -p "8" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --qnt-bits "6" --qnt-dec "2" --mdm-no-sig2 --dec-sub-max "MAX"
 
 [trace]
 # ----------------------------------------------------
@@ -18,11 +18,11 @@ info=Figure 2
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 1 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -31,6 +31,7 @@ info=Figure 2
 #    ** Inter frame level      = 32
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 6144
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -87,12 +88,12 @@ info=Figure 2
 #    ** Add users              = off
 # * Quantizer -------------------------------------
 #    ** Type                   = POW2
+#    ** Implementation         = STD
 #    ** Fixed-point config.    = {6, 2}
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Frame error count (e)  = 500
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -105,6 +106,7 @@ info=Figure 2
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
    -4.77 |  0.00 |     1520 |  1378394 |     1520 | 1.48e-01 | 1.00e+00 ||     8.05 | 00h00'01
    -4.67 |  0.10 |     1504 |  1141843 |     1504 | 1.24e-01 | 1.00e+00 ||    50.76 | 00h00'00
    -4.57 |  0.20 |     1520 |   826368 |     1518 | 8.85e-02 | 9.99e-01 ||    48.66 | 00h00'00

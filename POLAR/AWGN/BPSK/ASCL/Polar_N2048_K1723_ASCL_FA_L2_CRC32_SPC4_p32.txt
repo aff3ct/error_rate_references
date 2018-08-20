@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -K "1755" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "ASCL" --dec-simd "INTRA" -L "2" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}"
 title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
+command=./bin/aff3ct --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -K "1755" -N "2048" --src-type "AZCW" --chn-type AWGN --chn-implem FAST --dec-type "ASCL" --dec-simd "INTRA" -L "2" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = POLAR
 #    ** Noise range              = 1 -> 4.5 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -28,6 +28,7 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = AZCW
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 1723
 # * CRC -------------------------------------------
 #    ** Type                     = 32-GZIP
@@ -67,9 +68,8 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #
@@ -86,6 +86,7 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #  -0.50 |  0.25 |      125 |    23014 |      125 | 1.05e-01 | 1.00e+00 ||    11.98 |    10.27 |   170.90 ||    10.78 | 00h00'00
 #  -0.25 |  0.50 |      155 |    26938 |      155 | 9.90e-02 | 1.00e+00 ||    11.35 |     9.73 |   180.37 ||    15.74 | 00h00'00
 #  -0.00 |  0.75 |      155 |    25436 |      155 | 9.35e-02 | 1.00e+00 ||    11.45 |     9.81 |   178.90 ||    16.27 | 00h00'00
+# End of the simulation.
     0.25 |  1.00 |      154 |    23865 |      154 | 8.83e-02 | 1.00e+00 ||    11.41 |     9.78 |   179.49 ||    16.34 | 00h00'00
     0.50 |  1.25 |      142 |    20569 |      142 | 8.25e-02 | 1.00e+00 ||    12.90 |    11.06 |   158.72 ||    15.09 | 00h00'00
     0.75 |  1.50 |      147 |    20203 |      147 | 7.83e-02 | 1.00e+00 ||    12.57 |    10.78 |   162.88 ||    15.48 | 00h00'00

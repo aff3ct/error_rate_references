@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -m "0.0" -M "3.51" -s "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-min "MINS"
 title=LDPC (576,288) AMS MinStar 100 ite. WiMAX
+command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -m "0.0" -M "3.51" -s "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "AMS" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-min "MINS"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 3.5 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = AZCW
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 288
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -61,9 +62,8 @@ title=LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -76,6 +76,7 @@ title=LDPC (576,288) AMS MinStar 100 ite. WiMAX
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
    -3.01 |  0.00 |      108 |     3784 |      107 | 1.22e-01 | 9.91e-01 ||     0.06 | 00h00'00
    -2.76 |  0.25 |      109 |     3518 |      107 | 1.12e-01 | 9.82e-01 ||     0.08 | 00h00'00
    -2.51 |  0.50 |      117 |     3379 |      107 | 1.00e-01 | 9.15e-01 ||     0.08 | 00h00'00

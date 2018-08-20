@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" -i "30" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BSC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.1" -E "EP"
 title=LDPC (16200,10800) NMS 30 ite. DVB-S2
+command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" --enc-type "LDPC_DVBS2" -K "10800" -N "16200" -e "100" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" -i "30" --dec-norm "0.825" --dec-simd "INTER" --chn-type "BSC" --mdm-type "OOK" -R "0.1:0.05:0.5,0.01:0.002:0.1" -E "EP"
 
 [trace]
 # ----------------------------------------------------
@@ -14,12 +14,12 @@ title=LDPC (16200,10800) NMS 30 ite. DVB-S2
 #    ** Date (UTC)                = 2018-05-17 14:11:38
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0.03799 -> 0.5 dB
+#    ** Noise range               = 0.01 -> 0.5 dB
+#    ** Noise type (E)            = EP
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EP
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (16200,10800) NMS 30 ite. DVB-S2
 #    ** Inter frame level         = 8
 # * Source ----------------------------------------
 #    ** Type                      = RAND
+#    ** Implementation            = FAST
 #    ** Info. bits (K_info)       = 10800
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -60,9 +61,8 @@ title=LDPC (16200,10800) NMS 30 ite. DVB-S2
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -75,6 +75,7 @@ title=LDPC (16200,10800) NMS 30 ite. DVB-S2
 #        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
      0.5000 |      152 |   821185 |      152 | 5.00e-01 | 1.00e+00 ||     7.32 | 00h00'00
      0.4500 |      160 |   786719 |      160 | 4.55e-01 | 1.00e+00 ||    10.13 | 00h00'00
      0.4000 |      160 |   709349 |      160 | 4.11e-01 | 1.00e+00 ||    11.82 | 00h00'00

@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -C "LDPC" -K "14400" -N "16200" --enc-type "LDPC_DVBS2" -m "3.4" -M "4.6" --dec-simd "INTER" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "20"
 title=LDPC (16200,14400) NMS 20 ite. DVB-S2
+command=./bin/aff3ct -C "LDPC" -K "14400" -N "16200" --enc-type "LDPC_DVBS2" -m "3.4" -M "4.6" --dec-simd "INTER" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "20"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=LDPC (16200,14400) NMS 20 ite. DVB-S2
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 3.4 -> 4.6 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (16200,14400) NMS 20 ite. DVB-S2
 #    ** Inter frame level         = 8
 # * Source ----------------------------------------
 #    ** Type                      = RAND
+#    ** Implementation            = FAST
 #    ** Info. bits (K_info)       = 14400
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -60,9 +61,8 @@ title=LDPC (16200,14400) NMS 20 ite. DVB-S2
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -75,6 +75,7 @@ title=LDPC (16200,14400) NMS 20 ite. DVB-S2
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
     2.89 |  3.40 |      488 |    75826 |      454 | 1.08e-02 | 9.30e-01 ||     6.03 | 00h00'01
     2.99 |  3.50 |      528 |    43976 |      356 | 5.78e-03 | 6.74e-01 ||    50.74 | 00h00'00
     3.09 |  3.60 |      744 |    18103 |      207 | 1.69e-03 | 2.78e-01 ||    57.48 | 00h00'00

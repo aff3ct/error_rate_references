@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0.0" -M "4.51" -s "0.25" -e "200" --enc-fb-gen-method "GA" -K "1739" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "ASCL" --dec-simd "INTRA" --crc-type "16-IBM" --crc-implem "FAST" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}" -L "32" --dec-partial-adaptive
 title=Polar (2048,1723) ASCL PA L=32 CRC 16-bit SPC4 32-bit
+command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0.0" -M "4.51" -s "0.25" -e "200" --enc-fb-gen-method "GA" -K "1739" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "ASCL" --dec-simd "INTRA" --crc-type "16-IBM" --crc-implem "FAST" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}" -L "32" --dec-partial-adaptive
 
 [trace]
 # ----------------------------------------------------
@@ -70,7 +70,6 @@ title=Polar (2048,1723) ASCL PA L=32 CRC 16-bit SPC4 32-bit
 #    ** Frame error count (e)    = 200
 #    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #
@@ -83,6 +82,7 @@ title=Polar (2048,1723) ASCL PA L=32 CRC 16-bit SPC4 32-bit
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -0.75 |     0.00 |      269 |    51081 |      269 | 1.10e-01 | 1.00e+00 ||     1.99 | 00h00'00
       -0.50 |     0.25 |      269 |    48174 |      269 | 1.04e-01 | 1.00e+00 ||     3.59 | 00h00'00
       -0.25 |     0.50 |      269 |    45317 |      269 | 9.78e-02 | 1.00e+00 ||     3.56 | 00h00'00

@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -C "LDPC" -K "11880" -N "16200" --enc-type "LDPC_DVBS2" -m "2.3" -M "3.6" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "05"
 title=LDPC (16200,11880) NMS 5 ite. DVB-S2
+command=./bin/aff3ct -C "LDPC" -K "11880" -N "16200" --enc-type "LDPC_DVBS2" -m "2.3" -M "3.6" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "05"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=LDPC (16200,11880) NMS 5 ite. DVB-S2
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 2.3 -> 3.6 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (16200,11880) NMS 5 ite. DVB-S2
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = RAND
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 11880
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -59,9 +60,8 @@ title=LDPC (16200,11880) NMS 5 ite. DVB-S2
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -74,6 +74,7 @@ title=LDPC (16200,11880) NMS 5 ite. DVB-S2
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
     0.95 |  2.30 |      147 |    23851 |      147 | 1.37e-02 | 1.00e+00 ||     2.21 | 00h00'00
     1.05 |  2.40 |      147 |    14943 |      147 | 8.56e-03 | 1.00e+00 ||    38.36 | 00h00'00
     1.15 |  2.50 |      147 |    10665 |      147 | 6.11e-03 | 1.00e+00 ||    44.85 | 00h00'00

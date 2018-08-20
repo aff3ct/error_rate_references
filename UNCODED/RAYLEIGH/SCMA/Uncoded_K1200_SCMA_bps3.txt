@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" -F "6"
 title=Uncoded K=1200 8-SCMA
+command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" -F "6"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Uncoded K=1200 8-SCMA
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 32 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=1200 8-SCMA
 #    ** Inter frame level     = 6
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = STD
 #    ** Info. bits (K_info)   = 1200
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -55,9 +56,8 @@ title=Uncoded K=1200 8-SCMA
 #    ** Add users             = on
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 100
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -70,6 +70,7 @@ title=Uncoded K=1200 8-SCMA
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
     4.77 |  0.00 |      144 |    35490 |      144 | 2.05e-01 | 1.00e+00 ||     2.35 | 00h00'00
     6.77 |  2.00 |      144 |    29043 |      144 | 1.68e-01 | 1.00e+00 ||     3.20 | 00h00'00
     8.77 |  4.00 |      144 |    21746 |      144 | 1.26e-01 | 1.00e+00 ||     2.87 | 00h00'00

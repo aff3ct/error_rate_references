@@ -1,7 +1,7 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "63" -K "53" -T "5" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
 title=RS (63,53,5)
 ci=on
+command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "63" -K "53" -T "5" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
 
 [trace]
 # ----------------------------------------------------
@@ -75,6 +75,7 @@ ci=on
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -0.75 |     0.00 ||     1014 |    31413 |     1014 | 9.74e-02 | 1.00e+00 ||   15.955 | 00h00'00
       -0.55 |     0.20 ||     1015 |    29714 |     1015 | 9.21e-02 | 1.00e+00 ||  169.167 | 00h00'00
       -0.35 |     0.40 ||     1013 |    28130 |     1013 | 8.73e-02 | 1.00e+00 ||  170.893 | 00h00'00

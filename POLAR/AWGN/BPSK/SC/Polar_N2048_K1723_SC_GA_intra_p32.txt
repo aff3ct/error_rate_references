@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SC" --dec-simd "INTRA"
 title=Polar (2048,1723) SC 32-bit
+command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SC" --dec-simd "INTRA"
 
 [trace]
 # ----------------------------------------------------
@@ -63,7 +63,6 @@ title=Polar (2048,1723) SC 32-bit
 #    ** Frame error count (e) = 500
 #    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -76,6 +75,7 @@ title=Polar (2048,1723) SC 32-bit
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
        0.25 |     1.00 |      528 |    84306 |      528 | 9.27e-02 | 1.00e+00 ||     6.13 | 00h00'00
        0.50 |     1.25 |      530 |    79989 |      530 | 8.76e-02 | 1.00e+00 ||     8.76 | 00h00'00
        0.75 |     1.50 |      530 |    75235 |      530 | 8.24e-02 | 1.00e+00 ||     9.53 | 00h00'00

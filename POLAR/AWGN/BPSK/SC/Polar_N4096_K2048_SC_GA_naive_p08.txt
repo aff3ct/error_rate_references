@@ -1,8 +1,8 @@
 [metadata]
-command=./bin/aff3ct -p "8" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "3.2" -e "500" --enc-fb-gen-method "GA" --dec-type "SC" --dec-implem "NAIVE" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --qnt-bits "6" --qnt-dec "1" --qnt-implem "FAST"
+info=Figure 2
 title=Polar (4096,2048) SC GA naive 8-bit
 doi=10.1109/EUSIPCO.2016.7760327
-info=Figure 2
+command=./bin/aff3ct -p "8" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "3.2" -e "500" --enc-fb-gen-method "GA" --dec-type "SC" --dec-implem "NAIVE" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --qnt-bits "6" --qnt-dec "1" --qnt-implem "FAST"
 
 [trace]
 # ----------------------------------------------------
@@ -69,7 +69,6 @@ info=Figure 2
 #    ** Frame error count (e) = 500
 #    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -82,6 +81,7 @@ info=Figure 2
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -3.01 |     0.00 |      539 |   246131 |      539 | 2.23e-01 | 1.00e+00 ||     4.63 | 00h00'00
       -2.91 |     0.10 |      539 |   243386 |      539 | 2.20e-01 | 1.00e+00 ||     6.75 | 00h00'00
       -2.81 |     0.20 |      538 |   235089 |      538 | 2.13e-01 | 1.00e+00 ||     7.08 | 00h00'00

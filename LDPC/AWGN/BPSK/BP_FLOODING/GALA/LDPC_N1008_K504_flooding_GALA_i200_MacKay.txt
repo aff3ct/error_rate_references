@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type BFER -C LDPC -m 0.0 -M 8.51 -s 0.25 -K 504 -N 1008 --dec-h-path ../conf/dec/LDPC/MACKAY_504_1008.alist --dec-type BP_FLOODING --dec-implem GALA -i 200
 title=LDPC (1008,504) Gallager A 200 ite.
+command=./bin/aff3ct --sim-type BFER -C LDPC -m 0.0 -M 8.51 -s 0.25 -K 504 -N 1008 --dec-h-path ../conf/dec/LDPC/MACKAY_504_1008.alist --dec-type BP_FLOODING --dec-implem GALA -i 200
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 8.5 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = AZCW
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 504
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -60,9 +61,8 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -75,6 +75,7 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -3.01 |  0.00 |      103 |    25898 |      103 | 4.99e-01 | 1.00e+00 ||     0.12 |     0.06 |  8539.66 ||     0.45 | 00h00'00
    -2.76 |  0.25 |      103 |    25647 |      103 | 4.94e-01 | 1.00e+00 ||     0.12 |     0.06 |  8459.26 ||     0.47 | 00h00'00
    -2.51 |  0.50 |      103 |    25884 |      103 | 4.99e-01 | 1.00e+00 ||     0.12 |     0.06 |  8603.35 ||     0.46 | 00h00'00

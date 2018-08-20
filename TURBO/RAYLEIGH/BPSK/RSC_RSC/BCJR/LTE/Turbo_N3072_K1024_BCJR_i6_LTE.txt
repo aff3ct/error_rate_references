@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "2.5" -s "0.1" --enc-sub-std LTE --chn-type "RAYLEIGH" --mdm-type "BPSK" --mnt-max-fe "500" --dec-sf-type "LTE_VEC"
 title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "2.5" -s "0.1" --enc-sub-std LTE --chn-type "RAYLEIGH" --mdm-type "BPSK" --mnt-max-fe "500" --dec-sf-type "LTE_VEC"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 2.5 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -28,6 +28,7 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 1024
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -83,10 +84,9 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #    ** Complex                = off
 #    ** Add users              = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Frame error count (e)  = 500
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -99,6 +99,7 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -4.79 |  0.00 |      507 |   132775 |      507 | 2.56e-01 | 1.00e+00 ||     7.20 |     2.39 |   428.35 ||    22.79 | 00h00'00
    -4.69 |  0.10 |      507 |   129793 |      507 | 2.50e-01 | 1.00e+00 ||     5.90 |     1.96 |   522.39 ||    21.31 | 00h00'00
    -4.59 |  0.20 |      507 |   126259 |      507 | 2.43e-01 | 1.00e+00 ||     5.57 |     1.85 |   553.58 ||    21.08 | 00h00'00

@@ -1,7 +1,7 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "31" -K "11" -T "5" -m "0" -M "8.251" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
 title=BCH (31,11,5)
 ci=on
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "31" -K "11" -T "5" -m "0" -M "8.251" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
 
 [trace]
 # ----------------------------------------------------
@@ -15,7 +15,7 @@ ci=on
 #    ** Date (UTC)             = 2018-07-27 09:45:14
 #    ** Git version            = v1.3.2-825-g5c9c077
 #    ** Code type (C)          = BCH
-#    ** Noise range            = 0 -> 10 dB
+#    ** Noise range            = 0 -> 8.25 dB
 #    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
@@ -28,8 +28,8 @@ ci=on
 #    ** Bit rate               = 0.354839 (11/31)
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
-#    ** Type                   = RAND
-#    ** Implementation         = FAST
+#    ** Type                   = AZCW
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 11
 # * Codec -----------------------------------------
 #    ** Type                   = BCH
@@ -38,7 +38,7 @@ ci=on
 #    ** Frame size (N)         = 31
 #    ** Code rate              = 0.354839 (11/31)
 # * Encoder ---------------------------------------
-#    ** Type                   = BCH
+#    ** Type                   = AZCW
 #    ** Systematic             = yes
 # * Decoder ---------------------------------------
 #    ** Type (D)               = ALGEBRAIC
@@ -48,7 +48,7 @@ ci=on
 #    ** Correction power (T)   = 5
 # * Modem -----------------------------------------
 #    ** Type                   = BPSK
-#    ** Implementation         = FAST
+#    ** Implementation         = STD
 #    ** Bits per symbol        = 1
 #    ** Sampling factor        = 1
 #    ** Sigma square           = on
@@ -58,7 +58,7 @@ ci=on
 #    ** Complex                = off
 #    ** Add users              = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 1000
+#    ** Frame error count (e)  = 4000
 #    ** Compute mutual info    = no
 # * Terminal --------------------------------------
 #    ** Enabled                = yes
@@ -73,6 +73,7 @@ ci=on
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -4.50 |     0.00 ||     1745 |     3031 |     1004 | 1.58e-01 | 5.75e-01 ||    0.528 | 00h00'00
       -4.30 |     0.20 ||     1806 |     2955 |     1007 | 1.49e-01 | 5.58e-01 ||   13.218 | 00h00'00
       -4.10 |     0.40 ||     1877 |     2866 |     1004 | 1.39e-01 | 5.35e-01 ||   13.433 | 00h00'00

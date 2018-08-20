@@ -1,8 +1,8 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.6" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc
+info=Figure 5
 title=Turbo DB (3008,1504) BCJR 8 ite. FNC DVB-RCS1
 doi=10.1109/ISTC.2016.7593096
-info=Figure 5
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.6" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc
 
 [trace]
 # ----------------------------------------------------
@@ -16,12 +16,12 @@ info=Figure 5
 #    ** Date (UTC)               = 2018-05-17 14:26:44
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = TURBO_DB
-#    ** Noise range              = 0 -> 2.59999 dB
+#    ** Noise range              = 0 -> 2.4 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -30,6 +30,7 @@ info=Figure 5
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 1472
 # * CRC -------------------------------------------
 #    ** Type                     = 32-GZIP
@@ -88,9 +89,8 @@ info=Figure 5
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #
@@ -103,6 +103,7 @@ info=Figure 5
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -0.09 |  0.00 |      147 |    38888 |      147 | 1.80e-01 | 1.00e+00 ||     0.06 |     0.02 | 78360.30 ||     1.97 | 00h00'00
     0.11 |  0.20 |      147 |    35543 |      147 | 1.64e-01 | 1.00e+00 ||     0.06 |     0.02 | 81904.33 ||     2.12 | 00h00'00
     0.31 |  0.40 |      149 |    30506 |      147 | 1.39e-01 | 9.87e-01 ||     0.05 |     0.02 | 83188.94 ||     2.06 | 00h00'00

@@ -1,9 +1,9 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "231" -T "3" -m "0" -M "8.01" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
-title=BCH (255,231,3)
-ci=on
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
+title=BCH (255,231,3)
 info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
+ci=on
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "231" -T "3" -m "0" -M "8.01" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
 
 [trace]
 # ----------------------------------------------------
@@ -18,11 +18,11 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = BCH
 #    ** Noise range            = 0 -> 8 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -31,6 +31,7 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = AZCW
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 231
 # * Codec -----------------------------------------
 #    ** Type                   = BCH
@@ -60,9 +61,8 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 4000
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -75,6 +75,7 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -0.43 |  0.00 |     4002 |    84185 |     4002 | 9.11e-02 | 1.00e+00 ||    23.88 |    21.64 |    10.68 ||    48.75 | 00h00'00
    -0.18 |  0.25 |     4002 |    78292 |     4002 | 8.47e-02 | 1.00e+00 ||    21.90 |    19.84 |    11.64 ||    59.66 | 00h00'00
     0.07 |  0.50 |     4004 |    72845 |     4003 | 7.88e-02 | 1.00e+00 ||    21.78 |    19.73 |    11.71 ||    65.47 | 00h00'00

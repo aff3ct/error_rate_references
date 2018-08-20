@@ -1,8 +1,8 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.8" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE"
+info=Figure 5
 title=Turbo DB (3008,1504) BCJR 8 ite. REF DVB-RCS1
 doi=10.1109/ISTC.2016.7593096
-info=Figure 5
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.8" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE"
 
 [trace]
 # ----------------------------------------------------
@@ -17,11 +17,11 @@ info=Figure 5
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = TURBO_DB
 #    ** Noise range              = 0 -> 2.8 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -30,6 +30,7 @@ info=Figure 5
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 1472
 # * CRC -------------------------------------------
 #    ** Type                     = 32-GZIP
@@ -84,11 +85,11 @@ info=Figure 5
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
+#
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------
 #       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput
@@ -98,6 +99,7 @@ info=Figure 5
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -0.09 |  0.00 |      144 |    37796 |      144 | 1.78e-01 | 1.00e+00 ||     1.24 |     0.40 |  3652.94 ||    10.69 | 00h00'00
     0.11 |  0.20 |      146 |    35642 |      146 | 1.66e-01 | 1.00e+00 ||     0.94 |     0.31 |  4817.33 ||    12.08 | 00h00'00
     0.31 |  0.40 |      147 |    30086 |      144 | 1.39e-01 | 9.80e-01 ||     1.00 |     0.33 |  4502.99 ||    12.36 | 00h00'00

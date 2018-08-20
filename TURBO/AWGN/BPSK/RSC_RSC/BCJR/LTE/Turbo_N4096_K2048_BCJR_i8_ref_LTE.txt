@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "2048" -m "0.0" -M "2.0" -s "0.1" --enc-sub-std "LTE" -i "8" --dec-sf-type "LTE_VEC" --dec-sub-implem FAST --dec-sub-max "MAX" --pct-pattern "11,10,01" --crc-implem "FAST" --crc-poly "24-LTEA"
 title=Turbo (4108,2048) BCJR 8 ite. REF LTE
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "2048" -m "0.0" -M "2.0" -s "0.1" --enc-sub-std "LTE" -i "8" --dec-sf-type "LTE_VEC" --dec-sub-implem FAST --dec-sub-max "MAX" --pct-pattern "11,10,01" --crc-implem "FAST" --crc-poly "24-LTEA"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Turbo (4108,2048) BCJR 8 ite. REF LTE
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = TURBO
 #    ** Noise range              = 0 -> 2 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -28,6 +28,7 @@ title=Turbo (4108,2048) BCJR 8 ite. REF LTE
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 2024
 # * CRC -------------------------------------------
 #    ** Type                     = 24-LTEA
@@ -91,9 +92,8 @@ title=Turbo (4108,2048) BCJR 8 ite. REF LTE
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #
@@ -106,6 +106,7 @@ title=Turbo (4108,2048) BCJR 8 ite. REF LTE
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
    -3.07 |  0.00 |      146 |    49355 |      146 | 1.67e-01 | 1.00e+00 ||     1.60 |     0.53 |  3840.84 ||    20.96 | 00h00'00
    -2.97 |  0.10 |      142 |    46846 |      142 | 1.63e-01 | 1.00e+00 ||     1.53 |     0.50 |  4024.96 ||    20.14 | 00h00'00
    -2.87 |  0.20 |      146 |    46377 |      146 | 1.57e-01 | 1.00e+00 ||     1.43 |     0.47 |  4318.62 ||    20.25 | 00h00'00

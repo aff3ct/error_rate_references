@@ -1,7 +1,7 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "511" -K "322" -T "22" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" 
 title=BCH (511,322,22)
 ci=off
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "511" -K "322" -T "22" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-type "AWGN" --chn-implem "FAST"
 
 [trace]
 # ----------------------------------------------------
@@ -73,6 +73,7 @@ ci=off
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -2.01 |     0.00 ||     1011 |    42984 |     1011 | 1.32e-01 | 1.00e+00 ||    7.035 | 00h00'00
       -1.81 |     0.20 ||     1007 |    40756 |     1007 | 1.26e-01 | 1.00e+00 ||   13.255 | 00h00'00
       -1.61 |     0.40 ||     1008 |    38848 |     1008 | 1.20e-01 | 1.00e+00 ||   13.227 | 00h00'00

@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "4.00" -s "0.25" --enc-sub-std LTE --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "5" -i "6" --mnt-max-fe "100" --src-fra "6" --dec-sf-type "LTE_VEC" --mdm-psi "PSI2"
 title=Turbo (3084,1024) SCMA (PSI2 5 ite.) BCJR 6 ite. LTE
+command=./bin/aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "4.00" -s "0.25" --enc-sub-std LTE --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "5" -i "6" --mnt-max-fe "100" --src-fra "6" --dec-sf-type "LTE_VEC" --mdm-psi "PSI2"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Turbo (3084,1024) SCMA (PSI2 5 ite.) BCJR 6 ite. LTE
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 4 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -28,6 +28,7 @@ title=Turbo (3084,1024) SCMA (PSI2 5 ite.) BCJR 6 ite. LTE
 #    ** Inter frame level      = 6
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 1024
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -85,9 +86,8 @@ title=Turbo (3084,1024) SCMA (PSI2 5 ite.) BCJR 6 ite. LTE
 #    ** Add users              = on
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -100,6 +100,7 @@ title=Turbo (3084,1024) SCMA (PSI2 5 ite.) BCJR 6 ite. LTE
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
    -0.02 |  0.00 |      480 |   141011 |      480 | 2.87e-01 | 1.00e+00 ||     0.89 | 00h00'00
     0.23 |  0.25 |      480 |   136874 |      480 | 2.78e-01 | 1.00e+00 ||     3.47 | 00h00'00
     0.48 |  0.50 |      480 |   132661 |      480 | 2.70e-01 | 1.00e+00 ||     3.50 | 00h00'00

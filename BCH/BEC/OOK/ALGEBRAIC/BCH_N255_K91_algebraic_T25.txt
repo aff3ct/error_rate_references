@@ -1,7 +1,7 @@
 [metadata]
-command=./bin/aff3ct -C "BCH" -N "255" -T "25" -R "0.2:0.05:0.4,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --mdm-type "OOK"
 title=BCH (255,91,25)
 ci=on
+command=./bin/aff3ct -C "BCH" -N "255" -T "25" -R "0.2:0.05:0.4,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --mdm-type "OOK"
 
 [trace]
 # ----------------------------------------------------
@@ -15,12 +15,12 @@ ci=on
 #    ** Date (UTC)             = 2018-05-17 14:29:41
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = BCH
-#    ** Noise range            = 0.06 -> 0.4 dB
+#    ** Noise range            = 0.02 -> 0.4 dB
+#    ** Noise type (E)         = EP
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EP
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -29,6 +29,7 @@ ci=on
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 91
 # * Codec -----------------------------------------
 #    ** Type                   = BCH
@@ -58,9 +59,8 @@ ci=on
 #    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -73,6 +73,7 @@ ci=on
 #        EP |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #           |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
      0.4000 |      105 |     1891 |      105 | 1.98e-01 | 1.00e+00 ||     0.37 | 00h00'00
      0.3500 |      106 |     1706 |      106 | 1.77e-01 | 1.00e+00 ||     3.16 | 00h00'00
      0.3000 |      103 |     1358 |      101 | 1.45e-01 | 9.81e-01 ||     2.06 | 00h00'00

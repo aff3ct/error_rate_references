@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "64" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "QAM" --mnt-max-fe "1000" --mdm-bps "6"
 title=Uncoded K=4003 64-QAM
+command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "64" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "QAM" --mnt-max-fe "1000" --mdm-bps "6"
 
 [trace]
 # ----------------------------------------------------
@@ -15,11 +15,11 @@ title=Uncoded K=4003 64-QAM
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 64 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4003 64-QAM
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = STD
 #    ** Info. bits (K_info)   = 4003
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -54,9 +55,8 @@ title=Uncoded K=4003 64-QAM
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 1000
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -69,6 +69,7 @@ title=Uncoded K=4003 64-QAM
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+# End of the simulation.
     7.78 |  0.00 |     1003 |   992600 |     1003 | 2.47e-01 | 1.00e+00 ||  2261.55 |  2261.55 |     1.77 ||    11.04 | 00h00'00
     9.78 |  2.00 |     1003 |   839265 |     1003 | 2.09e-01 | 1.00e+00 ||  3220.63 |  3220.63 |     1.24 ||    11.42 | 00h00'00
    11.78 |  4.00 |     1003 |   688497 |     1003 | 1.71e-01 | 1.00e+00 ||  3402.36 |  3402.36 |     1.18 ||    11.42 | 00h00'00

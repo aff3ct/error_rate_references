@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -C "LDPC" -K "14400" -N "16200" --enc-type "LDPC_DVBS2" -m "3.4" -M "4.6" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-type "BP_HORIZONTAL_LAYERED" --dec-ite "50"
 title=LDPC (16200,14400) SPA 50 ite. DVB-S2
+command=./bin/aff3ct -C "LDPC" -K "14400" -N "16200" --enc-type "LDPC_DVBS2" -m "3.4" -M "4.6" --mdm-type BPSK --mdm-implem FAST --src-type "RAND" --src-implem "FAST" --chn-implem "FAST" --dec-type "BP_HORIZONTAL_LAYERED" --dec-type "BP_HORIZONTAL_LAYERED" --dec-ite "50"
 
 [trace]
 # ----------------------------------------------------
@@ -14,12 +14,12 @@ title=LDPC (16200,14400) SPA 50 ite. DVB-S2
 #    ** Date (UTC)                = 2018-05-17 14:19:02
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 3.4 -> 4.4 dB
+#    ** Noise range               = 3.4 -> 4.6 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (16200,14400) SPA 50 ite. DVB-S2
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = RAND
+#    ** Implementation            = FAST
 #    ** Info. bits (K_info)       = 14400
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -58,9 +59,8 @@ title=LDPC (16200,14400) SPA 50 ite. DVB-S2
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #
@@ -73,6 +73,7 @@ title=LDPC (16200,14400) SPA 50 ite. DVB-S2
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
     2.89 |  3.40 |      181 |    22802 |      142 | 8.75e-03 | 7.85e-01 ||     1.19 | 00h00'02
     2.99 |  3.50 |      312 |    17887 |      133 | 3.98e-03 | 4.26e-01 ||     3.14 | 00h00'01
     3.09 |  3.60 |     1131 |    13182 |      108 | 8.09e-04 | 9.55e-02 ||     6.32 | 00h00'02

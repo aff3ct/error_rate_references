@@ -1,6 +1,6 @@
 [metadata]
-command=./bin/aff3ct -p "8" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SCAN" --dec-implem "NAIVE" -i "4" --qnt-bits "6" --qnt-dec "1"
 title=Polar (2048,1723) SCAN 4 ite. 8-bit
+command=./bin/aff3ct -p "8" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SCAN" --dec-implem "NAIVE" -i "4" --qnt-bits "6" --qnt-dec "1"
 
 [trace]
 # ----------------------------------------------------
@@ -67,7 +67,6 @@ title=Polar (2048,1723) SCAN 4 ite. 8-bit
 #    ** Frame error count (e)  = 500
 #    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #
@@ -80,6 +79,7 @@ title=Polar (2048,1723) SCAN 4 ite. 8-bit
 #     Es/N0 |    Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) |          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------|----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
        0.25 |     1.00 |      569 |    83108 |      569 | 8.48e-02 | 1.00e+00 ||    13.46 | 00h00'00
        0.50 |     1.25 |      570 |    77892 |      570 | 7.93e-02 | 1.00e+00 ||    18.75 | 00h00'00
        0.75 |     1.50 |      570 |    72999 |      570 | 7.43e-02 | 1.00e+00 ||    18.56 | 00h00'00

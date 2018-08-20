@@ -1,9 +1,9 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "1023" -K "1003" -T "2" -m "0" -M "10" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
-title=BCH (1023,1003,2)
-ci=off
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
+title=BCH (1023,1003,2)
 info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
+ci=off
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "1023" -K "1003" -T "2" -m "0" -M "10" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
 
 [trace]
 # ----------------------------------------------------
@@ -75,6 +75,7 @@ info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
+# End of the simulation.
       -0.09 |     0.00 ||     1051 |    85865 |     1051 | 8.15e-02 | 1.00e+00 ||    1.228 | 00h00'00
        0.11 |     0.20 ||     1064 |    82233 |     1064 | 7.71e-02 | 1.00e+00 ||  133.033 | 00h00'00
        0.31 |     0.40 ||     1061 |    77036 |     1061 | 7.24e-02 | 1.00e+00 ||  131.722 | 00h00'00
