@@ -196,7 +196,6 @@ class aff3ctRefsReader:
 		return self.getSimuTitleAsString() + self.getSimuHeaderAsString() + self.getLegendTitleAsString()
 
 	def __checkLegend(self, legendTable, colName):
-
 		for key in legendTable:
 			if type(legendTable[key]) is list:
 				for i in range(len(legendTable[key])):
@@ -209,7 +208,6 @@ class aff3ctRefsReader:
 		return ""
 
 	def __getMatchingLegend(self, colName):
-
 		key = self.__checkLegend(self.NoiseLegendsList, colName)
 		if key != "":
 			return key
@@ -282,19 +280,21 @@ class aff3ctRefsReader:
 
 		return 0
 
-	def __parseCommentLine(self, line):
+	def __parseHeaderLine(self, line):
 		line = line.replace("\n", "")
 		if line.startswith(self.HeaderLevel1):
-			entry = line[len(self.HeaderLevel1):].split(" ") # keep line separator "-----------------" in second part
-			if len(entry) == 2:
-				entry.append(1)
-				self.SimuHeader.append(entry)
+			entry = line[len(self.HeaderLevel1):]
+			pos = entry.find(" --")
+			entry = [entry[:pos], entry[pos+1:]] # keep line separator "-----------------" in second part
+			entry.append(1)
+			self.SimuHeader.append(entry)
 
 		elif line.startswith(self.HeaderLevel2) and line[len(self.HeaderLevel2)] != ' ' and line[len(self.HeaderLevel2)] != '*':
-			entry = line[len(self.HeaderLevel2):].split(" ") # keep line separator "-----------------" in second part
-			if len(entry) == 2:
-				entry.append(2)
-				self.SimuHeader.append(entry)
+			entry = line[len(self.HeaderLevel2):]
+			pos = entry.find(" --")
+			entry = [entry[:pos], entry[pos+1:]] # keep line separator "-----------------" in second part
+			entry.append(2)
+			self.SimuHeader.append(entry)
 
 		elif line.startswith(self.HeaderLevel3):
 			entry = line[len(self.HeaderLevel3):].split(" = ")
@@ -340,7 +340,7 @@ class aff3ctRefsReader:
 
 			elif startTrace:
 				if line.startswith("#"):
-					self.__parseCommentLine(line)
+					self.__parseHeaderLine(line)
 
 				elif len(self.Legend) != 0:
 					d = self.__getVal(line)
@@ -365,7 +365,7 @@ class aff3ctRefsReader:
 
 		for line in aff3ctOutput:
 			if line.startswith("#"):
-				self.__parseCommentLine(line)
+				self.__parseHeaderLine(line)
 
 			elif len(self.Legend) != 0:
 				d = self.__getVal(line)
