@@ -3,9 +3,9 @@ command=./bin/aff3ct -C "TURBO_PROD" -K "120" -N "127" --enc-ext -m "3" -M "4.5"
 title=Turbo Prod BCH(128,120,1) 8 ite. p4
 
 [trace]
-# -------------------------------------------------
-# ---- A FAST FORWARD ERROR CORRECTION TOOL >> ----
-# -------------------------------------------------
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
 # Parameters :
 # * Simulation ------------------------------------
 #    ** Type                        = BFER
@@ -14,29 +14,28 @@ title=Turbo Prod BCH(128,120,1) 8 ite. p4
 #    ** Date (UTC)                  = 2018-02-07 14:25:38
 #    ** Git version                 = v1.3.1-171-g170b395
 #    ** Code type (C)               = TURBO_PROD
-#    ** SNR min (m)                 = 3.000000 dB
-#    ** SNR max (M)                 = 4.500100 dB
-#    ** SNR step (s)                = 0.250000 dB
+#    ** Noise range                 = 3 -> 4.5 dB
+#    ** Noise type (E)              = EBN0
 #    ** Seed                        = 0
 #    ** Statistics                  = off
 #    ** Debug mode                  = off
 #    ** Multi-threading (t)         = 48 thread(s)
-#    ** SNR type                    = EB
 #    ** Coset approach (c)          = no
 #    ** Coded monitoring            = no
 #    ** Bad frames tracking         = off
 #    ** Bad frames replay           = off
-#    ** Bit rate                    = 0.878906
+#    ** Bit rate                    = 0.878906 (225/256)
 #    ** Inter frame level           = 1
 # * Source ----------------------------------------
-#    ** Type                        = RAND_FAST
+#    ** Type                        = RAND
+#    ** Implementation              = FAST
 #    ** Info. bits (K_info)         = 14400
 # * Codec -----------------------------------------
 #    ** Type                        = TURBO_PROD
 #    ** Info. bits (K)              = 14400
 #    ** Codeword size (N_cw)        = 16384
 #    ** Frame size (N)              = 16384
-#    ** Code rate                   = 0.878906
+#    ** Code rate                   = 0.878906 (225/256)
 # * Encoder ---------------------------------------
 #    ** Type                        = TURBO_PROD
 #    ** Systematic                  = yes
@@ -52,8 +51,11 @@ title=Turbo Prod BCH(128,120,1) 8 ite. p4
 #    ** Implementation              = STD
 #    ** Systematic                  = yes
 #    ** Num. of iterations (i)      = 8
-#    ** alpha                       = 0.500000
+#    ** alpha                       = {0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5}
+#    ** Chase Pyndiah coeff.        = {1, 1, 1, 1, 0}
 #    ** Num. least reliable pos (p) = 4
+#    ** Num. test vectors (t)       = 0
+#    ** Num. competitors (c)        = 0
 #    ** Parity extended             = yes
 #    Decoder --------------------------------------
 #    ** Type (D)                    = ALGEBRAIC
@@ -63,6 +65,7 @@ title=Turbo Prod BCH(128,120,1) 8 ite. p4
 #    ** Correction power (T)        = 1
 # * Modem -----------------------------------------
 #    ** Type                        = BPSK
+#    ** Implementation              = STD
 #    ** Bits per symbol             = 1
 #    ** Sampling factor             = 1
 #    ** Sigma square                = on
@@ -73,8 +76,8 @@ title=Turbo Prod BCH(128,120,1) 8 ite. p4
 #    ** Add users                   = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)       = 100
+#    ** Compute mutual info         = no
 # * Terminal --------------------------------------
-#    ** Type                        = STD
 #    ** Enabled                     = yes
 #    ** Frequency (ms)              = 500
 #

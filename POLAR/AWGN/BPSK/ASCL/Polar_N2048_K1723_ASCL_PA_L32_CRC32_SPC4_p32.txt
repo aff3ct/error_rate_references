@@ -70,7 +70,6 @@ title=Polar (2048,1723) ASCL PA L=32 CRC 32-bit SPC4 32-bit
 #    ** Frame error count (e)    = 200
 #    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #

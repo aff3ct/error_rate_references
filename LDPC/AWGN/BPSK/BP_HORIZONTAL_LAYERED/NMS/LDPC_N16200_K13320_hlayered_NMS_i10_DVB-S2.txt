@@ -14,12 +14,12 @@ title=LDPC (16200,13320) NMS 10 ite. DVB-S2
 #    ** Date (UTC)                = 2018-05-17 14:16:59
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 2.3 -> 4 dB
+#    ** Noise range               = 2.3 -> 3.6 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (16200,13320) NMS 10 ite. DVB-S2
 #    ** Inter frame level         = 8
 # * Source ----------------------------------------
 #    ** Type                      = RAND
+#    ** Implementation            = FAST
 #    ** Info. bits (K_info)       = 13320
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -60,9 +61,8 @@ title=LDPC (16200,13320) NMS 10 ite. DVB-S2
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #

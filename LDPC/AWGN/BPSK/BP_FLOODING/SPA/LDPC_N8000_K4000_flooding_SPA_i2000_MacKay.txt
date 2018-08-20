@@ -1,8 +1,8 @@
 [metadata]
 command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --enc-type "LDPC_H" -m "1.00" -M "1.70" -s "0.1" --dec-implem "SPA" --dec-h-path "../conf/dec/LDPC/MACKAY_4000_8000.alist" -e "100" -i "2000" --dec-type "BP_FLOODING"
-title=LDPC (8000,4000) SPA 2000 ite. MacKay
 doi=10.1109/ACSSC.2002.1197141
 info=Figure 1
+title=LDPC (8000,4000) SPA 2000 ite. MacKay
 
 [trace]
 # ----------------------------------------------------
@@ -41,7 +41,7 @@ info=Figure 1
 # * Encoder ---------------------------------------
 #    ** Type                      = LDPC_H
 #    ** Systematic                = yes
-#    ** H matrix path             =
+#    ** H matrix path             = ../conf/dec/LDPC/MACKAY_4000_8000.alist
 #    ** H matrix reordering       = NONE
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_FLOODING
@@ -67,7 +67,6 @@ info=Figure 1
 #    ** Frame error count (e)     = 100
 #    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #

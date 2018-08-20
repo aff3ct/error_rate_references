@@ -1,7 +1,7 @@
 [metadata]
+ci=on
 command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "63" -K "30" -T "6" -m "0" -M "9" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
 title=BCH (63,30,6)
-ci=on
 
 [trace]
 # ----------------------------------------------------

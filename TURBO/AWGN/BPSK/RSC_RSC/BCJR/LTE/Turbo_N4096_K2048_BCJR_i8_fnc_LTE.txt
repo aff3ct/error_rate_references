@@ -15,11 +15,11 @@ title=Turbo (4108,2048) BCJR 8 ite. FNC LTE
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = TURBO
 #    ** Noise range              = 0 -> 2 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -28,6 +28,7 @@ title=Turbo (4108,2048) BCJR 8 ite. FNC LTE
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 2024
 # * CRC -------------------------------------------
 #    ** Type                     = 24-LTEA
@@ -95,9 +96,8 @@ title=Turbo (4108,2048) BCJR 8 ite. FNC LTE
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #
@@ -131,4 +131,4 @@ title=Turbo (4108,2048) BCJR 8 ite. FNC LTE
    -1.27 |  1.80 | 61635472 |     1278 |      100 | 1.02e-08 | 1.62e-06 ||     3.37 |     1.11 |  1824.23 ||    93.43 | 01h07'40
    -1.17 |  1.90 | 1.54e+08 |      935 |      100 | 3.00e-09 | 6.48e-07 ||     3.56 |     1.17 |  1727.08 ||    96.39 | 02h44'08
    -1.07 |  2.00 | 2.50e+08 |      729 |      100 | 1.44e-09 | 4.00e-07 ||     3.74 |     1.23 |  1647.58 ||    99.20 | 04h18'33
-#endif
+# End of the simulation.

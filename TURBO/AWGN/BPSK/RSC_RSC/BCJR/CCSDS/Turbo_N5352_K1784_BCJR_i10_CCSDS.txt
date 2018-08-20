@@ -15,11 +15,11 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 0.9 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -28,6 +28,7 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 1784
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -81,9 +82,8 @@ title=Turbo (5368,1784) BCJR 10 ite. CCSDS
 #    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

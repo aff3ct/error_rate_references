@@ -1,7 +1,7 @@
 [metadata]
+ci=on
 command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "127" -K "111" -T "8" -R "0.0025,0.005,0.01,0.05:0.05:0.25" -e "1000" -E "EP" --src-implem "FAST" --mdm-type "OOK" --chn-type "BEC" --chn-implem "FAST"
 title=RS (127,111,8)
-ci=on
 
 [trace]
 # ----------------------------------------------------
@@ -15,7 +15,7 @@ ci=on
 #    ** Date (UTC)             = 2018-07-31 14:29:17
 #    ** Git version            = v1.3.2-837-ga167806
 #    ** Code type (C)          = RS
-#    ** Noise range            = 0.00025 -> 0.25 dB
+#    ** Noise range            = 0.0025 -> 0.25 dB
 #    ** Noise type (E)         = EP
 #    ** Seed                   = 0
 #    ** Statistics             = off

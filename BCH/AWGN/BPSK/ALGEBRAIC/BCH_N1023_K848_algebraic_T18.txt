@@ -1,8 +1,8 @@
 [metadata]
 command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "1023" -K "848" -m "0" -M "6.01" -s "0.25" -e "1000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST -T "18"
+info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 title=BCH (1023,848,18)
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
-info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 
 [trace]
 # ----------------------------------------------------
@@ -17,11 +17,11 @@ info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = BCH
 #    ** Noise range            = 0 -> 6 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -30,6 +30,7 @@ info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = AZCW
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 848
 # * Codec -----------------------------------------
 #    ** Type                   = BCH
@@ -59,9 +60,8 @@ info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 #    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 1000
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

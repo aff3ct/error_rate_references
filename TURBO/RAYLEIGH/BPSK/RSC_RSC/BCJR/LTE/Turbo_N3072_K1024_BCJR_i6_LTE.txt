@@ -15,11 +15,11 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 2.5 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -28,6 +28,7 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 1024
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -83,10 +84,9 @@ title=Turbo (3084,1024) BCJR 6 ite. Rayleigh LTE
 #    ** Complex                = off
 #    ** Add users              = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Frame error count (e)  = 500
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

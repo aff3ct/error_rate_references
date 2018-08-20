@@ -1,7 +1,7 @@
 [metadata]
+ci=on
 command=./bin/aff3ct -C "BCH" -N "255" -T "18" -R "0.2:0.05:0.4,0.04:0.02:0.2,0.03" -E "EP" --chn-type "BSC" --mdm-type "OOK"
 title=BCH (255,131,18)
-ci=on
 
 [trace]
 # ----------------------------------------------------
@@ -16,11 +16,11 @@ ci=on
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = BCH
 #    ** Noise range            = 0.03 -> 0.4 dB
+#    ** Noise type (E)         = EP
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EP
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -29,6 +29,7 @@ ci=on
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 131
 # * Codec -----------------------------------------
 #    ** Type                   = BCH
@@ -58,9 +59,8 @@ ci=on
 #    ** Add users              = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

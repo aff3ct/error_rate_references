@@ -1,8 +1,8 @@
 [metadata]
 command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "63" -K "45" -T "3" -m "0" -M "9" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" -p "8"
+info=https://www.uni-kl.de/fileadmin/_processed_/a/3/csm_bch63_01e51211fa.png
 title=BCH (63,45,3)
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
-info=https://www.uni-kl.de/fileadmin/_processed_/a/3/csm_bch63_01e51211fa.png
 
 [trace]
 # ----------------------------------------------------

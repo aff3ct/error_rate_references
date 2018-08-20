@@ -15,11 +15,11 @@ title=LDPC (8192,4096) AMS 100 ite. AR4JA
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 1.3 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (8192,4096) AMS 100 ite. AR4JA
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = RAND
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 4096
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -38,7 +39,7 @@ title=LDPC (8192,4096) AMS 100 ite. AR4JA
 # * Encoder ---------------------------------------
 #    ** Type                      = LDPC_QC
 #    ** Systematic                = yes
-#    ** H matrix path             =
+#    ** H matrix path             = 
 #    ** H matrix reordering       = NONE
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_FLOODING
@@ -66,9 +67,8 @@ title=LDPC (8192,4096) AMS 100 ite. AR4JA
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #

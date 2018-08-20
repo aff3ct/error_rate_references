@@ -15,11 +15,11 @@ title=Turbo (3084,1024) SCMA (PSI3 5 ite.) BCJR 6 ite. LTE
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 4 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -28,6 +28,7 @@ title=Turbo (3084,1024) SCMA (PSI3 5 ite.) BCJR 6 ite. LTE
 #    ** Inter frame level      = 6
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 1024
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -85,9 +86,8 @@ title=Turbo (3084,1024) SCMA (PSI3 5 ite.) BCJR 6 ite. LTE
 #    ** Add users              = on
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

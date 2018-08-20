@@ -25,7 +25,7 @@ title=LDPC (8000,4000) SPA 2000 ite. MacKay
 #    ** Bad frames tracking       = off
 #    ** Bad frames replay         = off
 #    ** Bit rate                  = 0.5 (1/2)
-#    ** Inter frame level         = 4
+#    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = RAND
 #    ** Implementation            = STD
@@ -47,7 +47,6 @@ title=LDPC (8000,4000) SPA 2000 ite. MacKay
 #    ** Systematic                = yes
 #    ** H matrix path             = ../conf/dec/LDPC/MACKAY_4000_8000.alist
 #    ** H matrix reordering       = NONE
-#    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 2000
 #    ** Stop criterion (syndrome) = on
 #    ** Stop criterion depth      = 1
@@ -66,7 +65,6 @@ title=LDPC (8000,4000) SPA 2000 ite. MacKay
 #    ** Frame error count (e)     = 100
 #    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #

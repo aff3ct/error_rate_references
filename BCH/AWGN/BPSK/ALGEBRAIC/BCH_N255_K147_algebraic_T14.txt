@@ -1,7 +1,7 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "147" -T "14" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" 
-title=BCH (255,147,14)
 ci=off
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "147" -T "14" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-type "AWGN" --chn-implem "FAST"
+title=BCH (255,147,14)
 
 [trace]
 # ----------------------------------------------------

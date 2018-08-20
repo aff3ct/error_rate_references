@@ -14,12 +14,12 @@ title=Uncoded K=4500 CPM h=3/5 L=3 bps=2 REC
 #    ** Date (UTC)            = 2018-05-17 14:06:45
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
-#    ** Noise range           = -3.01 -> 9.99 dB
+#    ** Noise range           = 0 -> 21 dB
+#    ** Noise type (E)        = ESN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4500 CPM h=3/5 L=3 bps=2 REC
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = FAST
 #    ** Info. bits (K_info)   = 4500
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -57,9 +58,8 @@ title=Uncoded K=4500 CPM h=3/5 L=3 bps=2 REC
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 100
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #

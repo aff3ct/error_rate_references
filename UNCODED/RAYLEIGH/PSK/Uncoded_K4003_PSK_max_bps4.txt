@@ -15,11 +15,11 @@ title=Uncoded K=4003 16-PSK
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 64 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4003 16-PSK
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = STD
 #    ** Info. bits (K_info)   = 4003
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -54,9 +55,8 @@ title=Uncoded K=4003 16-PSK
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 1000
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -69,6 +69,7 @@ title=Uncoded K=4003 16-PSK
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+#  72.02 | 66.00 |    92945 |       80 |       76 | 2.15e-07 | 8.18e-04 ||  2940.92 |  2940.92 |     1.36 ||    30.66 | 00h00'12 x
     6.02 |  0.00 |     1003 |   903247 |     1003 | 2.25e-01 | 1.00e+00 ||  2858.31 |  2858.31 |     1.40 ||    29.43 | 00h00'00
     8.02 |  2.00 |     1003 |   751101 |     1003 | 1.87e-01 | 1.00e+00 ||  2874.68 |  2874.68 |     1.39 ||    29.71 | 00h00'00
    10.02 |  4.00 |     1003 |   607998 |     1003 | 1.51e-01 | 1.00e+00 ||  3008.57 |  3008.57 |     1.33 ||    31.14 | 00h00'00
@@ -102,5 +103,4 @@ title=Uncoded K=4003 16-PSK
    66.02 | 60.00 |   305273 |     1106 |     1000 | 9.05e-07 | 3.28e-03 ||  2839.95 |  2839.95 |     1.41 ||    30.34 | 00h00'40
    68.02 | 62.00 |   470872 |     1144 |     1000 | 6.07e-07 | 2.12e-03 ||  2847.09 |  2847.09 |     1.41 ||    30.56 | 00h01'01
    70.02 | 64.00 |   715127 |     1142 |     1000 | 3.99e-07 | 1.40e-03 ||  3029.59 |  3029.59 |     1.32 ||    30.92 | 00h01'32
-#  72.02 | 66.00 |    92945 |       80 |       76 | 2.15e-07 | 8.18e-04 ||  2940.92 |  2940.92 |     1.36 ||    30.66 | 00h00'12 x
 # End of the simulation.

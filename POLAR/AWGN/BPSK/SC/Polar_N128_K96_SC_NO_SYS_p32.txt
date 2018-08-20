@@ -61,7 +61,6 @@ title=Polar (128,96) SC NO SYS 32-bit
 #    ** Frame error count (e) = 500
 #    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #

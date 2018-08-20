@@ -1,9 +1,9 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "511" -K "502" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
-title=BCH (511,502,1)
 ci=off
-url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "511" -K "502" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
 info=https://www.uni-kl.de/fileadmin/_processed_/b/c/csm_bch511_50822f971d.png
+title=BCH (511,502,1)
+url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 
 [trace]
 # ----------------------------------------------------

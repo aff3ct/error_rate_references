@@ -15,11 +15,11 @@ title=Turbo DB (3008,1504) BCJR 8 ite. DVB-RCS1
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = TURBO_DB
 #    ** Noise range              = 0.06 -> 0.2 dB
+#    ** Noise type (E)           = EP
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EP
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -28,6 +28,7 @@ title=Turbo DB (3008,1504) BCJR 8 ite. DVB-RCS1
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 1472
 # * CRC -------------------------------------------
 #    ** Type                     = 32-GZIP
@@ -81,9 +82,8 @@ title=Turbo DB (3008,1504) BCJR 8 ite. DVB-RCS1
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #

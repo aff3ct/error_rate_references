@@ -1,8 +1,8 @@
 [metadata]
 command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "0.0" -M "4.51" -s "0.25" -e "200" --enc-fb-gen-method "GA" -K "1755" -N "2048" --src-type "RAND" --chn-type "AWGN" --dec-type "ASCL" --crc-type "32-GZIP" --dec-polar-nodes "{R0,R0L,R1,REP,REPL,SPC_4}" -L "32"
+info=Figure 5
 title=Polar (2048,1723) ASCL FA L=32 CRC 32-bit SPC4 32-bit
 url=https://arxiv.org/abs/1710.08314
-info=Figure 5
 
 [trace]
 # ----------------------------------------------------
@@ -71,7 +71,6 @@ info=Figure 5
 #    ** Frame error count (e)    = 200
 #    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #

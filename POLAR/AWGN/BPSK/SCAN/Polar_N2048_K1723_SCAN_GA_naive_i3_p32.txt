@@ -62,7 +62,6 @@ title=Polar (2048,1723) SCAN 3 ite. 32-bit
 #    ** Frame error count (e)  = 500
 #    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

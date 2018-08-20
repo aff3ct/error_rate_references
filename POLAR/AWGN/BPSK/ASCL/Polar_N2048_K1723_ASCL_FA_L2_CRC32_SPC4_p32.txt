@@ -15,11 +15,11 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = POLAR
 #    ** Noise range              = 1 -> 4.5 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -28,6 +28,7 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = AZCW
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 1723
 # * CRC -------------------------------------------
 #    ** Type                     = 32-GZIP
@@ -67,9 +68,8 @@ title=Polar (2048,1755) ASCL L=2 CRC 32-bit SPC4
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
 #

@@ -1,7 +1,7 @@
 [metadata]
+ci=on
 command=./bin/aff3ct -C "RS" -N "255" -T "25" -R "0.2,0.25,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --chn-implem "FAST" --mdm-type "OOK"
 title=RS (255,205,25)
-ci=on
 
 [trace]
 # ----------------------------------------------------
@@ -15,7 +15,7 @@ ci=on
 #    ** Date (UTC)             = 2018-07-31 14:02:21
 #    ** Git version            = v1.3.2-837-ga167806
 #    ** Code type (C)          = RS
-#    ** Noise range            = 0.02 -> 0.4 dB
+#    ** Noise range            = 0.02 -> 0.25 dB
 #    ** Noise type (E)         = EP
 #    ** Seed                   = 0
 #    ** Statistics             = off

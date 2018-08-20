@@ -15,11 +15,11 @@ title=Uncoded K=12 8-SCMA
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 14 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=12 8-SCMA
 #    ** Inter frame level     = 6
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = STD
 #    ** Info. bits (K_info)   = 12
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -54,9 +55,8 @@ title=Uncoded K=12 8-SCMA
 #    ** Add users             = on
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 10000
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #

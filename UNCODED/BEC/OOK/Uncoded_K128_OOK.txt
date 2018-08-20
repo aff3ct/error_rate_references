@@ -15,11 +15,11 @@ title=Uncoded K=128 OOK
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0.001 -> 1 dB
+#    ** Noise type (E)        = EP
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EP
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=128 OOK
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = STD
 #    ** Info. bits (K_info)   = 128
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -52,9 +53,8 @@ title=Uncoded K=128 OOK
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 1000
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #

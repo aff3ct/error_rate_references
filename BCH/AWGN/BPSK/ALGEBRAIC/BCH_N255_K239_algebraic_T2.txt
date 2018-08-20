@@ -1,9 +1,9 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "239" -T "2" -m "0" -M "8.01" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
-title=BCH (255,239,2)
 ci=off
-url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
+command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "239" -T "2" -m "0" -M "8.01" -s "0.25" -e "4000" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
 info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
+title=BCH (255,239,2)
+url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 
 [trace]
 # ----------------------------------------------------
@@ -17,7 +17,7 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Date (UTC)             = 2018-07-27 08:27:21
 #    ** Git version            = v1.3.2-825-g5c9c077
 #    ** Code type (C)          = BCH
-#    ** Noise range            = 0 -> 9 dB
+#    ** Noise range            = 0 -> 8 dB
 #    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
@@ -30,7 +30,7 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Bit rate               = 0.937255 (239/255)
 #    ** Inter frame level      = 1
 # * Source ----------------------------------------
-#    ** Type                   = RAND
+#    ** Type                   = AZCW
 #    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 239
 # * Codec -----------------------------------------
@@ -40,7 +40,7 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Frame size (N)         = 255
 #    ** Code rate              = 0.937255 (239/255)
 # * Encoder ---------------------------------------
-#    ** Type                   = BCH
+#    ** Type                   = AZCW
 #    ** Systematic             = yes
 # * Decoder ---------------------------------------
 #    ** Type (D)               = ALGEBRAIC
@@ -60,7 +60,7 @@ info=https://www.uni-kl.de/fileadmin/_migrated/pics/bch255.png
 #    ** Complex                = off
 #    ** Add users              = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 1000
+#    ** Frame error count (e)  = 4000
 #    ** Compute mutual info    = no
 # * Terminal --------------------------------------
 #    ** Enabled                = yes

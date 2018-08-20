@@ -14,12 +14,12 @@ title=LDPC (576,288) AMS Min 100 ite. WiMAX
 #    ** Date (UTC)                = 2018-05-17 14:13:23
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0 -> 4 dB
+#    ** Noise range               = 0 -> 3.5 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (576,288) AMS Min 100 ite. WiMAX
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = AZCW
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 288
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -61,9 +62,8 @@ title=LDPC (576,288) AMS Min 100 ite. WiMAX
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #

@@ -339,7 +339,7 @@ class aff3ctRefsReader:
 					self.Metadata[vals[0]] = vals[1].strip();
 
 			elif startTrace:
-				if line.startswith("#"):
+				if line.startswith("#") and not line.startswith("# End of the simulation"):
 					self.__parseHeaderLine(line)
 
 				elif len(self.Legend) != 0:
@@ -364,7 +364,7 @@ class aff3ctRefsReader:
 		allTrace   = []
 
 		for line in aff3ctOutput:
-			if line.startswith("#"):
+			if line.startswith("#") and not line.startswith("# End of the simulation"):
 				self.__parseHeaderLine(line)
 
 			elif len(self.Legend) != 0:

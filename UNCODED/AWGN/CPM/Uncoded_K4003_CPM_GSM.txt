@@ -15,11 +15,11 @@ title=Uncoded K=4003 GSM
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 12 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4003 GSM
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = FAST
 #    ** Info. bits (K_info)   = 4003
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -58,9 +59,8 @@ title=Uncoded K=4003 GSM
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 500
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #

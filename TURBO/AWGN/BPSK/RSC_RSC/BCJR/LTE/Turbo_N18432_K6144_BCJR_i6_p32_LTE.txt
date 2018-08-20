@@ -1,8 +1,8 @@
 [metadata]
 command=./bin/aff3ct -p "32" --sim-type "BFER" -C "TURBO" -K "6144" -e "500" -m "0.0" -M "1.01" --enc-sub-std "LTE" --dec-sub-implem "VERY_FAST" --dec-sub-simd "INTER" -i "6" --dec-sf-type "LTE_VEC" --dec-sub-max "MAX"
-title=Turbo (18444,6144) BCJR 32-bit 6 ite. LTE
 doi=10.1109/ISTC.2016.7593092
 info=Figure 2
+title=Turbo (18444,6144) BCJR 32-bit 6 ite. LTE
 
 [trace]
 # ----------------------------------------------------
@@ -17,11 +17,11 @@ info=Figure 2
 #    ** Git version            = v1.3.2-470-gf8de061
 #    ** Code type (C)          = TURBO
 #    ** Noise range            = 0 -> 1 dB
+#    ** Noise type (E)         = EBN0
 #    ** Seed                   = 0
 #    ** Statistics             = off
 #    ** Debug mode             = off
 #    ** Multi-threading (t)    = 4 thread(s)
-#    ** NOISE type (E)         = EBN0
 #    ** Coset approach (c)     = no
 #    ** Coded monitoring       = no
 #    ** Bad frames tracking    = off
@@ -30,6 +30,7 @@ info=Figure 2
 #    ** Inter frame level      = 8
 # * Source ----------------------------------------
 #    ** Type                   = RAND
+#    ** Implementation         = STD
 #    ** Info. bits (K_info)    = 6144
 # * Codec -----------------------------------------
 #    ** Type                   = TURBO
@@ -85,10 +86,9 @@ info=Figure 2
 #    ** Complex                = off
 #    ** Add users              = off
 # * Monitor ---------------------------------------
-#    ** Frame error count (e)  = 100
-#    ** Compute Mutual Info    = no
+#    ** Frame error count (e)  = 500
+#    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

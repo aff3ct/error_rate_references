@@ -15,11 +15,11 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #    ** Git version               = v1.3.2-470-gf8de061
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 8.5 dB
+#    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
 #    ** Multi-threading (t)       = 4 thread(s)
-#    ** NOISE type (E)            = EBN0
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
 #    ** Bad frames tracking       = off
@@ -28,6 +28,7 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #    ** Inter frame level         = 1
 # * Source ----------------------------------------
 #    ** Type                      = AZCW
+#    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 504
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
@@ -60,9 +61,8 @@ title=LDPC (1008,504) Gallager A 200 ite.
 #    ** Add users                 = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)     = 100
-#    ** Compute Mutual Info       = no
+#    ** Compute mutual info       = no
 # * Terminal --------------------------------------
-#    ** Type                      = STD
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
 #

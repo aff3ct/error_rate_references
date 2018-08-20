@@ -15,11 +15,11 @@ title=Uncoded K=4003 8-PAM
 #    ** Git version           = v1.3.2-470-gf8de061
 #    ** Code type (C)         = UNCODED
 #    ** Noise range           = 0 -> 66 dB
+#    ** Noise type (E)        = EBN0
 #    ** Seed                  = 0
 #    ** Statistics            = off
 #    ** Debug mode            = off
 #    ** Multi-threading (t)   = 4 thread(s)
-#    ** NOISE type (E)        = EBN0
 #    ** Coset approach (c)    = no
 #    ** Coded monitoring      = no
 #    ** Bad frames tracking   = off
@@ -28,6 +28,7 @@ title=Uncoded K=4003 8-PAM
 #    ** Inter frame level     = 1
 # * Source ----------------------------------------
 #    ** Type                  = RAND
+#    ** Implementation        = STD
 #    ** Info. bits (K_info)   = 4003
 # * Codec -----------------------------------------
 #    ** Type                  = UNCODED
@@ -54,9 +55,8 @@ title=Uncoded K=4003 8-PAM
 #    ** Add users             = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e) = 1000
-#    ** Compute Mutual Info   = no
+#    ** Compute mutual info   = no
 # * Terminal --------------------------------------
-#    ** Type                  = STD
 #    ** Enabled               = yes
 #    ** Frequency (ms)        = 500
 #
@@ -69,6 +69,7 @@ title=Uncoded K=4003 8-PAM
 #  Es/N0 | Eb/N0 |      FRA |       BE |       FE |      BER |      FER ||     CTHR |     ITHR |  LATENCY || SIM_CTHR |    ET/RT
 #   (dB) |  (dB) |          |          |          |          |          ||   (Mb/s) |   (Mb/s) |     (us) ||   (Mb/s) | (hhmmss)
 # -------|-------|----------|----------|----------|----------|----------||----------|----------|----------||----------|----------
+#  72.77 | 68.00 |   833641 |      583 |      544 | 1.75e-07 | 6.53e-04 ||  2057.54 |  2057.54 |     1.95 ||    49.89 | 00h01'06 x
     4.77 |  0.00 |     1003 |   990609 |     1003 | 2.47e-01 | 1.00e+00 ||  2037.81 |  2037.81 |     1.96 ||    41.65 | 00h00'00
     6.77 |  2.00 |     1003 |   839020 |     1003 | 2.09e-01 | 1.00e+00 ||  1930.54 |  1930.54 |     2.07 ||    44.06 | 00h00'00
     8.77 |  4.00 |     1003 |   688247 |     1003 | 1.71e-01 | 1.00e+00 ||  2021.12 |  2021.12 |     1.98 ||    49.92 | 00h00'00
@@ -103,5 +104,4 @@ title=Uncoded K=4003 8-PAM
    66.77 | 62.00 |   388201 |     1096 |     1000 | 7.05e-07 | 2.58e-03 ||  1885.82 |  1885.82 |     2.12 ||    45.71 | 00h00'33
    68.77 | 64.00 |   626023 |     1087 |     1000 | 4.34e-07 | 1.60e-03 ||  2156.04 |  2156.04 |     1.86 ||    51.10 | 00h00'49
    70.77 | 66.00 |   912036 |     1088 |     1000 | 2.98e-07 | 1.10e-03 ||  2118.45 |  2118.45 |     1.89 ||    51.16 | 00h01'11
-#  72.77 | 68.00 |   833641 |      583 |      544 | 1.75e-07 | 6.53e-04 ||  2057.54 |  2057.54 |     1.95 ||    49.89 | 00h01'06 x
 # End of the simulation.

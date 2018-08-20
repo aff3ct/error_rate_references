@@ -67,7 +67,6 @@ title=Polar (2048,1723) SCAN 4 ite. 8-bit
 #    ** Frame error count (e)  = 500
 #    ** Compute mutual info    = no
 # * Terminal --------------------------------------
-#    ** Type                   = STD
 #    ** Enabled                = yes
 #    ** Frequency (ms)         = 500
 #

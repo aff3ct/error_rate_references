@@ -1,8 +1,8 @@
 [metadata]
 command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.8" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE"
-title=Turbo DB (3008,1504) BCJR 8 ite. REF DVB-RCS1
 doi=10.1109/ISTC.2016.7593096
 info=Figure 5
+title=Turbo DB (3008,1504) BCJR 8 ite. REF DVB-RCS1
 
 [trace]
 # ----------------------------------------------------
@@ -17,11 +17,11 @@ info=Figure 5
 #    ** Git version              = v1.3.2-470-gf8de061
 #    ** Code type (C)            = TURBO_DB
 #    ** Noise range              = 0 -> 2.8 dB
+#    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
 #    ** Multi-threading (t)      = 4 thread(s)
-#    ** NOISE type (E)           = EBN0
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -30,6 +30,7 @@ info=Figure 5
 #    ** Inter frame level        = 1
 # * Source ----------------------------------------
 #    ** Type                     = RAND
+#    ** Implementation           = STD
 #    ** Info. bits (K_info)      = 1472
 # * CRC -------------------------------------------
 #    ** Type                     = 32-GZIP
@@ -84,11 +85,11 @@ info=Figure 5
 #    ** Add users                = off
 # * Monitor ---------------------------------------
 #    ** Frame error count (e)    = 100
-#    ** Compute Mutual Info      = no
+#    ** Compute mutual info      = no
 # * Terminal --------------------------------------
-#    ** Type                     = STD
 #    ** Enabled                  = yes
 #    ** Frequency (ms)           = 500
+#
 # The simulation is running...
 # ----------------------------------------------------------------------||--------------------------------||---------------------
 #       Bit Error Rate (BER) and Frame Error Rate (FER) depending       ||     Decoder throughput and     ||  Global throughput
