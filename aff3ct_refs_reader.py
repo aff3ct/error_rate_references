@@ -236,9 +236,9 @@ class aff3ctRefsReader:
 
 		self.Legend = line
 
-		self.__findNoiseType
+		self.__findNoiseType()
 
-	def __findNoiseType(self)
+	def __findNoiseType(self):
 		# find the type of noise used in this simulation
 		for n in self.NoiseLegendsList:
 			if n in self.Legend:
