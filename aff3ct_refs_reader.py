@@ -118,6 +118,8 @@ class aff3ctRefsReader:
 		elif traceVersion == 1:
 			self.__reader1(aff3ctOutput)
 
+		self.__findNoiseType()
+
 	def getSplitCommand(self):
 		return splitAsCommand(self.Metadata['command']);
 
@@ -236,8 +238,6 @@ class aff3ctRefsReader:
 
 		self.Legend = line
 
-		self.__findNoiseType()
-
 	def __findNoiseType(self):
 		# find the type of noise used in this simulation
 		for n in self.NoiseLegendsList:
@@ -248,10 +248,10 @@ class aff3ctRefsReader:
 		noiseParam = self.getSimuHeader("Noise type")
 
 		if self.NoiseType == "esn0" and noiseParam == "EBN0":
-			self.NoiseType == "ebn0"
+			self.NoiseType = "ebn0"
 
 		elif self.NoiseType == "ebn0" and noiseParam == "ESN0":
-			self.NoiseType == "esn0"
+			self.NoiseType = "esn0"
 
 	def __findLine(self, stringArray, string):
 		for i in range(len(stringArray)):
