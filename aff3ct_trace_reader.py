@@ -314,10 +314,10 @@ class aff3ctRefsReader:
 				self.SimuHeader.append(entry)
 
 		elif len(line) > 2:
-			if len(self.SimuHeader) == 0: # then its a simu title
+			if len(self.SimuHeader) == 0: # then it's a simu title
 				self.SimuTitle.append(line)
 
-			else: # then its a legend title
+			else: # then it's a legend title
 				self.LegendTitle.append(line)
 
 				if(   line.find(self.BferLegendsList["be_rate"]) != -1
