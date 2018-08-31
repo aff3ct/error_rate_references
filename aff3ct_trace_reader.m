@@ -49,7 +49,7 @@ classdef aff3ct_trace_reader < handle
 
 	end
 
-	properties (Access = public)
+	properties (Access = private)
 		Metadata;   % The Metadata map
 		SimuHeader; % simulation header that is list of trio (title, value, level index)
 		Legend;     % keys of BferLegendsList or MiLegendsList
@@ -61,7 +61,7 @@ classdef aff3ct_trace_reader < handle
 		LegendTitle; % save of the legend table to print it
 	end
 
-	methods
+	methods (Access = public)
 		function self = aff3ct_trace_reader(aff3ctOutput)
 			self.Metadata    = containers.Map({'command', 'title'}, {"", ""});
 			self.SimuHeader  = {}; % simulation header that is list of trio (title, value, level index)
@@ -115,9 +115,8 @@ classdef aff3ct_trace_reader < handle
 			end
 		end
 
-
 		function command = getSplitCommand(self)
-			command = splitAsCommand(self.Metadata('command'));
+			command = self.splitAsCommand(self.Metadata('command'));
 		end
 
 		function noiseTrace = getNoise(self)
@@ -223,6 +222,75 @@ classdef aff3ct_trace_reader < handle
 		end
 	end
 
+	methods (Access = public, Static)
+		% read all the lines from the given file and set them in a list of string lines with striped \n \r
+		function lines = readFileInTable(filename)
+			fid = fopen(filename, 'r');
+			tline = fgetl(fid);
+			lines = {};
+
+			while ischar(tline)
+				lines{end+1} = string(tline);
+				tline = fgetl(fid);
+			end
+
+			fclose(fid);
+		end
+
+		function version = detectTraceVersion(aff3ctOutput)
+			if aff3ctOutput{1}.startsWith("[metadata]")
+				version = 1;
+			elseif aff3ctOutput{1}.startsWith("Run command")
+				version = 0;
+			else
+				version = 0;
+			end
+		end
+
+		function command = splitAsCommand(runCommand)
+			argsList = {""};
+			new = false;
+			found_dashes = false;
+
+			for i = 1:length(runCommand)
+				s = runCommand(i);
+				if ~found_dashes
+					if s == ' '
+						if ~new
+							argsList{end+1} = "";
+							new = true;
+						end
+
+					elseif s == '"'
+						if ~new
+							argsList{end+1} = "";
+							new = true;
+						end
+						found_dashes = true;
+
+					else
+						argsList{end} = argsList{end} + s;
+						new = false;
+					end
+
+				else % between dashes
+					if s == '"'
+                        argsList{end+1} = "";
+						found_dashes = false;
+					else
+						argsList{end} = argsList{end} + s;
+					end
+				end
+			end
+
+			if argsList{end} == ""
+				command = {argsList{1:end-1}};
+			else
+				command = argsList;
+			end
+		end
+	end
+
 	methods (Access = private, Static)
 		function valLine = getVal(line)
 			line = line.replace('#', '');
@@ -324,7 +392,7 @@ classdef aff3ct_trace_reader < handle
 			end
 		end
 
-		function [] = parseHeaderLine(self, line)
+		function parseHeaderLine(self, line)
 			cline = char(line);
 			if line.startsWith(self.HeaderLevel1)
 				entry = extractAfter(line, strlength(self.HeaderLevel1));
@@ -369,7 +437,7 @@ classdef aff3ct_trace_reader < handle
 			end
 		end
 
-		function [] = reader1(self, aff3ctOutput)
+		function reader1(self, aff3ctOutput)
 			startMeta  = false;
 			startTrace = false;
 			allTrace   = [];
@@ -419,7 +487,7 @@ classdef aff3ct_trace_reader < handle
 			end
 		end
 
-		function [] = reader0(self, aff3ctOutput)
+		function reader0(self, aff3ctOutput)
 			startMeta  = false;
 			startTrace = false;
 			allTrace   = [];
@@ -462,35 +530,5 @@ classdef aff3ct_trace_reader < handle
 			end
 		end
 	end
-
-
-
-	methods (Access = public, Static)
-		% read all the lines from the given file and set them in a list of string lines with striped \n \r
-		function lines = readFileInTable(filename)
-			fid = fopen(filename, 'r');
-			tline = fgetl(fid);
-			lines = {};
-
-			while ischar(tline)
-				lines{end+1} = string(tline);
-				tline = fgetl(fid);
-			end
-
-			fclose(fid);
-		end
-
-
-		function version = detectTraceVersion(aff3ctOutput)
-			if aff3ctOutput{1}.startsWith("[metadata]")
-				version = 1;
-			elseif aff3ctOutput{1}.startsWith("Run command")
-				version = 0;
-			else
-				version = 0;
-			end
-		end
-	end
-
 end
 
