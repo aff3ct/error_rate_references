@@ -55,7 +55,7 @@ def readFileInTable(filename):
 	return lines;
 
 
-class aff3ctRefsReader:
+class aff3ctTraceReader:
 	NoiseLegendsList = { "ebn0" : "Eb/N0", # Signal noise ration view from info bits
 	                     "esn0" : "Es/N0", # SNR view from sent symbols
 	                     "rop"  : "ROP",   # Received optical power
