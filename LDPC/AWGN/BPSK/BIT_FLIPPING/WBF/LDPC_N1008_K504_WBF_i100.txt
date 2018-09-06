@@ -1,0 +1,104 @@
+[metadata]
+command=./bin/aff3ct -C "LDPC" -m "2" -M "7" -s "0.25" -K "504" -e "500" -N "1008" --dec-type "BIT_FLIPPING" --dec-implem "WBF" --dec-h-path "/home/vpignoly/Doctorat/MatricesAlist/1008x504.alist" -i "100" --enc-type "LDPC_H" 
+title=LDPC (1008,504) WBF 100 ite.
+doi = 10.1109/TCOMM.2010.06.090046
+url = https://ieeexplore.ieee.org/document/5474623/
+s
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-09-06 14:46:37
+#    ** Git version               = v1.3.2-982-geaae3a3
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 2 -> 7 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 8 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.5 (1/2)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = STD
+#    ** Info. bits (K_info)       = 504
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 504
+#    ** Codeword size (N_cw)      = 1008
+#    ** Frame size (N)            = 1008
+#    ** Code rate                 = 0.5 (1/2)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_H
+#    ** Systematic                = yes
+#    ** H matrix path             = /home/vpignoly/Doctorat/MatricesAlist/1008x504.alist
+#    ** H matrix reordering       = NONE
+#    ** G build method            = IDENTITY
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BIT_FLIPPING
+#    ** Implementation            = WBF
+#    ** Systematic                = yes
+#    ** H matrix path             = /home/vpignoly/Doctorat/MatricesAlist/1008x504.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 100
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 500
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+# 
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput  
+#         (SNR)        ||                                                      ||  and elapsed time   
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+      -1.01 |     2.00 ||      511 |    28655 |      511 | 1.11e-01 | 1.00e+00 ||    1.488 | 00h00'00   
+      -0.76 |     2.25 ||      508 |    25559 |      508 | 9.98e-02 | 1.00e+00 ||    2.392 | 00h00'00   
+      -0.51 |     2.50 ||      516 |    22865 |      516 | 8.79e-02 | 1.00e+00 ||    2.372 | 00h00'00   
+      -0.26 |     2.75 ||      514 |    19622 |      514 | 7.57e-02 | 1.00e+00 ||    2.397 | 00h00'00   
+      -0.01 |     3.00 ||      512 |    16311 |      512 | 6.32e-02 | 1.00e+00 ||    2.352 | 00h00'00   
+       0.24 |     3.25 ||      511 |    13317 |      511 | 5.17e-02 | 1.00e+00 ||    2.369 | 00h00'00   
+       0.49 |     3.50 ||      517 |    10579 |      512 | 4.06e-02 | 9.90e-01 ||    2.404 | 00h00'00   
+       0.74 |     3.75 ||      526 |     8122 |      510 | 3.06e-02 | 9.70e-01 ||    2.345 | 00h00'00   
+       0.99 |     4.00 ||      538 |     5805 |      506 | 2.14e-02 | 9.41e-01 ||    2.486 | 00h00'00   
+       1.24 |     4.25 ||      595 |     4304 |      511 | 1.44e-02 | 8.59e-01 ||    2.516 | 00h00'00   
+       1.49 |     4.50 ||      692 |     3207 |      510 | 9.20e-03 | 7.37e-01 ||    2.705 | 00h00'00   
+       1.74 |     4.75 ||      807 |     2447 |      510 | 6.02e-03 | 6.32e-01 ||    2.898 | 00h00'00   
+       1.99 |     5.00 ||     1039 |     1935 |      504 | 3.70e-03 | 4.85e-01 ||    3.308 | 00h00'00   
+       2.24 |     5.25 ||     1521 |     1631 |      506 | 2.13e-03 | 3.33e-01 ||    3.853 | 00h00'00   
+       2.49 |     5.50 ||     2278 |     1369 |      501 | 1.19e-03 | 2.20e-01 ||    4.530 | 00h00'00   
+       2.74 |     5.75 ||     3672 |     1241 |      503 | 6.71e-04 | 1.37e-01 ||    5.196 | 00h00'00   
+       2.99 |     6.00 ||     6436 |     1123 |      500 | 3.46e-04 | 7.77e-02 ||    6.144 | 00h00'00   
+       3.24 |     6.25 ||    12648 |     1004 |      503 | 1.58e-04 | 3.98e-02 ||    7.044 | 00h00'00   
+       3.49 |     6.50 ||    25104 |      954 |      500 | 7.54e-05 | 1.99e-02 ||    7.792 | 00h00'01   
+       3.74 |     6.75 ||    53388 |      903 |      500 | 3.36e-05 | 9.37e-03 ||    8.624 | 00h00'03   
+       3.99 |     7.00 ||   120288 |      903 |      500 | 1.49e-05 | 4.16e-03 ||    9.497 | 00h00'06   
+# End of the simulation.
