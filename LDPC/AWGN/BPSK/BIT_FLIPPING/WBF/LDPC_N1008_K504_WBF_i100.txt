@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C "LDPC" -m "2" -M "7" -s "0.25" -K "504" -e "500" -N "1008" --dec-type "BIT_FLIPPING" --dec-implem "WBF" --dec-h-path "/home/vpignoly/Doctorat/MatricesAlist/1008x504.alist" -i "100" --enc-type "LDPC_H" 
+command=./bin/aff3ct -C "LDPC" -m "2" -M "7" -s "0.25" -K "504" -e "500" -N "1008" --dec-type "BIT_FLIPPING" --dec-implem "WBF" --dec-h-path "../conf/dec/LDPC/PEG_Reg_1008x504.alist" -i "100" --enc-type "LDPC_H" 
 title=LDPC (1008,504) WBF 100 ite.
 doi = 10.1109/TCOMM.2010.06.090046
 url = https://ieeexplore.ieee.org/document/5474623/
@@ -41,14 +41,14 @@ s
 # * Encoder ---------------------------------------
 #    ** Type                      = LDPC_H
 #    ** Systematic                = yes
-#    ** H matrix path             = /home/vpignoly/Doctorat/MatricesAlist/1008x504.alist
+#    ** H matrix path             = ../conf/dec/LDPC/PEG_Reg_1008x504.alist
 #    ** H matrix reordering       = NONE
 #    ** G build method            = IDENTITY
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BIT_FLIPPING
 #    ** Implementation            = WBF
 #    ** Systematic                = yes
-#    ** H matrix path             = /home/vpignoly/Doctorat/MatricesAlist/1008x504.alist
+#    ** H matrix path             = ../conf/dec/LDPC/PEG_Reg_1008x504.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 100
 #    ** Stop criterion (syndrome) = on
