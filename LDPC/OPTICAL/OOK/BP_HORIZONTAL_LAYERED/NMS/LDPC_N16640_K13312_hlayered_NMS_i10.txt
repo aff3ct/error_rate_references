@@ -1,0 +1,94 @@
+[metadata]
+command=./bin/aff3ct -C "LDPC" --enc-type "LDPC_IRA" --dec-h-path "../conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist" --sim-pdf-path "../conf/chn/optical_channel.dist" --mdm-type "OOK" --src-type "RAND" --src-implem "FAST" --chn-type "OPTICAL" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "10" --mnt-mutinfo --dec-simd "INTER" -m -45
+title=LDPC PureIRA (16640,13312) 10it on Optical Channel
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-09-13 12:44:15
+#    ** Git version               = v1.3.2-1018-g22c91ce
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = -44.959 -> -42.459 dB
+#    ** Noise type (E)            = ROP
+#    ** PDF path                  = ../conf/chn/optical_channel.dist
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 8 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.8 (4/5)
+#    ** Inter frame level         = 8
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = FAST
+#    ** Info. bits (K_info)       = 13312
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 13312
+#    ** Codeword size (N_cw)      = 16640
+#    ** Frame size (N)            = 16640
+#    ** Code rate                 = 0.8 (4/5)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_IRA
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_HORIZONTAL_LAYERED
+#    ** Implementation            = NMS
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist
+#    ** H matrix reordering       = NONE
+#    ** SIMD strategy             = INTER
+#    ** Num. of iterations (i)    = 10
+#    ** Normalize factor          = 0.750000
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = OOK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sampling factor           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = OPTICAL
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = yes
+# * Terminal --------------------------------------
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ----------------||-------------------------------------------||------------------------------------------------------||---------------------
+# Received Optical||          Mutual Information (MI)          ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#   Power (ROP)   ||                                           ||                                                      ||  and elapsed time
+# ----------------||-------------------------------------------||------------------------------------------------------||---------------------
+# ----------------||----------|----------|----------|----------||----------|----------|----------|----------|----------||----------|----------
+#             ROP ||   TRIALS |       MI |      MIN |      MAX ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#            (dB) ||          |          |          |          ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------------||----------|----------|----------|----------||----------|----------|----------|----------|----------||----------|----------
+           -44.96 ||      160 |   0.7709 |   0.7602 |   0.7843 ||      160 |   140676 |      160 | 6.60e-02 | 1.00e+00 ||    6.214 | 00h00'00
+           -44.86 ||      184 |    0.781 |   0.7658 |   0.7927 ||      184 |   152576 |      184 | 6.23e-02 | 1.00e+00 ||   24.751 | 00h00'00
+           -44.76 ||      144 |   0.7871 |   0.7713 |   0.8006 ||      144 |   116440 |      144 | 6.07e-02 | 1.00e+00 ||   24.167 | 00h00'00
+           -44.66 ||      200 |   0.8045 |   0.7919 |   0.8165 ||      200 |   140737 |      200 | 5.29e-02 | 1.00e+00 ||   24.530 | 00h00'00
+           -44.56 ||      160 |   0.8123 |   0.8007 |   0.8263 ||      160 |   105957 |      160 | 4.97e-02 | 1.00e+00 ||   22.180 | 00h00'00
+           -44.46 ||      200 |   0.8182 |   0.8039 |   0.8297 ||      200 |   125675 |      200 | 4.72e-02 | 1.00e+00 ||   26.145 | 00h00'00
+           -44.36 ||      200 |   0.8278 |   0.8133 |   0.8392 ||      200 |   110856 |      200 | 4.16e-02 | 1.00e+00 ||   23.550 | 00h00'00
+           -44.26 ||      256 |   0.8392 |    0.824 |    0.851 ||      256 |   113627 |      255 | 3.33e-02 | 9.96e-01 ||   24.337 | 00h00'00
+           -44.16 ||      176 |    0.846 |   0.8351 |   0.8571 ||      176 |    58054 |      158 | 2.48e-02 | 8.98e-01 ||   27.001 | 00h00'00
+           -44.06 ||      264 |   0.8516 |     0.84 |   0.8652 ||      264 |    38838 |      155 | 1.11e-02 | 5.87e-01 ||   25.699 | 00h00'00
+           -43.96 ||     2072 |   0.8612 |   0.8437 |   0.8758 ||     2072 |    16422 |      106 | 5.95e-04 | 5.12e-02 ||   30.997 | 00h00'00
+           -43.86 ||   119112 |    0.868 |   0.8466 |   0.8856 ||   119112 |     9498 |      102 | 5.99e-06 | 8.56e-04 ||   36.940 | 00h00'50  x
+           -43.76 || 55556432 |   0.8773 |   0.8526 |    0.901 || 55556432 |     1022 |       13 | 1.38e-09 | 2.34e-07 ||   39.772 | 05h05'08  x
+# End of the simulation.
