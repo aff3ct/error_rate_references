@@ -1,0 +1,89 @@
+[metadata]
+command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "128" -R "0:1:15" --chn-type "AWGN" --chn-implem "FAST" --mdm-type "SCMA" --mdm-ite "6" -e "500" -F "6" --mdm-codebook "../conf/mod/SCMA/CS6.cb"
+title=Uncoded K=128 8-SCMA CS6
+url = https://ieeexplore.ieee.org/document/8011314
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation ------------------------------------
+#    ** Type                  = BFER
+#    ** Type of bits          = int32
+#    ** Type of reals         = float32
+#    ** Date (UTC)            = 2018-11-07 10:29:29
+#    ** Git version           = v1.3.2-1046-g58d38e1
+#    ** Code type (C)         = UNCODED
+#    ** Noise range           = 0 -> 15 dB
+#    ** Noise type (E)        = EBN0
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Multi-threading (t)   = 8 thread(s)
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 1 (1/1)
+#    ** Inter frame level     = 6
+# * Source ----------------------------------------
+#    ** Type                  = RAND
+#    ** Implementation        = STD
+#    ** Info. bits (K_info)   = 128
+# * Codec -----------------------------------------
+#    ** Type                  = UNCODED
+#    ** Info. bits (K)        = 128
+#    ** Codeword size (N_cw)  = 128
+#    ** Frame size (N)        = 128
+#    ** Code rate             = 1 (1/1)
+# * Decoder ---------------------------------------
+#    ** Type (D)              = NONE
+#    ** Implementation        = HARD_DECISION
+#    ** Systematic            = yes
+# * Modem -----------------------------------------
+#    ** Type                  = SCMA
+#    ** Implementation        = STD
+#    ** Bits per symbol       = 3
+#    ** Sampling factor       = 1
+#    ** Sigma square          = on
+#    ** Number of iterations  = 6
+#    ** Psi function          = PSI0
+#    ** codebook              = ../conf/mod/SCMA/CS6.cb
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Implementation        = FAST
+#    ** Complex               = on
+#    ** Add users             = on
+# * Monitor ---------------------------------------
+#    ** Frame error count (e) = 500
+#    ** Compute mutual info   = no
+# * Terminal --------------------------------------
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
+#
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+       4.77 |     0.00 ||      564 |    11833 |      564 | 1.64e-01 | 1.00e+00 ||    0.904 | 00h00'00
+       5.77 |     1.00 ||      582 |    11252 |      582 | 1.51e-01 | 1.00e+00 ||    3.685 | 00h00'00
+       6.77 |     2.00 ||      588 |     9607 |      588 | 1.28e-01 | 1.00e+00 ||    3.964 | 00h00'00
+       7.77 |     3.00 ||      570 |     7415 |      570 | 1.02e-01 | 1.00e+00 ||    4.114 | 00h00'00
+       8.77 |     4.00 ||      576 |     5403 |      575 | 7.33e-02 | 9.98e-01 ||    4.151 | 00h00'00
+       9.77 |     5.00 ||      576 |     3524 |      569 | 4.78e-02 | 9.88e-01 ||    4.112 | 00h00'00
+      10.77 |     6.00 ||      582 |     2048 |      540 | 2.75e-02 | 9.28e-01 ||    3.929 | 00h00'00
+      11.77 |     7.00 ||      768 |     1181 |      560 | 1.20e-02 | 7.29e-01 ||    4.056 | 00h00'00
+      12.77 |     8.00 ||     1218 |      761 |      516 | 4.88e-03 | 4.24e-01 ||    3.617 | 00h00'00
+      13.77 |     9.00 ||     3264 |      633 |      516 | 1.52e-03 | 1.58e-01 ||    3.015 | 00h00'00
+      14.77 |    10.00 ||     9906 |      573 |      505 | 4.52e-04 | 5.10e-02 ||    2.496 | 00h00'00
+      15.77 |    11.00 ||    58530 |      554 |      502 | 7.39e-05 | 8.58e-03 ||    1.793 | 00h00'04
+      16.77 |    12.00 ||   434046 |      555 |      501 | 9.99e-06 | 1.15e-03 ||    1.591 | 00h00'34
+      17.77 |    13.00 ||  3753888 |      372 |      341 | 7.74e-07 | 9.08e-05 ||    1.442 | 00h05'33  x
+      18.77 |    14.00 ||   315336 |        3 |        3 | 7.43e-08 | 9.51e-06 ||    1.259 | 00h00'32  x
+# End of the simulation.
