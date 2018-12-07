@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C "TURBO_PROD" -K "120" -N "127" --enc-ext -m "3" -M "4.5" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "4" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST"
+command=./bin/aff3ct -C "TPC" -K "120" -N "127" --enc-ext -m "3" -M "4.5" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "4" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST"
 title=Turbo Prod BCH(128,120,1) 8 ite. p4
 
 [trace]
@@ -13,7 +13,7 @@ title=Turbo Prod BCH(128,120,1) 8 ite. p4
 #    ** Type of reals               = float32
 #    ** Date (UTC)                  = 2018-02-07 14:25:38
 #    ** Git version                 = v1.3.1-171-g170b395
-#    ** Code type (C)               = TURBO_PROD
+#    ** Code type (C)               = TPC
 #    ** Noise range                 = 3 -> 4.5 dB
 #    ** Noise type (E)              = EBN0
 #    ** Seed                        = 0
@@ -31,13 +31,13 @@ title=Turbo Prod BCH(128,120,1) 8 ite. p4
 #    ** Implementation              = FAST
 #    ** Info. bits (K_info)         = 14400
 # * Codec -----------------------------------------
-#    ** Type                        = TURBO_PROD
+#    ** Type                        = TPC
 #    ** Info. bits (K)              = 14400
 #    ** Codeword size (N_cw)        = 16384
 #    ** Frame size (N)              = 16384
 #    ** Code rate                   = 0.878906 (225/256)
 # * Encoder ---------------------------------------
-#    ** Type                        = TURBO_PROD
+#    ** Type                        = TPC
 #    ** Systematic                  = yes
 #    ** Parity extended             = yes
 #    Encoder --------------------------------------
