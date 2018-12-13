@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 360 -N 480 -m 0.00 -M 5.51 -s 0.50 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 40 --dec-h-path dec/LDPC/WRAN_360_480.alist -p 32
+command=aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 360 -N 480 -m 0.00 -M 5.51 -s 0.50 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 40 --dec-h-path conf/dec/LDPC/WRAN_360_480.alist -p 32
 info=https://www.uni-kl.de/fileadmin/_processed_/1/c/csm_wran_ldpc_spa_vs_ml_ae903dda7d.png
 title=LDPC (480,360) SPA 40 ite. WRAN
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
@@ -45,7 +45,7 @@ url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = SPA
 #    ** Systematic                = yes
-#    ** H matrix path             = dec/LDPC/WRAN_360_480.alist
+#    ** H matrix path             = conf/dec/LDPC/WRAN_360_480.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 40
 #    ** Stop criterion (syndrome) = on

@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct -C "LDPC" --enc-type "LDPC_IRA" --dec-h-path "dec/LDPC/PureIRA_R_4_5_N16k_H.alist" --sim-pdf-path "chn/optical_channel.dist" --mdm-type "OOK" --src-type "RAND" --src-implem "FAST" --chn-type "OPTICAL" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "10" --mnt-mutinfo --dec-simd "INTER" -m -45
+command=aff3ct -C "LDPC" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist" --sim-pdf-path "conf/chn/optical_channel.dist" --mdm-type "OOK" --src-type "RAND" --src-implem "FAST" --chn-type "OPTICAL" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "10" --mnt-mutinfo --dec-simd "INTER" -m -45
 title=LDPC PureIRA (16640,13312) 10it on Optical Channel
 
 [trace]
@@ -16,7 +16,7 @@ title=LDPC PureIRA (16640,13312) 10it on Optical Channel
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = -44.959 -> -42.459 dB
 #    ** Noise type (E)            = ROP
-#    ** PDF path                  = chn/optical_channel.dist
+#    ** PDF path                  = conf/chn/optical_channel.dist
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
@@ -44,7 +44,7 @@ title=LDPC PureIRA (16640,13312) 10it on Optical Channel
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = NMS
 #    ** Systematic                = yes
-#    ** H matrix path             = dec/LDPC/PureIRA_R_4_5_N16k_H.alist
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 10

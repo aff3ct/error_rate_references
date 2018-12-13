@@ -45,7 +45,7 @@ title=Polar (4096,2048) SC TV inter 16-bit
 #    Frozen bits generator ------------------------
 #    ** Type                  = TV
 #    ** Sigma                 = adaptive
-#    ** Path                  = cde/awgn_polar_codes/TV
+#    ** Path                  = conf/cde/awgn_polar_codes/TV
 # * Decoder ---------------------------------------
 #    ** Type (D)              = SC
 #    ** Implementation        = FAST

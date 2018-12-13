@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" -R "2:5" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-simd "INTER" -i "10" --dec-h-path "dec/LDPC/WIFI_540_648.alist" --enc-type "LDPC_H" --enc-g-method "LU_DEC"
+command=aff3ct --sim-type "BFER" -C "LDPC" --src-type "RAND" --src-implem "FAST" -R "2:5" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-simd "INTER" -i "10" --dec-h-path "conf/dec/LDPC/WIFI_540_648.alist" --enc-type "LDPC_H" --enc-g-method "LU_DEC"
 title=LDPC (648,540) NMS 10 ite. Wi-Fi encoded
 
 [trace]
@@ -39,14 +39,14 @@ title=LDPC (648,540) NMS 10 ite. Wi-Fi encoded
 # * Encoder ---------------------------------------
 #    ** Type                      = LDPC_H
 #    ** Systematic                = yes
-#    ** H matrix path             = dec/LDPC/WIFI_540_648.alist
+#    ** H matrix path             = conf/dec/LDPC/WIFI_540_648.alist
 #    ** H matrix reordering       = NONE
 #    ** G build method            = LU_DEC
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = NMS
 #    ** Systematic                = yes
-#    ** H matrix path             = dec/LDPC/WIFI_540_648.alist
+#    ** H matrix path             = conf/dec/LDPC/WIFI_540_648.alist
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 10
