@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "LDPC" --enc-type "LDPC_H" -m "1.00" -M "1.80" -s "0.1" --dec-implem "SPA" --dec-h-path "../conf/dec/LDPC/MACKAY_4000_8000.alist" -e "100" -i "20" --dec-type "BP_HORIZONTAL_LAYERED" -t "32"
+command=aff3ct --sim-type "BFER" -C "LDPC" --enc-type "LDPC_H" -m "1.00" -M "1.80" -s "0.1" --dec-implem "SPA" --dec-h-path "dec/LDPC/MACKAY_4000_8000.alist" -e "100" -i "20" --dec-type "BP_HORIZONTAL_LAYERED" -t "32"
 title=LDPC (8000,4000) SPA 20 ite. MacKay
 
 [trace]
@@ -39,13 +39,13 @@ title=LDPC (8000,4000) SPA 20 ite. MacKay
 # * Encoder ---------------------------------------
 #    ** Type                      = LDPC_H
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/MACKAY_4000_8000.alist
+#    ** H matrix path             = dec/LDPC/MACKAY_4000_8000.alist
 #    ** H matrix reordering       = NONE
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = SPA
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/MACKAY_4000_8000.alist
+#    ** H matrix path             = dec/LDPC/MACKAY_4000_8000.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 20
 #    ** Stop criterion (syndrome) = on

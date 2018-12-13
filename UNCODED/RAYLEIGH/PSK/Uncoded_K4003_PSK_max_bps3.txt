@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PSK" --mnt-max-fe "1000" --mdm-bps "3"
+command=aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "62" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "PSK" --mnt-max-fe "1000" --mdm-bps "3"
 title=Uncoded K=4003 8-PSK
 
 [trace]

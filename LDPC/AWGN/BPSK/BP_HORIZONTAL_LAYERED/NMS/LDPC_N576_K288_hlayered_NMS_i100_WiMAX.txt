@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 288 -N 576 -m 0.00 -M 3.51 -s 0.25 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem NMS -i 100 --dec-h-path ../conf/dec/LDPC/WIMAX_288_576.alist --dec-norm 0.825 --dec-no-synd
+command=aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 288 -N 576 -m 0.00 -M 3.51 -s 0.25 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem NMS -i 100 --dec-h-path dec/LDPC/WIMAX_288_576.alist --dec-norm 0.825 --dec-no-synd
 title=LDPC (576,288) NMS 100 ite. WiMAX
 
 [trace]
@@ -43,7 +43,7 @@ title=LDPC (576,288) NMS 100 ite. WiMAX
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = NMS
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/WIMAX_288_576.alist
+#    ** H matrix path             = dec/LDPC/WIMAX_288_576.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 100
 #    ** Normalize factor          = 0.825000

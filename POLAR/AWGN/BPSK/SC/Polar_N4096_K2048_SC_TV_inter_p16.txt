@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -p "16" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "3.2" -e "500" --enc-fb-gen-method "TV" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTER" --qnt-bits "6" --qnt-dec "1" --qnt-implem "FAST"
+command=aff3ct -p "16" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "3.2" -e "500" --enc-fb-gen-method "TV" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTER" --qnt-bits "6" --qnt-dec "1" --qnt-implem "FAST"
 doi=10.1109/EUSIPCO.2016.7760327
 info=Figure 2
 title=Polar (4096,2048) SC TV inter 16-bit
@@ -45,7 +45,7 @@ title=Polar (4096,2048) SC TV inter 16-bit
 #    Frozen bits generator ------------------------
 #    ** Type                  = TV
 #    ** Sigma                 = adaptive
-#    ** Path                  = ../conf/cde/awgn_polar_codes/TV
+#    ** Path                  = cde/awgn_polar_codes/TV
 # * Decoder ---------------------------------------
 #    ** Type (D)              = SC
 #    ** Implementation        = FAST

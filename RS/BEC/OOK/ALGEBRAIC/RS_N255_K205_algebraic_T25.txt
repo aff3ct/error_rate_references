@@ -1,6 +1,6 @@
 [metadata]
 ci=on
-command=./bin/aff3ct -C "RS" -N "255" -T "25" -R "0.2,0.25,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --chn-implem "FAST" --mdm-type "OOK"
+command=aff3ct -C "RS" -N "255" -T "25" -R "0.2,0.25,0.02:0.02:0.2" -E "EP" --chn-type "BEC" --chn-implem "FAST" --mdm-type "OOK"
 title=RS (255,205,25)
 
 [trace]

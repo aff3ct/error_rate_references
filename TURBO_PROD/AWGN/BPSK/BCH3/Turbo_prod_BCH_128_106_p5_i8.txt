@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C "TPC" -K "106" -N "127" --enc-ext -m "2.5" -M "4.5" -s "0.25" -T "3" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" --dec-alpha "0.5,0.5,1,1,1,1,1.2" --dec-cp-coef "0,0.25,0,0,3"
+command=aff3ct -C "TPC" -K "106" -N "127" --enc-ext -m "2.5" -M "4.5" -s "0.25" -T "3" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" --dec-alpha "0.5,0.5,1,1,1,1,1.2" --dec-cp-coef "0,0.25,0,0,3"
 title=Turbo Prod BCH(128,106,3) 8it p5
 
 [trace]

@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 2.51 -s 0.25 -K 2112 -N 4224 --sim-coset --src-type RAND --src-implem FAST --itl-type USER --itl-path ../conf/itl/GSM-LDPC_4224.itl --mdm-type CPM --chn-type AWGN --chn-implem FAST --sim-ite 20 --dec-type BP_HORIZONTAL_LAYERED --dec-h-path ../conf/dec/LDPC/GSM_2112_4224.alist --dec-implem SPA --dec-ite 1 --mnt-max-fe 100 --mdm-max MAXS --mdm-cpm-std GSM
+command=aff3ct -C LDPC --sim-type BFERI --sim-prec 32 -m 0.0 -M 2.51 -s 0.25 -K 2112 -N 4224 --sim-coset --src-type RAND --src-implem FAST --itl-type USER --itl-path itl/GSM-LDPC_4224.itl --mdm-type CPM --chn-type AWGN --chn-implem FAST --sim-ite 20 --dec-type BP_HORIZONTAL_LAYERED --dec-h-path dec/LDPC/GSM_2112_4224.alist --dec-implem SPA --dec-ite 1 --mnt-max-fe 100 --mdm-max MAXS --mdm-cpm-std GSM
 title=LDPC (4224,2112) GSM-SPA 20 turbo ite.
 
 [trace]
@@ -44,14 +44,14 @@ title=LDPC (4224,2112) GSM-SPA 20 turbo ite.
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = SPA
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/GSM_2112_4224.alist
+#    ** H matrix path             = dec/LDPC/GSM_2112_4224.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 1
 #    ** Stop criterion (syndrome) = on
 #    ** Stop criterion depth      = 1
 # * Interleaver -----------------------------------
 #    ** Type                      = USER
-#    ** Path                      = ../conf/itl/GSM-LDPC_4224.itl
+#    ** Path                      = itl/GSM-LDPC_4224.itl
 # * Modem -----------------------------------------
 #    ** Type                      = CPM
 #    ** Implementation            = STD
