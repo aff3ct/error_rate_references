@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "LDPC" -R "7:0.2:10" --enc-type "LDPC_IRA" --dec-h-path "../../conf/matrixFile/Uplink/IRA/IRA_UplinkOpt_G_6_6_ACE_4_5_H.alist" --dec-type "BP_FLOODING" --dec-implem "GALA" -i "200"
+command=aff3ct --sim-type "BFER" -C "LDPC" -R "7:0.2:10" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist" --dec-type "BP_FLOODING" --dec-implem "GALA" -i "200"
 title=GalA IRA 4/5 200it BPSK
 
 [trace]
@@ -43,7 +43,7 @@ title=GalA IRA 4/5 200it BPSK
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = GALA
 #    ** Systematic                = yes
-#    ** H matrix path             = ../../conf/matrixFile/Uplink/IRA/IRA_UplinkOpt_G_6_6_ACE_4_5_H.alist
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 200
 #    ** Stop criterion (syndrome) = on

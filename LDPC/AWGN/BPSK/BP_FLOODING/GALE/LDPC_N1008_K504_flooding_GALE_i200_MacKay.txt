@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "LDPC" -m "0.0" -M "8.51" -s "0.25" -K "504" -N "1008" --dec-h-path "../conf/dec/LDPC/MACKAY_504_1008.alist" --dec-type "BP_FLOODING" --dec-implem "GALE" -i "200"
+command=aff3ct --sim-type "BFER" -C "LDPC" -m "0.0" -M "8.51" -s "0.25" -K "504" -N "1008" --dec-h-path "conf/dec/LDPC/MACKAY_504_1008.alist" --dec-type "BP_FLOODING" --dec-implem "GALE" -i "200"
 title=LDPC (1008,504) Gallager E 200 ite.
 
 [trace]
@@ -43,7 +43,7 @@ title=LDPC (1008,504) Gallager E 200 ite.
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = GALE
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/MACKAY_504_1008.alist
+#    ** H matrix path             = conf/dec/LDPC/MACKAY_504_1008.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 200
 #    ** Stop criterion (syndrome) = on

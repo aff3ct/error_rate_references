@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "LDPC" -R "5:0.2:10" -K "16384" --enc-type "LDPC_IRA" --dec-h-path "../../../RT_CNES/FEC_optique/conf/matrixFile/Uplink/IRA/IRA_UplinkOpt_G_6_6_ACE_4_5_H.alist" --dec-type "BP_FLOODING" --dec-implem "GALB" -i "50"
+command=aff3ct --sim-type "BFER" -C "LDPC" -R "5:0.2:10" -K "16384" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist" --dec-type "BP_FLOODING" --dec-implem "GALB" -i "50"
 title=GalB IRA 4/5 50it BPSK
 
 [trace]
@@ -43,7 +43,7 @@ title=GalB IRA 4/5 50it BPSK
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = GALB
 #    ** Systematic                = yes
-#    ** H matrix path             = ../../../RT_CNES/FEC_optique/conf/matrixFile/Uplink/IRA/IRA_UplinkOpt_G_6_6_ACE_4_5_H.alist
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N16k_H.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 50
 #    ** Stop criterion (syndrome) = on
