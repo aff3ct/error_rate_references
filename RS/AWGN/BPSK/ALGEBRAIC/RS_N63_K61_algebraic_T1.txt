@@ -1,6 +1,6 @@
 [metadata]
 ci=off
-command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "63" -K "61" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
+command=aff3ct --sim-type "BFER" -C "RS" -N "63" -K "61" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
 title=RS (63,61,1)
 
 [trace]
