@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "UNCODED" -K "128" -R "0:1:15" --chn-type "AWGN" --chn-implem "FAST" --mdm-type "SCMA" --mdm-ite "6" -e "500" -F "6" --mdm-codebook "../conf/mod/SCMA/CS5.cb"
+command=aff3ct --sim-type "BFER" -C "UNCODED" -K "128" -R "0:1:15" --chn-type "AWGN" --chn-implem "FAST" --mdm-type "SCMA" --mdm-ite "6" -e "500" -F "6" --mdm-codebook "conf/mod/SCMA/CS5.cb"
 title=Uncoded K=128 8-SCMA CS5
 url = https://ieeexplore.ieee.org/document/8011314
 
@@ -49,7 +49,7 @@ url = https://ieeexplore.ieee.org/document/8011314
 #    ** Sigma square          = on
 #    ** Number of iterations  = 6
 #    ** Psi function          = PSI0
-#    ** codebook              = ../conf/mod/SCMA/CS5.cb
+#    ** codebook              = conf/mod/SCMA/CS5.cb
 # * Channel ---------------------------------------
 #    ** Type                  = AWGN
 #    ** Implementation        = FAST

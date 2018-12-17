@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -R 0:1:18 --src-implem FAST --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" -e "500" --mdm-codebook ../conf/mod/SCMA/CS1.cb
+command=aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -R 0:1:18 --src-implem FAST --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" -e "500" --mdm-codebook conf/mod/SCMA/CS1.cb
 title=Uncoded K=4003 8-SCMA CS1
 
 [trace]
@@ -48,7 +48,7 @@ title=Uncoded K=4003 8-SCMA CS1
 #    ** Sigma square          = on
 #    ** Number of iterations  = 6
 #    ** Psi function          = PSI0
-#    ** codebook              = ../conf/mod/SCMA/CS1.cb
+#    ** codebook              = conf/mod/SCMA/CS1.cb
 # * Channel ---------------------------------------
 #    ** Type                  = AWGN
 #    ** Implementation        = FAST
