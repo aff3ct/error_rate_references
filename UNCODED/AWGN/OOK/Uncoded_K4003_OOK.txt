@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" -K "4003"
+command=aff3ct -C "UNCODED" -m "0.0" -M "20.0" -s "1" -e "500" --mdm-type "OOK" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST" -K "4003"
 title=Uncoded K=4003 OOK
 
 [trace]

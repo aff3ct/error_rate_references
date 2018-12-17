@@ -1,6 +1,6 @@
 [metadata]
 ci=off
-command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "255" -K "191" -T "32" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
+command=aff3ct --sim-type "BFER" -C "RS" -N "255" -K "191" -T "32" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
 info=https://c1.staticflickr.com/1/879/40996891980_d2cba66d7d_o.png
 title=RS (255,191,32)
 url=https://www.embeddedrelated.com/showarticle/1182.php

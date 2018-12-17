@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -p "08" --sim-type "BFER" -C "POLAR" -m "0" -M "6" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "96" -N "128" --dec-type "SC" --dec-implem "NAIVE"
+command=aff3ct -p "08" --sim-type "BFER" -C "POLAR" -m "0" -M "6" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "96" -N "128" --dec-type "SC" --dec-implem "NAIVE"
 title=Polar (128,96) SC SYS  8-bit
 
 [trace]

@@ -1,6 +1,6 @@
 [metadata]
 ci=off
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "215" -T "5" -m "0" -M "9" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
+command=aff3ct --sim-type "BFER" -C "BCH" -N "255" -K "215" -T "5" -m "0" -M "9" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
 title=BCH (255,215,5)
 
 [trace]

@@ -1,6 +1,6 @@
 [metadata]
 ci=on
-command=./bin/aff3ct --sim-type "BFER" -C "RS" -N "31" -K "25" -T "3" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
+command=aff3ct --sim-type "BFER" -C "RS" -N "31" -K "25" -T "3" -m "0" -M "10" -s "0.2" -e "1000" --src-implem "FAST" --mdm-implem "FAST" --chn-implem "FAST"
 info=https://www.uni-kl.de/fileadmin/_processed_/8/a/csm_rs_31_4f8b88f450.png
 title=RS (31,25,3)
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/

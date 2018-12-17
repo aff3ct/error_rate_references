@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.6" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc
+command=aff3ct --sim-type "BFER" -C "TURBO_DB" -K "1504" -N "3008" -m "0.0" -M "2.6" -s "0.2" --enc-sub-std "DVB-RCS1" -i "8" --mdm-type "PSK" --mdm-bps "2" -e "100" --crc-implem "FAST" --crc-poly "32-GZIP" --dec-sf-type "ADAPTIVE" --dec-fnc
 doi=10.1109/ISTC.2016.7593096
 info=Figure 5
 title=Turbo DB (3008,1504) BCJR 8 ite. FNC DVB-RCS1

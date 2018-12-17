@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA" --dec-h-path "../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist" --dec-type "BP_PEELING" --dec-implem "STD" --chn-type "BEC" --mdm-type "OOK" --dec-ite "50" --dec-synd-depth "1"
+command=aff3ct -C "LDPC" -R "0.2:0.5,0.13:0.01:0.19" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist" --dec-type "BP_PEELING" --dec-implem "STD" --chn-type "BEC" --mdm-type "OOK" --dec-ite "50" --dec-synd-depth "1"
 title=LDPC (3000,2400) Peeling 50 ite. PureIRA
 
 [trace]
@@ -43,7 +43,7 @@ title=LDPC (3000,2400) Peeling 50 ite. PureIRA
 #    ** Type (D)                  = BP_PEELING
 #    ** Implementation            = STD
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist
+#    ** H matrix path             = conf/dec/LDPC/Peeling_PureIRA_2400_3000.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 50
 #    ** Stop criterion (syndrome) = on

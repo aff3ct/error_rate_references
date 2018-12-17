@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SC" --dec-simd "INTRA"
+command=aff3ct -p "32" --sim-type "BFER" -C "POLAR" -m "1.0" -M "4.51" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "1723" -N "2048" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "SC" --dec-simd "INTRA"
 title=Polar (2048,1723) SC 32-bit
 
 [trace]
