@@ -1,5 +1,5 @@
 [metadata]
-command=/media/ohartmann/DATA/Documents/Projets/aff3ct/development/build/bin/aff3ct-2.1.1-159-g4cae1d3 -C "LDPC" -R "6:0.2:8" --dec-type "BIT_FLIPPING" --dec-implem "PPBF" --dec-h-path "../../../RT_CNES/FEC_optique/conf/matrixFile/Uplink/IRA/IRA_UplinkOpt_G_6_6_ACE_4_5_H.alist" -i "50" --enc-type "LDPC_IRA" --dec-ppbf-proba "0,0.001,0.1,0.3,1,1,1" 
+command=aff3ct -C "LDPC" -R "6:0.2:8" --dec-type "BIT_FLIPPING" --dec-implem "PPBF" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist" -i "50" --enc-type "LDPC_IRA" --dec-ppbf-proba "0,0.001,0.1,0.3,1,1,1"
 title=PPBF IRA 4/5 50it BPSK
 
 [trace]
@@ -43,7 +43,7 @@ title=PPBF IRA 4/5 50it BPSK
 #    ** Type (D)                  = BIT_FLIPPING
 #    ** Implementation            = PPBF
 #    ** Systematic                = yes
-#    ** H matrix path             = ../../../RT_CNES/FEC_optique/conf/matrixFile/Uplink/IRA/IRA_UplinkOpt_G_6_6_ACE_4_5_H.alist
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 50
 #    ** Stop criterion (syndrome) = on
@@ -65,25 +65,25 @@ title=PPBF IRA 4/5 50it BPSK
 # * Terminal --------------------------------------
 #    ** Enabled                   = yes
 #    ** Frequency (ms)            = 500
-# 
+#
 # The simulation is running...
 # ---------------------||------------------------------------------------------||---------------------
-#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput  
-#         (SNR)        ||                                                      ||  and elapsed time   
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
 # ---------------------||------------------------------------------------------||---------------------
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
-#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
-#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
-       5.03 |     6.00 ||      112 |   624200 |      112 | 3.40e-01 | 1.00e+00 ||    1.759 | 00h00'01   
-       5.23 |     6.20 ||      110 |   614341 |      110 | 3.41e-01 | 1.00e+00 ||    2.707 | 00h00'00   
-       5.43 |     6.40 ||      111 |   618504 |      111 | 3.40e-01 | 1.00e+00 ||    2.750 | 00h00'00   
-       5.63 |     6.60 ||      112 |   618460 |      111 | 3.37e-01 | 9.91e-01 ||    2.776 | 00h00'00   
-       5.83 |     6.80 ||      113 |   592109 |      106 | 3.20e-01 | 9.38e-01 ||    2.701 | 00h00'00   
-       6.03 |     7.00 ||      203 |   596073 |      108 | 1.79e-01 | 5.32e-01 ||    3.269 | 00h00'01   
-       6.23 |     7.20 ||      595 |   540172 |      101 | 5.54e-02 | 1.70e-01 ||    4.356 | 00h00'02   
-       6.43 |     7.40 ||     3822 |   400144 |      100 | 6.39e-03 | 2.62e-02 ||    5.299 | 00h00'11   
-       6.63 |     7.60 ||    16892 |    78118 |      100 | 2.82e-04 | 5.92e-03 ||    6.191 | 00h00'44   
-       6.83 |     7.80 ||    28951 |    11401 |      100 | 2.40e-05 | 3.45e-03 ||    7.562 | 00h01'02   
-       7.03 |     8.00 ||    43995 |      105 |      100 | 1.46e-07 | 2.27e-03 ||    8.499 | 00h01'24   
+       5.03 |     6.00 ||      112 |   624200 |      112 | 3.40e-01 | 1.00e+00 ||    1.759 | 00h00'01
+       5.23 |     6.20 ||      110 |   614341 |      110 | 3.41e-01 | 1.00e+00 ||    2.707 | 00h00'00
+       5.43 |     6.40 ||      111 |   618504 |      111 | 3.40e-01 | 1.00e+00 ||    2.750 | 00h00'00
+       5.63 |     6.60 ||      112 |   618460 |      111 | 3.37e-01 | 9.91e-01 ||    2.776 | 00h00'00
+       5.83 |     6.80 ||      113 |   592109 |      106 | 3.20e-01 | 9.38e-01 ||    2.701 | 00h00'00
+       6.03 |     7.00 ||      203 |   596073 |      108 | 1.79e-01 | 5.32e-01 ||    3.269 | 00h00'01
+       6.23 |     7.20 ||      595 |   540172 |      101 | 5.54e-02 | 1.70e-01 ||    4.356 | 00h00'02
+       6.43 |     7.40 ||     3822 |   400144 |      100 | 6.39e-03 | 2.62e-02 ||    5.299 | 00h00'11
+       6.63 |     7.60 ||    16892 |    78118 |      100 | 2.82e-04 | 5.92e-03 ||    6.191 | 00h00'44
+       6.83 |     7.80 ||    28951 |    11401 |      100 | 2.40e-05 | 3.45e-03 ||    7.562 | 00h01'02
+       7.03 |     8.00 ||    43995 |      105 |      100 | 1.46e-07 | 2.27e-03 ||    8.499 | 00h01'24
 # End of the simulation.
