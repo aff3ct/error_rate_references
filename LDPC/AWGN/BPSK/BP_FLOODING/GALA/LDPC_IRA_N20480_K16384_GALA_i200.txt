@@ -30,16 +30,16 @@ title=GalA IRA 4/5 200it BPSK
 #    ** Type                      = RAND
 #    ** Implementation            = STD
 #    ** Info. bits (K_info)       = 16384
-# * Codec LDPC ------------------------------------
+# * Codec -----------------------------------------
 #    ** Type                      = LDPC
 #    ** Info. bits (K)            = 16384
 #    ** Codeword size (N_cw)      = 20480
 #    ** Frame size (N)            = 20480
 #    ** Code rate                 = 0.8 (4/5)
-# * Encoder LDPC ----------------------------------
+# * Encoder ---------------------------------------
 #    ** Type                      = LDPC_IRA
 #    ** Systematic                = yes
-# * Decoder LDPC ----------------------------------
+# * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = GALA
 #    ** Systematic                = yes
