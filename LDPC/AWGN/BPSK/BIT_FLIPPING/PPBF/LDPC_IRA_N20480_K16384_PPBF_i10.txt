@@ -1,0 +1,99 @@
+[metadata]
+command=aff3ct -C "LDPC" -R "6:0.2:10" --dec-type "BIT_FLIPPING" --dec-implem "PPBF" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist" -i "10" --enc-type "LDPC_IRA" --dec-ppbf-proba "0,0.001,0.1,0.3,1,1,1"
+title=PPBF IRA 4/5 10it BPSK
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-12-21 12:36:50
+#    ** Git version               = v2.1.1-173-gec0e2f1
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 6 -> 10 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 48 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.8 (4/5)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = STD
+#    ** Info. bits (K_info)       = 16384
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 16384
+#    ** Codeword size (N_cw)      = 20480
+#    ** Frame size (N)            = 20480
+#    ** Code rate                 = 0.8 (4/5)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_IRA
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BIT_FLIPPING
+#    ** Implementation            = PPBF
+#    ** Systematic                = yes
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 10
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+#    ** Bernouilli probas         = {0, 0.001, 0.1, 0.3, 1, 1, 1}
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+       5.03 |     6.00 ||      175 |   977702 |      175 | 3.41e-01 | 1.00e+00 ||    0.622 | 00h00'04
+       5.23 |     6.20 ||      231 |  1286103 |      231 | 3.40e-01 | 1.00e+00 ||   49.039 | 00h00'00
+       5.43 |     6.40 ||      174 |   971226 |      174 | 3.41e-01 | 1.00e+00 ||   48.758 | 00h00'00
+       5.63 |     6.60 ||      179 |   980008 |      179 | 3.34e-01 | 1.00e+00 ||   51.242 | 00h00'00
+       5.83 |     6.80 ||      183 |   878182 |      176 | 2.93e-01 | 9.62e-01 ||   49.593 | 00h00'00
+       6.03 |     7.00 ||      223 |   588927 |      175 | 1.61e-01 | 7.85e-01 ||   51.362 | 00h00'00
+       6.23 |     7.20 ||      310 |   174579 |      145 | 3.44e-02 | 4.68e-01 ||   34.859 | 00h00'00
+       6.43 |     7.40 ||      428 |    18688 |      117 | 2.67e-03 | 2.73e-01 ||   34.265 | 00h00'00
+       6.63 |     7.60 ||      593 |      144 |      120 | 1.48e-05 | 2.02e-01 ||   37.219 | 00h00'00
+       6.83 |     7.80 ||      975 |      137 |      116 | 8.58e-06 | 1.19e-01 ||   39.730 | 00h00'00
+       7.03 |     8.00 ||     1251 |      112 |      105 | 5.46e-06 | 8.39e-02 ||   57.664 | 00h00'00
+       7.23 |     8.20 ||     1795 |      114 |      102 | 3.88e-06 | 5.68e-02 ||   41.031 | 00h00'00
+       7.43 |     8.40 ||     2280 |      110 |      106 | 2.94e-06 | 4.65e-02 ||   68.267 | 00h00'00
+       7.63 |     8.60 ||     3118 |      116 |      106 | 2.27e-06 | 3.40e-02 ||   49.519 | 00h00'01
+       7.83 |     8.80 ||     4395 |      105 |      103 | 1.46e-06 | 2.34e-02 ||   61.469 | 00h00'01
+       8.03 |     9.00 ||     6267 |      104 |      102 | 1.01e-06 | 1.63e-02 ||   67.346 | 00h00'01
+       8.23 |     9.20 ||     8635 |      109 |      102 | 7.70e-07 | 1.18e-02 ||   72.879 | 00h00'01
+       8.43 |     9.40 ||    14514 |      108 |      102 | 4.54e-07 | 7.03e-03 ||  118.505 | 00h00'02
+       8.63 |     9.60 ||    19194 |      106 |      100 | 3.37e-07 | 5.21e-03 ||  151.220 | 00h00'02
+       8.83 |     9.80 ||    26857 |      108 |      100 | 2.45e-07 | 3.72e-03 ||  180.630 | 00h00'02
+       9.03 |    10.00 ||    40014 |      103 |      101 | 1.57e-07 | 2.52e-03 ||  152.378 | 00h00'04
+# End of the simulation.
