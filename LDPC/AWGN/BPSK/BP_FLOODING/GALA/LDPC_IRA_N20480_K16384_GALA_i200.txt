@@ -1,0 +1,92 @@
+[metadata]
+command=aff3ct --sim-type "BFER" -C "LDPC" -R "7:0.2:10" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist" --dec-type "BP_FLOODING" --dec-implem "GALA" -i "200"
+title=GalA IRA 4/5 200it BPSK
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters :
+# * Simulation BFER standard ----------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-12-12 16:45:01
+#    ** Git version               = v2.1.1-174-gf7bafbd
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 7 -> 10 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 48 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.8 (4/5)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = STD
+#    ** Info. bits (K_info)       = 16384
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 16384
+#    ** Codeword size (N_cw)      = 20480
+#    ** Frame size (N)            = 20480
+#    ** Code rate                 = 0.8 (4/5)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_IRA
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_FLOODING
+#    ** Implementation            = GALA
+#    ** Systematic                = yes
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 200
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+       6.03 |     7.00 ||      193 |  1577963 |      193 | 4.99e-01 | 1.00e+00 ||    0.136 | 00h00'23
+       6.23 |     7.20 ||      193 |  1584314 |      193 | 5.01e-01 | 1.00e+00 ||    0.475 | 00h00'06
+       6.43 |     7.40 ||      194 |  1567191 |      192 | 4.93e-01 | 9.90e-01 ||    0.514 | 00h00'06
+       6.63 |     7.60 ||      201 |  1579994 |      193 | 4.80e-01 | 9.60e-01 ||    0.493 | 00h00'06
+       6.83 |     7.80 ||      227 |  1584855 |      193 | 4.26e-01 | 8.50e-01 ||    0.564 | 00h00'06
+       7.03 |     8.00 ||      262 |  1569695 |      192 | 3.66e-01 | 7.33e-01 ||    0.679 | 00h00'06
+       7.23 |     8.20 ||      329 |  1209896 |      148 | 2.24e-01 | 4.50e-01 ||    0.953 | 00h00'05
+       7.43 |     8.40 ||      579 |  1315288 |      161 | 1.39e-01 | 2.78e-01 ||    1.637 | 00h00'05
+       7.63 |     8.60 ||     1467 |  1251857 |      153 | 5.21e-02 | 1.04e-01 ||    3.998 | 00h00'06
+       7.83 |     8.80 ||     4427 |  1174745 |      143 | 1.62e-02 | 3.23e-02 ||   10.867 | 00h00'06
+       8.03 |     9.00 ||    11448 |   958445 |      118 | 5.11e-03 | 1.03e-02 ||   21.862 | 00h00'08
+       8.23 |     9.20 ||    41070 |   863443 |      106 | 1.28e-03 | 2.58e-03 ||   34.615 | 00h00'19
+       8.43 |     9.40 ||   149945 |   855958 |      107 | 3.48e-04 | 7.14e-04 ||   40.809 | 00h01'00
+       8.63 |     9.60 ||   432991 |   743012 |      105 | 1.05e-04 | 2.42e-04 ||   42.868 | 00h02'45
+       8.83 |     9.80 ||   838454 |   440336 |       74 | 3.21e-05 | 8.83e-05 ||   39.055 | 00h05'51  x
+# End of the simulation.

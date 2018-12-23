@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -p "16" --sim-type "BFER" -C "POLAR" -K "27307" -N "32768" -m "1.0" -M "4.0" -e "500" --enc-fb-gen-method "FILE" --enc-fb-awgn-path "../conf/cde/awgn_polar_codes/TV/15/N32768_awgn_s0.489.pc" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTER" --qnt-bits "6" --qnt-dec "1" --qnt-implem "FAST"
+command=aff3ct -p "16" --sim-type "BFER" -C "POLAR" -K "27307" -N "32768" -m "1.0" -M "4.0" -e "500" --enc-fb-gen-method "FILE" --enc-fb-awgn-path "conf/cde/awgn_polar_codes/TV/15/N32768_awgn_s0.489.pc" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTER" --qnt-bits "6" --qnt-dec "1" --qnt-implem "FAST"
 doi=10.1109/EUSIPCO.2016.7760327
 info=Figure 2
 title=Polar (32768,27307) SC FILE inter 16-bit
@@ -45,7 +45,7 @@ title=Polar (32768,27307) SC FILE inter 16-bit
 #    Frozen bits generator ------------------------
 #    ** Type                  = FILE
 #    ** Sigma                 = adaptive
-#    ** Path                  = ../conf/cde/awgn_polar_codes/TV/15/N32768_awgn_s0.489.pc
+#    ** Path                  = conf/cde/awgn_polar_codes/TV/15/N32768_awgn_s0.489.pc
 # * Decoder ---------------------------------------
 #    ** Type (D)              = SC
 #    ** Implementation        = FAST

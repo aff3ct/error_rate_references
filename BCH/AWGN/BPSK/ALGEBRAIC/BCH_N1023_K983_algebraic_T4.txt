@@ -1,6 +1,6 @@
 [metadata]
 ci=on
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "1023" -K "983" -T "4" -m "0" -M "8.01" -s "0.25" -e "500" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
+command=aff3ct --sim-type "BFER" -C "BCH" -N "1023" -K "983" -T "4" -m "0" -M "8.01" -s "0.25" -e "500" --enc-type "AZCW" --chn-type AWGN --chn-implem FAST
 info=https://www.uni-kl.de/fileadmin/_processed_/0/4/csm_bch1023_5abf62b1cc.png
 title=BCH (1023,983,4)
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/

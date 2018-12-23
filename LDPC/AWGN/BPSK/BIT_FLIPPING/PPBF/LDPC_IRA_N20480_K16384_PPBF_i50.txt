@@ -1,0 +1,99 @@
+[metadata]
+command=aff3ct -C "LDPC" -R "6:0.2:10" --dec-type "BIT_FLIPPING" --dec-implem "PPBF" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist" -i "50" --enc-type "LDPC_IRA" --dec-ppbf-proba "0,0.001,0.1,0.3,1,1,1"
+title=PPBF IRA 4/5 50it BPSK
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2018-12-20 14:54:13
+#    ** Git version               = v2.1.1-170-g6da0d32
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 6 -> 10 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Multi-threading (t)       = 8 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.8 (4/5)
+#    ** Inter frame level         = 1
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = STD
+#    ** Info. bits (K_info)       = 16384
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 16384
+#    ** Codeword size (N_cw)      = 20480
+#    ** Frame size (N)            = 20480
+#    ** Code rate                 = 0.8 (4/5)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_IRA
+#    ** Systematic                = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BIT_FLIPPING
+#    ** Implementation            = PPBF
+#    ** Systematic                = yes
+#    ** H matrix path             = conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist
+#    ** H matrix reordering       = NONE
+#    ** Num. of iterations (i)    = 50
+#    ** Stop criterion (syndrome) = on
+#    ** Stop criterion depth      = 1
+#    ** Bernouilli probas         = {0, 0.001, 0.1, 0.3, 1, 1, 1}
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = STD
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+       5.03 |     6.00 ||      114 |   635330 |      114 | 3.40e-01 | 1.00e+00 ||    1.811 | 00h00'01
+       5.23 |     6.20 ||      108 |   603913 |      108 | 3.41e-01 | 1.00e+00 ||    2.603 | 00h00'00
+       5.43 |     6.40 ||      107 |   596526 |      107 | 3.40e-01 | 1.00e+00 ||    2.774 | 00h00'00
+       5.63 |     6.60 ||      114 |   630234 |      113 | 3.37e-01 | 9.91e-01 ||    2.791 | 00h00'00
+       5.83 |     6.80 ||      123 |   620046 |      112 | 3.08e-01 | 9.11e-01 ||    3.283 | 00h00'00
+       6.03 |     7.00 ||      188 |   584466 |      106 | 1.90e-01 | 5.64e-01 ||    3.485 | 00h00'00
+       6.23 |     7.20 ||      577 |   517356 |      101 | 5.47e-02 | 1.75e-01 ||    4.529 | 00h00'02
+       6.43 |     7.40 ||     4453 |   399577 |      100 | 5.48e-03 | 2.25e-02 ||    5.929 | 00h00'12
+       6.63 |     7.60 ||    13870 |    61271 |      100 | 2.70e-04 | 7.21e-03 ||    6.865 | 00h00'33
+       6.83 |     7.80 ||    28493 |      103 |      100 | 2.21e-07 | 3.51e-03 ||    7.734 | 00h01'00
+       7.03 |     8.00 ||    40614 |      105 |      100 | 1.58e-07 | 2.46e-03 ||    8.722 | 00h01'16
+       7.23 |     8.20 ||    62574 |      107 |      100 | 1.04e-07 | 1.60e-03 ||    9.960 | 00h01'42
+       7.43 |     8.40 ||    89127 |      105 |      100 | 7.19e-08 | 1.12e-03 ||   11.469 | 00h02'07
+       7.63 |     8.60 ||   155309 |      102 |      100 | 4.01e-08 | 6.44e-04 ||   13.454 | 00h03'09
+       7.83 |     8.80 ||   170273 |      102 |      100 | 3.66e-08 | 5.87e-04 ||   15.915 | 00h02'55
+       8.03 |     9.00 ||   282308 |      102 |      100 | 2.21e-08 | 3.54e-04 ||   19.069 | 00h04'02
+       8.23 |     9.20 ||   367036 |      100 |      100 | 1.66e-08 | 2.72e-04 ||   22.968 | 00h04'21
+       8.43 |     9.40 ||   583840 |      103 |      100 | 1.08e-08 | 1.71e-04 ||   27.590 | 00h05'46
+       8.63 |     9.60 ||   711233 |      103 |      100 | 8.84e-09 | 1.41e-04 ||   33.187 | 00h05'51
+       8.83 |     9.80 ||  1176217 |      102 |      100 | 5.29e-09 | 8.50e-05 ||   39.825 | 00h08'03
+       9.03 |    10.00 ||  1626426 |      103 |      100 | 3.87e-09 | 6.15e-05 ||   47.032 | 00h09'26
+# End of the simulation.

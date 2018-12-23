@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.51 -s 0.25 -e 100 --dec-type BP_FLOODING --dec-implem NMS --dec-norm 0.5 -i 30 --dec-h-path ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
+command=aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 1723 -N 2048 -m 0.00 -M 4.51 -s 0.25 -e 100 --dec-type BP_FLOODING --dec-implem NMS --dec-norm 0.5 -i 30 --dec-h-path conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
 title=LDPC (2048,1723) NMS 30 ite.
 
 [trace]
@@ -43,7 +43,7 @@ title=LDPC (2048,1723) NMS 30 ite.
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = NMS
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
+#    ** H matrix path             = conf/dec/LDPC/10GBPS-ETHERNET_1723_2048.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 30
 #    ** Normalize factor          = 0.500000

@@ -1,6 +1,6 @@
 [metadata]
 ci=off
-command=./bin/aff3ct --sim-type "BFER" -C "BCH" -N "31" -K "26" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
+command=aff3ct --sim-type "BFER" -C "BCH" -N "31" -K "26" -T "1" -m "0" -M "10" -s "0.2" -e "1000" --chn-type "AWGN" --chn-implem "FAST"
 info=https://www.uni-kl.de/fileadmin/_processed_/d/2/csm_bch31_1ec9ea79e7.png
 title=BCH (31,26,1)
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/

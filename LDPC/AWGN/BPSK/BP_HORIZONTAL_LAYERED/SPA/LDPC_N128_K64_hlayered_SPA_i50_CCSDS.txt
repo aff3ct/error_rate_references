@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 64 -N 128 -m 0.00 -M 5.51 -s 0.5 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 50 --dec-h-path ../conf/dec/LDPC/CCSDS_64_128.alist
+command=aff3ct --sim-type BFER -C LDPC --src-type AZCW -K 64 -N 128 -m 0.00 -M 5.51 -s 0.5 -e 100 --dec-type BP_HORIZONTAL_LAYERED --dec-implem SPA -i 50 --dec-h-path conf/dec/LDPC/CCSDS_64_128.alist
 info=https://www.uni-kl.de/fileadmin/_migrated/pics/ccsds_ldpc.png
 title=LDPC (128,64) SPA 50 ite. CCSDS
 url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
@@ -45,7 +45,7 @@ url=https://www.uni-kl.de/channel-codes/ml-simulation-results/
 #    ** Type (D)                  = BP_HORIZONTAL_LAYERED
 #    ** Implementation            = SPA
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/CCSDS_64_128.alist
+#    ** H matrix path             = conf/dec/LDPC/CCSDS_64_128.alist
 #    ** H matrix reordering       = NONE
 #    ** Num. of iterations (i)    = 50
 #    ** Stop criterion (syndrome) = on

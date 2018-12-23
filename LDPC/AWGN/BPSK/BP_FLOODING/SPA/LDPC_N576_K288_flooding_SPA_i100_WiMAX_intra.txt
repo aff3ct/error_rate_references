@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -m "0.0" -M "3.51" -s "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "SPA" --dec-h-path "../conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-simd "INTRA"
+command=aff3ct --sim-type "BFER" --sim-cde-type "LDPC" -m "0.0" -M "3.51" -s "0.25" --mnt-max-fe "100" --src-type "AZCW" -K "288" -N "576" --enc-type "AZCW" --pct-type "NO" --chn-type "AWGN" --chn-implem "FAST" --dec-type "BP_FLOODING" --dec-implem "SPA" --dec-h-path "conf/dec/LDPC/WIMAX_288_576.alist" --dec-ite "100" --dec-synd-depth "1" --dec-simd "INTRA"
 title=LDPC (576,288) SPA 100 ite. WiMAX intra
 
 [trace]
@@ -43,7 +43,7 @@ title=LDPC (576,288) SPA 100 ite. WiMAX intra
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = SPA
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/WIMAX_288_576.alist
+#    ** H matrix path             = conf/dec/LDPC/WIMAX_288_576.alist
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTRA
 #    ** Num. of iterations (i)    = 100

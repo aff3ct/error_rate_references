@@ -1,5 +1,5 @@
 [metadata]
-command=./bin/aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type BPSK --mdm-implem FAST --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
+command=aff3ct -p 32 -C UNCODED -m 0.0 -M 11.1 -s 1.0 -e 500 -K 4003 --mdm-type BPSK --mdm-implem FAST --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
 title=Uncoded K=4003 BPSK Fast
 
 [trace]
