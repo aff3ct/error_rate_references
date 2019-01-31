@@ -1,5 +1,5 @@
 [metadata]
-command=/home/bonben/Projects/aff3ct/build/bin/aff3ct-2.2.0-52-ga86fa6e -C "POLAR" -K "3031" -N "8192" -R "0.5:0.01:0.58" -E "EP" --chn-type "BEC" --mdm-type "OOK" -e "500" --chn-implem "FAST" --dec-implem "FAST" --enc-fb-gen-method "BEC" --src-implem "FAST" 
+command=aff3ct -C "POLAR" -K "3031" -N "8192" -R "0.5:0.01:0.58" -E "EP" --chn-type "BEC" --mdm-type "OOK" -e "500" --chn-implem "FAST" --dec-implem "FAST" --enc-fb-gen-method "BEC" --src-implem "FAST" 
 title=Polar (8192,3031) SC BEC
 doi=10.5075/epfl-thesis-4461
 info=Figure 6.4, R=0.37
