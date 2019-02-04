@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -p "32" --sim-type "BFER" -C "POLAR" -K "2048" -N "4096" -m "0.0" -M "4.0" -e "500" --enc-fb-gen-method "BEC" --dec-type "SC" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-implem "FAST" --dec-simd "INTRA" --enc-fb-noise "0.5" 
-title=Polar (4096,2048) SC BEC FB NOISE 0.5 seq 32-bit
+title=Polar (4096,2048) SC BEC FB NOISE 0.5 intra 32-bit
 
 [trace]
 # ----------------------------------------------------
