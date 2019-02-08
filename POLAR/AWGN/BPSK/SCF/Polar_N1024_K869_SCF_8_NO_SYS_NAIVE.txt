@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "POLAR" -K "877" -N "1024" -m "2.5" -M "6.0" -s "0.25" -e "500" --enc-fb-gen-method "TV" --dec-type "SCF" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --enc-fb-gen-method "TV" --crc-poly "0x93" --crc-size "8" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}" --enc-fb-sigma "0.444" --enc-no-sys --dec-implem "NAIVE" 
+command=/home/bonben/Projects/aff3ct/build/bin/aff3ct-2.2.2-35-ga1b89e9 --sim-type "BFER" -C "POLAR" -K "877" -N "1024" -m "2.5" -M "6.0" -s "0.25" -e "500" --enc-fb-gen-method "TV" --dec-type "SCF" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --enc-fb-gen-method "TV" --crc-poly "0x93" --crc-size "8" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}" --enc-fb-sigma "0.444" --enc-no-sys --dec-implem "NAIVE" --dec-flips "8" 
 title=(1024,869) SCF 8 NO SYS
 doi=10.1109/JETCAS.2017.2745704
 info=Figure 2
@@ -13,15 +13,15 @@ info=Figure 2
 #    ** Type                     = BFER
 #    ** Type of bits             = int32
 #    ** Type of reals            = float32
-#    ** Date (UTC)               = 2019-02-08 10:32:32
-#    ** Git version              = v2.2.2-29-g5a498b4
+#    ** Date (UTC)               = 2019-02-08 18:23:51
+#    ** Git version              = v2.2.2-35-ga1b89e9
 #    ** Code type (C)            = POLAR
 #    ** Noise range              = 2.5 -> 6 dB
 #    ** Noise type (E)           = EBN0
 #    ** Seed                     = 0
 #    ** Statistics               = off
 #    ** Debug mode               = off
-#    ** Multi-threading (t)      = 8 thread(s)
+#    ** Multi-threading (t)      = 16 thread(s)
 #    ** Coset approach (c)       = no
 #    ** Coded monitoring         = no
 #    ** Bad frames tracking      = off
@@ -49,12 +49,12 @@ info=Figure 2
 #    Frozen bits generator ------------------------
 #    ** Type                     = TV
 #    ** Sigma                    = 0.444000
-#    ** PB path                  = ../lib/polar_bounds/bin/polar_bounds
 #    ** Path                     = /home/bonben/Projects/aff3ct/build/bin/../../conf/cde/awgn_polar_codes/TV
 # * Decoder ---------------------------------------
 #    ** Type (D)                 = SCF
 #    ** Implementation           = NAIVE
 #    ** Systematic               = no
+#    ** Num. of flips            = 8
 # * Modem -----------------------------------------
 #    ** Type                     = BPSK
 #    ** Implementation           = STD
@@ -83,15 +83,15 @@ info=Figure 2
 #     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
 #      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
 # ----------|----------||----------|----------|----------|----------|----------||----------|----------
-       1.79 |     2.50 ||      635 |   226614 |      616 | 4.11e-01 | 9.70e-01 ||    4.867 | 00h00'00   
-       2.04 |     2.75 ||      575 |   179550 |      512 | 3.59e-01 | 8.90e-01 ||    7.064 | 00h00'00   
-       2.29 |     3.00 ||      732 |   172360 |      511 | 2.71e-01 | 6.98e-01 ||    8.818 | 00h00'00   
-       2.54 |     3.25 ||     1067 |   158708 |      504 | 1.71e-01 | 4.72e-01 ||   10.990 | 00h00'00   
-       2.79 |     3.50 ||     2301 |   166033 |      548 | 8.30e-02 | 2.38e-01 ||   15.088 | 00h00'00   
-       3.04 |     3.75 ||     4840 |   146293 |      502 | 3.48e-02 | 1.04e-01 ||   19.507 | 00h00'00   
-       3.29 |     4.00 ||    14243 |   141086 |      501 | 1.14e-02 | 3.52e-02 ||   24.806 | 00h00'00   
-       3.54 |     4.25 ||    55996 |   136419 |      500 | 2.80e-03 | 8.93e-03 ||   26.611 | 00h00'01   
-       3.79 |     4.50 ||   248250 |   125671 |      500 | 5.83e-04 | 2.01e-03 ||   27.953 | 00h00'07   
-       4.04 |     4.75 ||  1343293 |   113613 |      500 | 9.73e-05 | 3.72e-04 ||   22.268 | 00h00'52   
-       4.29 |     5.00 ||  8514731 |    89686 |      443 | 1.21e-05 | 5.20e-05 ||   14.652 | 00h08'24  x
+       1.79 |     2.50 ||      548 |   191350 |      523 | 4.02e-01 | 9.54e-01 ||    1.961 | 00h00'00   
+       2.04 |     2.75 ||      586 |   180626 |      520 | 3.55e-01 | 8.87e-01 ||   25.181 | 00h00'00   
+       2.29 |     3.00 ||      738 |   179711 |      527 | 2.80e-01 | 7.14e-01 ||   28.668 | 00h00'00   
+       2.54 |     3.25 ||     1576 |   234264 |      748 | 1.71e-01 | 4.75e-01 ||   37.265 | 00h00'00   
+       2.79 |     3.50 ||     1977 |   153328 |      511 | 8.92e-02 | 2.58e-01 ||   48.490 | 00h00'00   
+       3.04 |     3.75 ||     5277 |   151499 |      511 | 3.30e-02 | 9.68e-02 ||   81.159 | 00h00'00   
+       3.29 |     4.00 ||    14812 |   143965 |      503 | 1.12e-02 | 3.40e-02 ||  110.633 | 00h00'00   
+       3.54 |     4.25 ||    59034 |   138680 |      500 | 2.70e-03 | 8.47e-03 ||  127.449 | 00h00'00   
+       3.79 |     4.50 ||   257601 |   127082 |      501 | 5.68e-04 | 1.94e-03 ||  135.184 | 00h00'01   
+       4.04 |     4.75 ||  1298984 |   113063 |      500 | 1.00e-04 | 3.85e-04 ||  137.853 | 00h00'08   
+       4.29 |     5.00 ||  9308679 |    99688 |      500 | 1.23e-05 | 5.37e-05 ||  138.915 | 00h00'58   
 # End of the simulation.
