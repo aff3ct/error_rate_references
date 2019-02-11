@@ -1,5 +1,5 @@
 [metadata]
-command=/home/adrien/workspace/HPC/aff3ct/aff3ct/build/bin/aff3ct-2.2.2-66-gc64d78d -p "08" -C "RSC" -K "1024" -m "0" -M "5" -s "0.25" --enc-poly "{023,033}" --qnt-bits 6 --qnt-dec 1 -e "500"
+command=aff3ct -p "08" -C "RSC" -K "1024" -m "0" -M "5" -s "0.25" --enc-poly "{023,033}" --qnt-bits 6 --qnt-dec 1 -e "500"
 title=BCJR K=1024 p=08
 
 [trace]
