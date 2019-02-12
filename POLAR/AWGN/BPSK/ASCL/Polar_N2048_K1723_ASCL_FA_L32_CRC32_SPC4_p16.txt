@@ -3,6 +3,7 @@ command=aff3ct -p "16" --sim-type "BFER" -C "POLAR" -m "0.0" -M "4.51" -s "0.25"
 info=Figure 5
 title=Polar (2048,1723) ASCL FA L=32 CRC 32-bit SPC4 16-bit
 url=https://arxiv.org/abs/1710.08314
+doi=10.1007/s11265-018-1430-3
 
 [trace]
 # ----------------------------------------------------

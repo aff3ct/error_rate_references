@@ -2,6 +2,7 @@
 command=aff3ct --sim-type "BFER" -C "POLAR" -m "1" -M "6.5" -s "0.25" -e "500" --enc-fb-gen-method "GA" -K "40" -N "160" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --dec-type "ASCL" --pct-type "SHORTLAST" --dec-simd "INTRA"  -L "32" --crc-poly "24-LTEA" --dec-polar-nodes "{R0,R1,R0L,REP,SPC_4}"
 info=Figure 6
 title=Polar (160,40) ASCL FA L=32 CRC 24-bit SPC4 32-bit
+doi=10.1109/WCNCW.2017.7919040
 url=https://arxiv.org/abs/1701.06458
 
 [trace]
