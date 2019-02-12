@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -p "16" -C "RSC_DB" -K "1024" -m "0" -M "7" -s "0.5" --mdm-type "BPSK" -e "500" --enc-std "DVB-RCS2" --qnt-bits "6" --qnt-dec "1"
-title=BCJR K=1024 p=16
+title=BCJR (2048,1024) 16-bit
 
 [trace]
 # ----------------------------------------------------
