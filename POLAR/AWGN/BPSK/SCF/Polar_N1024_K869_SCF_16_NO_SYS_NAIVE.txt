@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "POLAR" -K "877" -N "1024" -m "2.5" -M "6.0" -s "0.25" -e "500" --enc-fb-gen-method "TV" --dec-type "SCF" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --enc-fb-gen-method "TV" --crc-poly "0x93" --crc-size "8" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}" --enc-fb-sigma "0.444" --enc-no-sys --dec-implem "NAIVE" --dec-flips "16" 
+command=aff3ct --sim-type "BFER" -C "POLAR" -K "877" -N "1024" -m "2.5" -M "6.0" -s "0.25" -e "500" --enc-fb-gen-method "TV" --dec-type "SCF" --src-type "RAND" --src-implem "FAST" --chn-type "AWGN" --chn-implem "FAST" --enc-fb-gen-method "TV" --crc-poly "0x93" --crc-size "8" --dec-polar-nodes "{R0,R0L,R1,REP,REPL}" --enc-fb-noise "0.444" --enc-no-sys --dec-implem "NAIVE" --dec-flips "16" 
 title=(1024,869) SCF 16 NO SYS
 doi=10.1109/JETCAS.2017.2745704
 info=Figure 2
