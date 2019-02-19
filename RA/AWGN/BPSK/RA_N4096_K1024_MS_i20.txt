@@ -3,6 +3,7 @@ command=aff3ct -m "1.0" -M "2.5" -s "0.1" -C "RA" -K "1024" -N "4096" --itl-type
 url=https://pdfs.semanticscholar.org/b5cc/c94d4f9ea6df991190f17359ddd7ac47f005.pdf
 info=Figure 5, yellow/orange curve (q=4,N=1024,it=20) /!\ can't be reproduced!
 title=Min-Sum (4096,1024) 20 ite.
+ci=off
 
 [trace]
 # ----------------------------------------------------
