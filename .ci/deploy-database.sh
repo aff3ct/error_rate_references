@@ -1,7 +1,7 @@
 #!/bin/bash
 # This script get all the text files contained in the $ROOT folder
 # It concatenates all the text files in the $RESULT file
-# To launch the script use "./deploy-database.sh $ROOT $RESULT"
+# To launch the script use "./deploy-database.sh $ROOT $OUTPUT"
 # Each concatenated file begin by $startFile and end by $endFile
 # The $ROOT sub folder are also parsed
 
@@ -34,10 +34,13 @@ function directory
 				directory "$1/$element"
 			fi
 		else
-			echo -e "$1/$element:\n" >> $OUTPUT
-			echo -e "$startFile\n" >> $OUTPUT
-			cat "$1/$element" >> $OUTPUT
-			echo -e "$endFile\n" >> $OUTPUT
+			if [[ ( "$element" != "$OUTPUT" ) ]]
+			then
+				echo -e "$1/$element:\n" >> $OUTPUT
+				echo -e "$startFile\n" >> $OUTPUT
+				cat "$1/$element" >> $OUTPUT
+				echo -e "$endFile\n" >> $OUTPUT
+			fi
 		fi
 	done
 }
