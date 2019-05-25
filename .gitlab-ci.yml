@@ -1,0 +1,19 @@
+stages:
+  - deploy
+
+before_script:
+  - hostname
+  - whoami
+# - pwd
+
+deploy-database:
+  stage: deploy
+  tags:
+    - linux
+  artifacts:
+     name: database
+     when: always
+     paths:
+      - database.txt
+  script:
+    - ./.ci/deploy-database.sh . database.txt
