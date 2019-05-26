@@ -11,8 +11,7 @@ deploy-database-txt:
   tags:
     - linux
   artifacts:
-     name: database
-     when: always
+     name: database-txt
      paths:
       - database.txt
   script:
@@ -24,8 +23,7 @@ deploy-database-json:
     - linux
     - python3.4
   artifacts:
-     name: database
-     when: always
+     name: database-json
      paths:
       - database.json
   script:
