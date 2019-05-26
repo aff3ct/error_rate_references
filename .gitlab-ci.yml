@@ -6,7 +6,7 @@ before_script:
   - whoami
 # - pwd
 
-deploy-database:
+deploy-database-txt:
   stage: deploy
   tags:
     - linux
@@ -16,4 +16,17 @@ deploy-database:
      paths:
       - database.txt
   script:
-    - ./.ci/deploy-database.sh . database.txt
+    - ./.ci/deploy-database-txt.sh . database.txt
+
+deploy-database-json:
+  stage: deploy
+  tags:
+    - linux
+    - pyhton3
+  artifacts:
+     name: database
+     when: always
+     paths:
+      - database.json
+  script:
+    - ./.ci/deploy-database-json.py --refs-path ./ --output database.json --nice-json 1
