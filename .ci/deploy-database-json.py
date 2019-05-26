@@ -2,6 +2,7 @@
 
 import os
 import re
+import sys
 import json
 import hashlib
 import pathlib
@@ -62,12 +63,27 @@ def getHashFromFile(filename):
 args = parser.parse_args()
 fileNames = []
 getFileNames(args.refsPath, fileNames)
-
+hashList = []
+shashList = []
+exitCode = 0
 id = 0;
 aList = [];
 for fn in fileNames:
 	hash = getHashFromFile(args.refsPath + "/" + fn)
 	smallHash = hash[0:7]
+
+	if hash in hashList:
+		print("(EE) The '"+ hash +"' hash is not unique :-(.", file=sys.stderr)
+		exitCode = 1
+	else:
+		hashList.append(hash);
+
+	if smallHash in shashList:
+		print("(EE) The '"+ smallHash +"' small hash is not unique :-(.", file=sys.stderr)
+		exitCode = 1
+	else:
+		shashList.append(smallHash);
+
 	dict = {"id" : id, "filename" : fn, "hash" : hash, "shash" : smallHash}
 
 	sfn = readFileInTable(args.refsPath + "/" + fn)
@@ -147,3 +163,5 @@ else:
 f = open(args.output, "w")
 f.write(jsonList)
 f.close()
+
+sys.exit(exitCode);
