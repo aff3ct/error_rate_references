@@ -113,6 +113,7 @@ for fn in fileNames:
 					metadata[ls[0]] = False
 				else:
 					metadata[ls[0]] = ls[1]
+
 		else:
 			if len(metadata) > 0:
 				dict["metadata"] = metadata;
@@ -123,22 +124,28 @@ for fn in fileNames:
 					dictHeaders[titleSec] = dictSec;
 					dictSec = {}
 				titleSec = l[4:].split(" -",1)[0]
+
 			elif l.startswith("#    **"):
 				cleanL = l[8:]
 				splitL = cleanL.split(" = " , 1)
 				if len(splitL) == 2:
-					if (splitL[1] == "yes") or (splitL[1] == "on"):
-						dictSec[splitL[0].rstrip()] = True;
-					elif (splitL[1] == "no") or (splitL[1] == "off"):
-						dictSec[splitL[0].rstrip()] = False;
+					key = splitL[0].rstrip()
+					val = splitL[1]
+					if key in  ["Code rate", "Bit rate", "Multi-threading (t)"]:
+						val = val.split(" ", 1)[0]
+					if val in ["yes", "on"]:
+						dictSec[key] = True;
+					elif val in ["no", "off"]:
+						dictSec[key] = False;
 					else:
 						try:
-							dictSec[splitL[0].rstrip()] = int(splitL[1]);
+							dictSec[key] = int(val);
 						except ValueError:
 							try:
-								dictSec[splitL[0].rstrip()] = float(splitL[1]);
+								dictSec[key] = float(val);
 							except ValueError:
-								dictSec[splitL[0].rstrip()] = splitL[1];
+								dictSec[key] = val;
+
 			elif l.startswith("# The simulation is running..."):
 				if titleSec != "":
 					dictHeaders[titleSec] = dictSec
