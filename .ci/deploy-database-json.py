@@ -65,26 +65,24 @@ fileNames = []
 getFileNames(args.refsPath, fileNames)
 hashList = []
 shashList = []
-exitCode = 0
-id = 0;
-aList = [];
+bigDict = {};
 for fn in fileNames:
 	hash = getHashFromFile(args.refsPath + "/" + fn)
 	smallHash = hash[0:7]
 
 	if hash in hashList:
 		print("(EE) The '"+ hash +"' hash is not unique :-(.", file=sys.stderr)
-		exitCode = 1
+		sys.exit(1);
 	else:
 		hashList.append(hash);
 
 	if smallHash in shashList:
 		print("(EE) The '"+ smallHash +"' small hash is not unique :-(.", file=sys.stderr)
-		exitCode = 1
+		sys.exit(1);
 	else:
 		shashList.append(smallHash);
 
-	dict = {"id" : id, "filename" : fn, "hash" : hash, "shash" : smallHash}
+	dict = {"filename" : fn, "hash" : hash}
 
 	sfn = readFileInTable(args.refsPath + "/" + fn)
 
@@ -153,17 +151,15 @@ for fn in fileNames:
 
 	if trace != "":
 		dict["trace"] = trace
-		aList.append(dict)
-
-	id = id + 1
+		bigDict[smallHash] = dict
 
 if args.niceJson:
-	jsonList = json.dumps(aList, sort_keys=True, indent=4)
+	jsonList = json.dumps(bigDict, sort_keys=True, indent=4)
 else:
-	jsonList = json.dumps(aList)
+	jsonList = json.dumps(bigDict)
 
 f = open(args.output, "w")
 f.write(jsonList)
 f.close()
 
-sys.exit(exitCode);
+sys.exit(0);
