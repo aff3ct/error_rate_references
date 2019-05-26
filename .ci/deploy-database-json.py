@@ -98,6 +98,9 @@ for fn in fileNames:
 	for l in sfn:
 		if ln == 0 and l != "[metadata]":
 			break
+
+		trace += l + "\n";
+
 		if l == "[trace]":
 			isTrace = True
 			ln = ln + 1
@@ -116,7 +119,6 @@ for fn in fileNames:
 			if len(metadata) > 0:
 				dict["metadata"] = metadata;
 				metadata = {}
-			trace += l + "\n";
 
 			if l.startswith("# *"):
 				if titleSec != "":
