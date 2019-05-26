@@ -22,7 +22,7 @@ deploy-database-json:
   stage: deploy
   tags:
     - linux
-    - pyhton3
+    - python3
   artifacts:
      name: database
      when: always
