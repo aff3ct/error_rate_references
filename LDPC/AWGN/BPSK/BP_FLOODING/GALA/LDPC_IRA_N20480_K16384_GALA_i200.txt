@@ -7,7 +7,7 @@ title=GalA IRA 4/5 200it BPSK
 # ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
 # ----------------------------------------------------
 # Parameters :
-# * Simulation BFER standard ----------------------
+# * Simulation ------------------------------------
 #    ** Type                      = BFER
 #    ** Type of bits              = int32
 #    ** Type of reals             = float32
