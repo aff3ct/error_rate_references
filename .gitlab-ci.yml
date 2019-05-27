@@ -27,4 +27,4 @@ deploy-database-json:
      paths:
       - database.json
   script:
-    - ./.ci/deploy-database-json.py --refs-path ./ --output database.json --nice-json 1
+    - ./.ci/deploy-database-json.py --refs-path ./ --output database.json --nice-json 1 --hash-type sha1

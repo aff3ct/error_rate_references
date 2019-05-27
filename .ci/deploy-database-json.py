@@ -96,6 +96,9 @@ for fn in fileNames:
 
 	ln = 0
 	isTrace = False
+	isLegend = False
+	legends = []
+	contents = {}
 	trace = ""
 	metadata = {"ci": True}
 	titleSec = ""
@@ -161,11 +164,41 @@ for fn in fileNames:
 					titleSec = ""
 					dict["headers"] = dictHeaders
 
+			if not l.startswith("#"):
+				if not isLegend:
+					isLegend = True
+					if ln > 3:
+						leg = sfn[ln -3]
+						leg = leg.replace("||", "|")
+						leg = leg.replace("#", "")
+						legends = leg.split("|")
+
+				c = l
+				c = c.replace("||", "|")
+				cs = c.split("|")
+
+				if len(cs) == len(legends):
+					for x in range(len(cs)):
+						key = legends[x].strip()
+						val = cs[x].strip()
+						try:
+							li = [int(val)]
+						except ValueError:
+							try:
+								li = [float(val)]
+							except ValueError:
+								li = [val]
+
+						if key in contents:
+							contents[key] = contents[key] + li
+						else:
+							contents[key] = li
 
 		ln = ln + 1
 
-	if trace != "":
+	if trace != "" and len(contents):
 		dict["trace"] = trace
+		dict["contents"] = contents;
 		bigDict[smallHash] = dict
 
 if args.niceJson:
