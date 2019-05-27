@@ -180,7 +180,13 @@ for fn in fileNames:
 				if len(cs) == len(legends):
 					for x in range(len(cs)):
 						key = legends[x].strip()
-						val = cs[x].strip()
+						val = cs[x].strip().split(" ", 1)[0]
+
+						if key == "ET/RT":
+							newVal = int(val.split("'")[1]);
+							newVal += int(val.split("'")[0].split("h")[1]) * 60
+							newVal += int(val.split("'")[0].split("h")[0]) * 3600
+							val = newVal
 						try:
 							li = [int(val)]
 						except ValueError:
