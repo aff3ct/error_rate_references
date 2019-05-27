@@ -14,8 +14,10 @@ deploy-database-txt:
      name: database-txt
      paths:
       - database.txt
+      - database.txt.zip
   script:
     - ./.ci/deploy-database-txt.sh . database.txt
+    - zip database.txt.zip database.txt
 
 deploy-database-json:
   stage: deploy
@@ -26,5 +28,7 @@ deploy-database-json:
      name: database-json
      paths:
       - database.json
+      - database.json.zip
   script:
     - ./.ci/deploy-database-json.py --refs-path ./ --output database.json --nice-json 1 --hash-type sha1
+    - zip database.json.zip database.json
