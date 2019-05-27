@@ -9,9 +9,10 @@ import pathlib
 import argparse
 
 parser = argparse.ArgumentParser(prog='deploy-database-json', formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-parser.add_argument('--refs-path', action='store', dest='refsPath', type=str,  default="./",            help='Path to the reference files.')
-parser.add_argument('--output',    action='store', dest='output',   type=str,  default="database.json", help='Path to the concatenated files.')
-parser.add_argument('--nice-json', action='store', dest='niceJson', type=bool, default=False,           help='Beautiful JSON indentation.')
+parser.add_argument('--refs-path', action='store', dest='refsPath', type=str,  default="./",            help='Set the path to the reference files.')
+parser.add_argument('--output',    action='store', dest='output',   type=str,  default="database.json", help='Set the path to the concatenated files.')
+parser.add_argument('--nice-json', action='store', dest='niceJson', type=bool, default=False,           help='Enable the beautiful JSON indentation.')
+parser.add_argument('--hash-type', action='store', dest='hashType', type=str,  default="sha1",          help='Set the algorithm used for the hash ("sha1" or "md5").')
 
 # supported file extensions (filename suffix)
 extensions = ['.txt', '.perf', '.data', '.dat']
@@ -50,14 +51,21 @@ def readFileInTable(filename):
 
 	return lines;
 
-def getHashFromFile(filename):
-	BLOCKSIZE = 65536
-	hasher = hashlib.sha1()
+def getHashFromFile(filename, hashtype = "sha1"):
+	if hashtype == "sha1":
+		hasher = hashlib.sha1()
+	elif hashtype == "md5":
+		hasher = hashlib.md5()
+	else:
+		print("(EE) The hash type '" + hashtype + "' is not supported, supported types are 'sha1' and 'md5'.", file=sys.stderr)
+		sys.exit(1);
+
+	blocksize = 65536
 	with open(filename, 'rb') as afile:
-	    buf = afile.read(BLOCKSIZE)
-	    while len(buf) > 0:
-	        hasher.update(buf)
-	        buf = afile.read(BLOCKSIZE)
+		buf = afile.read(blocksize)
+		while len(buf) > 0:
+			hasher.update(buf)
+			buf = afile.read(blocksize)
 	return hasher.hexdigest()
 
 args = parser.parse_args()
@@ -67,7 +75,7 @@ hashList = []
 shashList = []
 bigDict = {};
 for fn in fileNames:
-	hash = getHashFromFile(args.refsPath + "/" + fn)
+	hash = getHashFromFile(args.refsPath + "/" + fn, args.hashType)
 	smallHash = hash[0:7]
 
 	if hash in hashList:
@@ -82,7 +90,7 @@ for fn in fileNames:
 	else:
 		shashList.append(smallHash);
 
-	dict = {"filename" : fn, "hash" : hash}
+	dict = {"filename" : fn, "hash" : {"type" : args.hashType, "value" : hash}}
 
 	sfn = readFileInTable(args.refsPath + "/" + fn)
 
