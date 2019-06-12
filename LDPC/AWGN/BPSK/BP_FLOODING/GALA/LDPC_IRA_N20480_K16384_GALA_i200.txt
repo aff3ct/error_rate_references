@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct --sim-type "BFER" -C "LDPC" -R "7:0.2:10" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist" --dec-type "BP_FLOODING" --dec-implem "GALA" -i "200"
-title=GalA IRA 4/5 200it BPSK
+title=LDPC (20480,16384) GalA IRA 4/5 200it BPSK
 
 [trace]
 # ----------------------------------------------------

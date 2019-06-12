@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct --sim-type "BFER" --sim-prec "32" --sim-noise-type "ESN0" -m "0.0" -M "21.0" -s "1.0" -e "100" --src-type "RAND" --src-implem "FAST" -K "4500" --sim-cde-type "UNCODED" --mdm-type "CPM" --mdm-bps "1" --mdm-cpm-L "3" --mdm-cpm-map "NATURAL" --mdm-cpm-k "1" --mdm-cpm-p "5" --mdm-cpm-ws "REC" --mdm-cpm-upf "8" --mdm-max "MAXS"
-title=Uncoded K=4500 CPM h=1/5 L=3 bps=1 REC
+title=Uncoded (4500) CPM h=1/5 L=3 bps=1 REC
 
 [trace]
 # ----------------------------------------------------

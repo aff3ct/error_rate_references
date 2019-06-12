@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -C "LDPC" -R "6:0.2:10" --dec-type "BIT_FLIPPING" --dec-implem "PPBF" --dec-h-path "conf/dec/LDPC/PureIRA_R_4_5_N20k_H.alist" -i "50" --enc-type "LDPC_IRA" --dec-ppbf-proba "0,0.001,0.1,0.3,1,1,1"
-title=PPBF IRA 4/5 50it BPSK
+title=LDPC (20480,16384) PPBF IRA 4/5 50it BPSK
 
 [trace]
 # ----------------------------------------------------

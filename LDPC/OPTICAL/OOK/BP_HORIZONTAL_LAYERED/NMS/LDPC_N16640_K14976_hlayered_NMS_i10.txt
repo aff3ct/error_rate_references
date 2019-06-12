@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -C "LDPC" --enc-type "LDPC_IRA" --dec-h-path "conf/dec/LDPC/PureIRA_R_9_10_N16k_H.alist" --sim-pdf-path "conf/chn/optical_channel.dist" --mdm-type "OOK" --src-type "RAND" --src-implem "FAST" --chn-type "OPTICAL" --dec-type "BP_HORIZONTAL_LAYERED" --dec-implem "NMS" --dec-norm "0.75" --dec-ite "10" --mnt-mutinfo --dec-simd "INTER" -m -45
-title=LDPC PureIRA (16640,14976) 10it on Optical Channel
+title=LDPC (16640,14976) PureIRA 10 ite.
 
 [trace]
 # ----------------------------------------------------
