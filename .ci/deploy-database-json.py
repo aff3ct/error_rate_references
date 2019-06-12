@@ -74,8 +74,8 @@ getFileNames(args.refsPath, fileNames)
 hashList = []
 shashList = []
 bigDict = {};
-for fn in fileNames:
-	hash = getHashFromFile(args.refsPath + "/" + fn, args.hashType)
+for fileName in fileNames:
+	hash = getHashFromFile(args.refsPath + "/" + fileName, args.hashType)
 	smallHash = hash[0:7]
 
 	if hash in hashList:
@@ -90,29 +90,26 @@ for fn in fileNames:
 	else:
 		shashList.append(smallHash);
 
-	dict = {"filename" : fn, "hash" : {"type" : args.hashType, "value" : hash}}
-
-	sfn = readFileInTable(args.refsPath + "/" + fn)
-
-	ln = 0
+	trace = ""
 	isTrace = False
 	isLegend = False
 	legends = []
 	contents = {}
-	trace = ""
 	metadata = {"ci": True}
-	titleSec = ""
-	dictHeaders = {}
-	dictSec = {}
-	for l in sfn:
-		if ln == 0 and l != "[metadata]":
-			break
+	titleSection = ""
+	headers = {}
+	section = {}
 
+	lines = readFileInTable(args.refsPath + "/" + fileName)
+	for ln in range(len(lines)):
+		l = lines[ln];
 		trace += l + "\n";
+
+		if (ln == 0 and l != "[metadata]") or l.startswith("#"):
+			isTrace = True;
 
 		if l == "[trace]":
 			isTrace = True
-			ln = ln + 1
 			continue
 
 		if not isTrace:
@@ -126,15 +123,11 @@ for fn in fileNames:
 					metadata[ls[0]] = ls[1]
 
 		else:
-			if len(metadata) > 0:
-				dict["metadata"] = metadata;
-				metadata = {}
-
 			if l.startswith("# *"):
-				if titleSec != "":
-					dictHeaders[titleSec] = dictSec;
-					dictSec = {}
-				titleSec = l[4:].split(" -",1)[0]
+				if titleSection != "":
+					headers[titleSection] = section;
+					section = {}
+				titleSection = l[4:].split(" -",1)[0]
 
 			elif l.startswith("#    **"):
 				cleanL = l[8:]
@@ -145,67 +138,75 @@ for fn in fileNames:
 					if key in  ["Code rate", "Bit rate", "Multi-threading (t)"]:
 						val = val.split(" ", 1)[0]
 					if val in ["yes", "on"]:
-						dictSec[key] = True;
+						section[key] = True;
 					elif val in ["no", "off"]:
-						dictSec[key] = False;
+						section[key] = False;
 					else:
 						try:
-							dictSec[key] = int(val);
+							section[key] = int(val);
 						except ValueError:
 							try:
-								dictSec[key] = float(val);
+								section[key] = float(val);
 							except ValueError:
-								dictSec[key] = val;
+								section[key] = val;
 
 			elif l.startswith("# The simulation is running..."):
-				if titleSec != "":
-					dictHeaders[titleSec] = dictSec
-					dictSec = {}
-					titleSec = ""
-					dict["headers"] = dictHeaders
+				if titleSection != "":
+					headers[titleSection] = section
+					section = {}
+					titleSection = ""
 
 			if not l.startswith("#"):
 				if not isLegend:
-					isLegend = True
-					if ln > 3:
-						leg = sfn[ln -3]
+					i = 1
+					while not isLegend and ln >= i:
+						leg = lines[ln -i];
 						leg = leg.replace("||", "|")
 						leg = leg.replace("#", "")
 						legends = leg.split("|")
 
-				c = l
-				c = c.replace("||", "|")
-				cs = c.split("|")
+						for c in legends:
+							if c.strip() == "BER" or c.strip() == "FER":
+								isLegend = True;
+								break;
+						i = i +1;
 
-				if len(cs) == len(legends):
-					for x in range(len(cs)):
-						key = legends[x].strip()
-						val = cs[x].strip().split(" ", 1)[0]
+				if isLegend:
+					cTmp = l
+					cTmp = cTmp.replace("||", "|")
+					cols = cTmp.split("|")
+					if len(cols) == len(legends):
+						for c in range(len(cols)):
+							key = legends[c].strip()
+							val = cols[c].strip().split(" ", 1)[0]
 
-						if key == "ET/RT":
-							newVal = int(val.split("'")[1]);
-							newVal += int(val.split("'")[0].split("h")[1]) * 60
-							newVal += int(val.split("'")[0].split("h")[0]) * 3600
-							val = newVal
-						try:
-							li = [int(val)]
-						except ValueError:
+							if key == "ET/RT":
+								newVal = int(val.split("'")[1]);
+								newVal += int(val.split("'")[0].split("h")[1]) * 60
+								newVal += int(val.split("'")[0].split("h")[0]) * 3600
+								val = newVal
 							try:
-								li = [float(val)]
+								li = [int(val)]
 							except ValueError:
-								li = [val]
+								try:
+									li = [float(val)]
+								except ValueError:
+									li = [val]
 
-						if key in contents:
-							contents[key] = contents[key] + li
-						else:
-							contents[key] = li
+							if key in contents:
+								contents[key] = contents[key] + li
+							else:
+								contents[key] = li
 
-		ln = ln + 1
-
-	if trace != "" and len(contents):
-		dict["trace"] = trace
+	dict = {"filename": fileName, "trace": trace, "hash": {"type": args.hashType, "value": hash}}
+	if len(metadata):
+		dict["metadata"] = metadata;
+	if len(headers):
+		dict["headers" ] = headers;
+	if len(contents):
 		dict["contents"] = contents;
-		bigDict[smallHash] = dict
+
+	bigDict[smallHash] = dict
 
 if args.niceJson:
 	jsonList = json.dumps(bigDict, sort_keys=True, indent=4)
