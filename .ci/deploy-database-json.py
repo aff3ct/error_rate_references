@@ -95,7 +95,7 @@ for fileName in fileNames:
 	isLegend = False
 	legends = []
 	contents = {}
-	metadata = {"ci": True}
+	metadata = {"ci": True, "source": "github"}
 	titleSection = ""
 	headers = {}
 	section = {}
