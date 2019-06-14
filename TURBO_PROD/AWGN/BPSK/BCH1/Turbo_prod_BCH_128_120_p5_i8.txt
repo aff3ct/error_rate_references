@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -C "TPC" -K "120" -N "127" --enc-ext -m "3" -M "4.5" -s "0.25" -T "1" --dec-ite "8" --dec-t "0" --dec-c "0" --dec-p "5" -e "100" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST"
-title=Turbo Prod BCH(128,120,1) 8 ite. p5
+title=TPC BCH (128,120,1) 8 ite. p5
 
 [trace]
 # ----------------------------------------------------
