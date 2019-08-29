@@ -1,0 +1,34 @@
+stages:
+  - deploy
+
+before_script:
+  - hostname
+  - whoami
+# - pwd
+
+deploy-database-txt:
+  stage: deploy
+  tags:
+    - linux
+  artifacts:
+     name: database-txt
+     paths:
+      - database.txt
+      - database.txt.zip
+  script:
+    - ./.ci/deploy-database-txt.sh . database.txt
+    - zip database.txt.zip database.txt
+
+deploy-database-json:
+  stage: deploy
+  tags:
+    - linux
+    - python3.4
+  artifacts:
+     name: database-json
+     paths:
+      - database.json
+      - database.json.zip
+  script:
+    - ./.ci/deploy-database-json.py --refs-path ./ --output database.json --nice-json 1 --hash-type sha1
+    - zip database.json.zip database.json

@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -C "UNCODED" -K "128" -R "0.001:0.001:0.1,0.01:0.01:0.05,0.05:0.05:1" -E "EP" --chn-type "BEC" --mdm-type "OOK" -e "1000"
-title=Uncoded K=128 OOK
+title=Uncoded (128) OOK
 
 [trace]
 # ----------------------------------------------------

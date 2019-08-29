@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -p "16" -C "RSC" -K "1024" -m "0" -M "5" -s "0.25" --enc-poly "{023,033}" -e "500" --qnt-type "CUSTOM" --qnt-bits "6" --qnt-range "10.55"
-title=BCJR (2056,1024) 16-bit
+title=RSC (2056,1024) BCJR 16-bit
 
 [trace]
 # ----------------------------------------------------

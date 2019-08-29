@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -p 32 -C UNCODED -m 0.0 -M 15.1 -s 1.0 -e 500 -K 4003 --mdm-type QAM --mdm-max MAX --mdm-bps 4 --chn-type AWGN --chn-implem FAST --src-type RAND --src-implem FAST
-title=Uncoded K=4003 16-QAM
+title=Uncoded (4003) 16-QAM
 
 [trace]
 # ----------------------------------------------------

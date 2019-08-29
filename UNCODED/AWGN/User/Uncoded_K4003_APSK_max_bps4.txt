@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -p "32" -C "UNCODED" -e "500" -K "4003" --mdm-type "USER" --mdm-const-path "conf/mod/16APSK.mod" -E "ESN0" -R "16:1:22" --chn-type "AWGN" --chn-implem "FAST" --src-type "RAND" --src-implem "FAST"
-title=Uncoded K=4003 16-APSK
+title=Uncoded (4003) 16-APSK
 
 [trace]
 # ----------------------------------------------------

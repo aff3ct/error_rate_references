@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct --sim-type "BFER" -C "UNCODED" -K "4003" -m "0" -M "64" -s "2" --chn-type RAYLEIGH --chn-implem FAST --mdm-type "QAM" --mnt-max-fe "1000" --mdm-bps "6"
-title=Uncoded K=4003 64-QAM
+title=Uncoded (4003) 64-QAM
 
 [trace]
 # ----------------------------------------------------
