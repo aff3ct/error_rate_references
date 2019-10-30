@@ -1,0 +1,105 @@
+[metadata]
+command=aff3ct -p "08" --sim-type "BFER" -C "POLAR" -m "0" -M "5.25" -s "0.25" -e "500" --enc-fb-gen-method "GA" --enc-no-sys -K "96" -N "128" --dec-type "SC" --dec-implem "NAIVE" --src-type "USER_BIN" --src-path "conf/src/binary.src" -t 1
+title=Polar (128,96) SC NO SYS  8-bit SRC USER_BIN
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                  = BFER
+#    ** Type of bits          = int8
+#    ** Type of reals         = float32
+#    ** Type of quant. reals  = int8
+#    ** Date (UTC)            = 2019-10-30 15:55:43
+#    ** Git version           = v2.3.5-22-geec95f2
+#    ** Code type (C)         = POLAR
+#    ** Noise range           = 0 -> 5.25 dB
+#    ** Noise type (E)        = EBN0
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Multi-threading (t)   = 1 thread(s)
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 0.75 (3/4)
+#    ** Inter frame level     = 1
+# * Source ----------------------------------------
+#    ** Type                  = USER_BIN
+#    ** Implementation        = STD
+#    ** Info. bits (K_info)   = 96
+#    ** Path                  = /home/mleonardon/Projects/dvbs2_optique/lib/aff3ct/build/bin/../../conf/src/binary.src
+# * Codec -----------------------------------------
+#    ** Type                  = POLAR
+#    ** Info. bits (K)        = 96
+#    ** Codeword size (N_cw)  = 128
+#    ** Frame size (N)        = 128
+#    ** Code rate             = 0.75 (3/4)
+# * Encoder ---------------------------------------
+#    ** Type                  = POLAR
+#    ** Systematic            = no
+#    Frozen bits generator ------------------------
+#    ** Type                  = GA
+#    ** Noise                 = adaptive
+# * Decoder ---------------------------------------
+#    ** Type (D)              = SC
+#    ** Implementation        = NAIVE
+#    ** Systematic            = no
+# * Modem -----------------------------------------
+#    ** Type                  = BPSK
+#    ** Implementation        = STD
+#    ** Bits per symbol       = 1
+#    ** Sigma square          = on
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Implementation        = STD
+#    ** Complex               = off
+#    ** Add users             = off
+# * Quantizer -------------------------------------
+#    ** Type                  = POW2
+#    ** Implementation        = STD
+#    ** Fixed-point config.   = {6, 1}
+# * Monitor ---------------------------------------
+#    ** Lazy reduction        = off
+#    ** Frame error count (e) = 500
+#    ** Compute mutual info   = no
+# * Terminal --------------------------------------
+#    ** Show Sigma            = off
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
+#
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+      -1.25 |     0.00 ||      517 |    18693 |      500 | 3.77e-01 | 9.67e-01 ||    2.454 | 00h00'00
+      -1.00 |     0.25 ||      527 |    17966 |      500 | 3.55e-01 | 9.49e-01 ||    8.645 | 00h00'00
+      -0.75 |     0.50 ||      556 |    17571 |      500 | 3.29e-01 | 8.99e-01 ||    8.930 | 00h00'00
+      -0.50 |     0.75 ||      581 |    17235 |      500 | 3.09e-01 | 8.61e-01 ||    8.926 | 00h00'00
+      -0.25 |     1.00 ||      624 |    16365 |      500 | 2.73e-01 | 8.01e-01 ||    9.011 | 00h00'00
+       0.00 |     1.25 ||      698 |    16156 |      500 | 2.41e-01 | 7.16e-01 ||    8.932 | 00h00'00
+       0.25 |     1.50 ||      727 |    15082 |      500 | 2.16e-01 | 6.88e-01 ||    9.084 | 00h00'00
+       0.50 |     1.75 ||      867 |    14144 |      500 | 1.70e-01 | 5.77e-01 ||    9.191 | 00h00'00
+       0.75 |     2.00 ||     1078 |    13635 |      500 | 1.32e-01 | 4.64e-01 ||    9.312 | 00h00'00
+       1.00 |     2.25 ||     1368 |    12827 |      500 | 9.77e-02 | 3.65e-01 ||    9.408 | 00h00'00
+       1.25 |     2.50 ||     1665 |    12819 |      500 | 8.02e-02 | 3.00e-01 ||    9.452 | 00h00'00
+       1.50 |     2.75 ||     2396 |    11640 |      500 | 5.06e-02 | 2.09e-01 ||    9.569 | 00h00'00
+       1.75 |     3.00 ||     3600 |    11356 |      500 | 3.29e-02 | 1.39e-01 ||    9.602 | 00h00'00
+       2.00 |     3.25 ||     5317 |    12266 |      500 | 2.40e-02 | 9.40e-02 ||    9.603 | 00h00'00
+       2.25 |     3.50 ||     9414 |    12493 |      500 | 1.38e-02 | 5.31e-02 ||    9.702 | 00h00'00
+       2.50 |     3.75 ||    14449 |    11847 |      500 | 8.54e-03 | 3.46e-02 ||    9.656 | 00h00'00
+       2.75 |     4.00 ||    26180 |    10829 |      500 | 4.31e-03 | 1.91e-02 ||    9.629 | 00h00'00
+       3.00 |     4.25 ||    44545 |    10688 |      500 | 2.50e-03 | 1.12e-02 ||    9.701 | 00h00'00
+       3.25 |     4.50 ||    95779 |     9765 |      500 | 1.06e-03 | 5.22e-03 ||    9.677 | 00h00'00
+       3.50 |     4.75 ||   192594 |     9447 |      500 | 5.11e-04 | 2.60e-03 ||    9.705 | 00h00'01
+       3.75 |     5.00 ||   412454 |    11992 |      500 | 3.03e-04 | 1.21e-03 ||    9.710 | 00h00'04
+       4.00 |     5.25 ||   916449 |    11146 |      500 | 1.27e-04 | 5.46e-04 ||    9.663 | 00h00'09
+# End of the simulation.
