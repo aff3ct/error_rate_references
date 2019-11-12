@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "4.0" -s "0.25" --enc-sub-std LTE --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "5" -i "6" --mnt-max-fe "100" --src-fra "6" --dec-sf-type "LTE_VEC" --mdm-psi "PSI3" --mdm-codebook "conf/mod/SCMA/CS1.cb"
+command=aff3ct --sim-type "BFER" -C "TURBO" -K "1024" -m "0" -M "4.0" -s "0.25" --enc-sub-std LTE --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "5" -i "6" --mnt-max-fe "100" --src-fra "6" --dec-sf-type "LTE_VEC" --mdm-psi "PSI3" --mdm-cb-path "conf/mod/SCMA/CS1.cb"
 title=Turbo (3084,1024) SCMA (CS1 PSI3 5 ite.) BCJR 6 ite. LTE
 
 [trace]

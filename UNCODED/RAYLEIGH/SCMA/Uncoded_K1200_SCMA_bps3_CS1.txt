@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" --mdm-codebook "conf/mod/SCMA/CS1.cb"
+command=aff3ct --sim-type "BFER" --sim-cde-type "UNCODED" -K "1200" -m "0" -M "32" -s "2" --chn-type "RAYLEIGH" --mdm-type "SCMA" --mdm-ite "4" --mnt-max-fe "100" --mdm-cb-path "conf/mod/SCMA/CS1.cb"
 title=Uncoded (1200) 8-SCMA CS1
 
 [trace]

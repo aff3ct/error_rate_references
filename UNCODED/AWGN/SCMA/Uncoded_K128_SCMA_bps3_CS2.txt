@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct --sim-type "BFER" -C "UNCODED" -K "128" -R 0:1:15 --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" -e "500" -F "6"  --mdm-codebook conf/mod/SCMA/CS2.cb
+command=aff3ct --sim-type "BFER" -C "UNCODED" -K "128" -R 0:1:15 --chn-type AWGN --chn-implem FAST --mdm-type "SCMA" --mdm-ite "6" -e "500" -F "6"  --mdm-cb-path conf/mod/SCMA/CS2.cb
 title=Uncoded (128) 8-SCMA CS2
 url = https://ieeexplore.ieee.org/document/8011314
 
