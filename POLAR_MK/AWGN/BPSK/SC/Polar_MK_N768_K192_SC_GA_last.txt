@@ -1,0 +1,99 @@
+[metadata]
+command=aff3ct -C "POLAR_MK" -m "0" -M "4" -s "0.25" --enc-pc-path "conf/cde/awgn_polar_codes/MK/3_2_2_2_2_2_2_2_2/N768.cde" -N "768" -K "192" --dec-type "SC" --dec-implem "NAIVE"
+title=Polar MK (768,192) SC last
+info=Figure 2
+url=https://arxiv.org/abs/1902.01922
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                  = BFER
+#    ** Type of bits          = int32
+#    ** Type of reals         = float32
+#    ** Date (UTC)            = 2019-04-19 09:46:34
+#    ** Git version           = v2.3.1-79-g6bd7f8f
+#    ** Code type (C)         = POLAR_MK
+#    ** Noise range           = 0 -> 4 dB
+#    ** Noise type (E)        = EBN0
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Multi-threading (t)   = 72 thread(s)
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 0.25 (1/4)
+#    ** Inter frame level     = 1
+# * Source ----------------------------------------
+#    ** Type                  = RAND
+#    ** Implementation        = STD
+#    ** Info. bits (K_info)   = 192
+# * Codec -----------------------------------------
+#    ** Type                  = POLAR_MK
+#    ** Info. bits (K)        = 192
+#    ** Codeword size (N_cw)  = 768
+#    ** Frame size (N)        = 768
+#    ** Code rate             = 0.25 (1/4)
+# * Encoder ---------------------------------------
+#    ** Type                  = POLAR_MK
+#    ** Systematic            = no
+#    Polar code -----------------------------------
+#    ** Kernels               = {{10,11},{111,101,011}}
+#    ** Stages                = {1,0,0,0,0,0,0,0,0}
+#    Frozen bits generator MK ---------------------
+#    ** Type                  = GA
+#    ** Noise                 = adaptive
+# * Decoder ---------------------------------------
+#    ** Type (D)              = SC
+#    ** Implementation        = NAIVE
+#    ** Systematic            = no
+# * Modem -----------------------------------------
+#    ** Type                  = BPSK
+#    ** Implementation        = STD
+#    ** Bits per symbol       = 1
+#    ** Sigma square          = on
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Implementation        = STD
+#    ** Complex               = off
+#    ** Add users             = off
+# * Monitor ---------------------------------------
+#    ** Lazy reduction        = off
+#    ** Frame error count (e) = 100
+#    ** Compute mutual info   = no
+# * Terminal --------------------------------------
+#    ** Show Sigma            = off
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
+#
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput
+#         (SNR)        ||                                                      ||  and elapsed time
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+      -6.02 |     0.00 ||      351 |    17998 |      264 | 2.67e-01 | 7.52e-01 ||    0.156 | 00h00'00
+      -5.77 |     0.25 ||      381 |    17075 |      262 | 2.33e-01 | 6.88e-01 ||    1.349 | 00h00'00
+      -5.52 |     0.50 ||      353 |    10742 |      186 | 1.58e-01 | 5.27e-01 ||    1.250 | 00h00'00
+      -5.27 |     0.75 ||      382 |     9499 |      166 | 1.30e-01 | 4.35e-01 ||    1.310 | 00h00'00
+      -5.02 |     1.00 ||      497 |     6481 |      128 | 6.79e-02 | 2.58e-01 ||    1.634 | 00h00'00
+      -4.77 |     1.25 ||      628 |     5209 |      111 | 4.32e-02 | 1.77e-01 ||    1.970 | 00h00'00
+      -4.52 |     1.50 ||     1109 |     5225 |      115 | 2.45e-02 | 1.04e-01 ||    3.159 | 00h00'00
+      -4.27 |     1.75 ||     2523 |     5641 |      125 | 1.16e-02 | 4.95e-02 ||    5.738 | 00h00'00
+      -4.02 |     2.00 ||     3237 |     4503 |      104 | 7.25e-03 | 3.21e-02 ||    6.731 | 00h00'00
+      -3.77 |     2.25 ||     7809 |     4098 |      101 | 2.73e-03 | 1.29e-02 ||   10.377 | 00h00'00
+      -3.52 |     2.50 ||    14829 |     3990 |      102 | 1.40e-03 | 6.88e-03 ||   12.738 | 00h00'00
+      -3.27 |     2.75 ||    45029 |     4012 |      101 | 4.64e-04 | 2.24e-03 ||   15.326 | 00h00'00
+      -3.02 |     3.00 ||   114413 |     3735 |      100 | 1.70e-04 | 8.74e-04 ||   16.366 | 00h00'01
+      -2.77 |     3.25 ||   332594 |     3352 |      100 | 5.25e-05 | 3.01e-04 ||   16.933 | 00h00'03
+      -2.52 |     3.50 ||   910580 |     3378 |      100 | 1.93e-05 | 1.10e-04 ||   17.025 | 00h00'10
+      -2.27 |     3.75 ||  2729541 |     3799 |      100 | 7.25e-06 | 3.66e-05 ||   17.240 | 00h00'30
+      -2.02 |     4.00 || 10951254 |     3452 |      100 | 1.64e-06 | 9.13e-06 ||   17.127 | 00h02'02
+# End of the simulation.
