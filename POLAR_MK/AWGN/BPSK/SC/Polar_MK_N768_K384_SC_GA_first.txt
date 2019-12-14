@@ -3,6 +3,7 @@ command=aff3ct -C "POLAR_MK" -m "0" -M "4" -s "0.25" --enc-pc-path "conf/cde/awg
 title=Polar MK (768,384) SC first
 info=Figure 2
 url=https://arxiv.org/abs/1902.01922
+doi=10.1109/WCNC.2019.8885698
 
 [trace]
 # ----------------------------------------------------
