@@ -1,0 +1,91 @@
+[metadata]
+command=aff3ct -C RSC --enc-poly "{133, 171}" --enc-no-buff --enc-type RSC --dec-type VITERBI -m 0 -M 5 -K 64 -s 0.5 -e 10000 
+title=RSC (140,64) Viterbi 32-bit
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                  = BFER
+#    ** Type of bits          = int32
+#    ** Type of reals         = float32
+#    ** Date (UTC)            = 2024-05-23 05:41:18
+#    ** Git version           = v3.0.2-49-g8e7b19d
+#    ** Code type (C)         = RSC
+#    ** Noise range           = 0 -> 5 dB
+#    ** Noise type (E)        = EBN0
+#    ** Seed                  = 0
+#    ** Statistics            = off
+#    ** Debug mode            = off
+#    ** Inter frame level     = 1
+#    ** Multi-threading (t)   = 48 thread(s)
+#    ** Coset approach (c)    = no
+#    ** Coded monitoring      = no
+#    ** Bad frames tracking   = off
+#    ** Bad frames replay     = off
+#    ** Bit rate              = 0.457143 (16/35)
+# * Source ----------------------------------------
+#    ** Type                  = RAND
+#    ** Implementation        = STD
+#    ** Info. bits (K_info)   = 64
+# * Codec -----------------------------------------
+#    ** Type                  = RSC
+#    ** Info. bits (K)        = 64
+#    ** Codeword size (N_cw)  = 140
+#    ** Frame size (N)        = 140
+#    ** Code rate             = 0.457143 (16/35)
+# * Encoder ---------------------------------------
+#    ** Type                  = RSC
+#    ** Systematic            = yes
+#    ** Tail length           = 12
+#    ** Buffered              = off
+#    ** Polynomials           = {0133,0171}
+# * Decoder ---------------------------------------
+#    ** Type (D)              = VITERBI
+#    ** Implementation        = GENERIC
+#    ** Systematic            = yes
+#    ** Polynomials           = {0133,0171}
+#    ** Max type              = MAX
+# * Modem -----------------------------------------
+#    ** Type                  = BPSK
+#    ** Implementation        = STD
+#    ** Bits per symbol       = 1
+#    ** Sigma square          = on
+# * Channel ---------------------------------------
+#    ** Type                  = AWGN
+#    ** Implementation        = STD
+#    ** Complex               = off
+#    ** Add users             = off
+# * Monitor ---------------------------------------
+#    ** Lazy reduction        = off
+#    ** Frame error count (e) = 10000
+#    ** Compute mutual info   = no
+# * Terminal --------------------------------------
+#    ** Show Sigma            = off
+#    ** Enabled               = yes
+#    ** Frequency (ms)        = 500
+# 
+# The simulation is running...
+toto
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput  
+#         (SNR)        ||                                                      ||  and elapsed time   
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+      -3.40 |     0.00 ||    16352 |   104599 |    10036 | 9.99e-02 | 6.14e-01 ||   28.295 | 00h00'00   
+      -2.90 |     0.50 ||    22126 |    93735 |    10039 | 6.62e-02 | 4.54e-01 ||   29.577 | 00h00'00   
+      -2.40 |     1.00 ||    35492 |    84745 |    10016 | 3.73e-02 | 2.82e-01 ||   33.676 | 00h00'00   
+      -1.90 |     1.50 ||    64245 |    77147 |    10008 | 1.88e-02 | 1.56e-01 ||   35.142 | 00h00'00   
+      -1.40 |     2.00 ||   138950 |    70576 |    10003 | 7.94e-03 | 7.20e-02 ||   43.435 | 00h00'00   
+      -0.90 |     2.50 ||   348859 |    65670 |    10002 | 2.94e-03 | 2.87e-02 ||   45.913 | 00h00'00   
+      -0.40 |     3.00 ||   998079 |    61241 |    10000 | 9.59e-04 | 1.00e-02 ||   44.264 | 00h00'01   
+       0.10 |     3.50 ||  3500062 |    57752 |    10000 | 2.58e-04 | 2.86e-03 ||   45.131 | 00h00'04   
+       0.60 |     4.00 || 13772986 |    56006 |    10000 | 6.35e-05 | 7.26e-04 ||   45.533 | 00h00'19   
+       1.10 |     4.50 || 63298149 |    54173 |    10000 | 1.34e-05 | 1.58e-04 ||   45.403 | 00h01'29   
+       1.60 |     5.00 || 3.36e+08 |    53727 |    10000 | 2.50e-06 | 2.97e-05 ||   45.463 | 00h07'53   
+# End of the simulation.
