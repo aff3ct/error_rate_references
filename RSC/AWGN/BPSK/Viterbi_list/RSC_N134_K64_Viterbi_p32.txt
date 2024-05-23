@@ -1,0 +1,93 @@
+[metadata]
+command=aff3ct -C RSC --enc-poly "{13, 15}" --enc-no-buff --enc-type RSC --dec-type PLVA -m 0 -M 3 -K 64 -s 0.5 -e 100 --poly-crc "0x23" --poly-size 5
+title=RSC (134,59) PLVA 32-bit
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                     = BFER
+#    ** Type of bits             = int32
+#    ** Type of reals            = float32
+#    ** Date (UTC)               = 2024-05-23 10:06:09
+#    ** Git version              = v3.0.2-63-ga1f159b
+#    ** Code type (C)            = RSC
+#    ** Noise range              = 0 -> 3 dB
+#    ** Noise type (E)           = EBN0
+#    ** Seed                     = 0
+#    ** Statistics               = off
+#    ** Debug mode               = off
+#    ** Inter frame level        = 1
+#    ** Multi-threading (t)      = 48 thread(s)
+#    ** Coset approach (c)       = no
+#    ** Coded monitoring         = no
+#    ** Bad frames tracking      = off
+#    ** Bad frames replay        = off
+#    ** Bit rate                 = 0.440298 (59/134)
+# * Source ----------------------------------------
+#    ** Type                     = RAND
+#    ** Implementation           = STD
+#    ** Info. bits (K_info)      = 59
+# * CRC -------------------------------------------
+#    ** Type                     = 0x23
+#    ** Polynomial (hexadecimal) = 0x23
+#    ** Size (in bit)            = 5
+#    ** Implementation           = FAST
+# * Codec -----------------------------------------
+#    ** Type                     = RSC
+#    ** Info. bits (K)           = 64
+#    ** Codeword size (N_cw)     = 134
+#    ** Frame size (N)           = 134
+#    ** Code rate                = 0.477612 (32/67)
+# * Encoder ---------------------------------------
+#    ** Type                     = RSC
+#    ** Systematic               = yes
+#    ** Tail length              = 6
+#    ** Buffered                 = off
+#    ** Standard                 = LTE
+#    ** Polynomials              = {013,015}
+# * Decoder ---------------------------------------
+#    ** Type (D)                 = PLVA
+#    ** Implementation           = STD
+#    ** Systematic               = yes
+#    ** Standard                 = LTE
+#    ** Polynomials              = {013,015}
+#    ** Num. of lists (L)        = 8
+# * Modem -----------------------------------------
+#    ** Type                     = BPSK
+#    ** Implementation           = STD
+#    ** Bits per symbol          = 1
+#    ** Sigma square             = on
+# * Channel ---------------------------------------
+#    ** Type                     = AWGN
+#    ** Implementation           = STD
+#    ** Complex                  = off
+#    ** Add users                = off
+# * Monitor ---------------------------------------
+#    ** Lazy reduction           = off
+#    ** Frame error count (e)    = 100
+#    ** Compute mutual info      = no
+# * Terminal --------------------------------------
+#    ** Show Sigma               = off
+#    ** Enabled                  = yes
+#    ** Frequency (ms)           = 500
+# 
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput  
+#         (SNR)        ||                                                      ||  and elapsed time   
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+      -3.56 |     0.00 ||      197 |     1276 |      134 | 1.10e-01 | 6.80e-01 ||    1.003 | 00h00'00   
+      -3.06 |     0.50 ||      273 |     1067 |      136 | 6.62e-02 | 4.98e-01 ||    1.171 | 00h00'00   
+      -2.56 |     1.00 ||      320 |      958 |      122 | 5.07e-02 | 3.81e-01 ||    1.305 | 00h00'00   
+      -2.06 |     1.50 ||      694 |      736 |      108 | 1.80e-02 | 1.56e-01 ||    1.977 | 00h00'00   
+      -1.56 |     2.00 ||     1397 |      653 |      102 | 7.92e-03 | 7.30e-02 ||    3.002 | 00h00'00   
+      -1.06 |     2.50 ||     2875 |      649 |      102 | 3.83e-03 | 3.55e-02 ||    3.505 | 00h00'00   
+      -0.56 |     3.00 ||     9346 |      557 |      100 | 1.01e-03 | 1.07e-02 ||    4.207 | 00h00'00   
+# End of the simulation.
