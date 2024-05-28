@@ -7,28 +7,37 @@ before_script:
 # - pwd
 
 deploy-database-txt:
+  image: registry.gitlab.com/aff3ct/aff3ct/x86_64_ubuntu_python:v3.8.5
   stage: deploy
   tags:
+    - x86_64
     - linux
+    - docker
   artifacts:
      name: database-txt
      paths:
       - database.txt
       - database.txt.zip
   script:
+    - apt update
+    - apt install -y zip
     - ./.ci/deploy-database-txt.sh . database.txt
     - zip database.txt.zip database.txt
 
 deploy-database-json:
+  image: registry.gitlab.com/aff3ct/aff3ct/x86_64_ubuntu_python:v3.8.5
   stage: deploy
   tags:
+    - x86_64
     - linux
-    - python3.4
+    - docker
   artifacts:
      name: database-json
      paths:
       - database.json
       - database.json.zip
   script:
+    - apt update
+    - apt install -y zip
     - ./.ci/deploy-database-json.py --refs-path ./ --output database.json --nice-json 1 --hash-type sha1
     - zip database.json.zip database.json
