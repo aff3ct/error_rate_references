@@ -1,0 +1,92 @@
+[metadata]
+command=aff3ct -C CONV --enc-poly "{0171,0133}" --dec-type PLVA --crc-type 32-GZIP --dec-lists 16 -K 64 -m 0 -M 4 -s 0.5 -e 500
+title=CONV (140,32) PLVA (L=16) 32-bit
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                     = BFER
+#    ** Type of bits             = int32
+#    ** Type of reals            = float32
+#    ** Date (UTC)               = 2026-04-24 12:35:48
+#    ** Git version              = ON
+#    ** Code type (C)            = CONV
+#    ** Noise range              = 0 -> 4 dB
+#    ** Noise type (E)           = EBN0
+#    ** Seed                     = 0
+#    ** Statistics               = off
+#    ** Debug mode               = off
+#    ** Inter frame level        = 1
+#    ** Multi-threading (t)      = 16 thread(s)
+#    ** Coset approach (c)       = no
+#    ** Coded monitoring         = no
+#    ** Bad frames tracking      = off
+#    ** Bad frames replay        = off
+#    ** Bit rate                 = 0.228571 (8/35)
+# * Source ----------------------------------------
+#    ** Type                     = RAND
+#    ** Implementation           = STD
+#    ** Info. bits (K_info)      = 32
+# * CRC -------------------------------------------
+#    ** Type                     = 32-GZIP
+#    ** Polynomial (hexadecimal) = 0x4c11db7
+#    ** Size (in bit)            = 32
+#    ** Implementation           = FAST
+# * Codec -----------------------------------------
+#    ** Type                     = CONV
+#    ** Info. bits (K)           = 64
+#    ** Codeword size (N_cw)     = 140
+#    ** Frame size (N)           = 140
+#    ** Code rate                = 0.457143 (16/35)
+# * Encoder ---------------------------------------
+#    ** Type                     = CONV
+#    ** Systematic               = no
+#    ** Tail length              = 12
+#    ** Polynomials              = {0171,0133}
+# * Decoder ---------------------------------------
+#    ** Type (D)                 = PLVA
+#    ** Implementation           = STD
+#    ** Systematic               = no
+#    ** Polynomials              = {0171,0133}
+#    ** Num. of lists (L)        = 16
+# * Modem -----------------------------------------
+#    ** Type                     = BPSK
+#    ** Implementation           = STD
+#    ** Bits per symbol          = 1
+#    ** Sigma square             = on
+# * Channel ---------------------------------------
+#    ** Type                     = AWGN
+#    ** Implementation           = STD
+#    ** Complex                  = off
+#    ** Add users                = off
+# * Monitor ---------------------------------------
+#    ** Lazy reduction           = off
+#    ** Frame error count (e)    = 500
+#    ** Compute mutual info      = no
+# * Terminal --------------------------------------
+#    ** Show Sigma               = off
+#    ** Enabled                  = yes
+#    ** Frequency (ms)           = 0
+# 
+# The simulation is running...
+# ---------------------||--------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||    Bit Error Rate (BER) and Frame Error Rate (FER)     ||  Global throughput  
+#         (SNR)        ||                                                        ||  and elapsed time   
+# ---------------------||--------------------------------------------------------||---------------------
+# ----------|----------||------------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||        FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#      (dB) |     (dB) ||            |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# ----------|----------||------------|----------|----------|----------|----------||----------|----------
+      -6.41 |     0.00 ||        549 |     6996 |      528 | 3.98e-01 | 9.62e-01 ||    0.007 | 00h00'02   
+      -5.91 |     0.50 ||        566 |     6866 |      526 | 3.79e-01 | 9.29e-01 ||    0.006 | 00h00'02   
+      -5.41 |     1.00 ||        583 |     6399 |      515 | 3.43e-01 | 8.83e-01 ||    0.006 | 00h00'03   
+      -4.91 |     1.50 ||        691 |     6182 |      517 | 2.80e-01 | 7.48e-01 ||    0.006 | 00h00'03   
+      -4.41 |     2.00 ||        825 |     6035 |      518 | 2.29e-01 | 6.28e-01 ||    0.005 | 00h00'04   
+      -3.91 |     2.50 ||       1014 |     5390 |      504 | 1.66e-01 | 4.97e-01 ||    0.006 | 00h00'05   
+      -3.41 |     3.00 ||       1821 |     5244 |      506 | 9.00e-02 | 2.78e-01 ||    0.005 | 00h00'12   
+      -2.91 |     3.50 ||       3444 |     4902 |      504 | 4.45e-02 | 1.46e-01 ||    0.005 | 00h00'24   
+      -2.41 |     4.00 ||       8011 |     4651 |      502 | 1.81e-02 | 6.27e-02 ||    0.005 | 00h00'48   
+# End of the simulation.
