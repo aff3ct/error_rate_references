@@ -1,0 +1,91 @@
+[metadata]
+command=aff3ct -m "5.5" -M "7.5" -s "0.2" -C "RA" -K $K -N $((2**12)) --itl-type "RANDOM" --itl-seed "0" -i "20" -e "250"
+url=https://ieeexplore.ieee.org/document/866412
+title=RA (4096,128) Min-Sum 20 ite.
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                   = BFER
+#    ** Type of bits           = int32
+#    ** Type of reals          = float32
+#    ** Date (UTC)             = 2023-05-06 16:43:04
+#    ** Git version            = v3.0.2-26-gf9ce821
+#    ** Code type (C)          = RA
+#    ** Noise range            = 5.5 -> 7.5 dB
+#    ** Noise type (E)         = EBN0
+#    ** Seed                   = 0
+#    ** Statistics             = off
+#    ** Debug mode             = off
+#    ** Inter frame level      = 1
+#    ** Multi-threading (t)    = 192 thread(s)
+#    ** Coset approach (c)     = no
+#    ** Coded monitoring       = no
+#    ** Bad frames tracking    = off
+#    ** Bad frames replay      = off
+#    ** Bit rate               = 0.03125 (1/32)
+# * Source ----------------------------------------
+#    ** Type                   = RAND
+#    ** Implementation         = STD
+#    ** Info. bits (K_info)    = 128
+# * Codec -----------------------------------------
+#    ** Type                   = RA
+#    ** Info. bits (K)         = 128
+#    ** Codeword size (N_cw)   = 4096
+#    ** Frame size (N)         = 4096
+#    ** Code rate              = 0.03125 (1/32)
+# * Encoder ---------------------------------------
+#    ** Type                   = RA
+#    ** Systematic             = yes
+# * Decoder ---------------------------------------
+#    ** Type (D)               = RA
+#    ** Implementation         = STD
+#    ** Systematic             = yes
+#    ** Num. of iterations (i) = 20
+# * Interleaver -----------------------------------
+#    ** Type                   = RANDOM
+#    ** Seed                   = 0
+#    ** Uniform                = no
+# * Modem -----------------------------------------
+#    ** Type                   = BPSK
+#    ** Implementation         = STD
+#    ** Bits per symbol        = 1
+#    ** Sigma square           = on
+# * Channel ---------------------------------------
+#    ** Type                   = AWGN
+#    ** Implementation         = STD
+#    ** Complex                = off
+#    ** Add users              = off
+# * Monitor ---------------------------------------
+#    ** Lazy reduction         = off
+#    ** Frame error count (e)  = 250
+#    ** Compute mutual info    = no
+# * Terminal --------------------------------------
+#    ** Show Sigma             = off
+#    ** Enabled                = yes
+#    ** Frequency (ms)         = 500
+# 
+# The simulation is running...
+# ---------------------||------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||   Bit Error Rate (BER) and Frame Error Rate (FER)    ||  Global throughput  
+#         (SNR)        ||                                                      ||  and elapsed time   
+# ---------------------||------------------------------------------------------||---------------------
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||      FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT 
+#      (dB) |     (dB) ||          |          |          |          |          ||   (Mb/s) | (hhmmss) 
+# ----------|----------||----------|----------|----------|----------|----------||----------|----------
+      -9.55 |     5.50 ||     2262 |    12476 |      286 | 4.31e-02 | 1.26e-01 ||    3.100 | 00h00'00   
+      -9.35 |     5.70 ||     3651 |    11654 |      266 | 2.49e-02 | 7.29e-02 ||    3.315 | 00h00'00   
+      -9.15 |     5.90 ||     8560 |    10826 |      258 | 9.88e-03 | 3.01e-02 ||    3.509 | 00h00'00   
+      -8.95 |     6.10 ||    20399 |    10134 |      252 | 3.88e-03 | 1.24e-02 ||    3.618 | 00h00'00   
+      -8.75 |     6.30 ||    51812 |     9678 |      251 | 1.46e-03 | 4.84e-03 ||    4.329 | 00h00'01   
+      -8.55 |     6.50 ||   154645 |     9295 |      250 | 4.70e-04 | 1.62e-03 ||    5.379 | 00h00'03   
+      -8.35 |     6.70 ||   591577 |     9106 |      250 | 1.20e-04 | 4.23e-04 ||    5.386 | 00h00'14   
+      -8.15 |     6.90 ||  2212189 |     8024 |      250 | 2.83e-05 | 1.13e-04 ||    5.385 | 00h00'52   
+      -7.95 |     7.10 ||  9508881 |     7749 |      250 | 6.37e-06 | 2.63e-05 ||    5.393 | 00h03'45   
+      -7.75 |     7.30 || 40975933 |     7049 |      250 | 1.34e-06 | 6.10e-06 ||    5.396 | 00h16'12   
+      -7.55 |     7.50 || 2.09e+08 |     6283 |      250 | 2.35e-07 | 1.20e-06 ||    5.398 | 01h22'34   
+# End of the simulation.
