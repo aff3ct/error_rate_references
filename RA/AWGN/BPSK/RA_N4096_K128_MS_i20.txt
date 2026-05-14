@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct -m "5.5" -M "7.5" -s "0.2" -C "RA" -K $K -N $((2**12)) --itl-type "RANDOM" --itl-seed "0" -i "20" -e "250"
+command=aff3ct -m "5.5" -M "7.5" -s "0.2" -C "RA" -K 128 -N 4096 --itl-type "RANDOM" --itl-seed "0" -i "20" -e "250"
 url=https://ieeexplore.ieee.org/document/866412
 doi=10.1109/ISIT.2000.866412
 title=RA (4096,128) Min-Sum 20 ite.
