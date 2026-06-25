@@ -1,0 +1,107 @@
+[metadata]
+command=aff3ct -p 16 -N 1024 -K 512 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 3.00 -s 0.25 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem OMS --dec-off 8 --dec-simd INTER
+title=LDPC (1024,512) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4)
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int16
+#    ** Type of reals             = float32
+#    ** Type of quant. reals      = int16
+#    ** Date (UTC)                = 2026-06-24 21:23:59
+#    ** Git version               = v4.4.0-20-g5e083bc
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 0 -> 3 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Inter frame level         = 16
+#    ** Multi-threading (t)       = 16 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.5 (1/2)
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = FAST
+#    ** Info. bits (K_info)       = 512
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 512
+#    ** Codeword size (N_cw)      = 3328
+#    ** Frame size (N)            = 1024
+#    ** Code rate                 = 0.5 (1/2)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_5G
+#    ** Systematic                = yes
+#    ** Base graph                = BG2
+#    ** Index list                = 0
+#    ** Zc                        = 64
+#    ** K LDPC                    = 640
+#    ** N LDPC                    = 3328
+#    ** G matrix path             = ../conf/enc/LDPC/5G/NR_2_0_64.txt
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_HORIZONTAL_LAYERED
+#    ** Implementation            = OMS
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/5G/NR_2_0_64.qc
+#    ** H matrix reordering       = NONE
+#    ** SIMD strategy             = INTER
+#    ** Num. of iterations (i)    = 10
+#    ** Offset                    = 8.000000
+#    ** Stop criterion (syndrome) = off
+# * Puncturer -------------------------------------
+#    ** Type                      = LDPC_5G
+#    ** Pattern                   = {}
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = FAST
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Quantizer -------------------------------------
+#    ** Type                      = POW2
+#    ** Implementation            = FAST
+#    ** Fixed-point config.       = {10, 4}
+# * Monitor ---------------------------------------
+#    ** Lazy reduction            = off
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Show Sigma                = off
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ---------------------||--------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||    Bit Error Rate (BER) and Frame Error Rate (FER)     ||  Global throughput
+#         (SNR)        ||                                                        ||  and elapsed time
+# ---------------------||--------------------------------------------------------||---------------------
+# ----------|----------||------------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||        FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||            |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||------------|----------|----------|----------|----------||----------|----------
+      -3.01 |     0.00 ||        544 |    50852 |      543 | 1.83e-01 | 9.98e-01 ||   55.318 | 00h00'00
+      -2.76 |     0.25 ||        496 |    41160 |      495 | 1.62e-01 | 9.98e-01 ||   72.392 | 00h00'00
+      -2.51 |     0.50 ||        352 |    24853 |      344 | 1.38e-01 | 9.77e-01 ||   51.537 | 00h00'00
+      -2.26 |     0.75 ||        496 |    25680 |      451 | 1.01e-01 | 9.09e-01 ||   72.620 | 00h00'00
+      -2.01 |     1.00 ||        496 |    14807 |      357 | 5.83e-02 | 7.20e-01 ||   72.516 | 00h00'00
+      -1.76 |     1.25 ||        464 |     5910 |      195 | 2.49e-02 | 4.20e-01 ||   67.935 | 00h00'00
+      -1.51 |     1.50 ||       1040 |     4919 |      197 | 9.24e-03 | 1.89e-01 ||   77.962 | 00h00'00
+      -1.26 |     1.75 ||       2128 |     2262 |      122 | 2.08e-03 | 5.73e-02 ||   82.056 | 00h00'00
+      -1.01 |     2.00 ||      10496 |     2099 |      102 | 3.91e-04 | 9.72e-03 ||  103.704 | 00h00'00
+      -0.76 |     2.25 ||      76064 |     1859 |      100 | 4.77e-05 | 1.31e-03 ||  139.823 | 00h00'00
+      -0.51 |     2.50 ||    1046096 |     1735 |      100 | 3.24e-06 | 9.56e-05 ||  163.200 | 00h00'03
+      -0.26 |     2.75 ||    9786992 |      940 |      100 | 1.88e-07 | 1.02e-05 ||  163.160 | 00h00'30
+      -0.01 |     3.00 ||   55057312 |      674 |      100 | 2.39e-08 | 1.82e-06 ||  157.894 | 00h02'58
+# End of the simulation.

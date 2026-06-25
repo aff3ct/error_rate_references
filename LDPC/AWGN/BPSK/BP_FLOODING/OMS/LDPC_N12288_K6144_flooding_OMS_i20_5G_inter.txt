@@ -1,0 +1,107 @@
+[metadata]
+command=aff3ct -N 12288 -K 6144 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 1.6 -s 0.1 --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem OMS --dec-off 0.5 --dec-simd INTER
+title=LDPC (12288,6144) BPF-OMS 20 ite. 5G NR UL-SCH (SIMD inter-frame)
+
+[trace]
+# ----------------------------------------------------
+# ---- A FAST FORWARD ERROR CORRECTION TOOLBOX >> ----
+# ----------------------------------------------------
+# Parameters:
+# * Simulation ------------------------------------
+#    ** Type                      = BFER
+#    ** Type of bits              = int32
+#    ** Type of reals             = float32
+#    ** Date (UTC)                = 2026-06-24 22:14:47
+#    ** Git version               = v4.4.0-20-g5e083bc
+#    ** Code type (C)             = LDPC
+#    ** Noise range               = 0 -> 1.6 dB
+#    ** Noise type (E)            = EBN0
+#    ** Seed                      = 0
+#    ** Statistics                = off
+#    ** Debug mode                = off
+#    ** Inter frame level         = 8
+#    ** Multi-threading (t)       = 16 thread(s)
+#    ** Coset approach (c)        = no
+#    ** Coded monitoring          = no
+#    ** Bad frames tracking       = off
+#    ** Bad frames replay         = off
+#    ** Bit rate                  = 0.5 (1/2)
+# * Source ----------------------------------------
+#    ** Type                      = RAND
+#    ** Implementation            = FAST
+#    ** Info. bits (K_info)       = 6144
+# * Codec -----------------------------------------
+#    ** Type                      = LDPC
+#    ** Info. bits (K)            = 6144
+#    ** Codeword size (N_cw)      = 19584
+#    ** Frame size (N)            = 12288
+#    ** Code rate                 = 0.5 (1/2)
+# * Encoder ---------------------------------------
+#    ** Type                      = LDPC_5G
+#    ** Systematic                = yes
+#    ** Base graph                = BG1
+#    ** Index list                = 4
+#    ** Zc                        = 288
+#    ** K LDPC                    = 6336
+#    ** N LDPC                    = 19584
+#    ** G matrix path             = ../conf/enc/LDPC/5G/NR_1_4_288.txt
+# * Decoder ---------------------------------------
+#    ** Type (D)                  = BP_FLOODING
+#    ** Implementation            = OMS
+#    ** Systematic                = yes
+#    ** H matrix path             = ../conf/dec/LDPC/5G/NR_1_4_288.qc
+#    ** H matrix reordering       = NONE
+#    ** SIMD strategy             = INTER
+#    ** Num. of iterations (i)    = 20
+#    ** Offset                    = 0.500000
+#    ** Stop criterion (syndrome) = off
+# * Puncturer -------------------------------------
+#    ** Type                      = LDPC_5G
+#    ** Pattern                   = {}
+# * Modem -----------------------------------------
+#    ** Type                      = BPSK
+#    ** Implementation            = STD
+#    ** Bits per symbol           = 1
+#    ** Sigma square              = on
+# * Channel ---------------------------------------
+#    ** Type                      = AWGN
+#    ** Implementation            = FAST
+#    ** Complex                   = off
+#    ** Add users                 = off
+# * Monitor ---------------------------------------
+#    ** Lazy reduction            = off
+#    ** Frame error count (e)     = 100
+#    ** Compute mutual info       = no
+# * Terminal --------------------------------------
+#    ** Show Sigma                = off
+#    ** Enabled                   = yes
+#    ** Frequency (ms)            = 500
+#
+# The simulation is running...
+# ---------------------||--------------------------------------------------------||---------------------
+#  Signal Noise Ratio  ||    Bit Error Rate (BER) and Frame Error Rate (FER)     ||  Global throughput
+#         (SNR)        ||                                                        ||  and elapsed time
+# ---------------------||--------------------------------------------------------||---------------------
+# ----------|----------||------------|----------|----------|----------|----------||----------|----------
+#     Es/N0 |    Eb/N0 ||        FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
+#      (dB) |     (dB) ||            |          |          |          |          ||   (Mb/s) | (hhmmss)
+# ----------|----------||------------|----------|----------|----------|----------||----------|----------
+      -3.01 |     0.00 ||        240 |   235080 |      240 | 1.59e-01 | 1.00e+00 ||   21.955 | 00h00'00
+      -2.91 |     0.10 ||        320 |   301183 |      320 | 1.53e-01 | 1.00e+00 ||   18.164 | 00h00'00
+      -2.81 |     0.20 ||        248 |   224866 |      248 | 1.48e-01 | 1.00e+00 ||   19.291 | 00h00'00
+      -2.71 |     0.30 ||        256 |   219237 |      256 | 1.39e-01 | 1.00e+00 ||   17.400 | 00h00'00
+      -2.61 |     0.40 ||        264 |   213332 |      264 | 1.32e-01 | 1.00e+00 ||   16.916 | 00h00'00
+      -2.51 |     0.50 ||        288 |   209066 |      288 | 1.18e-01 | 1.00e+00 ||   16.924 | 00h00'00
+      -2.41 |     0.60 ||        328 |   209316 |      328 | 1.04e-01 | 1.00e+00 ||   15.180 | 00h00'00
+      -2.31 |     0.70 ||        360 |   189113 |      360 | 8.55e-02 | 1.00e+00 ||   17.936 | 00h00'00
+      -2.21 |     0.80 ||        440 |   172265 |      440 | 6.37e-02 | 1.00e+00 ||   27.740 | 00h00'00
+      -2.11 |     0.90 ||        336 |    89375 |      335 | 4.33e-02 | 9.97e-01 ||   22.768 | 00h00'00
+      -2.01 |     1.00 ||        344 |    41673 |      314 | 1.97e-02 | 9.13e-01 ||   19.633 | 00h00'00
+      -1.91 |     1.10 ||        264 |    11872 |      209 | 7.32e-03 | 7.92e-01 ||   21.185 | 00h00'00
+      -1.81 |     1.20 ||        472 |     4676 |      176 | 1.61e-03 | 3.73e-01 ||   14.434 | 00h00'00
+      -1.71 |     1.30 ||       1024 |     1768 |      130 | 2.81e-04 | 1.27e-01 ||   13.227 | 00h00'00
+      -1.61 |     1.40 ||       7144 |      496 |      100 | 1.13e-05 | 1.40e-02 ||   12.701 | 00h00'03
+      -1.51 |     1.50 ||      99712 |      284 |      100 | 4.64e-07 | 1.00e-03 ||   12.404 | 00h00'49
+      -1.41 |     1.60 ||    3330280 |      242 |      100 | 1.18e-08 | 3.00e-05 ||   12.408 | 00h27'29
+# End of the simulation.
+
