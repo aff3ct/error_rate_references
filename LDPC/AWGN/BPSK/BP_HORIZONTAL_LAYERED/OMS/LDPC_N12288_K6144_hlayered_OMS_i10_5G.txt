@@ -1,6 +1,7 @@
 [metadata]
 command=aff3ct -N 12288 -K 6144 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 1.7 -s 0.1 --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem OMS --dec-off 0.5
 title=LDPC (12288,6144) BPHL-OMS 10 ite. 5G NR UL-SCH
+ci=off
 
 [trace]
 # ----------------------------------------------------

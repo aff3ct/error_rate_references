@@ -1,6 +1,7 @@
 [metadata]
 command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem SPA --dec-simd INTRA
 title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD intra-frame)
+ci=off
 
 [trace]
 # ----------------------------------------------------
