@@ -1,6 +1,6 @@
 [metadata]
-command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem SPA --dec-simd INTER
-title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD inter-frame)
+command=aff3ct -p 16 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_HORIZONTAL_LAYERED_LEGACY --dec-no-synd -i 10 --dec-implem OMS --dec-off 8 --dec-simd INTER
+title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4)
 
 [trace]
 # ----------------------------------------------------
@@ -9,9 +9,10 @@ title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD inter-frame)
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                      = BFER
-#    ** Type of bits              = int32
+#    ** Type of bits              = int16
 #    ** Type of reals             = float32
-#    ** Date (UTC)                = 2026-06-25 16:54:35
+#    ** Type of quant. reals      = int16
+#    ** Date (UTC)                = 2026-06-25 17:46:20
 #    ** Git version               = v4.4.0-20-g5e083bc
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 8 dB
@@ -19,7 +20,7 @@ title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD inter-frame)
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
-#    ** Inter frame level         = 8
+#    ** Inter frame level         = 16
 #    ** Multi-threading (t)       = 16 thread(s)
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
@@ -46,13 +47,14 @@ title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD inter-frame)
 #    ** N LDPC                    = 208
 #    ** G matrix path             = ../conf/enc/LDPC/5G/NR_2_0_4.txt
 # * Decoder ---------------------------------------
-#    ** Type (D)                  = BP_FLOODING
-#    ** Implementation            = SPA
+#    ** Type (D)                  = BP_HORIZONTAL_LAYERED_LEGACY
+#    ** Implementation            = OMS
 #    ** Systematic                = yes
 #    ** H matrix path             = ../conf/dec/LDPC/5G/NR_2_0_4.qc
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTER
-#    ** Num. of iterations (i)    = 20
+#    ** Num. of iterations (i)    = 10
+#    ** Offset                    = 8.000000
 #    ** Stop criterion (syndrome) = off
 # * Puncturer -------------------------------------
 #    ** Type                      = LDPC_5G
@@ -67,6 +69,10 @@ title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD inter-frame)
 #    ** Implementation            = FAST
 #    ** Complex                   = off
 #    ** Add users                 = off
+# * Quantizer -------------------------------------
+#    ** Type                      = POW2
+#    ** Implementation            = FAST
+#    ** Fixed-point config.       = {10, 4}
 # * Monitor ---------------------------------------
 #    ** Lazy reduction            = off
 #    ** Frame error count (e)     = 100
@@ -85,13 +91,13 @@ title=LDPC (40,20) BPF-SPA 20 ite. 5G NR UL-SCH (SIMD inter-frame)
 #     Es/N0 |    Eb/N0 ||        FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||            |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||------------|----------|----------|----------|----------||----------|----------
-      -3.01 |     0.00 ||        256 |      763 |      178 | 1.49e-01 | 6.95e-01 ||    1.595 | 00h00'00
-      -2.01 |     1.00 ||        328 |      706 |      162 | 1.08e-01 | 4.94e-01 ||    3.561 | 00h00'00
-      -1.01 |     2.00 ||        592 |      685 |      155 | 5.79e-02 | 2.62e-01 ||    4.134 | 00h00'00
-      -0.01 |     3.00 ||       1248 |      470 |      118 | 1.88e-02 | 9.46e-02 ||    4.522 | 00h00'00
-       0.99 |     4.00 ||       5656 |      431 |      105 | 3.81e-03 | 1.86e-02 ||    4.890 | 00h00'00
-       1.99 |     5.00 ||      24448 |      392 |      101 | 8.02e-04 | 4.13e-03 ||    5.405 | 00h00'00
-       2.99 |     6.00 ||     186928 |      420 |      100 | 1.12e-04 | 5.35e-04 ||    6.483 | 00h00'00
-       3.99 |     7.00 ||    1579496 |      419 |      100 | 1.33e-05 | 6.33e-05 ||    7.813 | 00h00'04
-       4.99 |     8.00 ||   26260024 |      388 |      100 | 7.39e-07 | 3.81e-06 ||    7.688 | 00h01'08
+      -3.01 |     0.00 ||        576 |     2005 |      450 | 1.74e-01 | 7.81e-01 ||    7.037 | 00h00'00
+      -2.01 |     1.00 ||        688 |     1566 |      372 | 1.14e-01 | 5.41e-01 ||   28.139 | 00h00'00
+      -1.01 |     2.00 ||        784 |      860 |      220 | 5.48e-02 | 2.81e-01 ||   32.197 | 00h00'00
+      -0.01 |     3.00 ||       1296 |      473 |      120 | 1.82e-02 | 9.26e-02 ||   37.674 | 00h00'00
+       0.99 |     4.00 ||       4624 |      374 |      101 | 4.04e-03 | 2.18e-02 ||   48.419 | 00h00'00
+       1.99 |     5.00 ||      32464 |      404 |      101 | 6.22e-04 | 3.11e-03 ||   53.780 | 00h00'00
+       2.99 |     6.00 ||     226176 |      417 |      100 | 9.22e-05 | 4.42e-04 ||   59.236 | 00h00'00
+       3.99 |     7.00 ||    1615168 |      406 |      100 | 1.26e-05 | 6.19e-05 ||   74.868 | 00h00'00
+       4.99 |     8.00 ||   13519856 |      388 |      100 | 1.43e-06 | 7.40e-06 ||   94.482 | 00h00'02
 # End of the simulation.
