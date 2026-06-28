@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -p 16 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem OMS --dec-off 8 --dec-simd INTER
-title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4)
+title=LDPC (40,20) BP-HL+OMS 10 ite. 5G NR UL-SCH (inter-frame SIMD, 16-bit Q10,4)
 
 [trace]
 # ----------------------------------------------------
@@ -13,7 +13,7 @@ title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4
 #    ** Type of reals             = float32
 #    ** Type of quant. reals      = int16
 #    ** Date (UTC)                = 2026-06-24 21:51:13
-#    ** Git version               = v4.4.0-20-g5e083bc
+#    ** Git version               = v4.5.0
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 8 dB
 #    ** Noise type (E)            = EBN0

@@ -1,6 +1,6 @@
 [metadata]
-command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem OMS --dec-off 0.5 --dec-simd INTER
-title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame)
+command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 9.0 -s 1.0 --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem OMS --dec-off 0.5 --dec-simd INTER
+title=LDPC (40,20) BP-HL+OMS 10 ite. 5G NR UL-SCH (inter-frame SIMD)
 
 [trace]
 # ----------------------------------------------------
@@ -12,9 +12,9 @@ title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame)
 #    ** Type of bits              = int32
 #    ** Type of reals             = float32
 #    ** Date (UTC)                = 2026-06-24 21:51:21
-#    ** Git version               = v4.4.0-20-g5e083bc
+#    ** Git version               = v4.5.0
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0 -> 8 dB
+#    ** Noise range               = 0 -> 9 dB
 #    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
@@ -95,4 +95,5 @@ title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame)
        2.99 |     6.00 ||     246664 |      416 |      100 | 8.43e-05 | 4.05e-04 ||   43.686 | 00h00'00
        3.99 |     7.00 ||    1644512 |      397 |      100 | 1.21e-05 | 6.08e-05 ||   51.783 | 00h00'00
        4.99 |     8.00 ||   11345872 |      409 |      100 | 1.80e-06 | 8.81e-06 ||   52.695 | 00h00'04
+       5.99 |     9.00 ||  142390384 |      402 |      100 | 1.41e-07 | 7.02e-07 ||   56.185 | 00h00'50
 # End of the simulation.

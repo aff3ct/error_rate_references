@@ -1,7 +1,9 @@
 [metadata]
-command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 9.0 -s 1.0 --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem OMS --dec-off 0.5 --dec-simd INTER
-title=LDPC (40,20) BP-F+OMS 20 ite. 5G NR UL-SCH (inter-frame SIMD)
+command=aff3ct -p 16 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 9.0 -s 1.0 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem OMS --dec-off 8 --dec-simd INTER
+title=LDPC (40,20) BP-F+OMS 20 ite. 5G NR UL-SCH (inter-frame SIMD, 16-bit Q10,4)
 ci=off
+power=104 W
+cpu=AMD Ryzen 9 7945HX
 
 [trace]
 # ----------------------------------------------------
@@ -10,9 +12,10 @@ ci=off
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                      = BFER
-#    ** Type of bits              = int32
+#    ** Type of bits              = int16
 #    ** Type of reals             = float32
-#    ** Date (UTC)                = 2026-06-24 21:49:15
+#    ** Type of quant. reals      = int16
+#    ** Date (UTC)                = 2026-06-27 08:35:53
 #    ** Git version               = v4.5.0
 #    ** Code type (C)             = LDPC
 #    ** Noise range               = 0 -> 9 dB
@@ -20,7 +23,7 @@ ci=off
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
-#    ** Inter frame level         = 8
+#    ** Inter frame level         = 16
 #    ** Multi-threading (t)       = 16 thread(s)
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
@@ -54,7 +57,7 @@ ci=off
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 20
-#    ** Offset                    = 0.500000
+#    ** Offset                    = 8.000000
 #    ** Stop criterion (syndrome) = off
 # * Puncturer -------------------------------------
 #    ** Type                      = LDPC_5G
@@ -69,6 +72,10 @@ ci=off
 #    ** Implementation            = FAST
 #    ** Complex                   = off
 #    ** Add users                 = off
+# * Quantizer -------------------------------------
+#    ** Type                      = POW2
+#    ** Implementation            = FAST
+#    ** Fixed-point config.       = {10, 4}
 # * Monitor ---------------------------------------
 #    ** Lazy reduction            = off
 #    ** Frame error count (e)     = 100
@@ -87,14 +94,14 @@ ci=off
 #     Es/N0 |    Eb/N0 ||        FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||            |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||------------|----------|----------|----------|----------||----------|----------
-      -3.01 |     0.00 ||        312 |     1043 |      233 | 1.67e-01 | 7.47e-01 ||    7.003 | 00h00'00
-      -2.01 |     1.00 ||        320 |      832 |      180 | 1.30e-01 | 5.62e-01 ||   10.793 | 00h00'00
-      -1.01 |     2.00 ||        472 |      579 |      145 | 6.13e-02 | 3.07e-01 ||   13.602 | 00h00'00
-      -0.01 |     3.00 ||       1088 |      466 |      116 | 2.14e-02 | 1.07e-01 ||   18.378 | 00h00'00
-       0.99 |     4.00 ||       5296 |      428 |      105 | 4.04e-03 | 1.98e-02 ||   21.794 | 00h00'00
-       1.99 |     5.00 ||      27952 |      440 |      100 | 7.87e-04 | 3.58e-03 ||   22.738 | 00h00'00
-       2.99 |     6.00 ||     209456 |      383 |      100 | 9.14e-05 | 4.77e-04 ||   23.300 | 00h00'00
-       3.99 |     7.00 ||    2645048 |      413 |      100 | 7.81e-06 | 3.78e-05 ||   38.814 | 00h00'01
-       4.99 |     8.00 ||   28855480 |      414 |      100 | 7.17e-07 | 3.47e-06 ||   40.053 | 00h00'14
-       5.99 |     9.00 || 1129450424 |      403 |      100 | 1.78e-08 | 8.85e-08 ||   38.958 | 00h09'39
+      -3.01 |     0.00 ||        432 |     1544 |      342 | 1.79e-01 | 7.92e-01 ||    8.916 | 00h00'00
+      -2.01 |     1.00 ||        528 |     1234 |      291 | 1.17e-01 | 5.51e-01 ||   17.060 | 00h00'00
+      -1.01 |     2.00 ||        624 |      724 |      177 | 5.80e-02 | 2.84e-01 ||   21.188 | 00h00'00
+      -0.01 |     3.00 ||       1280 |      527 |      134 | 2.06e-02 | 1.05e-01 ||   29.058 | 00h00'00
+       0.99 |     4.00 ||       4480 |      454 |      112 | 5.07e-03 | 2.50e-02 ||   35.697 | 00h00'00
+       1.99 |     5.00 ||      24912 |      393 |      102 | 7.89e-04 | 4.09e-03 ||   39.562 | 00h00'00
+       2.99 |     6.00 ||     186160 |      397 |      100 | 1.07e-04 | 5.37e-04 ||   46.136 | 00h00'00
+       3.99 |     7.00 ||    2416608 |      445 |      100 | 9.21e-06 | 4.14e-05 ||   55.452 | 00h00'00
+       4.99 |     8.00 ||   32540352 |      417 |      100 | 6.41e-07 | 3.07e-06 ||   61.422 | 00h00'10
+       5.99 |     9.00 || 1014722272 |      413 |      100 | 2.04e-08 | 9.85e-08 ||   58.508 | 00h05'46
 # End of the simulation.

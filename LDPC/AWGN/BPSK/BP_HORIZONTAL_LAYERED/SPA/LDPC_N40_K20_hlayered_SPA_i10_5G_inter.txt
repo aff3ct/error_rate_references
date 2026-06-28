@@ -1,6 +1,8 @@
 [metadata]
-command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem SPA --dec-simd INTER
-title=LDPC (40,20) BPHL-SPA 10 ite. 5G NR UL-SCH (SIMD inter-frame)
+command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 9.0 -s 1.0 --dec-type BP_HORIZONTAL_LAYERED --dec-no-synd -i 10 --dec-implem SPA --dec-simd INTER
+title=LDPC (40,20) BP-HL+SPA 10 ite. 5G NR UL-SCH (SIMD inter-frame)
+power=105 W
+cpu=AMD Ryzen 9 7945HX
 
 [trace]
 # ----------------------------------------------------
@@ -12,9 +14,9 @@ title=LDPC (40,20) BPHL-SPA 10 ite. 5G NR UL-SCH (SIMD inter-frame)
 #    ** Type of bits              = int32
 #    ** Type of reals             = float32
 #    ** Date (UTC)                = 2026-06-24 21:51:30
-#    ** Git version               = v4.4.0-20-g5e083bc
+#    ** Git version               = v4.5.0
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0 -> 8 dB
+#    ** Noise range               = 0 -> 9 dB
 #    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
@@ -94,4 +96,5 @@ title=LDPC (40,20) BPHL-SPA 10 ite. 5G NR UL-SCH (SIMD inter-frame)
        2.99 |     6.00 ||     201728 |      395 |      100 | 9.79e-05 | 4.96e-04 ||   11.884 | 00h00'00
        3.99 |     7.00 ||    1039488 |      417 |      100 | 2.01e-05 | 9.62e-05 ||   14.249 | 00h00'01
        4.99 |     8.00 ||    8022760 |      404 |      100 | 2.52e-06 | 1.25e-05 ||   14.060 | 00h00'11
+       5.99 |     9.00 ||   93247024 |      397 |      100 | 2.13e-07 | 1.07e-06 ||   14.789 | 00h02'06
 # End of the simulation.

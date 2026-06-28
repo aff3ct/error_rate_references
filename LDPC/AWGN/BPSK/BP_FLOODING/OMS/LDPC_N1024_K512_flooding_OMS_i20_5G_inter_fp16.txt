@@ -1,7 +1,9 @@
 [metadata]
-command=aff3ct -p 32 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 9.0 -s 1.0 --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem OMS --dec-off 0.5 --dec-simd INTER
-title=LDPC (40,20) BP-F+OMS 20 ite. 5G NR UL-SCH (inter-frame SIMD)
+command=aff3ct -p 16 -N 1024 -K 512 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 3.00 -s 0.25 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_FLOODING --dec-no-synd -i 20 --dec-implem OMS --dec-off 8 --dec-simd INTER
+title=LDPC (1024,512) BP-F+OMS 20 ite. 5G NR UL-SCH (inter-frame SIMD)
 ci=off
+power=93 W
+cpu=AMD Ryzen 9 7945HX
 
 [trace]
 # ----------------------------------------------------
@@ -10,17 +12,18 @@ ci=off
 # Parameters:
 # * Simulation ------------------------------------
 #    ** Type                      = BFER
-#    ** Type of bits              = int32
+#    ** Type of bits              = int16
 #    ** Type of reals             = float32
-#    ** Date (UTC)                = 2026-06-24 21:49:15
+#    ** Type of quant. reals      = int16
+#    ** Date (UTC)                = 2026-06-27 08:33:50
 #    ** Git version               = v4.5.0
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0 -> 9 dB
+#    ** Noise range               = 0 -> 3.00 dB
 #    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
 #    ** Debug mode                = off
-#    ** Inter frame level         = 8
+#    ** Inter frame level         = 16
 #    ** Multi-threading (t)       = 16 thread(s)
 #    ** Coset approach (c)        = no
 #    ** Coded monitoring          = no
@@ -30,31 +33,31 @@ ci=off
 # * Source ----------------------------------------
 #    ** Type                      = RAND
 #    ** Implementation            = FAST
-#    ** Info. bits (K_info)       = 20
+#    ** Info. bits (K_info)       = 512
 # * Codec -----------------------------------------
 #    ** Type                      = LDPC
-#    ** Info. bits (K)            = 20
-#    ** Codeword size (N_cw)      = 208
-#    ** Frame size (N)            = 40
+#    ** Info. bits (K)            = 512
+#    ** Codeword size (N_cw)      = 3328
+#    ** Frame size (N)            = 1024
 #    ** Code rate                 = 0.5 (1/2)
 # * Encoder ---------------------------------------
 #    ** Type                      = LDPC_5G
 #    ** Systematic                = yes
 #    ** Base graph                = BG2
 #    ** Index list                = 0
-#    ** Zc                        = 4
-#    ** K LDPC                    = 40
-#    ** N LDPC                    = 208
-#    ** G matrix path             = ../conf/enc/LDPC/5G/NR_2_0_4.txt
+#    ** Zc                        = 64
+#    ** K LDPC                    = 640
+#    ** N LDPC                    = 3328
+#    ** G matrix path             = ../conf/enc/LDPC/5G/NR_2_0_64.txt
 # * Decoder ---------------------------------------
 #    ** Type (D)                  = BP_FLOODING
 #    ** Implementation            = OMS
 #    ** Systematic                = yes
-#    ** H matrix path             = ../conf/dec/LDPC/5G/NR_2_0_4.qc
+#    ** H matrix path             = ../conf/dec/LDPC/5G/NR_2_0_64.qc
 #    ** H matrix reordering       = NONE
 #    ** SIMD strategy             = INTER
 #    ** Num. of iterations (i)    = 20
-#    ** Offset                    = 0.500000
+#    ** Offset                    = 8.000000
 #    ** Stop criterion (syndrome) = off
 # * Puncturer -------------------------------------
 #    ** Type                      = LDPC_5G
@@ -69,6 +72,10 @@ ci=off
 #    ** Implementation            = FAST
 #    ** Complex                   = off
 #    ** Add users                 = off
+# * Quantizer -------------------------------------
+#    ** Type                      = POW2
+#    ** Implementation            = FAST
+#    ** Fixed-point config.       = {10, 4}
 # * Monitor ---------------------------------------
 #    ** Lazy reduction            = off
 #    ** Frame error count (e)     = 100
@@ -87,14 +94,17 @@ ci=off
 #     Es/N0 |    Eb/N0 ||        FRA |       BE |       FE |      BER |      FER ||  SIM_THR |    ET/RT
 #      (dB) |     (dB) ||            |          |          |          |          ||   (Mb/s) | (hhmmss)
 # ----------|----------||------------|----------|----------|----------|----------||----------|----------
-      -3.01 |     0.00 ||        312 |     1043 |      233 | 1.67e-01 | 7.47e-01 ||    7.003 | 00h00'00
-      -2.01 |     1.00 ||        320 |      832 |      180 | 1.30e-01 | 5.62e-01 ||   10.793 | 00h00'00
-      -1.01 |     2.00 ||        472 |      579 |      145 | 6.13e-02 | 3.07e-01 ||   13.602 | 00h00'00
-      -0.01 |     3.00 ||       1088 |      466 |      116 | 2.14e-02 | 1.07e-01 ||   18.378 | 00h00'00
-       0.99 |     4.00 ||       5296 |      428 |      105 | 4.04e-03 | 1.98e-02 ||   21.794 | 00h00'00
-       1.99 |     5.00 ||      27952 |      440 |      100 | 7.87e-04 | 3.58e-03 ||   22.738 | 00h00'00
-       2.99 |     6.00 ||     209456 |      383 |      100 | 9.14e-05 | 4.77e-04 ||   23.300 | 00h00'00
-       3.99 |     7.00 ||    2645048 |      413 |      100 | 7.81e-06 | 3.78e-05 ||   38.814 | 00h00'01
-       4.99 |     8.00 ||   28855480 |      414 |      100 | 7.17e-07 | 3.47e-06 ||   40.053 | 00h00'14
-       5.99 |     9.00 || 1129450424 |      403 |      100 | 1.78e-08 | 8.85e-08 ||   38.958 | 00h09'39
+      -3.01 |     0.00 ||        544 |    51019 |      543 | 1.83e-01 | 9.98e-01 ||   46.623 | 00h00'00
+      -2.76 |     0.25 ||        544 |    45436 |      543 | 1.63e-01 | 9.98e-01 ||   52.682 | 00h00'00
+      -2.51 |     0.50 ||        416 |    29065 |      408 | 1.36e-01 | 9.81e-01 ||   71.570 | 00h00'00
+      -2.26 |     0.75 ||        400 |    19457 |      347 | 9.50e-02 | 8.68e-01 ||   64.892 | 00h00'00
+      -2.01 |     1.00 ||        432 |    12978 |      303 | 5.87e-02 | 7.01e-01 ||   75.233 | 00h00'00
+      -1.76 |     1.25 ||        688 |     8136 |      252 | 2.31e-02 | 3.66e-01 ||   66.778 | 00h00'00
+      -1.51 |     1.50 ||        912 |     3463 |      133 | 7.42e-03 | 1.46e-01 ||   83.205 | 00h00'00
+      -1.26 |     1.75 ||       2608 |     2774 |      108 | 2.08e-03 | 4.14e-02 ||   86.032 | 00h00'00
+      -1.01 |     2.00 ||      15968 |     2126 |      103 | 2.60e-04 | 6.45e-03 ||   90.412 | 00h00'00
+      -0.76 |     2.25 ||     139520 |     1832 |      100 | 2.56e-05 | 7.17e-04 ||  102.316 | 00h00'00
+      -0.51 |     2.50 ||    1544192 |     1528 |      100 | 1.93e-06 | 6.48e-05 ||  111.139 | 00h00'07
+      -0.26 |     2.75 ||   10887024 |     1290 |      100 | 2.31e-07 | 9.19e-06 ||  109.600 | 00h00'50
+      -0.01 |     3.00 ||   67284224 |      815 |      100 | 2.37e-08 | 1.49e-06 ||  104.541 | 00h05'29
 # End of the simulation.

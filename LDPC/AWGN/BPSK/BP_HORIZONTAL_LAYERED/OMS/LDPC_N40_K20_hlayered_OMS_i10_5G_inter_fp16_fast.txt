@@ -1,6 +1,8 @@
 [metadata]
-command=aff3ct -p 16 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 8.0 -s 1.0 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_HORIZONTAL_LAYERED_LEGACY --dec-no-synd -i 10 --dec-implem OMS --dec-off 8 --dec-simd INTER
-title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4)
+command=aff3ct -p 16 -N 40 -K 20 -C "LDPC" --src-implem FAST --chn-implem FAST --enc-type "LDPC_5G" -m 0.0 -M 9.0 -s 1.0 --qnt-bits 10 --qnt-dec 4 --qnt-implem FAST --dec-type BP_HORIZONTAL_LAYERED_LEGACY --dec-no-synd -i 10 --dec-implem OMS --dec-off 8 --dec-simd INTER
+title=LDPC (40,20) BP-HL+OMS 10 ite. 5G NR UL-SCH (inter-frame SIMD, 16-bit Q10,4)
+power=103 W
+cpu=AMD Ryzen 9 7945HX
 
 [trace]
 # ----------------------------------------------------
@@ -13,9 +15,9 @@ title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4
 #    ** Type of reals             = float32
 #    ** Type of quant. reals      = int16
 #    ** Date (UTC)                = 2026-06-25 17:46:20
-#    ** Git version               = v4.4.0-20-g5e083bc
+#    ** Git version               = v4.5.0
 #    ** Code type (C)             = LDPC
-#    ** Noise range               = 0 -> 8 dB
+#    ** Noise range               = 0 -> 9 dB
 #    ** Noise type (E)            = EBN0
 #    ** Seed                      = 0
 #    ** Statistics                = off
@@ -100,4 +102,5 @@ title=LDPC (40,20) BPHL-OMS 10 ite. 5G NR UL-SCH (SIMD inter-frame, 16-bit Q10,4
        2.99 |     6.00 ||     226176 |      417 |      100 | 9.22e-05 | 4.42e-04 ||   59.236 | 00h00'00
        3.99 |     7.00 ||    1615168 |      406 |      100 | 1.26e-05 | 6.19e-05 ||   74.868 | 00h00'00
        4.99 |     8.00 ||   13519856 |      388 |      100 | 1.43e-06 | 7.40e-06 ||   94.482 | 00h00'02
+       5.99 |     9.00 ||  143186560 |      398 |      100 | 1.39e-07 | 6.98e-07 ||   93.986 | 00h00'30
 # End of the simulation.
