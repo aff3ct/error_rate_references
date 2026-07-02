@@ -21,7 +21,7 @@ def getFileNames(currentPath, fileNames):
 	if os.path.isdir(currentPath):
 		files = os.listdir(currentPath)
 		for f in files:
-			if "~" in f or f.startswith("."):
+			if "~" in f or f.startswith(".") or f in ["database.txt", "database.json", "output"]:
 				continue
 			newCurrentPath = currentPath + "/" + f
 			getFileNames(newCurrentPath, fileNames)
@@ -181,10 +181,19 @@ for fileName in fileNames:
 							val = cols[c].strip().split(" ", 1)[0]
 
 							if key == "ET/RT":
-								newVal = int(val.split("'")[1]);
-								newVal += int(val.split("'")[0].split("h")[1]) * 60
-								newVal += int(val.split("'")[0].split("h")[0]) * 3600
-								val = newVal
+								try:
+									parts = val.split("'")
+									if len(parts) > 1:
+										newVal = int(parts[1])
+										hm = parts[0].split("h")
+										if len(hm) > 1:
+											newVal += int(hm[1]) * 60
+											newVal += int(hm[0]) * 3600
+										else:
+											newVal += int(hm[0]) * 60
+										val = newVal
+								except Exception:
+									pass
 							try:
 								li = [int(val)]
 							except ValueError:
