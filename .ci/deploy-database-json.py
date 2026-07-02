@@ -181,19 +181,10 @@ for fileName in fileNames:
 							val = cols[c].strip().split(" ", 1)[0]
 
 							if key == "ET/RT":
-								try:
-									parts = val.split("'")
-									if len(parts) > 1:
-										newVal = int(parts[1])
-										hm = parts[0].split("h")
-										if len(hm) > 1:
-											newVal += int(hm[1]) * 60
-											newVal += int(hm[0]) * 3600
-										else:
-											newVal += int(hm[0]) * 60
-										val = newVal
-								except Exception:
-									pass
+								newVal = int(val.split("'")[1]);
+								newVal += int(val.split("'")[0].split("h")[1]) * 60
+								newVal += int(val.split("'")[0].split("h")[0]) * 3600
+								val = newVal
 							try:
 								li = [int(val)]
 							except ValueError:
