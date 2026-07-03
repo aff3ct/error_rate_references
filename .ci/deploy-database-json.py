@@ -21,7 +21,7 @@ def getFileNames(currentPath, fileNames):
 	if os.path.isdir(currentPath):
 		files = os.listdir(currentPath)
 		for f in files:
-			if "~" in f or f.startswith("."):
+			if "~" in f or f.startswith(".") or f in ["database.txt", "database.json", "output"]:
 				continue
 			newCurrentPath = currentPath + "/" + f
 			getFileNames(newCurrentPath, fileNames)
