@@ -1,5 +1,5 @@
 [metadata]
-command=aff3ct -C "POLAR_PAC" -N "128" -K "64" -m "0" -M "3.0" -s "0.25" --enc-fb-gen-method "RM" -D "FANO" --dec-perr-snr "2.35" --dec-delta "1" --enc-conv "0o33" 
+command=aff3ct -C "POLAR_PAC" -N "128" -K "64" -m "0" -M "3.0" -s "0.25" --enc-fb-gen-method "RM" -D "FANO" --dec-perr-snr "2.35" --dec-delta "1" --enc-conv "0o33" --dec-implem "NAIVE"
 title=PAC(128, 64)@FANO DELTA=1 Perr@SNR=2.35
 
 [trace]

@@ -1,6 +1,6 @@
 [metadata]
 command=aff3ct -C "POLAR_PT" -N "128" -K "64" -m "0" -M "2.5" -s "0.25" --enc-fb-gen-method "FILE" --enc-fb-awgn-path "./conf/cde/awgn_polar_codes/PT/7/N128_K64_RP.txt" --enc-pt-gen-method "FILE" --enc-pt-path "./conf/cde/awgn_polar_codes/PT/7/N128_K64_PT.txt" --dec-implem "NAIVE" --mnt-max-fe "100" -L "128" 
-title=TITLE
+title=PT-Polar (128, 64) SCL@L128
 
 [trace]
 # ----------------------------------------------------
